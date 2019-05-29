@@ -19,7 +19,7 @@ body {
   background: darkred; 
   border: none;
   border-radius: 50%;
-  color: #eee;
+  color: #ddd;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -33,7 +33,7 @@ body {
 
 .descriptor {
   border-radius: 4px;
-  color: #eee;
+  color: #ddd;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -44,9 +44,31 @@ body {
   -webkit-transition: color 0.2s;
 }
 
+.descriptor-alt {
+  border-radius: 2px;
+  border-bottom: 2px solid;
+  color: #ddd;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px;
+  position: relative;
+  margin: 0 4px 4px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.1s;
+}
+
+.descriptor-alt:active {
+  color: #333;
+}
+
+.descriptor-alt:active::after {
+  color: #ddd; 
+}
+
 .filter {
   border-radius: 4px;
-  color: #eee;
+  color: #ddd;
   display: inline-block;
   height: 26px;
   line-height: 26px;
@@ -74,3 +96,21 @@ body {
 .personality { background: mediumvioletred; border-color: mediumvioletred; }
 .race { background: orangered; border-color: orangered; }
 .size { background: mediumpurple; border-color: mediumpurple; }
+
+/* Alt Descriptor Colors */
+.age-alt { border-color: crimson; }
+.clothing-alt { border-color: hotpink; }
+.color-alt { border-color: goldenrod; }
+.condition-alt { border-color: darkcyan; }
+.eyes-alt { border-color: springgreen; }
+.gender-alt { border-color: rosybrown; }
+.height-alt { border-color: tan; }
+.holding-alt { border-color: steelblue; } /* type is a filter for the holding descriptor */
+.material-alt { border-color: forestgreen; }
+.name-alt { border-color: steelblue; }
+.type-alt { border-color: steelblue; } /* type is a filter for the name descriptor */
+.namefirst-alt { border-color: olivedrab; }
+.namelast-alt { border-color: olive; }
+.personality-alt { border-color: mediumvioletred; }
+.race-alt { border-color: orangered; }
+.size-alt { border-color: mediumpurple; }

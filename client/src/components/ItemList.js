@@ -44,11 +44,11 @@ class ItemList extends Component {
       </div>
       <div>
         A(n){'\u00A0'}
-        <span key="0" className="descriptor age">old</span>
-        <span key="1" className="descriptor condition">dusty</span>
-        <span key="2" className="descriptor color">grey</span>
-        <span key="3" className="descriptor material">stone</span>
-        <span key="4" className="descriptor type">table</span>
+        <span key="0" className="descriptor-alt age-alt">old</span>
+        <span key="1" className="descriptor-alt condition-alt">dusty</span>
+        <span key="2" className="descriptor-alt color-alt">grey</span>
+        <span key="3" className="descriptor-alt material-alt">stone</span>
+        <span key="4" className="descriptor-alt type-alt">table</span>
         {'\u00A0'}{'\u00A0'}{'\u00A0'}
         <button className="btn-reroll">{'\u2b6e'}</button>
       </div>
