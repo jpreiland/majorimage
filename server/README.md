@@ -1,5 +1,18 @@
+## Required Setup
+
 Install nodemon using  
-### `npm install -g nodemon`
+`npm install -g nodemon`  
+
+Create config directory `config/` and config file `config.json` inside that directory.  
+Structure `config.json` as follows to allow db connection:  
+```
+{  
+  "db": {  
+    "connection_string" : "<YOUR DB CONNECTION STRING HERE>"  
+  }  
+}  
+```
+
 
 ### `nodemon app`
 
