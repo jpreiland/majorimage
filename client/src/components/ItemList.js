@@ -29,7 +29,28 @@ class ItemList extends Component {
         <span key="2" className="descriptor color">grey</span>
         <span key="3" className="descriptor material">stone</span>
         <span key="4" className="descriptor type">table</span>
-        <button>+</button>
+        {'\u00A0'}{'\u00A0'}{'\u00A0'}
+        <button className="btn-reroll">{'\u2b6e'}</button>
+      </div>
+      <div>
+        A(n){'\u00A0'}
+        <span key="0" className="descriptor age">old</span>
+        <span key="1" className="descriptor condition">dusty</span>
+        <span key="2" className="descriptor color">grey</span>
+        <span key="3" className="descriptor material">stone</span>
+        <span key="4" className="descriptor type">table</span>
+        {'\u00A0'}{'\u00A0'}{'\u00A0'}
+        <button className="btn-reroll">{'\u2b6e'}</button>
+      </div>
+      <div>
+        A(n){'\u00A0'}
+        <span key="0" className="descriptor age">old</span>
+        <span key="1" className="descriptor condition">dusty</span>
+        <span key="2" className="descriptor color">grey</span>
+        <span key="3" className="descriptor material">stone</span>
+        <span key="4" className="descriptor type">table</span>
+        {'\u00A0'}{'\u00A0'}{'\u00A0'}
+        <button className="btn-reroll">{'\u2b6e'}</button>
       </div>
       </React.Fragment>
     );

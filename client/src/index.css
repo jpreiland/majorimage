@@ -15,6 +15,22 @@ body {
   float: left; 
 }
 
+.btn-reroll {
+  background: darkred; 
+  border: none;
+  border-radius: 50%;
+  color: #eee;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 7px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-align:  center;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
 .descriptor {
   border-radius: 4px;
   color: #eee;
@@ -57,4 +73,4 @@ body {
 .namelast { background: olive; border-color: olive; }
 .personality { background: mediumvioletred; border-color: mediumvioletred; }
 .race { background: orangered; border-color: orangered; }
-.size { background: maroon; border-color: maroon; }
+.size { background: mediumpurple; border-color: mediumpurple; }
