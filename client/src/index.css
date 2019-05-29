@@ -55,15 +55,16 @@ body {
   position: relative;
   margin: 0 4px 4px 0;
   text-decoration: none;
-  -webkit-transition: color 0.1s;
+  -webkit-transition: color 0.5s;
 }
 
 .descriptor-alt:active {
+  -webkit-transition: color 0s;
   color: #333;
 }
 
 .descriptor-alt:active::after {
-  color: #ddd; 
+  color: #eee; 
 }
 
 .filter {
