@@ -3,3 +3,58 @@ body {
   font-family: "Arial";
   color: #ddd;
 }
+
+.descriptors {
+  list-style: none;
+  margin: 0;
+  overflow: hidden; 
+  padding: 0;
+}
+
+.descriptors li {
+  float: left; 
+}
+
+.descriptor {
+  border-radius: 4px;
+  color: #eee;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px;
+  position: relative;
+  margin: 0 4px 4px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.filter {
+  border-radius: 4px;
+  color: #eee;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+/* Descriptor Colors */
+.age { background: crimson; border-color: crimson; }
+.clothing { background: hotpink; border-color: hotpink; }
+.color { background: goldenrod; border-color: goldenrod; }
+.condition { background: darkcyan; border-color: darkcyan; }
+.eyes { background: springgreen; border-color: springgreen; }
+.gender { background: rosybrown; border-color: rosybrown; }
+.height { background: tan; border-color: tan; }
+.holding { background: steelblue; border-color: steelblue; } /* type is a filter for the holding descriptor */
+.material { background: forestgreen; border-color: forestgreen; }
+.name { background: steelblue; border-color: steelblue; }
+.type { background: steelblue; border-color: steelblue; } /* type is a filter for the name descriptor */
+.namefirst { background: olivedrab; border-color: olivedrab; }
+.namelast { background: olive; border-color: olive; }
+.personality { background: mediumvioletred; border-color: mediumvioletred; }
+.race { background: orangered; border-color: orangered; }
+.size { background: maroon; border-color: maroon; }

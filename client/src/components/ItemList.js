@@ -11,7 +11,9 @@ class ItemList extends Component {
     } else {
       return data.items.map(item => {
         return( 
-          <li key={ item.id }>{ item.name }</li>
+          <React.Fragment>
+          <span key={ item.id } className="descriptor name">{ item.name }</span>
+          </React.Fragment>
           );
       });
     }
@@ -19,11 +21,17 @@ class ItemList extends Component {
 
   render() {
     return (
+      <React.Fragment>
       <div>
-        <ul id="item-list">
-        	{ this.displayItems() }
-        </ul>
+        A(n){'\u00A0'}
+        <span key="0" className="descriptor age">old</span>
+        <span key="1" className="descriptor condition">dusty</span>
+        <span key="2" className="descriptor color">grey</span>
+        <span key="3" className="descriptor material">stone</span>
+        <span key="4" className="descriptor type">table</span>
+        <button>+</button>
       </div>
+      </React.Fragment>
     );
   }
 }

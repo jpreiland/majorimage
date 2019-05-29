@@ -3,7 +3,9 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 // components
+import Categories from './components/Categories';
 import ItemList from './components/ItemList';
+import Filters from './components/Filters';
 
 // apollo client setup
 const client = new ApolloClient({
@@ -15,7 +17,9 @@ class App extends Component {
     return (
       <ApolloProvider client={client}>
         <div id="main">
-          <h1>test</h1>
+          <h1>Major Image</h1>
+          <Categories />
+          <Filters />
           <ItemList />
         </div>
       </ApolloProvider>
