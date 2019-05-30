@@ -1,7 +1,64 @@
+html {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
 body {
   background:  #333;
   font-family: "Arial";
   color: #ddd;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.frame {
+  text-align: center;
+  height: 100%;
+}
+
+.contents {
+  background:  #424242;
+  display: inline-block; 
+  text-align: left;
+  border-left:  1px solid;
+  border-right:  1px solid;
+  border-color: #999;
+  padding: 0 1%;
+  height: 100%;
+}
+
+.navbar {
+  border-bottom: 1px solid;
+  border-color:  #999;
+}
+
+.navtab {
+  background:  #424242;
+  border-radius: 4px 4px 0px 0px;
+  border-color:  #999;
+  border: 1px solid;
+  border-bottom: 0px solid;
+  color: #ddd;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 5px;
+  position: relative;
+  margin: 0 4px 0 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+/* visited link */
+a {
+  color: #ddd;
+  text-decoration: none;
 }
 
 .descriptors {

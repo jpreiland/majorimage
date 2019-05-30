@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+import { Switch, Route } from 'react-router-dom';
 
 // components
-import Categories from './components/Categories';
-import ItemList from './components/ItemList';
-import Filters from './components/Filters';
-
-// apollo client setup
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
-});
+import Header from './components/Header';
+import ObjectsLink from './components/ObjectsLink';
+import SceneryLink from './components/SceneryLink';
+import NpcsLink from './components/NpcsLink';
 
 class App extends Component {
   render() {
     return (
-      <ApolloProvider client={client}>
-        <div id="main">
-          <h1>Major Image</h1>
-          <Categories />
-          <Filters />
-          <ItemList />
+    <div className="frame">
+      <div className="contents">
+        <Header />
+        <div className="listalign2">
+          <Switch>
+            <Route exact path="/" component={ObjectsLink} />
+            <Route exact path="/scenery" component={SceneryLink} />
+            <Route exact path="/npc" component={NpcsLink} />
+          </Switch>
         </div>
-      </ApolloProvider>
+      </div>
+    </div>
     );
   }
 }
