@@ -13,6 +13,19 @@ body {
   height:100%;
 }
 
+button:focus {
+  outline:0;
+}
+
+select:focus {
+  outline:0;
+}
+
+a {
+  color: #ddd;
+  text-decoration: none;
+}
+
 #root {
   height: 100%;
 }
@@ -55,12 +68,6 @@ body {
   -webkit-transition: color 0.2s;
 }
 
-/* visited link */
-a {
-  color: #ddd;
-  text-decoration: none;
-}
-
 .descriptors {
   list-style: none;
   margin: 0;
@@ -88,7 +95,8 @@ a {
   -webkit-transition: color 0.2s;
 }
 
-.descriptor {
+/* deprecated, remove later */
+.descriptor-old {
   border-radius: 4px;
   color: #ddd;
   display: inline-block;
@@ -101,7 +109,7 @@ a {
   -webkit-transition: color 0.2s;
 }
 
-.descriptor-alt {
+.descriptor {
   border-radius: 2px;
   border-bottom: 2px solid;
   color: #ddd;
@@ -115,29 +123,46 @@ a {
   -webkit-transition: color 0.5s;
 }
 
-.descriptor-alt:active {
+.descriptor:active {
   -webkit-transition: color 0s;
-  color: #333;
+  color: #424242;
 }
 
-.descriptor-alt:active::after {
+.descriptor:active::after {
   color: #eee; 
 }
 
 .filter {
-  border-radius: 4px;
+  display: inline-block;
+}
+
+.filter-toggle {
+  border-radius: 4px 0 0 4px;
+  color: #ddd;
+  display: inline-block;
+  height: 26px;
+  line-height: 24px;
+  padding: 0 0 0 5px;
+  position: relative;
+  margin: 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+}
+
+.filter-select {
+  border-radius: 0 4px 4px 0;
   color: #ddd;
   display: inline-block;
   height: 26px;
   line-height: 26px;
-  padding: 0 5px;
+  padding: 0 5px 0 2px;
   position: relative;
   margin: 0 10px 10px 0;
   text-decoration: none;
   -webkit-transition: color 0.2s;
 }
 
-/* Descriptor Colors */
+/* Filter Colors */
 .age { background: crimson; border-color: crimson; }
 .clothing { background: hotpink; border-color: hotpink; }
 .color { background: goldenrod; border-color: goldenrod; }
@@ -145,7 +170,6 @@ a {
 .eyes { background: springgreen; border-color: springgreen; }
 .gender { background: rosybrown; border-color: rosybrown; }
 .height { background: tan; border-color: tan; }
-.holding { background: steelblue; border-color: steelblue; } /* type is a filter for the holding descriptor */
 .material { background: forestgreen; border-color: forestgreen; }
 .name { background: steelblue; border-color: steelblue; }
 .type { background: steelblue; border-color: steelblue; } /* type is a filter for the name descriptor */
@@ -155,20 +179,18 @@ a {
 .race { background: orangered; border-color: orangered; }
 .size { background: mediumpurple; border-color: mediumpurple; }
 
-/* Alt Descriptor Colors */
-.age-alt { border-color: crimson; }
-.clothing-alt { border-color: hotpink; }
-.color-alt { border-color: goldenrod; }
-.condition-alt { border-color: darkcyan; }
-.eyes-alt { border-color: springgreen; }
-.gender-alt { border-color: rosybrown; }
-.height-alt { border-color: tan; }
-.holding-alt { border-color: steelblue; } /* type is a filter for the holding descriptor */
-.material-alt { border-color: forestgreen; }
-.name-alt { border-color: steelblue; }
-.type-alt { border-color: steelblue; } /* type is a filter for the name descriptor */
-.namefirst-alt { border-color: olivedrab; }
-.namelast-alt { border-color: olive; }
-.personality-alt { border-color: mediumvioletred; }
-.race-alt { border-color: orangered; }
-.size-alt { border-color: mediumpurple; }
+/* Descriptor Colors */
+.age-desc { border-color: crimson; }
+.clothing-desc { border-color: hotpink; }
+.color-desc { border-color: goldenrod; }
+.condition-desc { border-color: darkcyan; }
+.eyes-desc { border-color: springgreen; }
+.gender-desc { border-color: rosybrown; }
+.height-desc { border-color: tan; }
+.material-desc { border-color: forestgreen; }
+.name-desc { border-color: steelblue; }
+.namefirst-desc { border-color: olivedrab; }
+.namelast-desc { border-color: olive; }
+.personality-desc { border-color: mediumvioletred; }
+.race-desc { border-color: orangered; }
+.size-desc { border-color: mediumpurple; }

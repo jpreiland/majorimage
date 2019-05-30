@@ -13,7 +13,7 @@ class App extends Component {
     <div className="frame">
       <div className="contents">
         <Header />
-        <div className="listalign2">
+        <div>
           <Switch>
             <Route exact path="/" component={ObjectsLink} />
             <Route exact path="/scenery" component={SceneryLink} />

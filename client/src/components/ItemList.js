@@ -27,55 +27,55 @@ class ItemList extends Component {
         {'\u00A0'}
         A(n)
         {'\u00A0'}
-        <span key="0" className="descriptor-alt age-alt">old</span>
-        <span key="1" className="descriptor-alt condition-alt">dusty</span>
-        <span key="2" className="descriptor-alt color-alt">grey</span>
-        <span key="3" className="descriptor-alt material-alt">stone</span>
-        <span key="4" className="descriptor-alt type-alt">table</span>
+        <span key="0" className="descriptor age-desc">old</span>
+        <span key="1" className="descriptor condition-desc">dusty</span>
+        <span key="2" className="descriptor color-desc">grey</span>
+        <span key="3" className="descriptor material-desc">stone</span>
+        <span key="4" className="descriptor name-desc">table</span>
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
         {'\u00A0'}
         A(n)
         {'\u00A0'}
-        <span key="0" className="descriptor-alt age-alt">old</span>
-        <span key="1" className="descriptor-alt condition-alt">dusty</span>
-        <span key="2" className="descriptor-alt color-alt">grey</span>
-        <span key="3" className="descriptor-alt material-alt">stone</span>
-        <span key="4" className="descriptor-alt type-alt">table</span>
+        <span key="0" className="descriptor age-desc">old</span>
+        <span key="1" className="descriptor condition-desc">dusty</span>
+        <span key="2" className="descriptor color-desc">grey</span>
+        <span key="3" className="descriptor material-desc">stone</span>
+        <span key="4" className="descriptor name-desc">table</span>
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
         {'\u00A0'}
         A(n)
         {'\u00A0'}
-        <span key="0" className="descriptor-alt age-alt">old</span>
-        <span key="1" className="descriptor-alt condition-alt">dusty</span>
-        <span key="2" className="descriptor-alt color-alt">grey</span>
-        <span key="3" className="descriptor-alt material-alt">stone</span>
-        <span key="4" className="descriptor-alt type-alt">table</span>
+        <span key="0" className="descriptor age-desc">old</span>
+        <span key="1" className="descriptor condition-desc">dusty</span>
+        <span key="2" className="descriptor color-desc">grey</span>
+        <span key="3" className="descriptor material-desc">stone</span>
+        <span key="4" className="descriptor name-desc">table</span>
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
         {'\u00A0'}
         A(n)
         {'\u00A0'}
-        <span key="0" className="descriptor-alt age-alt">old</span>
-        <span key="1" className="descriptor-alt condition-alt">dusty</span>
-        <span key="2" className="descriptor-alt color-alt">grey</span>
-        <span key="3" className="descriptor-alt material-alt">stone</span>
-        <span key="4" className="descriptor-alt type-alt">table</span>
+        <span key="0" className="descriptor age-desc">old</span>
+        <span key="1" className="descriptor condition-desc">dusty</span>
+        <span key="2" className="descriptor color-desc">grey</span>
+        <span key="3" className="descriptor material-desc">stone</span>
+        <span key="4" className="descriptor name-desc">table</span>
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
         {'\u00A0'}
         A(n)
         {'\u00A0'}
-        <span key="0" className="descriptor-alt age-alt">old</span>
-        <span key="1" className="descriptor-alt condition-alt">dusty</span>
-        <span key="2" className="descriptor-alt color-alt">grey</span>
-        <span key="3" className="descriptor-alt material-alt">stone</span>
-        <span key="4" className="descriptor-alt type-alt">table</span>
+        <span key="0" className="descriptor age-desc">old</span>
+        <span key="1" className="descriptor condition-desc">dusty</span>
+        <span key="2" className="descriptor color-desc">grey</span>
+        <span key="3" className="descriptor material-desc">stone</span>
+        <span key="4" className="descriptor name-desc">table</span>
       </div>
       </React.Fragment>
     );
