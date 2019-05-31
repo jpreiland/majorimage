@@ -8,7 +8,6 @@ class SceneryLink extends Component {
   render() {
     return (
         <div id="main">
-          <br />
           <Filters />
           <ItemList />
         </div>

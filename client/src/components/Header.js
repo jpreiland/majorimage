@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <div className="">
-        <h1>Major Image</h1>
+        <div className="title">Major Image</div>
         <div className="navbar">
           <span className="navtab">
             <Link to="/" className="">

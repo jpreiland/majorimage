@@ -36,12 +36,14 @@ class ItemList extends Component {
     }
   }
 
+  // TODO: rename to item-specific reroll or accept parameter for a descriptor
   reroll(index) {
     var tempitems = this.state.items;
     tempitems[index] = this.displayItem();
     this.setState({items: tempitems});
   }
 
+  // TODO: update to reroll all descriptors
   rerollAll(index) {
     var tempitems = this.state.items;
     tempitems[index] = this.displayItem();
@@ -56,10 +58,10 @@ class ItemList extends Component {
     } else {
       return(
         <React.Fragment>
-          <span key="0" className="descriptor age-desc">ancient</span>
-          <span key="1" className="descriptor condition-desc">dusty</span>
-          <span key="2" className="descriptor color-desc">grey</span>
-          <span key="3" className="descriptor material-desc">stone</span>
+          <span key="0" className="descriptor age-desc">ancient </span>
+          <span key="1" className="descriptor condition-desc">dusty </span>
+          <span key="2" className="descriptor color-desc">grey </span>
+          <span key="3" className="descriptor material-desc">stone </span>
           <span key="4" className="descriptor item-desc" onClick={this.reroll.bind(this, index)}>
             { this.state.items[index] || this.displayItem(index) }
           </span>
