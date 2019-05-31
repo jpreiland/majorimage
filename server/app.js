@@ -13,14 +13,14 @@ app.use(cors());
 //connect to atlas:mongoDB cluster
 mongoose.connect(config.db.connection_string);
 mongoose.connection.once('open', () => {
-	console.log('connected to database');
+  console.log('connected to database');
 })
 
 app.use('/graphql', graphqlHTTP({
-	schema,
-	graphiql: true
+  schema,
+  graphiql: true
 }));
 
 app.listen(4000, () => {
-	console.log('now listening for requests on port 4000');
+  console.log('now listening for requests on port 4000');
 });
