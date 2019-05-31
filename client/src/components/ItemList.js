@@ -56,7 +56,7 @@ class ItemList extends Component {
     } else {
       return(
         <React.Fragment>
-          <span key="0" className="descriptor age-desc">old</span>
+          <span key="0" className="descriptor age-desc">ancient</span>
           <span key="1" className="descriptor condition-desc">dusty</span>
           <span key="2" className="descriptor color-desc">grey</span>
           <span key="3" className="descriptor material-desc">stone</span>
@@ -72,23 +72,23 @@ class ItemList extends Component {
     return (
       <React.Fragment>
       <div>
-        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_ONE)}>{'\u2b6e'}</button>
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_ONE)}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_ONE)}
       </div>
       <div>
-        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_TWO)}>{'\u2b6e'}</button>
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_TWO)}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_TWO)}
       </div>
       <div>
-        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_THREE)}>{'\u2b6e'}</button>
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_THREE)}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_THREE)}
       </div>
       <div>
-        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FOUR)}>{'\u2b6e'}</button>
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FOUR)}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_FOUR)}
       </div>
       <div>
-        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FIVE)}>{'\u2b6e'}</button>
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FIVE)}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_FIVE)}
       </div>
       </React.Fragment>

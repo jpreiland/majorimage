@@ -86,7 +86,6 @@ span:hover {
 .btn-reroll {
   background: darkred; 
   border: none;
-  border-radius: 50%;
   color: #ddd;
   display: inline-block;
   height: 26px;
@@ -127,8 +126,8 @@ span:hover {
   border-bottom: 2px solid;
   color: #ddd;
   display: inline-block;
-  height: 26px;
-  line-height: 26px;
+  height: 35px;
+  line-height: 45px;
   padding: 0 5px;
   position: relative;
   margin: 0 4px 4px 0;
