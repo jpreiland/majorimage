@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { getItemsQuery } from '../queries/queries';
 
+const LIST_ITEM_ONE = 0;
+const LIST_ITEM_TWO = 1;
+const LIST_ITEM_THREE = 2;
+const LIST_ITEM_FOUR = 3;
+const LIST_ITEM_FIVE = 4;
+
 
 class ItemList extends Component {
   constructor(props) {
@@ -34,7 +40,12 @@ class ItemList extends Component {
     var tempitems = this.state.items;
     tempitems[index] = this.displayItem();
     this.setState({items: tempitems});
-    return 
+  }
+
+  rerollAll(index) {
+    var tempitems = this.state.items;
+    tempitems[index] = this.displayItem();
+    this.setState({items: tempitems});
   }
 
   displayLine(index) {
@@ -54,33 +65,31 @@ class ItemList extends Component {
           </span>
         </React.Fragment>
       );
-    }
-      
+    }      
   }
-
 
   render() {
     return (
       <React.Fragment>
       <div>
-        <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(0)}
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_ONE)}>{'\u2b6e'}</button>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_ONE)}
       </div>
       <div>
-        <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(1)}
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_TWO)}>{'\u2b6e'}</button>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_TWO)}
       </div>
       <div>
-        <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(2)}
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_THREE)}>{'\u2b6e'}</button>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_THREE)}
       </div>
       <div>
-        <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(3)}
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FOUR)}>{'\u2b6e'}</button>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_FOUR)}
       </div>
       <div>
-        <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(4)}
+        <button className="btn-reroll" onClick={this.rerollAll.bind(this, LIST_ITEM_FIVE)}>{'\u2b6e'}</button>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(LIST_ITEM_FIVE)}
       </div>
       </React.Fragment>
     );

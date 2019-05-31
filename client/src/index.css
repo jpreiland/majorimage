@@ -96,7 +96,16 @@ span:hover {
   margin: 0 10px 10px 0;
   text-align:  center;
   text-decoration: none;
-  -webkit-transition: color 0.2s;
+  -webkit-transition: background-color 0.2s;
+}
+
+.btn-reroll:active {
+  -webkit-transition: background-color 0s;
+  background-color: red;
+}
+
+.btn-reroll:active::after {
+  background-color: darkred; 
 }
 
 /* deprecated, remove later */
