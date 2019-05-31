@@ -4,7 +4,6 @@ const getItemsQuery = gql`
   {
     items {
       name
-      id
     }
   }
 `

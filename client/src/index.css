@@ -26,6 +26,10 @@ a {
   text-decoration: none;
 }
 
+span:hover {
+  cursor: pointer;
+}
+
 #root {
   height: 100%;
 }
@@ -171,8 +175,8 @@ a {
 .gender { background: rosybrown; border-color: rosybrown; }
 .height { background: tan; border-color: tan; }
 .material { background: forestgreen; border-color: forestgreen; }
-.name { background: steelblue; border-color: steelblue; }
-.type { background: steelblue; border-color: steelblue; } /* type is a filter for the name descriptor */
+.item { background: steelblue; border-color: steelblue; }
+.type { background: steelblue; border-color: steelblue; } /* type is a filter for the item descriptor */
 .namefirst { background: olivedrab; border-color: olivedrab; }
 .namelast { background: olive; border-color: olive; }
 .personality { background: mediumvioletred; border-color: mediumvioletred; }
@@ -188,7 +192,7 @@ a {
 .gender-desc { border-color: rosybrown; }
 .height-desc { border-color: tan; }
 .material-desc { border-color: forestgreen; }
-.name-desc { border-color: steelblue; }
+.item-desc { border-color: steelblue; }
 .namefirst-desc { border-color: olivedrab; }
 .namelast-desc { border-color: olive; }
 .personality-desc { border-color: mediumvioletred; }

@@ -4,78 +4,83 @@ import { getItemsQuery } from '../queries/queries';
 
 
 class ItemList extends Component {
-  displayItems() {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [null,null,null,null,null]
+    };
+  }
+
+  displayItem(index) {
     var data = this.props.data;
     if(data.loading) {
-      return( <div>Loading Items...</div> );
+      // default name for an item's type is "object"
+      return( "object" );
     } else {
-      return data.items.map(item => {
-        return( 
-          <React.Fragment>
-          <span key={ item.id } className="descriptor name">{ item.name }</span>
-          </React.Fragment>
-          );
-      });
+      var total_items = data.items.length;
+      var random_index = Math.floor(Math.random() * total_items);
+
+      // genuinely no idea why these two lines are required
+      // to fix bug where rerolling a descriptor rerolls
+      // that descriptor for every line.
+      var tempitems = this.state.items;
+      tempitems[index] = data.items[random_index].name;
+
+      return data.items[random_index].name;
     }
   }
+
+  reroll(index) {
+    var tempitems = this.state.items;
+    tempitems[index] = this.displayItem();
+    this.setState({items: tempitems});
+    return 
+  }
+
+  displayLine(index) {
+    var data = this.props.data;
+    if(data.loading) {
+      // default name for an item's type is "object"
+      return( "object" );
+    } else {
+      return(
+        <React.Fragment>
+          <span key="0" className="descriptor age-desc">old</span>
+          <span key="1" className="descriptor condition-desc">dusty</span>
+          <span key="2" className="descriptor color-desc">grey</span>
+          <span key="3" className="descriptor material-desc">stone</span>
+          <span key="4" className="descriptor item-desc" onClick={this.reroll.bind(this, index)}>
+            { this.state.items[index] || this.displayItem(index) }
+          </span>
+        </React.Fragment>
+      );
+    }
+      
+  }
+
 
   render() {
     return (
       <React.Fragment>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}
-        A(n)
-        {'\u00A0'}
-        <span key="0" className="descriptor age-desc">old</span>
-        <span key="1" className="descriptor condition-desc">dusty</span>
-        <span key="2" className="descriptor color-desc">grey</span>
-        <span key="3" className="descriptor material-desc">stone</span>
-        <span key="4" className="descriptor name-desc">table</span>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(0)}
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}
-        A(n)
-        {'\u00A0'}
-        <span key="0" className="descriptor age-desc">old</span>
-        <span key="1" className="descriptor condition-desc">dusty</span>
-        <span key="2" className="descriptor color-desc">grey</span>
-        <span key="3" className="descriptor material-desc">stone</span>
-        <span key="4" className="descriptor name-desc">table</span>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(1)}
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}
-        A(n)
-        {'\u00A0'}
-        <span key="0" className="descriptor age-desc">old</span>
-        <span key="1" className="descriptor condition-desc">dusty</span>
-        <span key="2" className="descriptor color-desc">grey</span>
-        <span key="3" className="descriptor material-desc">stone</span>
-        <span key="4" className="descriptor name-desc">table</span>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(2)}
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}
-        A(n)
-        {'\u00A0'}
-        <span key="0" className="descriptor age-desc">old</span>
-        <span key="1" className="descriptor condition-desc">dusty</span>
-        <span key="2" className="descriptor color-desc">grey</span>
-        <span key="3" className="descriptor material-desc">stone</span>
-        <span key="4" className="descriptor name-desc">table</span>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(3)}
       </div>
       <div>
         <button className="btn-reroll">{'\u2b6e'}</button>
-        {'\u00A0'}
-        A(n)
-        {'\u00A0'}
-        <span key="0" className="descriptor age-desc">old</span>
-        <span key="1" className="descriptor condition-desc">dusty</span>
-        <span key="2" className="descriptor color-desc">grey</span>
-        <span key="3" className="descriptor material-desc">stone</span>
-        <span key="4" className="descriptor name-desc">table</span>
+        {'\u00A0'}A(n){'\u00A0'}{this.displayLine(4)}
       </div>
       </React.Fragment>
     );

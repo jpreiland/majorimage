@@ -7,7 +7,7 @@ import Filters from './Filters';
 class ObjectsLink extends Component {
   render() {
     return (
-        <div id="main" className="">
+        <div id="main">
           <br />
           <Filters />
           <ItemList />

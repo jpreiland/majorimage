@@ -55,7 +55,7 @@ class Filters extends Component {
             <option key="2" value="2">Metal</option>
             <option key="3" value="3">Stone</option>
             <option key="4" value="4">Glass</option>
-            <option key="5" value="5">Organic</option>
+            <option key="5" value="5">Wearable</option>
           </select>
         </div>
 

@@ -17,7 +17,8 @@ const ItemType = new GraphQLObjectType({
 	name: 'Item',
 	fields: () => ({
 		id: { type: GraphQLID },
-		name: { type: GraphQLString }
+		name: { type: GraphQLString },
+		f_type: { type: GraphQLString }
 	})
 });
 
@@ -38,7 +39,7 @@ const RootQuery = new GraphQLObjectType({
 				// code to get data from db/other source
 				return Item.find({});
 			}
-		}		
+		}
 	}
 });
 
@@ -48,11 +49,13 @@ const Mutation = new GraphQLObjectType({
 		addItem: {
 			type: ItemType,
 			args: {
-				name: { type: new GraphQLNonNull(GraphQLString) }
+				name: { type: new GraphQLNonNull(GraphQLString) },				
+				f_type: { type: new GraphQLNonNull(GraphQLString) }
 			},
 			resolve(parent, args) {
 				let item = new Item({
-					name: args.name
+					name: args.name,
+					f_type: args.f_type
 				});
 				return item.save();
 			}
