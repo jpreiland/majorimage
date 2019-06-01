@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 // components
 import ObjectList from './objects/ObjectList';
-import Filters from './Filters';
+import ObjectFilters from './objects/filters/ObjectFilters';
 
 class ObjectsLink extends Component {
   render() {
     return (
       <div id="main">
-        <Filters />
+        <ObjectFilters />
         <ObjectList />
       </div>
     );

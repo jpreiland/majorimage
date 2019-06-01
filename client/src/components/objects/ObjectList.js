@@ -6,21 +6,23 @@ import * as Constants from './ObjectConstants';
 // components
 import ObjectLine from './ObjectLine';
 
+const blankspaces = '\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0';
+
 class ObjectList extends Component {
   constructor(props) {
     super(props);
     this.state = {
       descriptors: [
-        ["_","_","_","_","_"],
-        ["_","_","_","_","_"],
-        ["_","_","_","_","_"],
-        ["_","_","_","_","_"],
-        ["_","_","_","_","_"]
+        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces]
       ]
     };
   }
 
-  // TODO: this is not good, waiting 100ms before initializing state
+  // TODO: this is not good, waiting 250ms before initializing state
   // because the query results aren't ready immediately. 
   // Find a correct solution.
   componentDidMount() {
@@ -32,7 +34,7 @@ class ObjectList extends Component {
         this.rerollAll(Constants.LINE_FOUR);
         this.rerollAll(Constants.LINE_FIVE);
       }.bind(this),
-      100
+      250
     );
   }
 
@@ -44,7 +46,7 @@ class ObjectList extends Component {
     data.materials = ["iron", "wooden", "glass", "ivory", "obsidian"];
     if(data.loading) {
       // default name for an item's type is "object"
-      return( "object" );
+      return( blankspaces );
     } else {
       var random_index;
       switch(descriptor) {
@@ -78,7 +80,6 @@ class ObjectList extends Component {
     this.reroll(line, descriptor);
   }
 
-  // TODO: use descriptor parameter to pull from correct data
   reroll(line, descriptor) {
     var descriptors = this.state.descriptors;
     descriptors[line][descriptor] = this.getRandomDescriptor(descriptor);
@@ -98,24 +99,24 @@ class ObjectList extends Component {
     return (
       <React.Fragment>
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_ONE]} 
-                onReroll={this.handleReroll.bind(this, Constants.LINE_ONE)} 
-                onRerollAll={this.rerollAll.bind(this, Constants.LINE_ONE)} />
+                  onReroll={this.handleReroll.bind(this, Constants.LINE_ONE)} 
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_ONE)} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_TWO]} 
-                onReroll={this.handleReroll.bind(this, Constants.LINE_TWO)} 
-                onRerollAll={this.rerollAll.bind(this, Constants.LINE_TWO)} />
+                  onReroll={this.handleReroll.bind(this, Constants.LINE_TWO)} 
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_TWO)} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_THREE]} 
-                onReroll={this.handleReroll.bind(this, Constants.LINE_THREE)} 
-                onRerollAll={this.rerollAll.bind(this, Constants.LINE_THREE)} />
+                  onReroll={this.handleReroll.bind(this, Constants.LINE_THREE)} 
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_THREE)} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FOUR]} 
-                onReroll={this.handleReroll.bind(this, Constants.LINE_FOUR)} 
-                onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} />
+                  onReroll={this.handleReroll.bind(this, Constants.LINE_FOUR)} 
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FIVE]} 
-                onReroll={this.handleReroll.bind(this, Constants.LINE_FIVE)} 
-                onRerollAll={this.rerollAll.bind(this, Constants.LINE_FIVE)} />
+                  onReroll={this.handleReroll.bind(this, Constants.LINE_FIVE)} 
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FIVE)} />
       </React.Fragment>
     );
   }

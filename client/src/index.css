@@ -160,12 +160,18 @@ span:hover {
   min-width: 80px;
 }
 
+.btn-filter-inactive {
+  opacity: 0.6;
+  filter: brightness(50%);
+}
+
 .filter-opt-bar {
   background-color: steelblue;
 }
 
 .filter-opt {
-  display: inline-block;
+  display: inline-block;  
+  border: 1px solid steelblue;
   margin: 5px 5px;
   padding: 0 5px;
   line-height: 30px;
