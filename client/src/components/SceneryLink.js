@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // components
-import ItemList from './ItemList';
+import ObjectList from './objects/ObjectList';
 import Filters from './Filters';
 
 class SceneryLink extends Component {
@@ -9,7 +9,7 @@ class SceneryLink extends Component {
     return (
       <div id="main">
         <Filters />
-        <ItemList />
+        <ObjectList />
       </div>
     );
   }
