@@ -21,13 +21,29 @@ class ObjectList extends Component {
     super(props);
     this.state = {
       descriptors: [
-        ["ageOne","conOne","colorOne","matOne","itemOne"],
-        ["ageTwo","conTwo","colorTwo","matTwo","itemTwo"],
-        ["ageThree","conThree","colorThree","matThree","itemThree"],
-        ["ageFour","conFour","colorFour","matFour","itemFour"],
-        ["ageFive","conFive","colorFive","matFive","itemFive"]
+        ["_","_","_","_","_"],
+        ["_","_","_","_","_"],
+        ["_","_","_","_","_"],
+        ["_","_","_","_","_"],
+        ["_","_","_","_","_"]
       ]
     };
+  }
+
+  // TODO: this is not good, waiting 100ms before initializing state
+  // because the query results aren't ready immediately. 
+  // Find a correct solution.
+  componentDidMount() {
+    setTimeout(
+      function() {
+        this.rerollAll(LINE_ONE);
+        this.rerollAll(LINE_TWO);
+        this.rerollAll(LINE_THREE);
+        this.rerollAll(LINE_FOUR);
+        this.rerollAll(LINE_FIVE);
+      }.bind(this),
+      100
+    );
   }
 
   getRandomDescriptor(descriptor) {
