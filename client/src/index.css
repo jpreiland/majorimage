@@ -60,6 +60,7 @@ span:hover {
   border-color: #000;
   height: 100%;
   max-width: 700px;
+  min-height: 800px;
 }
 
 .navbar {
@@ -178,8 +179,8 @@ span:hover {
   border: 1px solid steelblue;
   margin: 5px 5px;
   padding: 0 5px;
-  line-height: 30px;
-  height: 30px;
+  line-height: 28px;
+  height: 28px;
   color: #eee;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
