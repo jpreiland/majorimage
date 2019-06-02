@@ -141,6 +141,10 @@ span:hover {
   color: #eee; 
 }
 
+.descriptor-hidden {
+  display:none;
+}
+
 .filter {
   display: inline-block;
   margin: 0 5px;

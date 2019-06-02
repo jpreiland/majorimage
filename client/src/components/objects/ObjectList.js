@@ -100,23 +100,28 @@ class ObjectList extends Component {
       <React.Fragment>
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_ONE]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_ONE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_ONE)} />
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_ONE)}
+                  activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_TWO]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_TWO)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_TWO)} />
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_TWO)}
+                  activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_THREE]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_THREE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_THREE)} />
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_THREE)} 
+                  activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FOUR]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_FOUR)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} />
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} 
+                  activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FIVE]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_FIVE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FIVE)} />
+                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FIVE)} 
+                  activeFilters={this.props.activeFilters} />
       </React.Fragment>
     );
   }

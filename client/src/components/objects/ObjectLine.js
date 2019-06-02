@@ -41,18 +41,6 @@ class ObjectLine extends Component {
     console.log("child reroll");
   }
 
-  displayLine(index) {
-    var data = this.props.data;
-    if(data.loading) {
-      // default name for an item's type is "object"
-      return( "object" );
-    } else {
-      return(
-        "test loaded"
-      );
-    }      
-  }
-
   handleReroll = (value) => {
     this.props.onReroll(value); 
   }
@@ -62,11 +50,21 @@ class ObjectLine extends Component {
       <div>
         <button className="btn-reroll" onClick={this.props.onRerollAll}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}
-        <AgeDescriptor itemName={this.props.lineDescriptors[_AGE]} onReroll={this.handleReroll} />
-        <ConditionDescriptor itemName={this.props.lineDescriptors[_CONDITION]} onReroll={this.handleReroll} />
-        <ColorDescriptor itemName={this.props.lineDescriptors[_COLOR]} onReroll={this.handleReroll} />
-        <MaterialDescriptor itemName={this.props.lineDescriptors[_MATERIAL]} onReroll={this.handleReroll} />
-        <ItemDescriptor itemName={this.props.lineDescriptors[_TYPE]} onReroll={this.handleReroll} />
+        <AgeDescriptor itemName={this.props.lineDescriptors[_AGE]} 
+                       active={this.props.activeFilters.Age.active} 
+                       onReroll={this.handleReroll} />
+        <ConditionDescriptor itemName={this.props.lineDescriptors[_CONDITION]} 
+                             active={this.props.activeFilters.Condition.active} 
+                             onReroll={this.handleReroll} />
+        <ColorDescriptor itemName={this.props.lineDescriptors[_COLOR]} 
+                         active={this.props.activeFilters.Color.active} 
+                         onReroll={this.handleReroll} />
+        <MaterialDescriptor itemName={this.props.lineDescriptors[_MATERIAL]} 
+                            active={this.props.activeFilters.Material.active} 
+                            onReroll={this.handleReroll} />
+        <ItemDescriptor itemName={this.props.lineDescriptors[_TYPE]} 
+                        active={true} // Item is always active
+                        onReroll={this.handleReroll} />
       </div>
     );
   }

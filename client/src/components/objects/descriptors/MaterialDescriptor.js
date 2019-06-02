@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 
 class MaterialDescriptor extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      classNamesActive: "descriptor material-desc",
+      classNamesInactive: "descriptor material-desc descriptor-hidden"
+    };
+  }
+
   handleReroll = () => {
     this.props.onReroll(3); 
   }
 
   render() {
     return (
-      <span key="3" className="descriptor material-desc" onClick={this.handleReroll}>
-        {this.props.itemName}
+      <span className={this.props.active ? this.state.classNamesActive : this.state.classNamesInactive } 
+            onClick={this.handleReroll}>
+        {this.props.itemName} 
       </span>
     );
   }
