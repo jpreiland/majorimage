@@ -8,7 +8,6 @@ class ObjectFilterBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      OFF: {name: "OFF", active: false},
       ANY: {name: "ANY", active: true},
       FURNITURE: {name: "FURNITURE", active: false},
       CLOTHING: {name: "CLOTHING", active: false},
@@ -34,8 +33,6 @@ class ObjectFilterBar extends Component {
   render() {
     return (
       <div className="filter-opt-bar">
-        <ObjectFilterBarOpt name={this.state.OFF.name} active={this.state.OFF.active} 
-                            toggle={this.toggle.bind(this, this.state.OFF.name)}/>
         <ObjectFilterBarOpt name={this.state.ANY.name} active={this.state.ANY.active}  
                             toggle={this.toggle.bind(this, this.state.ANY.name)}/>
         <ObjectFilterBarOpt name={this.state.FURNITURE.name} active={this.state.FURNITURE.active}  

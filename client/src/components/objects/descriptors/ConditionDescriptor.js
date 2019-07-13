@@ -11,7 +11,7 @@ class ConditionDescriptor extends Component {
   }
 
   handleReroll = () => {
-        this.props.onReroll(1); 
+    this.props.onReroll(1); 
   }
 
   render() {
