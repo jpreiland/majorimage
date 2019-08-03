@@ -7,7 +7,7 @@ export const LINE_FIVE = 4;
 
 // Descriptor positions
 export const _AGE = 0;
-export const _CONDITION = 1;
+export const _QUALITY = 1;
 export const _COLOR = 2;
 export const _MATERIAL = 3;
 export const _TYPE = 4;

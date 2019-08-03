@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-class ConditionDescriptor extends Component {
+class QualityDescriptor extends Component {
   
   constructor(props) {
     super(props);
     this.state = {
-      classNamesActive: "descriptor condition-desc",
-      classNamesInactive: "descriptor condition-desc descriptor-hidden"
+      classNamesActive: "descriptor quality-desc",
+      classNamesInactive: "descriptor quality-desc descriptor-hidden"
     };
   }
 
@@ -24,4 +24,4 @@ class ConditionDescriptor extends Component {
   }
 }
 
-export default ConditionDescriptor;
+export default QualityDescriptor;

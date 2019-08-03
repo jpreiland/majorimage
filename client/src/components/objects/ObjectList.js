@@ -41,7 +41,7 @@ class ObjectList extends Component {
   getRandomDescriptor(descriptor) {
     var data = this.props.data;
     data.ages = ["new", "old", "ancient"];
-    data.conditions = ["dusty", "broken", "pristine", "unfinished", "decrepit"];
+    data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit"];
     data.colors = ["grey", "green", "black", "white", "red", "blue", "gold", "silver", "brown"];
     data.materials = ["iron", "wooden", "glass", "ivory", "obsidian"];
     if(data.loading) {
@@ -54,10 +54,10 @@ class ObjectList extends Component {
           var total_ages = data.ages.length;
           random_index = Math.floor(Math.random() * total_ages);
           return data.ages[random_index];
-        case Constants._CONDITION:
-          var total_conditions = data.conditions.length;
-          random_index = Math.floor(Math.random() * total_conditions);
-          return data.conditions[random_index];
+        case Constants._QUALITY:
+          var total_qualities = data.qualities.length;
+          random_index = Math.floor(Math.random() * total_qualities);
+          return data.qualities[random_index];
         case Constants._COLOR:
           var total_colors = data.colors.length;
           random_index = Math.floor(Math.random() * total_colors);

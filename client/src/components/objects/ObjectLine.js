@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 // components
 import ItemDescriptor from './descriptors/ItemDescriptor';
 import AgeDescriptor from './descriptors/AgeDescriptor';
-import ConditionDescriptor from './descriptors/ConditionDescriptor';
+import QualityDescriptor from './descriptors/QualityDescriptor';
 import ColorDescriptor from './descriptors/ColorDescriptor';
 import MaterialDescriptor from './descriptors/MaterialDescriptor';
 
 const _AGE = 0;
-const _CONDITION = 1;
+const _QUALITY = 1;
 const _COLOR = 2;
 const _MATERIAL = 3;
 const _TYPE = 4;
@@ -53,8 +53,8 @@ class ObjectLine extends Component {
         <AgeDescriptor itemName={this.props.lineDescriptors[_AGE]} 
                        active={this.props.activeFilters.Age.active} 
                        onReroll={this.handleReroll} />
-        <ConditionDescriptor itemName={this.props.lineDescriptors[_CONDITION]} 
-                             active={this.props.activeFilters.Condition.active} 
+        <QualityDescriptor itemName={this.props.lineDescriptors[_QUALITY]} 
+                             active={this.props.activeFilters.Quality.active} 
                              onReroll={this.handleReroll} />
         <ColorDescriptor itemName={this.props.lineDescriptors[_COLOR]} 
                          active={this.props.activeFilters.Color.active} 

@@ -3,7 +3,13 @@ const Schema = mongoose.Schema;
 
 const itemSchema = new Schema({
   name: String,
-  f_type: String
+  isArmor: Boolean,
+  isClothing: Boolean,
+  isContainer: Boolean,
+  isFurniture: Boolean,
+  isMisc: Boolean,
+  isTreasure: Boolean,
+  isWriting: Boolean
 })
 
 module.exports = mongoose.model('Item', itemSchema);

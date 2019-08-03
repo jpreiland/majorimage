@@ -196,7 +196,7 @@ span:hover {
 .age { background: crimson; border-color: crimson; }
 .clothing { background: hotpink; border-color: hotpink; }
 .color { background: goldenrod; border-color: goldenrod; }
-.condition { background: darkcyan; border-color: darkcyan; }
+.quality { background: darkcyan; border-color: darkcyan; }
 .eyes { background: springgreen; border-color: springgreen; }
 .gender { background: rosybrown; border-color: rosybrown; }
 .height { background: tan; border-color: tan; }
@@ -213,7 +213,7 @@ span:hover {
 .age-desc { border-color: crimson; }
 .clothing-desc { border-color: hotpink; }
 .color-desc { border-color: goldenrod; }
-.condition-desc { border-color: darkcyan; }
+.quality-desc { border-color: darkcyan; }
 .eyes-desc { border-color: springgreen; }
 .gender-desc { border-color: rosybrown; }
 .height-desc { border-color: tan; }

@@ -11,7 +11,7 @@ class ObjectsLink extends Component {
     this.state = {
       Age: {active: false},
       Color: {active: true},
-      Condition: {active: true},
+      Quality: {active: true},
       Material: {active: false},
       Size: {active: false}
     };

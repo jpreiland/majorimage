@@ -20,8 +20,8 @@ class Filters extends Component {
         </div>
 
         <div className="filter">
-          <button id="condition-list" className="btn-filter condition">
-          Condition
+          <button id="quality-list" className="btn-filter quality">
+          Quality
           </button>
         </div>
 

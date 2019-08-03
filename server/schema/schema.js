@@ -6,6 +6,7 @@ const
   GraphQLObjectType, 
   GraphQLString, 
   GraphQLSchema,
+  GraphQLBoolean,
   GraphQLID,
   GraphQLInt,
   GraphQLList,
@@ -18,7 +19,13 @@ const ItemType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
-    f_type: { type: GraphQLString }
+    isArmor: { type: GraphQLBoolean },
+    isClothing: { type: GraphQLBoolean },
+    isContainer: { type: GraphQLBoolean },
+    isFurniture: { type: GraphQLBoolean },
+    isMisc: { type: GraphQLBoolean },
+    isTreasure: { type: GraphQLBoolean },
+    isWriting: { type: GraphQLBoolean }
   })
 });
 
@@ -49,13 +56,25 @@ const Mutation = new GraphQLObjectType({
     addItem: {
       type: ItemType,
       args: {
-        name: { type: new GraphQLNonNull(GraphQLString) },        
-        f_type: { type: new GraphQLNonNull(GraphQLString) }
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        isArmor: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isClothing: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isContainer: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isFurniture: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isMisc: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isTreasure: { type: new GraphQLNonNull(GraphQLBoolean) },
+        isWriting: { type: new GraphQLNonNull(GraphQLBoolean) }
       },
       resolve(parent, args) {
         let item = new Item({
           name: args.name,
-          f_type: args.f_type
+          isArmor: args.isArmor,
+          isClothing: args.isClothing,
+          isContainer: args.isContainer,
+          isFurniture: args.isFurniture,
+          isMisc: args.isMisc,
+          isTreasure: args.isTreasure,
+          isWriting: args.isWriting
         });
         return item.save();
       }
