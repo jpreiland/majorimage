@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { _MATERIAL } from '../ObjectConstants';
 
 class MaterialDescriptor extends Component {
   
@@ -11,7 +12,7 @@ class MaterialDescriptor extends Component {
   }
 
   handleReroll = () => {
-    this.props.onReroll(2); 
+    this.props.onReroll(_MATERIAL); 
   }
 
   render() {

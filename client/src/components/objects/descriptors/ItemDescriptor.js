@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { _TYPE } from '../ObjectConstants';
 
 class ItemDescriptor extends Component {
   handleReroll = () => {
-        this.props.onReroll(3);
+        this.props.onReroll(_TYPE);
   }
 
   render() {

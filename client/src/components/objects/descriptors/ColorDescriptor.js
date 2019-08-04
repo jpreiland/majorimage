@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { _COLOR } from '../ObjectConstants';
 
 class ColorDescriptor extends Component {
   
@@ -11,7 +12,7 @@ class ColorDescriptor extends Component {
   }
 
   handleReroll = () => {
-    this.props.onReroll(1); 
+    this.props.onReroll(_COLOR); 
   }
 
   render() {

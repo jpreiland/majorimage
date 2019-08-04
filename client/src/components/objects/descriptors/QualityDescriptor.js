@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { _QUALITY } from '../ObjectConstants';
 
 class QualityDescriptor extends Component {
   
@@ -11,7 +12,7 @@ class QualityDescriptor extends Component {
   }
 
   handleReroll = () => {
-    this.props.onReroll(0); 
+    this.props.onReroll(_QUALITY); 
   }
 
   render() {
