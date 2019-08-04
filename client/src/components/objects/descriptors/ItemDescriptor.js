@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class ItemDescriptor extends Component {
   handleReroll = () => {
-        this.props.onReroll(4); 
+        this.props.onReroll(3);
   }
 
   render() {

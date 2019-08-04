@@ -8,12 +8,6 @@ class Filters extends Component {
       <React.Fragment>
       <div className="filter-bar">
         <div className="filter">
-          <button id="age-list" className="btn-filter age">
-          Age
-          </button>
-        </div>
-
-        <div className="filter">
           <button id="color-list" className="btn-filter color">
           Color
           </button>

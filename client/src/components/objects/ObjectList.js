@@ -13,11 +13,11 @@ class ObjectList extends Component {
     super(props);
     this.state = {
       descriptors: [
-        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
-        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
-        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
-        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces],
-        [blankspaces, blankspaces, blankspaces, blankspaces, blankspaces]
+        [blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, blankspaces, blankspaces, blankspaces]
       ]
     };
   }
@@ -32,7 +32,6 @@ class ObjectList extends Component {
         this.rerollAll(Constants.LINE_TWO);
         this.rerollAll(Constants.LINE_THREE);
         this.rerollAll(Constants.LINE_FOUR);
-        this.rerollAll(Constants.LINE_FIVE);
       }.bind(this),
       250
     );
@@ -40,20 +39,23 @@ class ObjectList extends Component {
 
   getRandomDescriptor(descriptor) {
     var data = this.props.data;
-    data.ages = ["new", "old", "ancient"];
-    data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit"];
-    data.colors = ["grey", "green", "black", "white", "red", "blue", "gold", "silver", "brown"];
-    data.materials = ["iron", "wooden", "glass", "ivory", "obsidian"];
+
+    data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit", "immaculate", "exquisite", "shoddy",
+                      "new", "old", "ancient", "artisinal"];
+
+    data.colors = [ "grey", "green", "black", "white", "red", "blue", "gold", "silver", "blood red",
+                    "brown", "yellow", "teal", "purple", "orange", "crimson", "olive", "amber",
+                    "dark grey", "pink", "bronze", "dark green", "dark red", "dark blue", "indigo", "violet",
+                    "light grey", "light green", "light red", "light blue", "light yellow", "tan"];
+
+    data.materials = ["iron", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "steel", "clay",
+                      "porcelain", "marble", "wax"];
     if(data.loading) {
       // default name for an item's type is "object"
       return( blankspaces );
     } else {
       var random_index;
       switch(descriptor) {
-        case Constants._AGE:
-          var total_ages = data.ages.length;
-          random_index = Math.floor(Math.random() * total_ages);
-          return data.ages[random_index];
         case Constants._QUALITY:
           var total_qualities = data.qualities.length;
           random_index = Math.floor(Math.random() * total_qualities);
@@ -82,14 +84,14 @@ class ObjectList extends Component {
 
   reroll(line, descriptor) {
     var descriptors = this.state.descriptors;
-    descriptors[line][descriptor] = this.getRandomDescriptor(descriptor);
+    descriptors[line][descriptor] = this.getRandomDescriptor(descriptor); // TODO why does this need -1
     this.setState({descriptors: descriptors});
   }
 
   // TODO
   rerollAll(line) {
     var descriptors = this.state.descriptors;
-    for (const descriptor of Array(5).keys()) {
+    for (const descriptor of Array(4).keys()) {
       descriptors[line][descriptor] = this.getRandomDescriptor(descriptor);
     }
     this.setState({descriptors: descriptors});
@@ -116,11 +118,6 @@ class ObjectList extends Component {
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FOUR]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_FOUR)} 
                   onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} 
-                  activeFilters={this.props.activeFilters} />
-
-      <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FIVE]} 
-                  onReroll={this.handleReroll.bind(this, Constants.LINE_FIVE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FIVE)} 
                   activeFilters={this.props.activeFilters} />
       </React.Fragment>
     );

@@ -9,7 +9,6 @@ class ObjectsLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Age: {active: false},
       Color: {active: true},
       Quality: {active: true},
       Material: {active: false},

@@ -11,7 +11,7 @@ class ColorDescriptor extends Component {
   }
 
   handleReroll = () => {
-    this.props.onReroll(2); 
+    this.props.onReroll(1); 
   }
 
   render() {

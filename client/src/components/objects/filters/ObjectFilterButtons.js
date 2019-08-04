@@ -18,7 +18,6 @@ class ObjectFilterButtons extends Component {
   render() {
     return (
       <div className="filter-bar">
-        <ObjectFilterButton name="Age" active={this.state.Age.active} toggle={this.toggle.bind(this, "Age")} />
         <ObjectFilterButton name="Color" active={this.state.Color.active} toggle={this.toggle.bind(this, "Color")} />
         <ObjectFilterButton name="Quality" active={this.state.Quality.active} toggle={this.toggle.bind(this, "Quality")} />
         <ObjectFilterButton name="Material" active={this.state.Material.active} toggle={this.toggle.bind(this, "Material")} />

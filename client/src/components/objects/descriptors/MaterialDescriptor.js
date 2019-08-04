@@ -11,7 +11,7 @@ class MaterialDescriptor extends Component {
   }
 
   handleReroll = () => {
-    this.props.onReroll(3); 
+    this.props.onReroll(2); 
   }
 
   render() {
