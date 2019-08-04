@@ -34,12 +34,63 @@ const RootQuery = new GraphQLObjectType({
   fields: {
     item: {
       type: ItemType,
-      args: {id: { type: GraphQLID }},
+      args: {
+          id: { type: GraphQLID },
+          isClothing: { type: GraphQLBoolean }
+      },
       resolve(parent, args) {
         // code to get data from db/other source
-        return Item.findById(args.id);
+        return Item.find({isClothing: args.isClothing});
       }
-    },    
+    },
+    itemsAnd: {
+      type: GraphQLList(ItemType),
+      args: {
+          isArmor: { type: GraphQLBoolean },
+          isClothing: { type: GraphQLBoolean },
+          isContainer: { type: GraphQLBoolean },
+          isFurniture: { type: GraphQLBoolean },
+          isMisc: { type: GraphQLBoolean },
+          isTreasure: { type: GraphQLBoolean },
+          isWriting: { type: GraphQLBoolean }
+      },
+      resolve(parent, args) {
+        // code to get data from db/other source
+        let params = {};
+        for (var key in args) {
+          if (args.hasOwnProperty(key)) {
+              params[key] = args[key];
+          }
+        }
+
+        return Item.find(params);
+      }
+    },
+    itemsOr: {
+      type: GraphQLList(ItemType),
+      args: {
+          isArmor: { type: GraphQLBoolean },
+          isClothing: { type: GraphQLBoolean },
+          isContainer: { type: GraphQLBoolean },
+          isFurniture: { type: GraphQLBoolean },
+          isMisc: { type: GraphQLBoolean },
+          isTreasure: { type: GraphQLBoolean },
+          isWriting: { type: GraphQLBoolean }
+      },
+      resolve(parent, args) {
+        // code to get data from db/other source
+        let params = { $or: [] };
+        for (var key in args) {
+          if (args.hasOwnProperty(key)) {
+            let param = {};
+            param[key] = args[key];
+            params.$or.push(param);
+          }
+        }
+
+        return Item.find(params);
+      }
+    }, 
     items: {
       type: GraphQLList(ItemType),
       resolve(parent, args) {
