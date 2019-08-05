@@ -12,7 +12,14 @@ class ObjectsLink extends Component {
       Color: {active: true},
       Quality: {active: true},
       Material: {active: false},
-      Size: {active: false}
+      Size: {active: false},
+      isArmor: true,
+      isClothing: true,
+      isContainer: true,
+      isFurniture: true,
+      isMisc: true,
+      isTreasure: true,
+      isWriting: true
     };
   }
 

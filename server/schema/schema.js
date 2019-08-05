@@ -63,7 +63,7 @@ const RootQuery = new GraphQLObjectType({
         return Item.find(params);
       }
     },
-    itemsOr: {
+    items: {
       type: GraphQLList(ItemType),
       args: {
           isArmor: { type: GraphQLBoolean },
@@ -78,19 +78,15 @@ const RootQuery = new GraphQLObjectType({
         let params = { $or: [] };
         for (var key in args) {
           if (args.hasOwnProperty(key)) {
-            let param = {};
-            param[key] = args[key];
-            params.$or.push(param);
+            if(args[key]) {
+              let param = {};
+              param[key] = args[key];
+              params.$or.push(param);
+            }
           }
         }
 
         return Item.find(params);
-      }
-    }, 
-    items: {
-      type: GraphQLList(ItemType),
-      resolve(parent, args) {
-        return Item.find({});
       }
     }
   }

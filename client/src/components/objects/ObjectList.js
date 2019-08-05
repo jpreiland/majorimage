@@ -13,7 +13,7 @@ class ObjectList extends Component {
     super(props);
     this.state = {
       descriptors: [
-        [blankspaces, blankspaces, blankspaces, blankspaces],
+        [blankspaces, "(loading)", blankspaces, blankspaces],
         [blankspaces, blankspaces, blankspaces, blankspaces],
         [blankspaces, blankspaces, blankspaces, blankspaces],
         [blankspaces, blankspaces, blankspaces, blankspaces],
@@ -125,4 +125,19 @@ class ObjectList extends Component {
   }
 }
 
-export default graphql(getItemsQuery)(ObjectList);
+export default graphql(
+  getItemsQuery, 
+  {
+    options: (props) => ({
+      variables: {
+        isArmor: props.activeFilters.isArmor,
+        isClothing: props.activeFilters.isClothing,
+        isContainer: props.activeFilters.isContainer,
+        isFurniture: props.activeFilters.isFurniture,
+        isMisc: props.activeFilters.isMisc,
+        isTreasure: props.activeFilters.isTreasure,
+        isWriting: props.activeFilters.isWriting
+      },
+    }),
+  }
+  )(ObjectList);
