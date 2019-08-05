@@ -41,7 +41,8 @@ class ObjectList extends Component {
     var data = this.props.data;
 
     data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit", "immaculate", "exquisite", "shoddy",
-                      "new", "old", "ancient", "artisinal"];
+                      "new", "old", "ancient", "artisinal", "fine", "peculiar", "uneven", "ornate", "elegant", "magnificent",
+                      "well-made", "cracked", "dilapidated", "battered", "deteriorated", "worn out", "ruined", ];
 
     data.colors = [ "grey", "green", "black", "white", "red", "blue", "gold", "silver", "blood red",
                     "brown", "yellow", "teal", "purple", "orange", "crimson", "olive", "amber",
@@ -49,7 +50,7 @@ class ObjectList extends Component {
                     "light grey", "light green", "light red", "light blue", "light yellow", "tan"];
 
     data.materials = ["iron", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "steel", "clay",
-                      "porcelain", "marble", "wax"];
+                      "porcelain", "marble", "wax", "bone"];
     if(data.loading) {
       // default name for an item's type is "object"
       return( blankspaces );
@@ -84,7 +85,7 @@ class ObjectList extends Component {
 
   reroll(line, descriptor) {
     var descriptors = this.state.descriptors;
-    descriptors[line][descriptor] = this.getRandomDescriptor(descriptor); // TODO why does this need -1
+    descriptors[line][descriptor] = this.getRandomDescriptor(descriptor);
     this.setState({descriptors: descriptors});
   }
 

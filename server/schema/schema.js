@@ -35,12 +35,10 @@ const RootQuery = new GraphQLObjectType({
     item: {
       type: ItemType,
       args: {
-          id: { type: GraphQLID },
-          isClothing: { type: GraphQLBoolean }
+          id: { type: GraphQLID }
       },
       resolve(parent, args) {
-        // code to get data from db/other source
-        return Item.find({isClothing: args.isClothing});
+        return Item.findById(args.id);
       }
     },
     itemsAnd: {
@@ -55,7 +53,6 @@ const RootQuery = new GraphQLObjectType({
           isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
-        // code to get data from db/other source
         let params = {};
         for (var key in args) {
           if (args.hasOwnProperty(key)) {
@@ -78,7 +75,6 @@ const RootQuery = new GraphQLObjectType({
           isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
-        // code to get data from db/other source
         let params = { $or: [] };
         for (var key in args) {
           if (args.hasOwnProperty(key)) {
@@ -94,7 +90,6 @@ const RootQuery = new GraphQLObjectType({
     items: {
       type: GraphQLList(ItemType),
       resolve(parent, args) {
-        // code to get data from db/other source
         return Item.find({});
       }
     }
@@ -108,24 +103,24 @@ const Mutation = new GraphQLObjectType({
       type: ItemType,
       args: {
         name: { type: new GraphQLNonNull(GraphQLString) },
-        isArmor: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isClothing: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isContainer: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isFurniture: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isMisc: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isTreasure: { type: new GraphQLNonNull(GraphQLBoolean) },
-        isWriting: { type: new GraphQLNonNull(GraphQLBoolean) }
+        isArmor: { type: GraphQLBoolean },
+        isClothing: { type: GraphQLBoolean },
+        isContainer: { type: GraphQLBoolean },
+        isFurniture: { type: GraphQLBoolean },
+        isMisc: { type: GraphQLBoolean },
+        isTreasure: { type: GraphQLBoolean },
+        isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
         let item = new Item({
           name: args.name,
-          isArmor: args.isArmor,
-          isClothing: args.isClothing,
-          isContainer: args.isContainer,
-          isFurniture: args.isFurniture,
-          isMisc: args.isMisc,
-          isTreasure: args.isTreasure,
-          isWriting: args.isWriting
+          isArmor: args.isArmor ? args.isArmor : false,
+          isClothing: args.isClothing ? args.isClothing : false,
+          isContainer: args.isContainer ? args.isContainer : false,
+          isFurniture: args.isFurniture ? args.isFurniture : false,
+          isMisc: args.isMisc ? args.isMisc : false,
+          isTreasure: args.isTreasure ? args.isTreasure : false,
+          isWriting: args.isWriting ? args.isWriting : false
         });
         return item.save();
       }
