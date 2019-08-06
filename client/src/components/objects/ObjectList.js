@@ -42,7 +42,9 @@ class ObjectList extends Component {
 
     data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit", "immaculate", "exquisite", "shoddy",
                       "new", "old", "ancient", "artisinal", "fine", "peculiar", "uneven", "ornate", "elegant", "magnificent",
-                      "well-made", "cracked", "dilapidated", "battered", "deteriorated", "worn out", "ruined", ];
+                      "well-made", "cracked", "dilapidated", "battered", "deteriorated", "worn-out", "ruined", "gaudy",
+                      "rugged", "damp", "polished", "spotless", "antique", "old-fashioned", "primitive", "aged",
+                      "flawless"];
 
     data.colors = [ "grey", "green", "black", "white", "red", "blue", "gold", "silver", "blood red",
                     "brown", "yellow", "teal", "purple", "orange", "crimson", "olive", "amber",
@@ -136,6 +138,7 @@ export default graphql(
         isFurniture: props.activeFilters.isFurniture,
         isMisc: props.activeFilters.isMisc,
         isTreasure: props.activeFilters.isTreasure,
+        isWeapon: props.activeFilters.isWeapon,
         isWriting: props.activeFilters.isWriting
       },
     }),

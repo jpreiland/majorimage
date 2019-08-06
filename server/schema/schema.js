@@ -25,6 +25,7 @@ const ItemType = new GraphQLObjectType({
     isFurniture: { type: GraphQLBoolean },
     isMisc: { type: GraphQLBoolean },
     isTreasure: { type: GraphQLBoolean },
+    isWeapon: { type: GraphQLBoolean },
     isWriting: { type: GraphQLBoolean }
   })
 });
@@ -50,6 +51,7 @@ const RootQuery = new GraphQLObjectType({
           isFurniture: { type: GraphQLBoolean },
           isMisc: { type: GraphQLBoolean },
           isTreasure: { type: GraphQLBoolean },
+          isWeapon: { type: GraphQLBoolean },
           isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
@@ -72,6 +74,7 @@ const RootQuery = new GraphQLObjectType({
           isFurniture: { type: GraphQLBoolean },
           isMisc: { type: GraphQLBoolean },
           isTreasure: { type: GraphQLBoolean },
+          isWeapon: { type: GraphQLBoolean },
           isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
@@ -105,6 +108,7 @@ const Mutation = new GraphQLObjectType({
         isFurniture: { type: GraphQLBoolean },
         isMisc: { type: GraphQLBoolean },
         isTreasure: { type: GraphQLBoolean },
+        isWeapon: { type: GraphQLBoolean },
         isWriting: { type: GraphQLBoolean }
       },
       resolve(parent, args) {
@@ -116,6 +120,7 @@ const Mutation = new GraphQLObjectType({
           isFurniture: args.isFurniture ? args.isFurniture : false,
           isMisc: args.isMisc ? args.isMisc : false,
           isTreasure: args.isTreasure ? args.isTreasure : false,
+          isWeapon: args.isWeapon ? args.isWeapon : false,
           isWriting: args.isWriting ? args.isWriting : false
         });
         return item.save();

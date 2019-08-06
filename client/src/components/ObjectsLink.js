@@ -19,6 +19,7 @@ class ObjectsLink extends Component {
       isFurniture: true,
       isMisc: true,
       isTreasure: true,
+      isWeapon: true,
       isWriting: true
     };
   }

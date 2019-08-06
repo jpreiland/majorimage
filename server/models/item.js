@@ -9,6 +9,7 @@ const itemSchema = new Schema({
   isFurniture: Boolean,
   isMisc: Boolean,
   isTreasure: Boolean,
+  isWeapon: Boolean,
   isWriting: Boolean
 })
 

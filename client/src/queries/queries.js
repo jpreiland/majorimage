@@ -7,7 +7,8 @@ const getItemsQuery = gql`
       $isContainer: Boolean,
       $isFurniture: Boolean,
       $isMisc: Boolean,
-      $isTreasure: Boolean
+      $isTreasure: Boolean,
+      $isWeapon: Boolean,
       $isWriting: Boolean
       ) {
     items(
@@ -16,7 +17,8 @@ const getItemsQuery = gql`
       isContainer: $isContainer,
       isFurniture: $isFurniture,
       isMisc: $isMisc,
-      isTreasure: $isTreasure
+      isTreasure: $isTreasure,
+      isWeapon: $isWeapon,
       isWriting: $isWriting
     ) {
       name

@@ -11,7 +11,8 @@ class ObjectFilterBar extends Component {
       ANY: {name: "ANY", active: true},
       FURNITURE: {name: "FURNITURE", active: false},
       CLOTHING: {name: "CLOTHING", active: false},
-      ARMS_ARMOR: {name: "ARMS/ARMOR", active: false},
+      WEAPONS: {name: "WEAPONS", active: false},
+      ARMOR: {name: "ARMOR", active: false},
       CONTAINERS: {name: "CONTAINERS", active: false},
       WRITING: {name: "WRITING", active: false},
       TREASURE: {name: "TREASURE", active: false},
@@ -39,8 +40,10 @@ class ObjectFilterBar extends Component {
                             toggle={this.toggle.bind(this, this.state.FURNITURE.name)}/>
         <ObjectFilterBarOpt name={this.state.CLOTHING.name} active={this.state.CLOTHING.active}  
                             toggle={this.toggle.bind(this, this.state.CLOTHING.name)}/>
-        <ObjectFilterBarOpt name={this.state.ARMS_ARMOR.name} active={this.state.ARMS_ARMOR.active}  
-                            toggle={this.toggle.bind(this, this.state.ARMS_ARMOR.name)}/>
+        <ObjectFilterBarOpt name={this.state.WEAPONS.name} active={this.state.WEAPONS.active}  
+                            toggle={this.toggle.bind(this, this.state.WEAPONS.name)}/>
+        <ObjectFilterBarOpt name={this.state.ARMOR.name} active={this.state.ARMOR.active}  
+                            toggle={this.toggle.bind(this, this.state.ARMOR.name)}/>
         <ObjectFilterBarOpt name={this.state.CONTAINERS.name} active={this.state.CONTAINERS.active}  
                             toggle={this.toggle.bind(this, this.state.CONTAINERS.name)}/>
         <ObjectFilterBarOpt name={this.state.WRITING.name} active={this.state.WRITING.active}  
