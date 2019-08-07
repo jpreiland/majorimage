@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { graphql } from 'react-apollo';
-import { getItemsQuery } from '../../queries/queries';
+import { compose, graphql, withApollo } from 'react-apollo';
+import { getDataQuery } from '../../queries/queries';
 import * as Constants from './ObjectConstants';
 
 // components
@@ -26,6 +26,15 @@ class ObjectList extends Component {
   // because the query results aren't ready immediately. 
   // Find a correct solution.
   componentDidMount() {
+    let colors = [ "grey", "green", "black", "white", "red", "blue", "gold", "silver", "blood red",
+                    "brown", "yellow", "teal", "purple", "orange", "crimson", "olive", "amber",
+                    "dark grey", "pink", "bronze", "dark green", "dark red", "dark blue", "indigo", "violet",
+                    "light grey", "light green", "light red", "light blue", "light yellow", "tan"];
+
+    let materials = ["iron", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "steel", "clay",
+                      "porcelain", "marble", "wax", "bone"];
+    this.setState({ colors: colors, materials: materials });
+
     setTimeout(
       function() {
         this.rerollAll(Constants.LINE_ONE);
@@ -39,22 +48,8 @@ class ObjectList extends Component {
 
   getRandomDescriptor(descriptor) {
     var data = this.props.data;
-
-    data.qualities = ["dusty", "broken", "pristine", "unfinished", "decrepit", "immaculate", "exquisite", "shoddy",
-                      "new", "old", "ancient", "artisinal", "fine", "peculiar", "uneven", "ornate", "elegant", "magnificent",
-                      "well-made", "cracked", "dilapidated", "battered", "deteriorated", "worn-out", "ruined", "gaudy",
-                      "rugged", "damp", "polished", "spotless", "antique", "old-fashioned", "primitive", "aged",
-                      "flawless"];
-
-    data.colors = [ "grey", "green", "black", "white", "red", "blue", "gold", "silver", "blood red",
-                    "brown", "yellow", "teal", "purple", "orange", "crimson", "olive", "amber",
-                    "dark grey", "pink", "bronze", "dark green", "dark red", "dark blue", "indigo", "violet",
-                    "light grey", "light green", "light red", "light blue", "light yellow", "tan"];
-
-    data.materials = ["iron", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "steel", "clay",
-                      "porcelain", "marble", "wax", "bone"];
+    
     if(data.loading) {
-      // default name for an item's type is "object"
       return( blankspaces );
     } else {
       var random_index;
@@ -62,15 +57,15 @@ class ObjectList extends Component {
         case Constants._QUALITY:
           var total_qualities = data.qualities.length;
           random_index = Math.floor(Math.random() * total_qualities);
-          return data.qualities[random_index];
+          return data.qualities[random_index].name;
         case Constants._COLOR:
-          var total_colors = data.colors.length;
+          var total_colors = this.state.colors.length;
           random_index = Math.floor(Math.random() * total_colors);
-          return data.colors[random_index];
+          return this.state.colors[random_index];
         case Constants._MATERIAL:
-          var total_materials = data.materials.length;
+          var total_materials = this.state.materials.length;
           random_index = Math.floor(Math.random() * total_materials);
-          return data.materials[random_index];
+          return this.state.materials[random_index];
         case Constants._TYPE:
           var total_items = data.items.length;
           random_index = Math.floor(Math.random() * total_items);
@@ -91,7 +86,6 @@ class ObjectList extends Component {
     this.setState({descriptors: descriptors});
   }
 
-  // TODO
   rerollAll(line) {
     var descriptors = this.state.descriptors;
     for (const descriptor of Array(4).keys()) {
@@ -127,20 +121,23 @@ class ObjectList extends Component {
   }
 }
 
-export default graphql(
-  getItemsQuery, 
-  {
-    options: (props) => ({
-      variables: {
-        isArmor: props.activeFilters.isArmor,
-        isClothing: props.activeFilters.isClothing,
-        isContainer: props.activeFilters.isContainer,
-        isFurniture: props.activeFilters.isFurniture,
-        isMisc: props.activeFilters.isMisc,
-        isTreasure: props.activeFilters.isTreasure,
-        isWeapon: props.activeFilters.isWeapon,
-        isWriting: props.activeFilters.isWriting
-      },
-    }),
-  }
-  )(ObjectList);
+export default compose(
+  withApollo,
+  graphql(
+    getDataQuery, 
+    {
+      options: (props) => ({
+        variables: {
+          isArmor: props.activeFilters.isArmor,
+          isClothing: props.activeFilters.isClothing,
+          isContainer: props.activeFilters.isContainer,
+          isFurniture: props.activeFilters.isFurniture,
+          isMisc: props.activeFilters.isMisc,
+          isTreasure: props.activeFilters.isTreasure,
+          isWeapon: props.activeFilters.isWeapon,
+          isWriting: props.activeFilters.isWriting
+        },
+      })
+    }
+  )
+)(ObjectList);

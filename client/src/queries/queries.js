@@ -1,6 +1,6 @@
 import { gql } from 'apollo-boost';
 
-const getItemsQuery = gql`
+const getDataQuery = gql`
   query Items(
       $isArmor: Boolean,
       $isClothing: Boolean,
@@ -23,7 +23,19 @@ const getItemsQuery = gql`
     ) {
       name
     }
+    qualities(
+      isArmor: $isArmor,
+      isClothing: $isClothing,
+      isContainer: $isContainer,
+      isFurniture: $isFurniture,
+      isMisc: $isMisc,
+      isTreasure: $isTreasure,
+      isWeapon: $isWeapon,
+      isWriting: $isWriting
+    ) {
+      name
+    }
   }
 `
 
-export { getItemsQuery };
+export { getDataQuery };
