@@ -35,6 +35,18 @@ const getDataQuery = gql`
     ) {
       name
     }
+    colors(
+      isArmor: $isArmor,
+      isClothing: $isClothing,
+      isContainer: $isContainer,
+      isFurniture: $isFurniture,
+      isMisc: $isMisc,
+      isTreasure: $isTreasure,
+      isWeapon: $isWeapon,
+      isWriting: $isWriting
+    ) {
+      name
+    }
   }
 `
 
