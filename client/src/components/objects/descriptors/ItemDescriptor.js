@@ -8,7 +8,7 @@ class ItemDescriptor extends Component {
 
   render() {
     return (
-      <span key="4" className="descriptor item-desc" onClick={this.handleReroll}>
+      <span key="4" className="descriptor item-desc noselect" onClick={this.handleReroll}>
         {this.props.itemName}
       </span>
     );

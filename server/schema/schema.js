@@ -154,7 +154,7 @@ const RootQuery = new GraphQLObjectType({
       }
     },
     colors: {
-      type: GraphQLList(QualityType),
+      type: GraphQLList(ColorType),
       args: {
           isArmor: { type: GraphQLBoolean },
           isClothing: { type: GraphQLBoolean },

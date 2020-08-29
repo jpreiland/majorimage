@@ -6,8 +6,8 @@ class MaterialDescriptor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classNamesActive: "descriptor material-desc",
-      classNamesInactive: "descriptor material-desc descriptor-hidden"
+      classNamesActive: "descriptor material-desc noselect",
+      classNamesInactive: "descriptor material-desc noselect descriptor-hidden"
     };
   }
 

@@ -6,8 +6,8 @@ class ColorDescriptor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classNamesActive: "descriptor color-desc",
-      classNamesInactive: "descriptor color-desc descriptor-hidden"
+      classNamesActive: "descriptor color-desc noselect",
+      classNamesInactive: "descriptor color-desc noselect descriptor-hidden"
     };
   }
 

@@ -6,8 +6,8 @@ class QualityDescriptor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      classNamesActive: "descriptor quality-desc",
-      classNamesInactive: "descriptor quality-desc descriptor-hidden"
+      classNamesActive: "descriptor quality-desc noselect",
+      classNamesInactive: "descriptor quality-desc noselect descriptor-hidden"
     };
   }
 
