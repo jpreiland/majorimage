@@ -26,7 +26,7 @@ class ObjectList extends Component {
   // because the query results aren't ready immediately. 
   // Find a correct solution.
   componentDidMount() {
-    let materials = ["iron", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "steel", "clay",
+    let materials = ["metal", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "clay",
                       "porcelain", "marble", "wax", "bone"];
     this.setState({ materials: materials });
 
