@@ -110,6 +110,25 @@ span:hover {
   -webkit-transition: background-color 0.2s;
 }
 
+.btn-first-roll {
+  background: #99ee99; 
+  border: 1px solid black;
+  color: #222;
+  display: inline-block;
+  width: 150px;
+  line-height: 26px;
+  padding: 0 15px;
+  position: relative;
+  margin: 7px 10px 10px 5px;
+  text-align:  center;
+  text-decoration: none;
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  -webkit-transition: background-color 0.2s;
+}
+
 .btn-reroll:active {
   -webkit-transition: background-color 0s;
   background-color: #ccc;
