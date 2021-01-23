@@ -2,6 +2,7 @@ const graphql = require('graphql');
 const Item = require('../models/item');
 const Quality = require('../models/quality');
 const Color = require('../models/color');
+const Material = require('../models/material');
 
 const 
 { 
@@ -50,6 +51,22 @@ const QualityType = new GraphQLObjectType({
 
 const ColorType = new GraphQLObjectType({
   name: 'Color',
+  fields: () => ({
+    id: { type: GraphQLID },
+    name: { type: GraphQLString },
+    isArmor: { type: GraphQLBoolean },
+    isClothing: { type: GraphQLBoolean },
+    isContainer: { type: GraphQLBoolean },
+    isFurniture: { type: GraphQLBoolean },
+    isMisc: { type: GraphQLBoolean },
+    isTreasure: { type: GraphQLBoolean },
+    isWeapon: { type: GraphQLBoolean },
+    isWriting: { type: GraphQLBoolean }
+  })
+});
+
+const MaterialType = new GraphQLObjectType({
+  name: 'Material',
   fields: () => ({
     id: { type: GraphQLID },
     name: { type: GraphQLString },
@@ -179,6 +196,33 @@ const RootQuery = new GraphQLObjectType({
 
         return Color.find(params);
       }
+    },
+    materials: {
+      type: GraphQLList(MaterialType),
+      args: {
+          isArmor: { type: GraphQLBoolean },
+          isClothing: { type: GraphQLBoolean },
+          isContainer: { type: GraphQLBoolean },
+          isFurniture: { type: GraphQLBoolean },
+          isMisc: { type: GraphQLBoolean },
+          isTreasure: { type: GraphQLBoolean },
+          isWeapon: { type: GraphQLBoolean },
+          isWriting: { type: GraphQLBoolean }
+      },
+      resolve(parent, args) {
+        let params = { $or: [] };
+        for (var key in args) {
+          if (args.hasOwnProperty(key)) {
+            if(args[key]) {
+              let param = {};
+              param[key] = args[key];
+              params.$or.push(param);
+            }
+          }
+        }
+
+        return Material.find(params);
+      }
     }
   }
 });
@@ -268,6 +312,34 @@ const Mutation = new GraphQLObjectType({
           isWriting: args.isWriting ? args.isWriting : false
         });
         return color.save();
+      }
+    },
+    addMaterial: {
+      type: MaterialType,
+      args: {
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        isArmor: { type: GraphQLBoolean },
+        isClothing: { type: GraphQLBoolean },
+        isContainer: { type: GraphQLBoolean },
+        isFurniture: { type: GraphQLBoolean },
+        isMisc: { type: GraphQLBoolean },
+        isTreasure: { type: GraphQLBoolean },
+        isWeapon: { type: GraphQLBoolean },
+        isWriting: { type: GraphQLBoolean }
+      },
+      resolve(parent, args) {
+        let material = new Material({
+          name: args.name,
+          isArmor: args.isArmor ? args.isArmor : false,
+          isClothing: args.isClothing ? args.isClothing : false,
+          isContainer: args.isContainer ? args.isContainer : false,
+          isFurniture: args.isFurniture ? args.isFurniture : false,
+          isMisc: args.isMisc ? args.isMisc : false,
+          isTreasure: args.isTreasure ? args.isTreasure : false,
+          isWeapon: args.isWeapon ? args.isWeapon : false,
+          isWriting: args.isWriting ? args.isWriting : false
+        });
+        return material.save();
       }
     }
   }

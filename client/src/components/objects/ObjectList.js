@@ -26,10 +26,6 @@ class ObjectList extends Component {
   // because the query results aren't ready immediately. 
   // Find a correct solution.
   componentDidMount() {
-    let materials = ["metal", "wooden", "glass", "ivory", "obsidian", "jade", "wicker", "icy", "clay",
-                      "porcelain", "marble", "wax", "bone"];
-    this.setState({ materials: materials });
-
     setTimeout(
       function() {
         this.rerollAll(Constants.LINE_ONE);
@@ -58,9 +54,9 @@ class ObjectList extends Component {
           random_index = Math.floor(Math.random() * total_colors);
           return data.colors[random_index].name;
         case Constants._MATERIAL:
-          var total_materials = this.state.materials.length;
+          var total_materials = data.materials.length;
           random_index = Math.floor(Math.random() * total_materials);
-          return this.state.materials[random_index];
+          return data.materials[random_index].name;
         case Constants._TYPE:
           var total_items = data.items.length;
           random_index = Math.floor(Math.random() * total_items);

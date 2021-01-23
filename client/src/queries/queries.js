@@ -47,6 +47,18 @@ const getDataQuery = gql`
     ) {
       name
     }
+    materials(
+      isArmor: $isArmor,
+      isClothing: $isClothing,
+      isContainer: $isContainer,
+      isFurniture: $isFurniture,
+      isMisc: $isMisc,
+      isTreasure: $isTreasure,
+      isWeapon: $isWeapon,
+      isWriting: $isWriting
+    ) {
+      name
+    }
   }
 `
 
