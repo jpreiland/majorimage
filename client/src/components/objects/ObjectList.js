@@ -81,7 +81,7 @@ class ObjectList extends Component {
   }
 
   render() {
-    const rollBtn = <center><RollButton onFirstRoll={this.handleFirstRoll.bind(this, 1)}/></center>
+    const rollBtn = <center><RollButton onFirstRoll={this.handleFirstRoll.bind(this)}/></center>
     const lines = 
       <React.Fragment>
         <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_ONE]} 
