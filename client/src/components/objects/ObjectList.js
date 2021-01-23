@@ -28,10 +28,10 @@ class ObjectList extends Component {
   componentDidMount() {
     setTimeout(
       function() {
-        this.rerollAll(Constants.LINE_ONE);
-        this.rerollAll(Constants.LINE_TWO);
-        this.rerollAll(Constants.LINE_THREE);
-        this.rerollAll(Constants.LINE_FOUR);
+        this.rerollLine(Constants.LINE_ONE);
+        this.rerollLine(Constants.LINE_TWO);
+        this.rerollLine(Constants.LINE_THREE);
+        this.rerollLine(Constants.LINE_FOUR);
       }.bind(this),
       250
     );
@@ -77,7 +77,7 @@ class ObjectList extends Component {
     this.setState({descriptors: descriptors});
   }
 
-  rerollAll(line) {
+  rerollLine(line) {
     var descriptors = this.state.descriptors;
     for (const descriptor of Array(4).keys()) {
       descriptors[line][descriptor] = this.getRandomDescriptor(descriptor);
@@ -90,22 +90,22 @@ class ObjectList extends Component {
       <React.Fragment>
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_ONE]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_ONE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_ONE)}
+                  onRerollLine={this.rerollLine.bind(this, Constants.LINE_ONE)}
                   activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_TWO]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_TWO)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_TWO)}
+                  onRerollLine={this.rerollLine.bind(this, Constants.LINE_TWO)}
                   activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_THREE]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_THREE)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_THREE)} 
+                  onRerollLine={this.rerollLine.bind(this, Constants.LINE_THREE)} 
                   activeFilters={this.props.activeFilters} />
 
       <ObjectLine lineDescriptors={this.state.descriptors[Constants.LINE_FOUR]} 
                   onReroll={this.handleReroll.bind(this, Constants.LINE_FOUR)} 
-                  onRerollAll={this.rerollAll.bind(this, Constants.LINE_FOUR)} 
+                  onRerollLine={this.rerollLine.bind(this, Constants.LINE_FOUR)} 
                   activeFilters={this.props.activeFilters} />
       </React.Fragment>
     );

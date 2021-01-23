@@ -25,7 +25,7 @@ class ObjectLine extends Component {
   render() {
     return (
       <div>
-        <button className="btn-reroll" onClick={this.props.onRerollAll}>Reroll</button>
+        <button className="btn-reroll" onClick={this.props.onRerollLine}>Reroll</button>
         {'\u00A0'}A(n){'\u00A0'}
         <QualityDescriptor itemName={this.props.lineDescriptors[_QUALITY]} 
                              active={this.props.activeFilters.Quality.active} 
