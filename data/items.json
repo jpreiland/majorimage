@@ -6,7 +6,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -17,7 +17,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -28,7 +28,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -39,7 +39,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -50,7 +50,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -61,7 +61,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -72,7 +72,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -83,7 +83,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -94,7 +94,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -105,7 +105,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -116,7 +116,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -127,7 +127,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -138,7 +138,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -149,7 +149,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -160,7 +160,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -171,7 +171,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -182,7 +182,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -193,7 +193,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -204,7 +204,7 @@
   "isFurniture": true,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -215,7 +215,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -226,7 +226,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -237,7 +237,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -248,7 +248,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -259,7 +259,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -270,7 +270,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -281,7 +281,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -292,7 +292,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -303,7 +303,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -314,7 +314,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -325,7 +325,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -336,7 +336,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -347,7 +347,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -358,7 +358,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -369,7 +369,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -380,7 +380,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -391,7 +391,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -402,7 +402,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -413,7 +413,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -424,7 +424,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -435,7 +435,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -446,7 +446,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -457,7 +457,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -468,7 +468,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -479,7 +479,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -490,7 +490,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -501,7 +501,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -512,7 +512,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -523,7 +523,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -534,7 +534,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -545,7 +545,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -556,7 +556,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -567,7 +567,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -578,7 +578,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -589,7 +589,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -600,7 +600,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -611,7 +611,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -622,7 +622,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -633,7 +633,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -644,7 +644,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -655,7 +655,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -666,7 +666,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -677,7 +677,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -688,7 +688,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -699,7 +699,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -710,7 +710,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -721,7 +721,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -732,7 +732,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -743,7 +743,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -754,7 +754,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -765,7 +765,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -776,7 +776,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -787,7 +787,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -798,7 +798,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -809,7 +809,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -820,7 +820,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -831,7 +831,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -842,7 +842,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -853,7 +853,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -864,7 +864,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -875,7 +875,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -886,7 +886,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -897,7 +897,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -908,7 +908,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -919,7 +919,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -930,7 +930,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -941,7 +941,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -952,7 +952,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -963,7 +963,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -974,7 +974,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -985,7 +985,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -996,7 +996,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1007,7 +1007,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1018,7 +1018,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1029,7 +1029,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1040,7 +1040,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1051,7 +1051,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1062,7 +1062,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1073,7 +1073,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1084,7 +1084,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1095,7 +1095,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1106,7 +1106,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1117,7 +1117,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1128,7 +1128,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1139,7 +1139,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1150,7 +1150,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1161,7 +1161,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1172,7 +1172,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1183,7 +1183,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1194,7 +1194,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1205,7 +1205,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1216,7 +1216,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1227,7 +1227,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1238,7 +1238,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1249,7 +1249,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1260,7 +1260,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1271,7 +1271,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1282,7 +1282,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1293,7 +1293,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1304,7 +1304,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1315,7 +1315,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1326,7 +1326,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1337,7 +1337,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1348,7 +1348,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1359,7 +1359,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1370,7 +1370,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1381,7 +1381,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1392,7 +1392,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1403,7 +1403,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1414,7 +1414,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1425,7 +1425,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1436,7 +1436,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1447,7 +1447,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1458,7 +1458,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1469,7 +1469,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1480,7 +1480,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1491,7 +1491,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1502,7 +1502,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1513,7 +1513,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1524,7 +1524,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1535,7 +1535,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1546,7 +1546,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1557,7 +1557,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1568,7 +1568,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1579,7 +1579,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1590,7 +1590,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1601,7 +1601,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1612,7 +1612,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1623,7 +1623,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1634,7 +1634,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1645,7 +1645,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1656,7 +1656,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1667,7 +1667,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1678,7 +1678,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1689,7 +1689,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1700,7 +1700,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1711,7 +1711,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1722,7 +1722,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1733,7 +1733,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1744,7 +1744,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1755,7 +1755,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1766,7 +1766,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1777,7 +1777,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1788,7 +1788,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1799,7 +1799,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1810,7 +1810,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1821,7 +1821,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1832,7 +1832,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1843,7 +1843,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1854,7 +1854,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1865,7 +1865,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1876,7 +1876,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1887,7 +1887,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1898,7 +1898,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1909,7 +1909,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1920,7 +1920,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1931,7 +1931,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1942,7 +1942,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1953,7 +1953,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1964,7 +1964,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1975,7 +1975,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1986,7 +1986,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -1997,7 +1997,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2008,7 +2008,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2019,7 +2019,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2030,7 +2030,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2041,7 +2041,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2052,7 +2052,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2063,7 +2063,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2074,7 +2074,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2085,7 +2085,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2096,7 +2096,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2107,7 +2107,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2118,7 +2118,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2129,7 +2129,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2140,7 +2140,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2151,7 +2151,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2162,7 +2162,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2173,7 +2173,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2184,7 +2184,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2195,7 +2195,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2206,7 +2206,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2217,7 +2217,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2228,7 +2228,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2239,7 +2239,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2250,7 +2250,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2261,7 +2261,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2272,7 +2272,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2283,7 +2283,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2294,7 +2294,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2305,7 +2305,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2316,7 +2316,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2327,7 +2327,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2338,7 +2338,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2349,7 +2349,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2360,7 +2360,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2371,7 +2371,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2382,7 +2382,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2393,7 +2393,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2404,7 +2404,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2415,7 +2415,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2426,7 +2426,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2437,7 +2437,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2448,7 +2448,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2459,7 +2459,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2470,7 +2470,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2481,7 +2481,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2492,7 +2492,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2503,7 +2503,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2514,7 +2514,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2525,7 +2525,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2536,7 +2536,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2547,7 +2547,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2558,7 +2558,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2569,7 +2569,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2580,7 +2580,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2591,7 +2591,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2602,7 +2602,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2613,7 +2613,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2624,7 +2624,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2635,7 +2635,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2646,7 +2646,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2657,7 +2657,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2668,7 +2668,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2679,7 +2679,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2690,7 +2690,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2701,7 +2701,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2712,7 +2712,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2723,7 +2723,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2734,7 +2734,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2745,7 +2745,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2756,7 +2756,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2767,7 +2767,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2778,7 +2778,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2789,7 +2789,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2800,7 +2800,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2811,7 +2811,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2822,7 +2822,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2833,7 +2833,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2844,7 +2844,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2855,7 +2855,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2866,7 +2866,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2877,7 +2877,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2888,7 +2888,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2899,7 +2899,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2910,7 +2910,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2921,7 +2921,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2932,7 +2932,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2943,7 +2943,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2954,7 +2954,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2965,7 +2965,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2976,7 +2976,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2987,7 +2987,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -2998,7 +2998,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3009,7 +3009,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3020,7 +3020,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3031,7 +3031,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3042,7 +3042,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3053,7 +3053,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3064,7 +3064,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3075,7 +3075,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3086,7 +3086,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3097,7 +3097,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3108,7 +3108,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3119,7 +3119,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3130,7 +3130,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3141,7 +3141,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3152,7 +3152,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3163,7 +3163,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": true,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -3174,7 +3174,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3185,7 +3185,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3196,7 +3196,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3207,7 +3207,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3218,7 +3218,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3229,7 +3229,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3240,7 +3240,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3251,7 +3251,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3262,7 +3262,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3273,7 +3273,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3284,7 +3284,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3295,7 +3295,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3306,7 +3306,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3317,7 +3317,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3328,7 +3328,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3339,7 +3339,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3350,7 +3350,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3361,7 +3361,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3372,7 +3372,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3383,7 +3383,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3394,7 +3394,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3405,7 +3405,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3416,7 +3416,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3427,7 +3427,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3438,7 +3438,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3449,7 +3449,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3460,7 +3460,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3471,7 +3471,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3482,7 +3482,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3493,7 +3493,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3504,7 +3504,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3515,7 +3515,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3526,7 +3526,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3537,7 +3537,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3548,7 +3548,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3559,7 +3559,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3570,7 +3570,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3581,7 +3581,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3592,7 +3592,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3603,7 +3603,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3614,7 +3614,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3625,7 +3625,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3636,7 +3636,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3647,7 +3647,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3658,7 +3658,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3669,7 +3669,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3680,7 +3680,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3691,7 +3691,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3702,7 +3702,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3713,7 +3713,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3724,7 +3724,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3735,7 +3735,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3746,7 +3746,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3757,7 +3757,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3768,7 +3768,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3779,7 +3779,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3790,7 +3790,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3801,7 +3801,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3812,7 +3812,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3823,7 +3823,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3834,7 +3834,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3845,7 +3845,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3856,7 +3856,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3867,7 +3867,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3878,7 +3878,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3889,7 +3889,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3900,7 +3900,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3911,7 +3911,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3922,7 +3922,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3933,7 +3933,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3944,7 +3944,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3955,7 +3955,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3966,7 +3966,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3977,7 +3977,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3988,7 +3988,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -3999,7 +3999,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -4010,7 +4010,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": true
 },
 {
@@ -4021,7 +4021,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4032,7 +4032,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4043,7 +4043,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4054,7 +4054,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4065,7 +4065,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4076,7 +4076,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4087,7 +4087,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4098,7 +4098,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4109,7 +4109,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4120,7 +4120,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4131,7 +4131,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4142,7 +4142,7 @@
   "isFurniture": true,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4153,7 +4153,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4164,7 +4164,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4175,7 +4175,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4186,7 +4186,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4197,7 +4197,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4208,7 +4208,7 @@
   "isFurniture": false,
   "isMisc": false,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4219,7 +4219,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4230,7 +4230,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4241,7 +4241,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4252,7 +4252,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4263,7 +4263,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4274,7 +4274,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4285,7 +4285,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4296,7 +4296,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4307,7 +4307,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4318,7 +4318,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4329,7 +4329,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4340,7 +4340,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4351,7 +4351,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4362,7 +4362,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4373,7 +4373,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4384,7 +4384,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4395,7 +4395,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4406,7 +4406,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4417,7 +4417,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4428,7 +4428,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4439,7 +4439,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4450,7 +4450,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4461,7 +4461,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4472,7 +4472,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4483,7 +4483,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4494,7 +4494,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4505,7 +4505,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4516,7 +4516,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4527,7 +4527,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4538,7 +4538,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
@@ -4549,7 +4549,7 @@
   "isFurniture": false,
   "isMisc": true,
   "isTreasure": false,
-  "isWeapon": null,
+  "isWeapon": false,
   "isWriting": false
 },
 {
