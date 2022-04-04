@@ -7,30 +7,35 @@
       <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" @click="toggleMaterial">Material</a>
     </div>
     <div v-if="initialized">
+      <span class="button is-info rerollRow" @click="rerollRow(0)">➔</span>
       <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(0)" :key="displayedQualities[0].name">{{displayedQualities[0].name}}</span>
       <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(0)" :key="displayedColors[0].name">{{displayedColors[0].name}}</span>
       <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(0)" :key="displayedMaterials[0].name">{{displayedMaterials[0].name}}</span>
       <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(0)" :key="displayedItems[0].name">{{displayedItems[0].name}}</span>
     </div>
     <div v-if="initialized">
+      <span class="button is-info rerollRow" @click="rerollRow(1)">➔</span>
       <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(1)" :key="displayedQualities[1].name">{{displayedQualities[1].name}}</span>
       <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(1)" :key="displayedColors[1].name">{{displayedColors[1].name}}</span>
       <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(1)" :key="displayedMaterials[1].name">{{displayedMaterials[1].name}}</span>
       <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(1)" :key="displayedItems[1].name">{{displayedItems[1].name}}</span>
     </div>
     <div v-if="initialized">
+      <span class="button is-info rerollRow" @click="rerollRow(2)">➔</span>
       <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(2)" :key="displayedQualities[2].name">{{displayedQualities[2].name}}</span>
       <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(2)" :key="displayedColors[2].name">{{displayedColors[2].name}}</span>
       <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(2)" :key="displayedMaterials[2].name">{{displayedMaterials[2].name}}</span>
       <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(2)" :key="displayedItems[2].name">{{displayedItems[2].name}}</span>
     </div>
     <div v-if="initialized">
+      <span class="button is-info rerollRow" @click="rerollRow(3)">➔</span>
       <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(3)" :key="displayedQualities[3].name">{{displayedQualities[3].name}}</span>
       <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(3)" :key="displayedColors[3].name">{{displayedColors[3].name}}</span>
       <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(3)" :key="displayedMaterials[3].name">{{displayedMaterials[3].name}}</span>
       <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(3)" :key="displayedItems[3].name">{{displayedItems[3].name}}</span>
     </div>
     <div v-if="initialized">
+      <span class="button is-info rerollRow" @click="rerollRow(4)">➔</span>
       <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(4)" :key="displayedQualities[4].name">{{displayedQualities[4].name}}</span>
       <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(4)" :key="displayedColors[4].name">{{displayedColors[4].name}}</span>
       <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(4)" :key="displayedMaterials[4].name">{{displayedMaterials[4].name}}</span>
@@ -114,6 +119,12 @@ export default {
     },
     async toggleQuality() {
       this.displayedDescriptors.quality = !this.displayedDescriptors.quality;
+    },
+    async rerollRow(rowNum) {
+      this.pickItem(rowNum);
+      this.pickColor(rowNum);
+      this.pickMaterial(rowNum);
+      this.pickQuality(rowNum);
     },
     async pickItem(rowNum) {
       this.displayedItems[rowNum] = this.items[Math.floor(Math.random() * this.items.length)]
