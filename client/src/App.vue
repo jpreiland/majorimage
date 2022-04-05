@@ -1,10 +1,20 @@
 <template>
   <div id="app">
     Major Image
-    <div class="control"> 
+    <div class="control">
       <a class="button is-danger" v-bind:class="{ 'is-light': !displayedDescriptors.quality }" @click="toggleQuality">Quality</a>
       <a class="button is-success" v-bind:class="{ 'is-light': !displayedDescriptors.color }" @click="toggleColor">Color</a>
       <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" @click="toggleMaterial">Material</a>
+    </div>
+    <div class="control">
+      <a class="button" v-bind:class="{ 'is-light': !params.isArmor }" @click="toggleItemType('isArmor')">Armor</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isClothing }" @click="toggleItemType('isClothing')">Clothing</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isContainer }" @click="toggleItemType('isContainer')">Container</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isFurniture }" @click="toggleItemType('isFurniture')">Furniture</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isMisc }" @click="toggleItemType('isMisc')">Misc</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isTreasure }" @click="toggleItemType('isTreasure')">Treasure</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isWeapon }" @click="toggleItemType('isWeapon')">Weapon</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isWriting }" @click="toggleItemType('isWriting')">Writing</a>
     </div>
     <div v-if="initialized">
       <span class="button is-info rerollRow" @click="rerollRow(0)">➔</span>
@@ -58,6 +68,16 @@ export default {
         quality: true,
         material: false
       },
+      params: {
+        isArmor: true,
+        isClothing: true,
+        isContainer: true,
+        isFurniture: true,
+        isMisc: true,
+        isTreasure: true,
+        isWeapon: true,
+        isWriting: true,
+      },
       displayedItems: [
       {name: "0"},
       {name: "1"},
@@ -89,7 +109,7 @@ export default {
     };
   },
   async mounted() {
-    const response = await axios.get('api/data/');
+    const response = await axios.get('api/data/', { params: this.params });
     this.items = response.data.items;
     this.colors = response.data.colors;
     this.materials = response.data.materials;
@@ -111,6 +131,13 @@ export default {
     this.initialized = true;
   },
   methods: {
+    async getData() {
+      const response = await axios.get('api/data/', { params: this.params });
+      this.items = response.data.items;
+      this.colors = response.data.colors;
+      this.materials = response.data.materials;
+      this.qualities = response.data.qualities;
+    },
     async toggleMaterial() {
       this.displayedDescriptors.material = !this.displayedDescriptors.material;
     },
@@ -120,11 +147,22 @@ export default {
     async toggleQuality() {
       this.displayedDescriptors.quality = !this.displayedDescriptors.quality;
     },
+    async toggleItemType(itemType) {
+      console.log(`itemType: ${itemType}`);
+      this.params[itemType] = !this.params[itemType];
+      await this.getData();
+      this.rerollItems();
+    },
     async rerollRow(rowNum) {
       this.pickItem(rowNum);
       this.pickColor(rowNum);
       this.pickMaterial(rowNum);
       this.pickQuality(rowNum);
+    },
+    async rerollItems() {
+      for (let i = 0; i < 5; i++) {
+        this.pickItem(i);
+      }
     },
     async pickItem(rowNum) {
       this.displayedItems[rowNum] = this.items[Math.floor(Math.random() * this.items.length)]
@@ -146,6 +184,6 @@ export default {
 #app {
   margin: auto;
   margin-top: 3rem;
-  max-width: 700px;
+  max-width: 760px;
 }
 </style>
