@@ -148,7 +148,6 @@ export default {
       this.displayedDescriptors.quality = !this.displayedDescriptors.quality;
     },
     async toggleItemType(itemType) {
-      console.log(`itemType: ${itemType}`);
       this.params[itemType] = !this.params[itemType];
       await this.getData();
       this.rerollItems();
