@@ -2,9 +2,9 @@
   <div id="app">
     Major Image
     <div class="control">
-      <a class="button is-danger" v-bind:class="{ 'is-light': !displayedDescriptors.quality }" @click="toggleQuality">Quality</a>
-      <a class="button is-success" v-bind:class="{ 'is-light': !displayedDescriptors.color }" @click="toggleColor">Color</a>
-      <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" @click="toggleMaterial">Material</a>
+      <a class="button is-danger" v-bind:class="{ 'is-light': !displayedDescriptors.quality }" @click="toggleDescriptor('quality')">Quality</a>
+      <a class="button is-success" v-bind:class="{ 'is-light': !displayedDescriptors.color }" @click="toggleDescriptor('color')">Color</a>
+      <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" @click="toggleDescriptor('material')">Material</a>
     </div>
     <div class="control">
       <a class="button" v-bind:class="{ 'is-light': !params.isArmor }" @click="toggleItemType('isArmor')">Armor</a>
@@ -16,46 +16,20 @@
       <a class="button" v-bind:class="{ 'is-light': !params.isWeapon }" @click="toggleItemType('isWeapon')">Weapon</a>
       <a class="button" v-bind:class="{ 'is-light': !params.isWriting }" @click="toggleItemType('isWriting')">Writing</a>
     </div>
-    <div v-if="initialized">
-      <span class="button is-info rerollRow" @click="rerollRow(0)">➔</span>
-      <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(0)" :key="displayedQualities[0].name">{{displayedQualities[0].name}}</span>
-      <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(0)" :key="displayedColors[0].name">{{displayedColors[0].name}}</span>
-      <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(0)" :key="displayedMaterials[0].name">{{displayedMaterials[0].name}}</span>
-      <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(0)" :key="displayedItems[0].name">{{displayedItems[0].name}}</span>
-    </div>
-    <div v-if="initialized">
-      <span class="button is-info rerollRow" @click="rerollRow(1)">➔</span>
-      <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(1)" :key="displayedQualities[1].name">{{displayedQualities[1].name}}</span>
-      <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(1)" :key="displayedColors[1].name">{{displayedColors[1].name}}</span>
-      <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(1)" :key="displayedMaterials[1].name">{{displayedMaterials[1].name}}</span>
-      <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(1)" :key="displayedItems[1].name">{{displayedItems[1].name}}</span>
-    </div>
-    <div v-if="initialized">
-      <span class="button is-info rerollRow" @click="rerollRow(2)">➔</span>
-      <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(2)" :key="displayedQualities[2].name">{{displayedQualities[2].name}}</span>
-      <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(2)" :key="displayedColors[2].name">{{displayedColors[2].name}}</span>
-      <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(2)" :key="displayedMaterials[2].name">{{displayedMaterials[2].name}}</span>
-      <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(2)" :key="displayedItems[2].name">{{displayedItems[2].name}}</span>
-    </div>
-    <div v-if="initialized">
-      <span class="button is-info rerollRow" @click="rerollRow(3)">➔</span>
-      <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(3)" :key="displayedQualities[3].name">{{displayedQualities[3].name}}</span>
-      <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(3)" :key="displayedColors[3].name">{{displayedColors[3].name}}</span>
-      <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(3)" :key="displayedMaterials[3].name">{{displayedMaterials[3].name}}</span>
-      <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(3)" :key="displayedItems[3].name">{{displayedItems[3].name}}</span>
-    </div>
-    <div v-if="initialized">
-      <span class="button is-info rerollRow" @click="rerollRow(4)">➔</span>
-      <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(4)" :key="displayedQualities[4].name">{{displayedQualities[4].name}}</span>
-      <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(4)" :key="displayedColors[4].name">{{displayedColors[4].name}}</span>
-      <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(4)" :key="displayedMaterials[4].name">{{displayedMaterials[4].name}}</span>
-      <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(4)" :key="displayedItems[4].name">{{displayedItems[4].name}}</span>
+    <div v-for="row in rows" :key="row.id">
+      <div v-if="initialized">
+        <span class="button is-info rerollRow" @click="rerollRow(row.id)">➔</span>
+        <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(row.id)" :key="displayedQualities[row.id].name">{{displayedQualities[row.id].name}}</span>
+        <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(row.id)" :key="displayedColors[row.id].name">{{displayedColors[row.id].name}}</span>
+        <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(row.id)" :key="displayedMaterials[row.id].name">{{displayedMaterials[row.id].name}}</span>
+        <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(row.id)" :key="displayedItems[row.id].name">{{displayedItems[row.id].name}}</span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+import axios from "axios"
 export default {
   name: 'App',
   data() {
@@ -78,89 +52,53 @@ export default {
         isWeapon: true,
         isWriting: true,
       },
-      displayedItems: [
-      {name: "0"},
-      {name: "1"},
-      {name: "2"},
-      {name: "3"},
-      {name: "4"}
-      ],
-      displayedColors: [
-      {name: "0"},
-      {name: "1"},
-      {name: "2"},
-      {name: "3"},
-      {name: "4"}
-      ],
-      displayedMaterials: [
-      {name: "0"},
-      {name: "1"},
-      {name: "2"},
-      {name: "3"},
-      {name: "4"}
-      ],
-      displayedQualities: [
-      {name: "0"},
-      {name: "1"},
-      {name: "2"},
-      {name: "3"},
-      {name: "4"}
-      ]
-    };
+      numRows: 5,
+      displayedItems: [],
+      displayedColors: [],
+      displayedMaterials: [],
+      displayedQualities: [],
+      rows: []
+    }
   },
   async mounted() {
-    const response = await axios.get('api/data/', { params: this.params });
-    this.items = response.data.items;
-    this.colors = response.data.colors;
-    this.materials = response.data.materials;
-    this.qualities = response.data.qualities;
+    const response = await axios.get('api/data/', { params: this.params })
+    this.items = response.data.items
+    this.colors = response.data.colors
+    this.materials = response.data.materials
+    this.qualities = response.data.qualities
 
-    this.displayedItems.forEach(element => {
-      this.pickItem(element.name);
-    });
-    this.displayedColors.forEach(element => {
-      this.pickColor(element.name);
-    });
-    this.displayedMaterials.forEach(element => {
-      this.pickMaterial(element.name);
-    });
-    this.displayedQualities.forEach(element => {
-      this.pickQuality(element.name);
-    });
-
-    this.initialized = true;
+    for (let i = 0; i < this.numRows; i++) {
+      this.rerollRow(i)
+      this.rows.push({id: i})
+    }
+  
+    this.initialized = true
   },
   methods: {
     async getData() {
-      const response = await axios.get('api/data/', { params: this.params });
-      this.items = response.data.items;
-      this.colors = response.data.colors;
-      this.materials = response.data.materials;
-      this.qualities = response.data.qualities;
+      const response = await axios.get('api/data/', { params: this.params })
+      this.items = response.data.items
+      this.colors = response.data.colors
+      this.materials = response.data.materials
+      this.qualities = response.data.qualities
     },
-    async toggleMaterial() {
-      this.displayedDescriptors.material = !this.displayedDescriptors.material;
-    },
-    async toggleColor() {
-      this.displayedDescriptors.color = !this.displayedDescriptors.color;
-    },
-    async toggleQuality() {
-      this.displayedDescriptors.quality = !this.displayedDescriptors.quality;
+    async toggleDescriptor(descriptor) {
+      this.displayedDescriptors[descriptor] = !this.displayedDescriptors[descriptor]
     },
     async toggleItemType(itemType) {
-      this.params[itemType] = !this.params[itemType];
-      await this.getData();
-      this.rerollItems();
+      this.params[itemType] = !this.params[itemType]
+      await this.getData()
+      this.rerollItems()
     },
     async rerollRow(rowNum) {
-      this.pickItem(rowNum);
-      this.pickColor(rowNum);
-      this.pickMaterial(rowNum);
-      this.pickQuality(rowNum);
+      this.pickItem(rowNum)
+      this.pickColor(rowNum)
+      this.pickMaterial(rowNum)
+      this.pickQuality(rowNum)
     },
     async rerollItems() {
-      for (let i = 0; i < 5; i++) {
-        this.pickItem(i);
+      for (let i = 0; i < this.numRows; i++) {
+        this.pickItem(i)
       }
     },
     async pickItem(rowNum) {
@@ -176,7 +114,7 @@ export default {
       this.displayedQualities[rowNum] = this.qualities[Math.floor(Math.random() * this.qualities.length)]
     }
   }
-};
+}
 </script>
 
 <style>
