@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
     let query = { $or: [ ] }
     for (const param in req.query) {
       if (req.query[param] === 'true') {
-        let queryParam = {};
+        const queryParam = {}
         queryParam[param] = req.query[param]
         query.$or.push(queryParam)
       }
