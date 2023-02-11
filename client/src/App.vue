@@ -2,29 +2,29 @@
   <div id="app">
     Major Image
     <div class="control">
-      <a class="button is-danger" v-bind:class="{ 'is-light': !displayedDescriptors.quality }" @click="toggleDescriptor('quality')">Quality</a>
-      <a class="button is-success" v-bind:class="{ 'is-light': !displayedDescriptors.color }" @click="toggleDescriptor('color')">Color</a>
-      <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" @click="toggleDescriptor('material')">Material</a>
+      <a class="button is-danger" v-bind:class="{ 'is-light': !displayedDescriptors.quality }" v-on:click="toggleDescriptor('quality')">Quality</a>
+      <a class="button is-success" v-bind:class="{ 'is-light': !displayedDescriptors.color }" v-on:click="toggleDescriptor('color')">Color</a>
+      <a class="button is-warning" v-bind:class="{ 'is-light': !displayedDescriptors.material }" v-on:click="toggleDescriptor('material')">Material</a>
     </div>
     <div class="control">
-      <a class="button" v-bind:class="{ 'is-light': !params.isArmor }" @click="toggleItemType('isArmor')">Armor</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isClothing }" @click="toggleItemType('isClothing')">Clothing</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isContainer }" @click="toggleItemType('isContainer')">Container</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isFurniture }" @click="toggleItemType('isFurniture')">Furniture</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isMisc }" @click="toggleItemType('isMisc')">Misc</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isTreasure }" @click="toggleItemType('isTreasure')">Treasure</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isWeapon }" @click="toggleItemType('isWeapon')">Weapon</a>
-      <a class="button" v-bind:class="{ 'is-light': !params.isWriting }" @click="toggleItemType('isWriting')">Writing</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isArmor }" v-on:click="toggleItemType('isArmor')">Armor</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isClothing }" v-on:click="toggleItemType('isClothing')">Clothing</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isContainer }" v-on:click="toggleItemType('isContainer')">Container</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isFurniture }" v-on:click="toggleItemType('isFurniture')">Furniture</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isMisc }" v-on:click="toggleItemType('isMisc')">Misc</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isTreasure }" v-on:click="toggleItemType('isTreasure')">Treasure</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isWeapon }" v-on:click="toggleItemType('isWeapon')">Weapon</a>
+      <a class="button" v-bind:class="{ 'is-light': !params.isWriting }" v-on:click="toggleItemType('isWriting')">Writing</a>
     </div>
-    <div v-for="row in rows" :key="row.id">
-      <div v-if="initialized">
-        <span class="button is-info rerollRow" @click="rerollRow(row.id)">➔</span>
-        <span class="button qualityName" v-if="displayedDescriptors.quality" @click="pickQuality(row.id)" :key="displayedQualities[row.id].name">{{displayedQualities[row.id].name}}</span>
-        <span class="button colorName" v-if="displayedDescriptors.color" @click="pickColor(row.id)" :key="displayedColors[row.id].name">{{displayedColors[row.id].name}}</span>
-        <span class="button materialName" v-if="displayedDescriptors.material" @click="pickMaterial(row.id)" :key="displayedMaterials[row.id].name">{{displayedMaterials[row.id].name}}</span>
-        <span class="button itemName" v-if="displayedDescriptors.item" @click="pickItem(row.id)" :key="displayedItems[row.id].name">{{displayedItems[row.id].name}}</span>
+    <template v-for="row in rows">
+      <div v-if="initialized" :key="row.id">
+        <span class="button is-info rerollRow" v-on:click="rerollRow(row.id)">➔</span>
+        <span class="button qualityName" v-if="displayedDescriptors.quality" v-on:click="pickQuality(row.id)" :key="displayedQualities[row.id].name">{{displayedQualities[row.id].name}}</span>
+        <span class="button colorName" v-if="displayedDescriptors.color" v-on:click="pickColor(row.id)" :key="displayedColors[row.id].name">{{displayedColors[row.id].name}}</span>
+        <span class="button materialName" v-if="displayedDescriptors.material" v-on:click="pickMaterial(row.id)" :key="displayedMaterials[row.id].name">{{displayedMaterials[row.id].name}}</span>
+        <span class="button itemName" v-if="displayedDescriptors.item" v-on:click="pickItem(row.id)" :key="displayedItems[row.id].name">{{displayedItems[row.id].name}}</span>
       </div>
-    </div>
+    </template>
   </div>
 </template>
 
