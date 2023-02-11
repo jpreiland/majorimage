@@ -3,6 +3,7 @@ const Item = require ('../../models/Item')
 const Color = require ('../../models/Color')
 const Quality = require ('../../models/Quality')
 const Material = require ('../../models/Material')
+const Effect = require ('../../models/Effect')
 
 const router = Router()
 
@@ -22,7 +23,8 @@ router.get('/', async (req, res) => {
     const colors = await Color.find(query)
     const qualities = await Quality.find(query)
     const materials = await Material.find(query)
-    const data = {items, colors, qualities, materials}
+    const effects = await Effect.find(query)
+    const data = {items, colors, qualities, materials, effects}
     
     if (!items) throw new Error('No items found')
     res.status(200).json(data)
