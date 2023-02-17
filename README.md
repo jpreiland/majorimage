@@ -7,7 +7,7 @@ The aim of this tool is to quickly provide GMs with sample descriptions to spark
 
 ### Setup
 Host and populate your own data set in MongoDB.  
-Sample data is included in `/data`.
+Sample data is included in `/sample-data`.
 
 Create a `.env` file in the project's root directory with the following variable:  
 `MONGO_URI = <your mongodb connection string here>`
