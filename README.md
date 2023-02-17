@@ -18,4 +18,3 @@ Install dependencies:
 Run client and server in dev mode:  
 `npm run dev`  
 
-Use `127.0.0.1:8080`, not `localhost:8080`, to test the app. Axios has a weird thing where it does a DNS lookup every other request on localhost, slowing things down noticeably. 
