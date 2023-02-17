@@ -21,14 +21,19 @@
     </div>
     <div v-if="initialized">
       <template v-for="row in rows" v-bind:key="row.id">
-        <div>
-          <span class="button is-info rerollRow" v-on:click="rerollRow(row.id)">➔</span>
-          <span class="button descriptor effect" v-if="displayedDescriptors.effect" v-on:click="pickEffect(row.id)" v-bind:key="displayedEffects[row.id].name">{{displayedEffects[row.id].name}}</span>
-          <span class="button descriptor quality" v-if="displayedDescriptors.quality" v-on:click="pickQuality(row.id)" v-bind:key="displayedQualities[row.id].name">{{displayedQualities[row.id].name}}</span>
-          <span class="button descriptor color" v-if="displayedDescriptors.color" v-on:click="pickColor(row.id)" v-bind:key="displayedColors[row.id].name">{{displayedColors[row.id].name}}</span>
-          <span class="button descriptor material" v-if="displayedDescriptors.material" v-on:click="pickMaterial(row.id)" v-bind:key="displayedMaterials[row.id].name">{{displayedMaterials[row.id].name}}</span>
-          <span class="button descriptor item" v-if="displayedDescriptors.item" v-on:click="pickItem(row.id)" v-bind:key="displayedItems[row.id].name">{{displayedItems[row.id].name}}</span>
-        </div>
+        <ObjectRow  v-bind:rowId="row.id"
+                    v-bind:displayed-descriptors="displayedDescriptors"
+                    v-bind:effect="displayedEffects[row.id].name"
+                    v-bind:quality="displayedQualities[row.id].name"
+                    v-bind:color="displayedColors[row.id].name"
+                    v-bind:material="displayedMaterials[row.id].name"
+                    v-bind:item="displayedItems[row.id].name"
+                    @reroll-row="rerollRow(row.id)"
+                    @pick-effect="pickEffect(row.id)"
+                    @pick-quality="pickQuality(row.id)"
+                    @pick-color="pickColor(row.id)"
+                    @pick-material="pickMaterial(row.id)"
+                    @pick-item="pickItem(row.id)" />
       </template>
     </div>
   </div>
@@ -36,8 +41,13 @@
 
 <script>
 import axios from "axios"
+import ObjectRow from "./components/ObjectRow.vue"
+
 export default {
   name: 'App',
+  components: {
+    ObjectRow: ObjectRow
+  },
   data() {
     return {
       initialized: false,

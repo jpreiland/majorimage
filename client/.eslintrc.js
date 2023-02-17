@@ -4,10 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    //'airbnb-base',
-  ],
+  extends: ["vue", "standard", "plugin:vue/recommended"],
   overrides: [
   ],
   parser: '@babel/eslint-parser',
@@ -20,9 +17,7 @@ module.exports = {
     requireConfigFile: false,
     sourceType: 'module',
   },
-  plugins: [
-    'vue',
-  ],
+  plugins: ["import", "vue"],
   rules: {
     'vue/no-template-key': 0
   },
