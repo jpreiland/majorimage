@@ -20,6 +20,5 @@ mongoose
   .catch((err) => console.log(err))
 
 app.use('/api/data', dataRoutes)
-app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))
