@@ -1,35 +1,44 @@
 const { Router } = require('express')
-const Item = require ('../../models/Item')
-const Color = require ('../../models/Color')
-const Quality = require ('../../models/Quality')
-const Material = require ('../../models/Material')
-const Effect = require ('../../models/Effect')
+const Item = require('../../models/Item')
+const Items = require('../../sample-data/objects/items.json')
+const Colors = require('../../sample-data/colors.json')
+const Qualities = require('../../sample-data/qualities.json')
+const Materials = require('../../sample-data/materials.json')
+const Effects = require('../../sample-data/effects.json')
 
 const router = Router()
 
-router.get('/', async (req, res) => {
+router.get('/item', async (req, res) => {
   try {
-    // build query
-    let query = { $or: [ ] }
+    let query = { $or: [] }
+    let trueCount = 0
+
     for (const param in req.query) {
       if (req.query[param] === 'true') {
         const queryParam = {}
         queryParam[param] = req.query[param]
         query.$or.push(queryParam)
+        trueCount++
       }
     }
 
-    const items = await Item.find(query)
-    const colors = await Color.find(query)
-    const qualities = await Quality.find(query)
-    const materials = await Material.find(query)
-    const effects = await Effect.find(query)
-    const data = {items, colors, qualities, materials, effects}
-    
-    if (!items) throw new Error('No items found')
+    let data = { 
+      "items": Items,
+      "colors": Colors,
+      "qualities": Qualities,
+      "materials": Materials,
+      "effects": Effects
+    }
+
+    // Don't send request to db if requesting all items
+    if (trueCount !== 0 && trueCount !== Object.keys(req.query).length) {
+      data.items = await Item.find(query).select({ name: 1 })
+    }
+
+    if (!data.items) throw new Error('No items found')
     res.status(200).json(data)
   } catch (error) {
-    res.status(500).json({message: error.message})
+    res.status(500).json({ message: error.message })
   }
 })
 

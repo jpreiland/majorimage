@@ -19,6 +19,6 @@ mongoose
   .then(() => console.log('Connected to mongo database'))
   .catch((err) => console.log(err))
 
-app.use('/api/data', dataRoutes)
+app.use('/api', dataRoutes)
 
 app.listen(PORT, () => console.log(`App listening on http://localhost:${PORT}`))

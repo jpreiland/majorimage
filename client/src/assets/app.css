@@ -46,10 +46,22 @@
   margin-right: auto;
 }
 .button.btn-effect {
-    background-color: #6800df;
-    color: #fff;
+  background-color: #6800df;
+  color: #fff;
 }
 .button.btn-effect.is-light {
-    background-color: #e4cdff;
-    color: #43008f;
+  background-color: #e4cdff;
+  color: #43008f;
+}
+.button.filter {
+  box-sizing: border-box;
+  border: 2px solid;
+  border-color: #3e8ed0;
+  margin: 2px;
+}
+.button.filter.is-light {
+  border: 0px solid;
+  background-color: lightsteelblue;
+  color: #ffffff;
+  margin: 2px;
 }

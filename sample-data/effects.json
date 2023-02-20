@@ -1,332 +1,92 @@
 [
   {
-    "name": "levitating",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "levitating"
   },
   {
-    "name": "glowing",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "glowing"
   },
   {
-    "name": "unusually warm",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "unusually warm"
   },
   {
-    "name": "unusually cool",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "unusually cool"
   },
   {
-    "name": "smelly",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "smelly"
   },
   {
-    "name": "fragrant",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "fragrant"
   },
   {
-    "name": "humming",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "humming"
   },
   {
-    "name": "vibrating",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "vibrating"
   },
   {
-    "name": "oddly heavy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "oddly heavy"
   },
   {
-    "name": "oddly light",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "oddly light"
   },
   {
-    "name": "flaming",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "flaming"
   },
   {
-    "name": "icy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "icy"
   },
   {
-    "name": "cursed",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "cursed"
   },
   {
-    "name": "unholy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "unholy"
   },
   {
-    "name": "holy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "holy"
   },
   {
-    "name": "intelligent",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "intelligent"
   },
   {
-    "name": "invisible",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "invisible"
   },
   {
-    "name": "indestructible",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "indestructible"
   },
   {
-    "name": "animated",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "animated"
   },
   {
-    "name": "sparkling",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "sparkling"
   },
   {
-    "name": "poisoned",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "poisoned"
   },
   {
-    "name": "illusory",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "illusory"
   },
   {
-    "name": "alluring",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "alluring"
   },
   {
-    "name": "hypnotic",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "hypnotic"
   },
   {
-    "name": "haunted",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "haunted"
   },
   {
-    "name": "shadowy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "shadowy"
   },
   {
-    "name": "ethereal",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "ethereal"
   },
   {
-    "name": "immovable",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "immovable"
   },
   {
-    "name": "lucky",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "lucky"
   },
   {
-    "name": "unlucky",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "unlucky"
   }
 ]

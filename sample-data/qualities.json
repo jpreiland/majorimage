@@ -1,365 +1,101 @@
 [  
   {
-    "name": "antique",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "antique"
   },
   {
-    "name": "dusty",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dusty"
   },
   {
-    "name": "broken",
-    "isArmor": true,
-    "isClothing": false,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "broken"
   },
   {
-    "name": "pristine",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "pristine"
   },
   {
-    "name": "unfinished",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "unfinished"
   },
   {
-    "name": "decrepit",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "decrepit"
   },
   {
-    "name": "immaculate",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "immaculate"
   },
   {
-    "name": "exquisite",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "exquisite"
   },
   {
-    "name": "shoddy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "shoddy"
   },
   {
-    "name": "new",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "new"
   },
   {
-    "name": "old",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "old"
   },
   {
-    "name": "ancient",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "ancient"
   },
   {
-    "name": "artisinal",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "artisinal"
   },
   {
-    "name": "fine",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "fine"
   },
   {
-    "name": "peculiar",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "peculiar"
   },
   {
-    "name": "uneven",
-    "isArmor": true,
-    "isClothing": false,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "uneven"
   },
   {
-    "name": "ornate",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "ornate"
   },
   {
-    "name": "elegant",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "elegant"
   },
   {
-    "name": "magnificent",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "magnificent"
   },
   {
-    "name": "well-made",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "well-made"
   },
   {
-    "name": "cracked",
-    "isArmor": true,
-    "isClothing": false,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "cracked"
   },
   {
-    "name": "dilapidated",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dilapidated"
   },
   {
-    "name": "worn-out",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "worn-out"
   },
   {
-    "name": "ruined",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "ruined"
   },
   {
-    "name": "gaudy",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "gaudy"
   },
   {
-    "name": "rugged",
-    "isArmor": true,
-    "isClothing": false,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "rugged"
   },
   {
-    "name": "damp",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "damp"
   },
   {
-    "name": "polished",
-    "isArmor": true,
-    "isClothing": false,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "polished"
   },
   {
-    "name": "spotless",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": false
+    "name": "spotless"
   },
   {
-    "name": "old-fashioned",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "old-fashioned"
   },
   {
-    "name": "primitive",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "primitive"
   },
   {
-    "name": "aged",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "aged"
   },
   {
-    "name": "flawless",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "flawless"
   }
 ]

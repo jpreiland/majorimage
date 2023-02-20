@@ -1,453 +1,125 @@
 [
   {
-    "name": "grey",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "grey"
   },
   {
-    "name": "green",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "green"
   },
   {
-    "name": "black",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "black"
   },
   {
-    "name": "white",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "white"
   },
   {
-    "name": "red",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "red"
   },
   {
-    "name": "blue",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "blue"
   },
   {
-    "name": "gold",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "gold"
   },
   {
-    "name": "silver",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "silver"
   },
   {
-    "name": "blood red",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "blood red"
   },
   {
-    "name": "brown",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "brown"
   },
   {
-    "name": "yellow",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "yellow"
   },
   {
-    "name": "teal",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "teal"
   },
   {
-    "name": "purple",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "purple"
   },
   {
-    "name": "orange",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "orange"
   },
   {
-    "name": "crimson",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "crimson"
   },
   {
-    "name": "olive",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "olive"
   },
   {
-    "name": "amber",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "amber"
   },
   {
-    "name": "dark grey",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark grey"
   },
   {
-    "name": "dark green",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark green"
   },
   {
-    "name": "dark red",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark red"
   },
   {
-    "name": "dark blue",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark blue"
   },
   {
-    "name": "dark brown",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark brown"
   },
   {
-    "name": "dark yellow",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark yellow"
   },
   {
-    "name": "dark teal",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark teal"
   },
   {
-    "name": "dark purple",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark purple"
   },
   {
-    "name": "dark orange",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "dark orange"
   },
   {
-    "name": "pink",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "pink"
   },
   {
-    "name": "bronze",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "bronze"
   },
   {
-    "name": "indigo",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "indigo"
   },
   {
-    "name": "violet",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "violet"
   },
   {
-    "name": "light grey",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light grey"
   },
   {
-    "name": "light green",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light green"
   },
   {
-    "name": "light red",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light red"
   },
   {
-    "name": "light blue",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light blue"
   },
   {
-    "name": "light brown",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light brown"
   },
   {
-    "name": "light yellow",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light yellow"
   },
   {
-    "name": "light teal",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light teal"
   },
   {
-    "name": "light purple",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light purple"
   },
   {
-    "name": "light orange",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light orange"
   },
   {
-    "name": "light pink",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "light pink"
   },
   {
-    "name": "tan",
-    "isArmor": true,
-    "isClothing": true,
-    "isContainer": true,
-    "isFurniture": true,
-    "isMisc": true,
-    "isTreasure": true,
-    "isWeapon": true,
-    "isWriting": true
+    "name": "tan"
   }
 ]
