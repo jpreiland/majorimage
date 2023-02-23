@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Iron",
+    "attributes": {
+      "Weight": 150,
+      "Cost": 80,
+      "Hardness": 7.5
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Steel",
+    "attributes": {
+      "Weight": 140,
+      "Cost": 90,
+      "Hardness": 8
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Gold",
+    "attributes": {
+      "Weight": 110,
+      "Cost": 167,
+      "Hardness": 7
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Tin",
+    "attributes": {
+      "Weight": 90,
+      "Cost": 54,
+      "Hardness": 5
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  }
+]

@@ -76,7 +76,7 @@ export default {
       rows: []
     }
   },
-  async mounted() {
+  async created() {
     const response = await axios.get('api/item', { params: this.params })
     this.items = response.data.items
     this.colors = response.data.colors

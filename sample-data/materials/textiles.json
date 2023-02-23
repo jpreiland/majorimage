@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Linen",
+    "attributes": {
+      "Weight": 10,
+      "Cost": 5,
+      "Texture": "medium"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isCloth": true,
+    "isFur": false
+  },
+  {
+    "name": "Wool",
+    "attributes": {
+      "Weight": 20,
+      "Cost": 12,
+      "Texture": "rough"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isCloth": true,
+    "isFur": false
+  },
+  {
+    "name": "Silk",
+    "attributes": {
+      "Weight": 15,
+      "Cost": 30,
+      "Texture": "fine"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isCloth": true,
+    "isFur": false
+  },
+  {
+    "name": "Cashmere",
+    "attributes": {
+      "Weight": 18,
+      "Cost": 20,
+      "Texture": "soft"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isCloth": false,
+    "isFur": false
+  }
+]

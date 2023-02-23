@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Oak",
+    "attributes": {
+      "Weight": 55,
+      "Cost": 35,
+      "Hardness": 7.5
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isExotic": true,
+    "isMagical": false
+  },
+  {
+    "name": "Ash",
+    "attributes": {
+      "Weight": 45,
+      "Cost": 30,
+      "Hardness": 8
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isExotic": true,
+    "isMagical": false
+  },
+  {
+    "name": "Pine",
+    "attributes": {
+      "Weight": 40,
+      "Cost": 25,
+      "Hardness": 7
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isExotic": true,
+    "isMagical": false
+  },
+  {
+    "name": "Rosewood",
+    "attributes": {
+      "Weight": 70,
+      "Cost": 120,
+      "Hardness": 5
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  }
+]
