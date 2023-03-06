@@ -2,9 +2,14 @@
   {
     "name": "Iron",
     "attributes": {
-      "Weight": 150,
-      "Cost": 80,
-      "Hardness": 7.5
+      "weightCostVolume": {
+        "Weight": [150, "lb"],
+        "Cost": [0.80, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [7.5]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -16,9 +21,14 @@
   {
     "name": "Steel",
     "attributes": {
-      "Weight": 140,
-      "Cost": 90,
-      "Hardness": 8
+      "weightCostVolume": {
+        "Weight": [140, "lb"],
+        "Cost": [0.90, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [8]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -30,9 +40,14 @@
   {
     "name": "Gold",
     "attributes": {
-      "Weight": 110,
-      "Cost": 167,
-      "Hardness": 7
+      "weightCostVolume": {
+        "Weight": [110, "lb"],
+        "Cost": [1.67, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [7]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -44,9 +59,14 @@
   {
     "name": "Tin",
     "attributes": {
-      "Weight": 90,
-      "Cost": 54,
-      "Hardness": 5
+      "weightCostVolume": {
+        "Weight": [90, "lb"],
+        "Cost": [0.54, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [5]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

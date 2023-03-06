@@ -2,9 +2,14 @@
   {
     "name": "Oak",
     "attributes": {
-      "Weight": 55,
-      "Cost": 35,
-      "Hardness": 7.5
+      "weightCostVolume": {
+        "Weight": [55, "lb"],
+        "Cost": [0.35, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [7.5]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -16,9 +21,14 @@
   {
     "name": "Ash",
     "attributes": {
-      "Weight": 45,
-      "Cost": 30,
-      "Hardness": 8
+      "weightCostVolume": {
+        "Weight": [45, "lb"],
+        "Cost": [0.30, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [8]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -30,9 +40,14 @@
   {
     "name": "Pine",
     "attributes": {
-      "Weight": 40,
-      "Cost": 25,
-      "Hardness": 7
+      "weightCostVolume": {
+        "Weight": [40, "lb"],
+        "Cost": [0.25, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [7]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -44,9 +59,14 @@
   {
     "name": "Rosewood",
     "attributes": {
-      "Weight": 70,
-      "Cost": 120,
-      "Hardness": 5
+      "weightCostVolume": {
+        "Weight": [70, "lb"],
+        "Cost": [1.2, "g"],
+        "Volume": [1, "ft³"]
+      },
+      "other": {
+        "Hardness": [5]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

@@ -85,9 +85,14 @@ export default {
       activeMaterial: {
         "name": "Emerald",
         "attributes": {
-          "Weight": 103.0,
-          "Cost": 57,
-          "Hardness": 7
+          "weightCostVolume": {
+            "Weight": [103.8, "lb"],
+            "Cost": [0.57, "g"],
+            "Volume": [1, "ft³"]
+          },
+          "other": {
+            "Hardness": [7]
+          }
         },
         "image": "https://via.placeholder.com/50",
         "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -95,7 +100,7 @@ export default {
         "isCommon": true,
         "isPrecious": true,
         "isMagical": false
-    }
+      }
     }
   },
   async mounted() {

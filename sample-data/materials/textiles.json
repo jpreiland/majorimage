@@ -2,9 +2,14 @@
   {
     "name": "Linen",
     "attributes": {
-      "Weight": 10,
-      "Cost": 5,
-      "Texture": "medium"
+      "weightCostVolume": {
+        "Weight": [10, "lb"],
+        "Cost": [0.05, "g"],
+        "Volume": [1, "ft²"]
+      },
+      "other": {
+        "Texture": ["Medium"]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -16,9 +21,14 @@
   {
     "name": "Wool",
     "attributes": {
-      "Weight": 20,
-      "Cost": 12,
-      "Texture": "rough"
+      "weightCostVolume": {
+        "Weight": [20, "lb"],
+        "Cost": [0.12, "g"],
+        "Volume": [1, "ft²"]
+      },
+      "other": {
+        "Texture": ["Rough"]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -30,9 +40,14 @@
   {
     "name": "Silk",
     "attributes": {
-      "Weight": 15,
-      "Cost": 30,
-      "Texture": "fine"
+      "weightCostVolume": {
+        "Weight": [15, "lb"],
+        "Cost": [0.30, "g"],
+        "Volume": [1, "ft²"]
+      },
+      "other": {
+        "Texture": ["Fine"]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -44,9 +59,14 @@
   {
     "name": "Cashmere",
     "attributes": {
-      "Weight": 18,
-      "Cost": 20,
-      "Texture": "soft"
+      "weightCostVolume": {
+        "Weight": [18, "lb"],
+        "Cost": [0.20, "g"],
+        "Volume": [1, "ft²"]
+      },
+      "other": {
+        "Texture": ["Soft"]
+      }
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

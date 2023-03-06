@@ -7,9 +7,15 @@
       <div class="card-header-right">
         <h2 class="card-title">{{ material.name }}</h2>
         <ul class="card-attributes">
-          <li v-for="(value, key) in material.attributes" :key="key">
+          <li v-for="(value, key) in material.attributes.weightCostVolume" :key="key">
             <span class="attribute-key">{{ key }}:</span>
-            <span class="attribute-value">{{ value }}</span>
+            <span class="attribute-value">{{ value[0] }}{{ value[1] }}</span>
+          </li>
+        </ul>
+        <ul class="card-attributes">
+          <li v-for="(value, key) in material.attributes.other" :key="key">
+            <span class="attribute-key">{{ key }}:</span>
+            <span class="attribute-value">{{ value[0] }}{{ value[1] }}</span>
           </li>
         </ul>
       </div>
@@ -49,7 +55,10 @@ export default {
 }
 
 .card-header-left {
+  margin-bottom: 0.2rem;
+  margin-left: 0.75rem;
   margin-right: 1rem;
+  margin-top: 0.2rem;
 }
 
 .card-image {
