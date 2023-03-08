@@ -200,7 +200,7 @@
     "isMagical": false
   },
   {
-    "name": "Mithral",
+    "name": "Mithril",
     "attributes": {
       "weightCost": {
         "Weight": {"value": 0.1417996, "units": "lb"},

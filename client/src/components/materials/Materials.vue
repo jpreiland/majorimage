@@ -4,47 +4,47 @@
       <div class="column header" :key="'stone-header'">
         <ul>
           <li class="material-list-header">Stone</li>
-          <span class='button material-category' @click="cycleCategory('stone')">{{ stoneCategories[stoneCategory] }}</span>
+          <span class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category] }}</span>
         </ul>
       </div>
       <div class="column header" :key="'wood-header'">
         <ul>
           <li class="material-list-header">Wood</li>
-          <li class="button material-category" @click="cycleCategory('wood')">{{ woodCategories[woodCategory] }}</li>
+          <li class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'metal-header'">
         <ul>
           <li class="material-list-header">Metal</li>
-          <li class="button material-category" @click="cycleCategory('metal')">{{ metalCategories[metalCategory] }}</li>
+          <li class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'textile-header'">
         <ul>
           <li class="material-list-header">Textile</li>
-          <li class="button material-category" @click="cycleCategory('textile')">{{ textileCategories[textileCategory] }}</li>
+          <li class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category] }}</li>
         </ul>
       </div>
     </div>
     <div class="columns material-list">
       <div class="column" :key="'stone'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in stone.stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'wood'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in wood.woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'metal'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in metal.metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'textile'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in textile.textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
         </ul>
       </div>
     </div>
@@ -66,22 +66,30 @@ export default {
   data() {
     return {
       fullLists: false,
-      stoneCategory: 0,
-      stoneCategories: ['All', 'Precious', 'Magical'],
-      woodCategory: 0,
-      woodCategories: ['All', 'Exotic', 'Magical'],
-      metalCategory: 0,
-      metalCategories: ['All', 'Precious', 'Magical'],
-      textileCategory: 0,
-      textileCategories: ['All', 'Cloth', 'Fur'],
-      stoneParams: { category: 'All' }, 
-      woodParams: { category: 'All' }, 
-      metalParams: { category: 'All' },
-      textileParams: { category: 'All' },
-      stones: [],
-      woods: [],
-      metals: [],
-      textiles: [],
+      stone: {
+        category: 0,
+        categories: ['All', 'Precious', 'Magical'],
+        params: { category: 'All' },
+        stones: []
+      },
+      wood: {
+        category: 0,
+        categories: ['All', 'Exotic', 'Magical'],
+        params: { category: 'All' },
+        woods: []
+      },
+      metal: {
+        category: 0,
+        categories: ['All', 'Precious', 'Magical'],
+        params: { category: 'All' },
+        metals: []
+      },
+      textile: {
+        category: 0,
+        categories: ['All', 'Cloth', 'Fur'],
+        params: { category: 'All' },
+        textiles: []
+      },
       activeMaterial: {
         "name": "Diamond",
         "attributes": {
@@ -124,37 +132,34 @@ export default {
       this.getTextiles()
     },
     async getStones() {
-      const response = await axios.get('api/material/stone', { params: this.stoneParams })
-      this.stones = response.data.stones
+      const response = await axios.get('api/material/stone', { params: this.stone.params })
+      this.stone.stones = response.data.stones
     },
     async getWoods() {
-      const response = await axios.get('api/material/wood', { params: this.woodParams })
-      this.woods = response.data.woods
+      const response = await axios.get('api/material/wood', { params: this.wood.params })
+      this.wood.woods = response.data.woods
     },
     async getMetals() {
-      const response = await axios.get('api/material/metal', { params: this.metalParams })
-      this.metals = response.data.metals
+      const response = await axios.get('api/material/metal', { params: this.metal.params })
+      this.metal.metals = response.data.metals
     },
     async getTextiles() {
-      const response = await axios.get('api/material/textile', { params: this.textileParams })
-      this.textiles = response.data.textiles
+      const response = await axios.get('api/material/textile', { params: this.textile.params })
+      this.textile.textiles = response.data.textiles
     },
     async cycleCategory(material) {
       switch (material) {
         case 'stone':
-          this.stoneCategory = (this.stoneCategory + 1) % this.stoneCategories.length
+          this.stone.category = (this.stone.category + 1) % this.stone.categories.length
           break;
         case 'wood':
-          this.woodCategory = (this.woodCategory + 1) % this.woodCategories.length
+          this.wood.category = (this.wood.category + 1) % this.wood.categories.length
           break;
         case 'metal':
-          this.metalCategory = (this.metalCategory + 1) % this.metalCategories.length
+          this.metal.category = (this.metal.category + 1) % this.metal.categories.length
           break;
         case 'textile':
-          this.textileCategory = (this.textileCategory + 1) % this.textileCategories.length
-          break;
-      
-        default:
+          this.textile.category = (this.textile.category + 1) % this.textile.categories.length
           break;
       }
     },
