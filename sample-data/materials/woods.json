@@ -2,14 +2,15 @@
   {
     "name": "Oak",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [55, "lb"],
-        "Cost": [0.35, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": [7.5]
-      }
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -21,14 +22,15 @@
   {
     "name": "Ash",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [45, "lb"],
-        "Cost": [0.30, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": [8]
-      }
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -40,14 +42,15 @@
   {
     "name": "Pine",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [40, "lb"],
-        "Cost": [0.25, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": [7]
-      }
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -59,14 +62,15 @@
   {
     "name": "Rosewood",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [70, "lb"],
-        "Cost": [1.2, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": [5]
-      }
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

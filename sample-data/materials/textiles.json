@@ -2,14 +2,15 @@
   {
     "name": "Linen",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [10, "lb"],
-        "Cost": [0.05, "g"],
-        "Volume": [1, "ft²"]
+      "weightCost": {
+        "Weight": {"value": 0.003858, "units": "oz"},
+        "Cost": {"value": 0.0038580246, "units": "g"}
       },
       "other": {
-        "Texture": ["Medium"]
-      }
+        "Texture": {"value": "Medium"},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -21,14 +22,15 @@
   {
     "name": "Wool",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [20, "lb"],
-        "Cost": [0.12, "g"],
-        "Volume": [1, "ft²"]
+      "weightCost": {
+        "Weight": {"value": 0.00925925925, "units": "oz"},
+        "Cost": {"value": 0.12, "units": "g"}
       },
       "other": {
-        "Texture": ["Rough"]
-      }
+        "Texture": {"value": "Rough"},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -40,14 +42,15 @@
   {
     "name": "Silk",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [15, "lb"],
-        "Cost": [0.30, "g"],
-        "Volume": [1, "ft²"]
+      "weightCost": {
+        "Weight": {"value": 0.0015432, "units": "oz"},
+        "Cost": {"value": 0.007716049, "units": "g"}
       },
       "other": {
-        "Texture": ["Fine"]
-      }
+        "Texture": {"value": "Fine"},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -59,14 +62,15 @@
   {
     "name": "Cashmere",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [18, "lb"],
-        "Cost": [0.20, "g"],
-        "Volume": [1, "ft²"]
+      "weightCost": {
+        "Weight": {"value": 18, "units": "oz"},
+        "Cost": {"value": 0.20, "units": "g"}
       },
       "other": {
-        "Texture": ["Soft"]
-      }
+        "Texture": {"value": "Soft"},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

@@ -2,14 +2,15 @@
   {
     "name": "Sapphire",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [105, "lb"],
-        "Cost": [0.53, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": [7.5]
-      }
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -21,14 +22,15 @@
   {
     "name": "Ruby",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [102, "lb"],
-        "Cost": [0.59, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 102, "units": "lb"},
+        "Cost": {"value": 0.59, "units": "g"}
       },
       "other": {
-        "Hardness": [8]
-      }
+        "Hardness": {"value": 8},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -40,14 +42,35 @@
   {
     "name": "Emerald",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [103.8, "lb"],
-        "Cost": [0.57, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 103.8, "units": "lb"},
+        "Cost": {"value": 0.57, "units": "g"}
       },
       "other": {
-        "Hardness": [7]
-      }
+        "Hardness": {"value": 7},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Diamond",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 146.8, "units": "lb"},
+        "Cost": {"value": 2, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 10},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -59,14 +82,15 @@
   {
     "name": "Granite",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [100, "lb"],
-        "Cost": [0.20, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 100, "units": "lb"},
+        "Cost": {"value": 0.20, "units": "g"}
       },
       "other": {
-        "Hardness": [5]
-      }
+        "Hardness": {"value": 5},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",

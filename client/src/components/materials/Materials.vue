@@ -29,22 +29,22 @@
     <div class="columns material-list">
       <div class="column" :key="'stone'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in stones" @click="select(material)" :key="'-stone-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'wood'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in woods" @click="select(material)" :key="'-wood-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'metal'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in metals" @click="select(material)" :key="'-metal-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'textile'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in textiles" @click="select(material)" :key="'-textile-'+i">{{ material.name }}</li>
+          <li class="material-list-item" v-for="(material, i) in textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
         </ul>
       </div>
     </div>
@@ -83,16 +83,17 @@ export default {
       metals: [],
       textiles: [],
       activeMaterial: {
-        "name": "Emerald",
+        "name": "Diamond",
         "attributes": {
-          "weightCostVolume": {
-            "Weight": [103.8, "lb"],
-            "Cost": [0.57, "g"],
-            "Volume": [1, "ft³"]
+          "weightCost": {
+            "Weight": {"value": 146.8, "units": "lb"},
+            "Cost": {"value": 2, "units": "g"}
           },
           "other": {
-            "Hardness": [7]
-          }
+            "Hardness": {"value": 10},
+            "Cost/lb": {"value": 0.1, "units": "g"}
+          },
+          "units": "in³"
         },
         "image": "https://via.placeholder.com/50",
         "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -100,11 +101,20 @@ export default {
         "isCommon": true,
         "isPrecious": true,
         "isMagical": false
-      }
+      },
+      activeMaterialType: "stone",
+      materialTypeDimensions: {
+        "stone": 3,
+        "wood": 3,
+        "metal": 3,
+        "textile": 2
+      },
+      isInInches: true
     }
   },
   async mounted() {
     this.getAllMaterials()
+    this.switchUnits()
   },
   methods: {
     async getAllMaterials() {
@@ -148,8 +158,29 @@ export default {
           break;
       }
     },
-    async select(material) {
+    async select(material, materialType) {
       this.activeMaterial = material
+      this.activeMaterialType = materialType
+      if (!this.activeMaterial.attributes.units.includes(this.isInInches ? 'in' : 'ft')) {
+        this.adjustMaterialUnits(this.materialTypeDimensions[this.activeMaterialType])
+      }
+    },
+    async switchUnits() {
+      this.isInInches = !this.isInInches
+      this.adjustMaterialUnits(this.materialTypeDimensions[this.activeMaterialType])
+    },
+    async adjustMaterialUnits(dimension) {
+      if (this.isInInches) {
+        this.activeMaterial.attributes.weightCost.Weight.value /= Math.pow(12, dimension)
+        this.activeMaterial.attributes.weightCost.Cost.value /= Math.pow(12, dimension)
+      } else {
+        this.activeMaterial.attributes.weightCost.Weight.value *= Math.pow(12, dimension)
+        this.activeMaterial.attributes.weightCost.Cost.value *= Math.pow(12, dimension)
+      }
+
+      const dimensionSuperscript = dimension === 3 ? '³' : '²'
+
+      this.activeMaterial.attributes.units = (this.isInInches ? 'in' : 'ft') + dimensionSuperscript
     }
   },
 }

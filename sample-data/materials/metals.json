@@ -2,36 +2,158 @@
   {
     "name": "Iron",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [150, "lb"],
-        "Cost": [0.80, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 0.284466, "units": "lb"},
+        "Cost": {"value": 0.0284466, "units": "g"}
       },
       "other": {
-        "Hardness": [7.5]
-      }
+        "Hardness": {"value": 4},
+        "Cost/lb": {"value": 0.1, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "description": "Iron is a soft, silver-white or gray, and ductile metal.",
     "uses": "Lorem, ipsum, dolor, sit, and amet.",
     "isCommon": true,
-    "isPrecious": true,
+    "isPrecious": false,
     "isMagical": false
   },
   {
     "name": "Steel",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [140, "lb"],
-        "Cost": [0.90, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 0.283599239, "units": "lb"},
+        "Cost": {"value": 1.134396956, "units": "g"}
       },
       "other": {
-        "Hardness": [8]
-      }
+        "Hardness": {"value": 4.5},
+        "Cost/lb": {"value": 4, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Tin",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.26246477, "units": "lb"},
+        "Cost": {"value": 0.07873943, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 1.5},
+        "Cost/lb": {"value": 0.3, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Brass",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.30635943, "units": "lb"},
+        "Cost": {"value": 0.09190783, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 3},
+        "Cost/lb": {"value": 0.3, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Bronze",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.31719762, "units": "lb"},
+        "Cost": {"value": 0.95159286, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 3},
+        "Cost/lb": {"value": 0.3, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Lead",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.40968348, "units": "lb"},
+        "Cost": {"value": 0.081936696, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 1.5},
+        "Cost/lb": {"value": 0.2, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Copper",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.3237005329, "units": "lb"},
+        "Cost": {"value": 0.161850266, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 3},
+        "Cost/lb": {"value": 0.5, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Silver",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.37897528, "units": "lb"},
+        "Cost": {"value": 1.894876, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 2.5},
+        "Cost/lb": {"value": 5, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
     "uses": "Lorem, ipsum, dolor, sit, and amet.",
     "isCommon": true,
     "isPrecious": true,
@@ -40,14 +162,15 @@
   {
     "name": "Gold",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [110, "lb"],
-        "Cost": [1.67, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 0.69125, "units": "lb"},
+        "Cost": {"value": 34.5625, "units": "g"}
       },
       "other": {
-        "Hardness": [7]
-      }
+        "Hardness": {"value": 2.5},
+        "Cost/lb": {"value": 50, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
@@ -57,22 +180,63 @@
     "isMagical": false
   },
   {
-    "name": "Tin",
+    "name": "Platinum",
     "attributes": {
-      "weightCostVolume": {
-        "Weight": [90, "lb"],
-        "Cost": [0.54, "g"],
-        "Volume": [1, "ft³"]
+      "weightCost": {
+        "Weight": {"value": 0.7749304, "units": "lb"},
+        "Cost": {"value": 387.4652, "units": "g"}
       },
       "other": {
-        "Hardness": [5]
-      }
+        "Hardness": {"value": 3.5},
+        "Cost/lb": {"value": 500, "units": "g"}
+      },
+      "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
     "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
     "uses": "Lorem, ipsum, dolor, sit, and amet.",
     "isCommon": true,
-    "isPrecious": false,
+    "isPrecious": true,
     "isMagical": false
+  },
+  {
+    "name": "Mithral",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.1417996, "units": "lb"},
+        "Cost": {"value": 141.7996, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 4.5},
+        "Cost/lb": {"value": 1000, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": true
+  },
+  {
+    "name": "Adamantine",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.283599239, "units": "lb"},
+        "Cost": {"value": 708.9980975, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 10},
+        "Cost/lb": {"value": 2500, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "image": "https://via.placeholder.com/50",
+    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
+    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": true
   }
 ]
