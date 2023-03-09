@@ -1,10 +1,12 @@
 <script>
 import Objects from './components/objects/Objects.vue'
 import Materials from './components/materials/Materials.vue'
+import Locations from './components/locations/Locations.vue'
 
 const routes = {
   '/': Objects,
-  '/materials': Materials
+  '/materials': Materials,
+  '/locations': Locations
 }
 
 export default {
@@ -30,5 +32,6 @@ export default {
   <div class="title">Major Image</div>
   <a href="#/">Objects</a> |
   <a href="#/materials">Materials</a> |
+  <a href="#/locations">Locations</a> |
   <component :is="currentView" />
 </template>

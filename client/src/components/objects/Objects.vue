@@ -43,7 +43,7 @@ import axios from "axios"
 import ObjectRow from "./ObjectRow.vue"
 
 export default {
-  name: 'App',
+  name: 'Objects',
   components: {
     ObjectRow: ObjectRow
   },

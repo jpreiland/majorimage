@@ -1,5 +1,5 @@
 <template>
-  <div class="material-info-card">
+  <div class="info-card material">
     <div class="card-header" @click="this.$parent.switchUnits()">
       <div class="card-header-left">
         <img :src="material.image" class="card-image">
@@ -40,61 +40,4 @@ export default {
 </script>
 
 <style scoped>
-.material-info-card {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  margin: 10px;
-}
-
-.card-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.card-header-left {
-  margin-bottom: 0.2rem;
-  margin-left: 0.75rem;
-  margin-right: 1rem;
-  margin-top: 0.2rem;
-}
-
-.card-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.card-header-right {
-  flex: 1;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  margin: 0;
-}
-
-.card-attributes {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.attribute-key {
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-.attribute-value {
-  margin-right: 0.5rem;
-}
-
-.card-description {
-  margin: 0;
-  font-size: 0.875rem;
-}
 </style>

@@ -1,0 +1,3 @@
+<template>
+  a nice countryside...
+</template>

@@ -1,0 +1,3 @@
+<template>
+  welcome aboard!
+</template>

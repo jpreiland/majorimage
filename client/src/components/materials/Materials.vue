@@ -3,48 +3,48 @@
     <div class="columns">
       <div class="column header" :key="'stone-header'">
         <ul>
-          <li class="material-list-header">Stone</li>
+          <li class="list-header">Stone</li>
           <span class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category] }}</span>
         </ul>
       </div>
       <div class="column header" :key="'wood-header'">
         <ul>
-          <li class="material-list-header">Wood</li>
+          <li class="list-header">Wood</li>
           <li class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'metal-header'">
         <ul>
-          <li class="material-list-header">Metal</li>
+          <li class="list-header">Metal</li>
           <li class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'textile-header'">
         <ul>
-          <li class="material-list-header">Textile</li>
+          <li class="list-header">Textile</li>
           <li class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category] }}</li>
         </ul>
       </div>
     </div>
-    <div class="columns material-list">
+    <div class="columns list">
       <div class="column" :key="'stone'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in stone.stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
+          <li class="list-item" v-for="(material, i) in stone.stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'wood'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in wood.woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
+          <li class="list-item" v-for="(material, i) in wood.woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'metal'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in metal.metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
+          <li class="list-item" v-for="(material, i) in metal.metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
         </ul>
       </div>
       <div class="column" :key="'textile'">
         <ul>
-          <li class="material-list-item" v-for="(material, i) in textile.textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
+          <li class="list-item" v-for="(material, i) in textile.textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
         </ul>
       </div>
     </div>
@@ -59,7 +59,7 @@ import axios from "axios"
 import MaterialInfoCard from "./MaterialInfoCard.vue"
 
 export default {
-  name: 'App',
+  name: 'Materials',
   components: {
     MaterialInfoCard
   },
@@ -192,24 +192,4 @@ export default {
 </script>
 
 <style>
-/* Width and height of the scrollbar */
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Background color of the scrollbar */
-::-webkit-scrollbar-track {
-  background-color: #f1f1f1;
-}
-
-/* Color of the scrollbar thumb */
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-}
-
-/* Hover state of the scrollbar thumb */
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
 </style>

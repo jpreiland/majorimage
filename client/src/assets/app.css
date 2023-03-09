@@ -27,9 +27,6 @@
 .quality {
   border-bottom-color: #ef2e55;
 }
-.q2 {
-  border-bottom-color: #fcd4dc;
-}
 .color {
   border-bottom-color: #3abb81;
 }
@@ -45,6 +42,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .button.btn-effect {
   background-color: #6800df;
   color: #fff;
@@ -71,26 +69,34 @@
   font-weight: 400;
   min-width: 90%;
 }
-.column.header {
-  text-align: center;
-}
-.material-list-header {
-  font-size: 1.25em;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-.columns{
-  margin: none;
+
+.columns {
+  margin: 2px;
   display: flex;
   justify-content: space-between;
 }
-.columns.material-list {
+.columns.list {
   height: min(50vh, 600px); /* 50% of the viewport height */
+}
+.columns.list.locations {
+  height: 90svh;
 }
 .column {
   overflow-y: auto; /* enable scrolling if column exceeds fixed height */
 }
-.material-list-item {
+.column.locations {
+  max-width: 25%;
+}
+.column.header {
+  text-align: center;
+}
+
+.list-header {
+  font-size: 1.25em;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.list-item {
   background-color: #fff;
   border: solid #b4b4b4;
   border-radius: 3px;
@@ -109,4 +115,93 @@
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+}
+
+.info-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+.info-card.material {
+  margin: 10px;
+}
+.info-card.location {
+  height: 100%; /* 75% of the viewport height */
+  overflow: auto;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card-header-left {
+  margin-bottom: 0.2rem;
+  margin-left: 0.75rem;
+  margin-right: 1rem;
+  margin-top: 0.2rem;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.card-header-right {
+  flex: 1;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.card-attributes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.attribute-key {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.attribute-value {
+  margin-right: 0.5rem;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.info-panel-description {
+  margin: 0;
+  line-height: 3rem;
+}
+
+/* Width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Background color of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Hover state of the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
 }

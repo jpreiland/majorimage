@@ -1,0 +1,9 @@
+{
+  "adjective": ["big", "little"],
+  "bit": ["caf", "mas", "mok"],
+  "color": ["black", "blue", "green", "red"],
+  "creature": ["bear", "eagle", "giant"],
+  "epithet": ["bold", "strong", "swift", "wise"],
+  "geography": ["cross", "peak", "point", "shore", "vale", "water"],
+  "person": ["alice", "bob", "claire", "don"]
+}
