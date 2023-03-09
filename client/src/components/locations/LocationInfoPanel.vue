@@ -63,7 +63,7 @@ export default {
         "Temple": {
           "temple-givenName": { weight: 1, parts: [['static', 'temple of '], ['pick', 'givenName']] },
           "temple-epithet": { weight: 2, parts: [['static', 'temple of the '], ['pick', 'epithet']] },
-          "temple-adjectivePersonality-trade(s)": { weight: 3, parts: [['static', 'temple of the '], ['pick', 'adjectivePersonality'], ['static', ' '], ['pick-pluralize-optional', 'trade']] },
+          "temple-adjectivePersonality-tradeAdventurer(s)": { weight: 3, parts: [['static', 'temple of the '], ['pick', 'adjectivePersonality'], ['static', ' '], ['pick-pluralize-optional', 'tradeAdventurer']] },
         },
         "Small Town": {
           "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
