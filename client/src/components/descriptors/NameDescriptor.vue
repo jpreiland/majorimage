@@ -3,6 +3,7 @@
 </template>
 
 <script>
+import pluralize from 'pluralize'
 
 export default {
   name: "NameDescriptor",
@@ -36,43 +37,33 @@ export default {
       let name = ""
 
       for (let part of formatParts) {
-        // if this is a dynamic part, concatenate value from appropriate part picker function otherwise, concatenate static part
-        if (part[0]) {
-          switch (part[1]) {
-            case 'color':
-              name += this.pickColor()
-              break;
-            case 'creature': 
-              name += this.pickCreature()
-              break;
-            case 'geography':
-              name += this.pickGeography()
-              break;
-            case 'givenName':
-              name += this.pickGivenName()
-              break;
-          
-            default:
-              break;
-          }
-        } else {
-          name += part[1]
+        switch (part[0]) {
+          case 'pick':
+            name += this.partPicker(part[1])
+            break;
+          case 'pick-pluralize':
+            name += pluralize(this.partPicker(part[1]))
+            break;
+          case 'pick-pluralize-optional':
+            if (Math.random() >= 0.5) {
+              name += pluralize(this.partPicker(part[1]))
+            } else {
+              name += this.partPicker(part[1])
+            }
+            break;
+          case 'static':
+            name += part[1]
+            break;
+
+          default:
+            break;
         }
       }
 
       return name
     },
-    pickColor() {
-      return this.names.color[Math.floor(Math.random() * this.names.color.length)]
-    },
-    pickCreature() {
-      return this.names.creature[Math.floor(Math.random() * this.names.creature.length)]
-    },
-    pickGeography() {
-      return this.names.geography[Math.floor(Math.random() * this.names.geography.length)]
-    },
-    pickGivenName() {
-      return this.names.givenName[Math.floor(Math.random() * this.names.givenName.length)]
+    partPicker(part) {
+      return this.names[part][Math.floor(Math.random() * this.names[part].length)]
     }
   }
 }

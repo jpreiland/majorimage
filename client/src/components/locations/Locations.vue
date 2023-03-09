@@ -7,7 +7,7 @@
         </ul>
       </div>
       <div class="column">
-        <LocationInfoPanel :locationType="activeLocationType" :locationTemplateType="activeTemplate"/>
+        <LocationInfoPanel :locationType="activeLocationType" :locationTemplateType="activeTemplate" :locationTypes="locations"/>
       </div>
     </div>
   </div>

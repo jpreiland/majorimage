@@ -39,10 +39,10 @@ export default {
   data() {
     return {
       cityNameFormats: {
-        "color-geography": { weight: 1, parts: [[true, 'color'], [false, ' '], [true, 'geography']] },
-        "creature-geography": { weight: 1, parts: [[true, 'creature'], [false, ' '], [true, 'geography']] },
-        "givenName-geography": { weight: 1, parts: [[true, 'givenName'], [false, '\'s '], [true, 'geography']] },
-      }
+          "color-geography": { weight: 1, parts: [['pick', 'color'], ['static', ' '], ['pick', 'geography']] },
+          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
+          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+        }
     }
   },
   methods: {

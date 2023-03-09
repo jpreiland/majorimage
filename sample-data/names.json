@@ -1,10 +1,19 @@
 {
-  "adjective": ["big", "little"],
-  "bit": ["caf", "mas", "mok"],
+  "adjective": ["big", "crooked", "little", "narrow", "wide"],
+  "adjectivePersonality": ["adamant", "advanced", "aggressive", "ambitious", "annoyed", "antagonistic", "apathetic", "aristocratic", "arrogant", "assertive", "audacious", "authoritative", "bad", "belligerent", "bitter", "bold", "bookish", "bored", "boring", "brainless", "brainy", "brash", "brave", "bright", "calm", "cantankerous", "caring", "charming", "cheerful", "chic", "clever", "coarse", "committed", "compassionate", "conceited", "concerned", "condescending", "confident", "considerate", "contemptuous", "controlling", "courageous", "cowardly", "crabby", "cranky", "cross", "cruel", "cultured", "cynical", "daft", "dandy", "daring", "decent", "dedicated", "dense", "destructive", "determined", "detracting", "devoted", "difficult", "dignified", "dim", "disapproving", "disdainful", "disgusting", "disillusioned", "disorganized", "disparaging", "disrespectful", "distinguished", "distrustful", "dramatic", "driven", "droopy", "dull", "elegant", "eminent", "energetic", "enraged", "enthusiatic", "epic", "evil", "experienced", "extroverted", "fair", "faithful", "false", "famed", "famous", "fanatical", "fearless", "fickle", "fine", "firm", "forceful", "forthright", "friendly", "fuming", "furious", "gallant", "garrulous", "generous", "genius", "gentle", "genuine", "good", "graceful", "gracious", "great", "greedy", "grumpy", "gullible", "happy", "headstrong", "heated", "helpful", "heroic", "honest", "hopeful", "horrible", "hostile", "hyper", "illustrious", "incensed", "indifferent", "indignant", "infamous", "inflexible", "infuriated", "insistent", "intrepid", "introverted", "irate", "irritable", "keen", "kind", "known", "laid-back", "late", "lazy", "legendary", "lethargic", "lighthearted", "listless", "livid", "loathsome", "loquacious", "loud", "lovely", "loving", "lowly", "loyal", "lusty", "mad", "malevolent", "malicious", "mean", "melancholy", "mellow", "militant", "misleading", "motivated", "mousy", "naive", "nasty", "neat", "nervous", "nervous", "noble", "notable", "notorious", "obnoxious", "obsessed", "obstinate", "optimistic", "organized", "ornery", "outgoing", "outraged", "peeved", "persistent", "pessimistic", "phony", "pigheaded", "plucky", "poised", "poisonous", "polished", "prideful", "prominent", "proud", "proven", "punctual", "pushy", "quiet", "recognized", "refined", "regal", "renowned", "reprehensible", "respectful", "responsible", "reverent", "righteous", "sarcastic", "sardonic", "self-assured", "self-sacrificing", "serious", "sharp", "shy", "skeptical", "slow", "smarmy", "smart", "snobbish", "snobby", "sophisticated", "sporting", "stalwart", "strong", "stylish", "sulky", "superior", "surly", "suspicious", "talkative", "thick", "thoughtful", "tilted", "timid", "unafraid", "uncaring", "uncommitted", "uncompromising", "unconcerned", "undistinguished", "uninterested", "unknown", "unmoving", "unreasonable", "unwise", "valiant", "venomous", "vicious", "warm", "wasteful", "weary", "welcoming", "well-known", "wicked", "witchy", "withering"],
+  "bodyPartCrustacean": ["eye", "head", "heart", "leg"],
+  "bodyPartFish": ["eye", "fin", "gill", "head", "heart"],
+  "bodyPartHuman": ["eye", "fist", "hand", "head", "heart", "leg"],
+  "bodyPartInsect": ["eye", "head", "heart", "leg"],
+  "bodyPartMammal": ["eye", "head", "heart", "leg", "paw"],
   "color": ["black", "blue", "green", "red"],
   "creature": ["bear", "eagle", "giant"],
   "epithet": ["bold", "strong", "swift", "wise"],
-  "geography": ["cross", "peak", "point", "shore", "vale", "water"],
+  "emotion": ["desire", "envy", "fury", "love", "rage", "wrath"],
+  "geography": ["cross", "hill", "peak", "point", "quarry", "shore", "vale", "water"],
   "givenName": ["alice", "bob", "claire", "don"],
-  "surame": ["baker", "overhill", "parker", "smith"]
+  "remains": ["blood", "guts", "hair", "skull", "tongue"],
+  "rp-bit": ["caf", "mas", "mok"],
+  "surame": ["baker", "overhill", "parker", "smith"],
+  "trade": ["architect", "armorer", "baker", "builder", "butler", "blacksmith", "carpenter", "chandler", "doctor", "draper", "dyer", "farmer", "fletcher", "furrier", "goldsmith", "mason", "merchant", "miller", "saddler", "silversmith", "surgeon", "tailor", "tanner", "weaver"]
 }
