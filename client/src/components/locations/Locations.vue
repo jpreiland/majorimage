@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 import axios from "axios"
 import LocationInfoPanel from "./LocationInfoPanel.vue"
 
@@ -22,11 +21,6 @@ export default {
   name: 'Locations',
   components: {
     LocationInfoPanel
-  },
-  provide() {
-    return {
-      names: computed(() => this.names)
-    }
   },
   data() {
     return {
@@ -37,18 +31,21 @@ export default {
         creature: ['default'],
         epithet: ['default'],
         geography: ['default'],
-        person: ['default'],
+        givenName: ['default'],
+        surname: ['default']
       },
       locations: [],
       activeLocationType: 'City',
       activeTemplate: 'BasicCity'
     }
   },
-  async created() {
-    const namesResponse = await axios.get('api/names', { })
-    this.names = namesResponse.data
+  async beforeCreate() {
     const locationsResponse = await axios.get('api/locations', { })
     this.locations = locationsResponse.data
+    if (this.locations) {
+      this.activeLocationType = this.locations[0].locationType
+      this.activeTemplate = this.locations[0].templates[0]
+    }
   },
   methods: {
     async getLocationTypes() {

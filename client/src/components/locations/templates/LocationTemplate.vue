@@ -76,6 +76,7 @@ export default {
   },
   computed: {
     computeTemplateType () {
+      if (!this.locationType || !this.locationTemplateType) return
       const pathLocationType = this.locationPathMap[this.locationType].dir
       const pathTemplateName = this.locationPathMap[this.locationType].templates[this.locationTemplateType]
 
@@ -84,6 +85,7 @@ export default {
       return defineAsyncComponent(() => import(`./${pathLocationType}/${pathTemplateName}.vue`))
     },
     computeOverview () {
+      if (!this.locationType || !this.locationTemplateType) return
       const pathLocationType = this.locationPathMap[this.locationType].dir
       const pathOverviewName = this.locationPathMap[this.locationType].overview
 

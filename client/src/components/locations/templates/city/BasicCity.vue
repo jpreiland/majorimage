@@ -1,13 +1,13 @@
 <template>
   <div class="info-panel-description">
     <p>
+      <NameDescriptor :nameFormats="cityNameFormats" />
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-      <span class="button descriptor item" @click="testRollDescriptor()">{{ testBool ? testDescriptor : testDescriptor2 }}</span> 
-      hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
-      sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
-      velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
+      hendrerit, ligula vitae feugiat ullamcorper, velit <NameDescriptor :nameFormats="cityNameFormats" /> placerat nisi, 
+      sit <NameDescriptor :nameFormats="cityNameFormats" /> vestibulum <NameDescriptor :nameFormats="cityNameFormats" /> enim et magna.Lorem <NameDescriptor :nameFormats="cityNameFormats" /> dolor sit amet, consectetur adipiscing elit. Integer <NameDescriptor :nameFormats="cityNameFormats" />, ligula vitae feugiat ullamcorper, 
+      velit nulla placerat nisi, sit amet vestibulum sapien <NameDescriptor :nameFormats="cityNameFormats" /> et magna.<NameDescriptor :nameFormats="cityNameFormats" /> ipsum dolor sit <NameDescriptor :nameFormats="cityNameFormats" />, consectetur adipiscing elit. <NameDescriptor :nameFormats="cityNameFormats" /> hendrerit, 
       ligula vitae feugiat ullamcorper.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
+      Lorem ipsum dolor sit amet, consectetur adipiscing <NameDescriptor :nameFormats="cityNameFormats" />. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
       sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
       velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
       ligula vitae feugiat ullamcorper.
@@ -28,22 +28,24 @@
 </template>
 
 <script>
+import NameDescriptor from '../../../descriptors/NameDescriptor.vue'
+
 export default {
   name: 'BasicCity',
-  props: {
+  components: {
+    NameDescriptor
   },
   inject: ['names'],
   data() {
     return {
-      testBool: true,
-      testDescriptor: "AAAAAAAA",
-      testDescriptor2: "BBBBBBBBBB",
+      cityNameFormats: {
+        "color-geography": { weight: 1, parts: [[true, 'color'], [false, ' '], [true, 'geography']] },
+        "creature-geography": { weight: 1, parts: [[true, 'creature'], [false, ' '], [true, 'geography']] },
+        "givenName-geography": { weight: 1, parts: [[true, 'givenName'], [false, '\'s '], [true, 'geography']] },
+      }
     }
   },
   methods: {
-    testRollDescriptor() {
-      this.testBool = !this.testBool
-    }
   }
 }
 </script>
