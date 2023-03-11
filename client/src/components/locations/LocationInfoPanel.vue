@@ -7,7 +7,7 @@
       <div class="card-header-right" v-if="this.wordData">
         <div v-if="!this.wordData">Generating Location...</div>
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <Descriptor v-if="this.locationType === locationTitleType.locationType"  :type="locationTitleType.locationType"  />
+          <Descriptor v-if="this.locationType === locationTitleType.locationType" :type="locationTitleType.locationType" />
         </template>
       </div>
     </div>

@@ -1,4 +1,6 @@
 {
+  "novel-tradeNPC-verbed": [["static", "the "], ["pick", "tradeNPC"], ["static", " I "], ["pick-pastTense", "verbCreatureToCreature"]],
+  "novel-tradeNPCs-verbed": [["static", "the "], ["pick-pluralize", "tradeNPC"], ["static", " I "], ["pick-pastTense-optional", "verbCreatureToCreature"]],
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
   "humanoidCommon-geography": [["pick", "humanoidCommon"], ["static", " "], ["pick", "geography"]],
   "monster-geography": [["pick-group", "monster"], ["static", " "], ["pick", "geography"]],

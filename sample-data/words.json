@@ -21,7 +21,8 @@
   "castlePart": ["aisle", "apse", "arcade", "arch", "arrowslit", "bailey", "barbican", "bastion", "battlement", "berm", "blockhouse", "buttery", "buttress", "column", "counterscarp", "counterscarp gallery", "cupola", "curtain wall", "dormer", "drawbridge", "dungeon", "forebuilding", "gate house", "great chamber", "great hall", "guard tower", "hall", "hallway", "inner curtain", "inner ward", "lancet window", "machicolation", "mantlet", "merlon", "moat", "motte", "murder hole", "oubliette", "outer curtain", "palisade", "parapet", "pediment", "portcullis", "postern gate", "quadrangle", "rampart", "refectory", "ringwork", "sally port", "scarp", "shaft", "shell keep", "solar", "stockade", "tower", "treasury", "turret", "vault", "wall stair", "wall walk", "yett"],
   "celestial": ["angel", "unicorn"],
   "clothing": ["apron", "blouse", "boots", "coat", "corset", "double-breasted coat", "dress", "evening gown", "fur coat", "gown", "jacket", "mantle", "nightgown", "overcoat", "pants", "petticoat", "robe", "sandals", "shirt", "shoes", "shorts", "skirt", "slacks", "slippers", "socks", "suit", "sun dress", "sweater", "tabard", "tailcoat", "tank top", "trousers", "undershirt", "vest", "vestments", "wasitcoat", "wedding dress", "wizard robe"],
-  "color": ["black", "blue", "green", "red", "white", "yellow"],
+  "color": ["amber", "black", "blood red", "blue", "bronze", "brown", "crimson", "gold", "green", "grey", "indigo", "olive", "orange", "pink", "purple", "red", "silver", "tan", "teal", "violet", "white", "yellow"],
+  "colorModified": ["dark blue", "dark brown", "dark green", "dark grey", "dark orange", "dark purple", "dark red", "dark tan", "dark teal", "dark yellow", "light blue", "light brown", "light green", "light grey", "light orange", "light purple", "light red", "light tan", "light teal", "light yellow"],
   "construct": ["clay golem", "flying sword", "shield guardian"],
   "container": ["box", "coffin", "crate"],
   "dragon": ["wyvern", "red dragon"],
@@ -63,7 +64,7 @@
   "undead": ["lich", "wraith", "zombie"],
   "verbCreatureAlone": ["cry"],
   "verbObjectAlone": ["sit"],
-  "verbCreatureToCreature": ["cry"],
+  "verbCreatureToCreature": ["love", "punch"],
   "verbObjectToCreature": ["sit"],
   "verbCreatureToObject": ["break"],
   "verbObjectToObject": ["break"],
@@ -71,3 +72,4 @@
   "wood": ["oak"],
   "writing": ["book", "scroll", "tome"]
 }
+

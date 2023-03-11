@@ -4,6 +4,7 @@
 
 <script>
 import pluralize from 'pluralize'
+import tensify from '../../lib/tensify/inflector'
 
 export default {
   name: "Descriptor",
@@ -45,9 +46,11 @@ export default {
           case 'pick':
             name += this.wordPicker(part[1])
             break;
+
           case 'pick-pluralize':
             name += pluralize(this.wordPicker(part[1]))
             break;
+
           case 'pick-pluralize-optional':
             if (Math.random() >= 0.5) {
               name += pluralize(this.wordPicker(part[1]))
@@ -55,12 +58,27 @@ export default {
               name += this.wordPicker(part[1])
             }
             break;
+
+          case 'pick-pastTense':
+            name += tensify(this.wordPicker(part[1]))
+            break;
+
+          case 'pick-pastTense-optional':
+            if (Math.random() >= 0.5) {
+              name += tensify(this.wordPicker(part[1]))
+            } else {
+              name += this.wordPicker(part[1])
+            }
+            break;
+
           case 'pick-group':
             name += this.groupWordPicker(part[1])
             break;
+
           case 'pick-group-pluralize':
             name += pluralize(this.groupWordPicker(part[1]))
             break;
+
           case 'pick-group-pluralize-optional':
             if (Math.random() >= 0.5) {
               name += pluralize(this.groupWordPicker(part[1]))
@@ -68,6 +86,19 @@ export default {
               name += this.groupWordPicker(part[1])
             }
             break;
+
+          case 'pick-group-pastTense':
+            name += tensify(this.groupWordPicker(part[1]))
+            break;
+
+          case 'pick-group-pastTense-optional':
+            if (Math.random() >= 0.5) {
+              name += tensify(this.groupWordPicker(part[1]))
+            } else {
+              name += this.groupWordPicker(part[1])
+            }
+            break;
+
           case 'pick-multi':
             numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
             name += this.wordPicker(part[1])
@@ -78,6 +109,7 @@ export default {
               numWords--
             }
             break;
+
           case 'pick-group-multi':
             numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
             name += this.groupWordPicker(part[1])
@@ -88,6 +120,7 @@ export default {
               numWords--
             }
             break;
+
           case 'static':
             name += part[1]
             break;

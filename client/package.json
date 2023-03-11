@@ -11,7 +11,7 @@
     "axios": "^0.26.1",
     "core-js": "^3.8.3",
     "pluralize": "^8.0.0",
-    "tensify": "^0.0.4",
+    "symbols": "^0.0.6",
     "vue": "^3.2.13"
   },
   "devDependencies": {
