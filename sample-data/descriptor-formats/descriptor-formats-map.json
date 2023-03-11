@@ -3,6 +3,7 @@
   "Book": [["novel-tradeNPC-verbed", 1], ["novel-tradeNPCs-verbed", 1]],
   "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
   "Countryside": [["color-geography", 1], ["humanoidCommon-geography", 1]],
+  "CreatureVerbingObject(s)": [["creature-verbing-object", 1], ["creature-verbing-objects", 1]],
   "Ship": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Small Town": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Temple": [["temple-adjectivePersonality-tradeAdventurer(s)", 1]]

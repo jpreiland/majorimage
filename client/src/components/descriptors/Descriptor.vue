@@ -5,6 +5,7 @@
 <script>
 import pluralize from 'pluralize'
 import tensify from '../../lib/tensify/inflector'
+import gerund from '../../lib/gerunds/gerunds'
 
 export default {
   name: "Descriptor",
@@ -71,6 +72,18 @@ export default {
             }
             break;
 
+          case 'pick-gerund':
+            name += gerund(this.wordPicker(part[1]))
+            break;
+
+          case 'pick-gerund-optional':
+            if (Math.random() >= 0.5) {
+              name += gerund(this.wordPicker(part[1]))
+            } else {
+              name += this.wordPicker(part[1])
+            }
+            break;
+
           case 'pick-group':
             name += this.groupWordPicker(part[1])
             break;
@@ -94,6 +107,18 @@ export default {
           case 'pick-group-pastTense-optional':
             if (Math.random() >= 0.5) {
               name += tensify(this.groupWordPicker(part[1]))
+            } else {
+              name += this.groupWordPicker(part[1])
+            }
+            break;
+
+          case 'pick-group-gerund':
+            name += gerund(this.groupWordPicker(part[1]))
+            break;
+
+          case 'pick-group-gerund-optional':
+            if (Math.random() >= 0.5) {
+              name += gerund(this.groupWordPicker(part[1]))
             } else {
               name += this.groupWordPicker(part[1])
             }

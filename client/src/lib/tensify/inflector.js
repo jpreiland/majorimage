@@ -17,8 +17,8 @@ function ends_with_a_single_vowel_plus_a_consonant_and_not_wx(verb, last) {
 			&& verb[last] !== 'x'
 }
 
-function ends_with_c(verb) {
-	return verb[verb.length - 1].toLowerCase() === 'c'
+function ends_with_c(verb, last) {
+	return verb[last].toLowerCase() === 'c'
 }
 
 function ends_with_consonant_plus_y(verb, last) {
@@ -26,8 +26,8 @@ function ends_with_consonant_plus_y(verb, last) {
 			&& symbols.is_consonant(verb[last - 1])
 }
 
-function ends_with_e(verb) {
-	return verb[verb.length - 1].toLowerCase() === 'e'
+function ends_with_e(verb, last) {
+	return verb[last].toLowerCase() === 'e'
 }
 
 function ends_with_two_vowels_plus_a_consonant(verb, last) {
@@ -39,13 +39,13 @@ function ends_with_two_vowels_plus_a_consonant(verb, last) {
 function edify(verb) {
 	const last = verb.length - 1
 	switch (true) {
-		case ends_with_c(verb):
+		case ends_with_c(verb, last):
 			return verb + 'ked'
 
 		case ends_with_consonant_plus_y(verb, last):
 			return verb.slice(0, -1) + 'ied'
 
-		case ends_with_e(verb):
+		case ends_with_e(verb, last):
 			return verb + 'd'
 
 		case ends_with_two_vowels_plus_a_consonant(verb, last):
@@ -60,7 +60,7 @@ function edify(verb) {
 }
 
 function tensify(verb) {
-	if (!verb || verb.length < 1) return ''
+	if (!verb || verb.length < 1) return verb
 	const irregular = find_irregular_verb(verb)
 
 	return irregular ? irregular[0] : edify(verb)
