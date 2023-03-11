@@ -9,8 +9,8 @@ export default {
   name: "Descriptor",
   inject: ['wordData'],
   props: {
-    nameFormats: {
-      type: Object,
+    type: {
+      type: String,
       required: true
     },
     color: {
@@ -24,8 +24,8 @@ export default {
     }
   },
   async mounted() {
-    for (let format of Object.keys(this.nameFormats)) {
-      this.formatPicker = this.formatPicker.concat(Array(this.nameFormats[format].weight).fill(format))
+    for (let format of Object.keys(this.wordData.dfMap[this.type])) {
+      this.formatPicker = this.formatPicker.concat(Array(this.wordData.dfMap[this.type][format].weight).fill(format))
     }
     this.reroll()
   },
@@ -34,7 +34,7 @@ export default {
       if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
 
-      this.descriptorText = this.buildName(this.nameFormats[format].format)
+      this.descriptorText = this.buildName(this.wordData.dfMap[this.type][format].format)
     },
     buildName(parts) {
       let name = ""

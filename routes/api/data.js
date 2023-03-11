@@ -12,8 +12,8 @@ const Textiles = require('../../sample-data/materials/textiles.json')
 const Words = require('../../sample-data/words.json')
 const WordGroups = require('../../sample-data/word-groups.json')
 const Locations = require('../../sample-data/locations/locations.json')
-const NameFormats = require('../../sample-data/name-formats/name-formats.json')
-const NameFormatsMap = require('../../sample-data/name-formats/descriptor-name-formats-map.json')
+const Formats = require('../../sample-data/descriptor-formats/formats.json')
+const DescriptorFormatsMap = require('../../sample-data/descriptor-formats/descriptor-formats-map.json')
 
 const router = Router()
 
@@ -109,26 +109,26 @@ router.get('/words', async (req, res) => {
       }
     }
 
-    /* compile descriptor nameFormat map */
-    const compiledNameFormats = {}
+    /* compile descriptor-format map */
+    const compiledFormats = {}
 
-    for (let descriptorType of Object.keys(NameFormatsMap)) {
+    for (let descriptorType of Object.keys(DescriptorFormatsMap)) {
       const compiledDescriptorType = {}
 
-      for (let nfWeightPair of NameFormatsMap[descriptorType]) {
+      for (let nfWeightPair of DescriptorFormatsMap[descriptorType]) {
         compiledDescriptorType[nfWeightPair[0]] = {
           weight: nfWeightPair[1],
-          format: NameFormats[nfWeightPair[0]]
+          format: Formats[nfWeightPair[0]]
         }
       }
 
-      compiledNameFormats[descriptorType] = compiledDescriptorType
+      compiledFormats[descriptorType] = compiledDescriptorType
     }
 
     const wordData = {
       words: Words, 
       wordGroups: compiledWordGroups,
-      dnfMap: compiledNameFormats
+      dfMap: compiledFormats
     }
 
     res.status(200).json(wordData)

@@ -1,19 +1,16 @@
 <template>
-  <div class="info-card location">
-    <!-- title -->
+  <div class="info-card location" >
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">icon</h2>
       </div>
-      <div class="card-header-right">
+      <div class="card-header-right" v-if="this.wordData">
         <div v-if="!this.wordData">Generating Location...</div>
-        <!-- TODO: computed component, different descriptors for each location type, larger size, static nameFormats -->
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <Descriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="this.wordData.dnfMap[locationTitleType.locationType]"  />
+          <Descriptor v-if="this.locationType === locationTitleType.locationType"  :type="locationTitleType.locationType"  />
         </template>
       </div>
     </div>
-    <!-- location template -->
     <LocationTemplate v-if="this.wordData" :locationType="locationType" :locationTemplateType="locationTemplateType" />
   </div>
 </template>
