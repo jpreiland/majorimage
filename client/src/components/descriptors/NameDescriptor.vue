@@ -7,7 +7,7 @@ import pluralize from 'pluralize'
 
 export default {
   name: "NameDescriptor",
-  inject: ['words'],
+  inject: ['wordData'],
   props: {
     nameFormats: {
       type: Object,
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async reroll() {
-      if (!this.words) return "(name)"
+      if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
 
       this.descriptorText = this.buildName(this.nameFormats[format].parts)
@@ -39,16 +39,29 @@ export default {
       for (let part of formatParts) {
         switch (part[0]) {
           case 'pick':
-            name += this.partPicker(part[1])
+            name += this.wordPicker(part[1])
             break;
           case 'pick-pluralize':
-            name += pluralize(this.partPicker(part[1]))
+            name += pluralize(this.wordPicker(part[1]))
             break;
           case 'pick-pluralize-optional':
             if (Math.random() >= 0.5) {
-              name += pluralize(this.partPicker(part[1]))
+              name += pluralize(this.wordPicker(part[1]))
             } else {
-              name += this.partPicker(part[1])
+              name += this.wordPicker(part[1])
+            }
+            break;
+          case 'pick-group':
+            name += this.groupWordPicker(part[1])
+            break;
+          case 'pick-group-pluralize':
+            name += pluralize(this.groupWordPicker(part[1]))
+            break;
+          case 'pick-group-pluralize-optional':
+            if (Math.random() >= 0.5) {
+              name += pluralize(this.groupWordPicker(part[1]))
+            } else {
+              name += this.groupWordPicker(part[1])
             }
             break;
           case 'static':
@@ -62,8 +75,22 @@ export default {
 
       return name
     },
-    partPicker(part) {
-      return this.words[part][Math.floor(Math.random() * this.words[part].length)]
+    wordPicker(category) {
+      return this.wordData.words[category][Math.floor(Math.random() * this.wordData.words[category].length)]
+    },
+    groupWordPicker(wordGroup) {
+      // pick category from word group
+      const groupsize = this.wordData.wordGroups[wordGroup].totalWords
+      const grouproll = Math.floor(Math.random() * groupsize)
+      let category = ''
+
+      for (let categorySize of Object.keys(this.wordData.wordGroups[wordGroup].categoryMap)) {
+        category = this.wordData.wordGroups[wordGroup].categoryMap[categorySize]
+        if (categorySize >= grouproll) break
+      }
+
+      // pick word
+      return this.wordData.words[category][Math.floor(Math.random() * this.wordData.words[category].length)]
     }
   }
 }

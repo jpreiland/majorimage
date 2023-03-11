@@ -6,15 +6,15 @@
         <h2 class="card-title">icon</h2>
       </div>
       <div class="card-header-right">
-        <div v-if="!this.words">Generating Location...</div>
+        <div v-if="!this.wordData">Generating Location...</div>
         <!-- TODO: computed component, different descriptors for each location type, larger size, static nameFormats -->
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <NameDescriptor  v-if="this.words && this.locationType === locationTitleType.locationType"  :nameFormats="nameFormats[locationTitleType.locationType]"  />
+          <NameDescriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="nameFormats[locationTitleType.locationType]"  />
         </template>
       </div>
     </div>
     <!-- location template -->
-    <LocationTemplate v-if="this.words" :locationType="locationType" :locationTemplateType="locationTemplateType" />
+    <LocationTemplate v-if="this.wordData" :locationType="locationType" :locationTemplateType="locationTemplateType" />
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     LocationTemplate,
     NameDescriptor
   },
-  inject: ['words'],
+  inject: ['wordData'],
   props: {
     locationType: {
       type: String,

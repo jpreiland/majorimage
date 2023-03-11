@@ -24,16 +24,6 @@ export default {
   },
   data() {
     return {
-      words: {
-        adjective: ['default'],
-        bit: ['default'],
-        color: ['default'],
-        creature: ['default'],
-        epithet: ['default'],
-        geography: ['default'],
-        givenName: ['default'],
-        surname: ['default']
-      },
       locations: [],
       activeLocationType: 'City',
       activeTemplate: 'BasicCity'
