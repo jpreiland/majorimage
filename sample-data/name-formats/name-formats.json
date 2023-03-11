@@ -1,0 +1,7 @@
+{
+  "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
+  "humanoidCommon-geography": [["pick", "humanoidCommon"], ["static", " "], ["pick", "geography"]],
+  "monster-geography": [["pick-group", "monster"], ["static", " "], ["pick", "geography"]],
+  "nameFirst-geography": [["pick", "nameFirst"], ["static", "'s "], ["pick", "geography"]],
+  "temple-adjectivePersonality-tradeAdventurer(s)": [["static", "temple of the "], ["pick", "adjectivePersonality"], ["static", " "], ["pick-pluralize-optional", "tradeAdventurer"]]
+}

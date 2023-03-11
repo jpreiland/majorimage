@@ -1,0 +1,8 @@
+{
+  "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
+  "Countryside": [["color-geography", 1], ["humanoidCommon-geography", 1]],
+  "Temple": [["temple-adjectivePersonality-tradeAdventurer(s)", 1]],
+  "Small Town": [["color-geography", 1], ["humanoidCommon-geography", 1]],
+  "Bazaar": [["color-geography", 1], ["humanoidCommon-geography", 1]],
+  "Ship": [["color-geography", 1], ["humanoidCommon-geography", 1]]
+}

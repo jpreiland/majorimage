@@ -31,12 +31,13 @@ export default {
       if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
 
-      this.descriptorText = this.buildName(this.nameFormats[format].parts)
+      this.descriptorText = this.buildName(this.nameFormats[format].format)
     },
-    buildName(formatParts) {
+    buildName(parts) {
       let name = ""
+      let numWords = 1
 
-      for (let part of formatParts) {
+      for (let part of parts) {
         switch (part[0]) {
           case 'pick':
             name += this.wordPicker(part[1])
@@ -62,6 +63,26 @@ export default {
               name += pluralize(this.groupWordPicker(part[1]))
             } else {
               name += this.groupWordPicker(part[1])
+            }
+            break;
+          case 'pick-multi':
+            numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
+            name += this.wordPicker(part[1])
+            numWords--
+
+            while (numWords > 0) {
+              name += ' ' + this.wordPicker(part[1])
+              numWords--
+            }
+            break;
+          case 'pick-group-multi':
+            numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
+            name += this.groupWordPicker(part[1])
+            numWords--
+
+            while (numWords > 0) {
+              name += ' ' + this.groupWordPicker(part[1])
+              numWords--
             }
             break;
           case 'static':

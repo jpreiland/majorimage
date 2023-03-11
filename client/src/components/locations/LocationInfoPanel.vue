@@ -9,7 +9,7 @@
         <div v-if="!this.wordData">Generating Location...</div>
         <!-- TODO: computed component, different descriptors for each location type, larger size, static nameFormats -->
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <NameDescriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="nameFormats[locationTitleType.locationType]"  />
+          <NameDescriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="this.wordData.dnfMap[locationTitleType.locationType]"  />
         </template>
       </div>
     </div>
@@ -49,39 +49,10 @@ export default {
       testDescriptor: "one descriptor",
       testDescriptor2: "another descriptor",
       locationName: "",
-      locationNameFormats: {},
-      nameFormats: {
-        "City": {
-          "color-geography": { weight: 1, parts: [['pick', 'color'], ['static', ' '], ['pick', 'geography']] },
-          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
-          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
-        },
-        "Countryside": {
-          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
-          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
-        },
-        "Temple": {
-          "temple-nameFirst": { weight: 1, parts: [['static', 'temple of '], ['pick', 'nameFirst']] },
-          "temple-epithet": { weight: 2, parts: [['static', 'temple of the '], ['pick', 'epithet']] },
-          "temple-adjectivePersonality-tradeAdventurer(s)": { weight: 3, parts: [['static', 'temple of the '], ['pick', 'adjectivePersonality'], ['static', ' '], ['pick-pluralize-optional', 'tradeAdventurer']] },
-        },
-        "Small Town": {
-          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
-          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
-        },
-        "Bazaar": {
-          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
-          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
-        },
-        "Ship": {
-          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
-          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
-        }
-      }
+      locationNameFormats: {}
     }
   },
-  async beforeMount() {
-
+  async mounted() {
   },
   methods: {
     testRollDescriptor() {
