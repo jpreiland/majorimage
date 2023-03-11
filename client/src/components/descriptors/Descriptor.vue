@@ -6,7 +6,7 @@
 import pluralize from 'pluralize'
 
 export default {
-  name: "NameDescriptor",
+  name: "Descriptor",
   inject: ['wordData'],
   props: {
     nameFormats: {

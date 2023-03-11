@@ -9,7 +9,7 @@
         <div v-if="!this.wordData">Generating Location...</div>
         <!-- TODO: computed component, different descriptors for each location type, larger size, static nameFormats -->
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <NameDescriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="this.wordData.dnfMap[locationTitleType.locationType]"  />
+          <Descriptor  v-if="this.wordData && this.locationType === locationTitleType.locationType"  :nameFormats="this.wordData.dnfMap[locationTitleType.locationType]"  />
         </template>
       </div>
     </div>
@@ -20,13 +20,13 @@
 
 <script>
 import LocationTemplate from "./templates/LocationTemplate.vue"
-import NameDescriptor from './../descriptors/NameDescriptor.vue'
+import Descriptor from '../descriptors/Descriptor.vue'
 
 export default {
   name: 'LocationInfoPanel',
   components: {
     LocationTemplate,
-    NameDescriptor
+    Descriptor
   },
   inject: ['wordData'],
   props: {
