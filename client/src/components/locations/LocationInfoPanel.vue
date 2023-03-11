@@ -6,15 +6,15 @@
         <h2 class="card-title">icon</h2>
       </div>
       <div class="card-header-right">
-        <div v-if="!this.names">Generating Location...</div>
+        <div v-if="!this.words">Generating Location...</div>
         <!-- TODO: computed component, different descriptors for each location type, larger size, static nameFormats -->
         <template v-for="locationTitleType in locationTypes" v-bind:key="'location-name-'+locationTitleType.locationType">
-          <NameDescriptor  v-if="this.names && this.locationType === locationTitleType.locationType"  :nameFormats="nameFormats[locationTitleType.locationType]"  />
+          <NameDescriptor  v-if="this.words && this.locationType === locationTitleType.locationType"  :nameFormats="nameFormats[locationTitleType.locationType]"  />
         </template>
       </div>
     </div>
     <!-- location template -->
-    <LocationTemplate v-if="this.names" :locationType="locationType" :locationTemplateType="locationTemplateType" />
+    <LocationTemplate v-if="this.words" :locationType="locationType" :locationTemplateType="locationTemplateType" />
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     LocationTemplate,
     NameDescriptor
   },
-  inject: ['names'],
+  inject: ['words'],
   props: {
     locationType: {
       type: String,
@@ -53,29 +53,29 @@ export default {
       nameFormats: {
         "City": {
           "color-geography": { weight: 1, parts: [['pick', 'color'], ['static', ' '], ['pick', 'geography']] },
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         },
         "Countryside": {
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         },
         "Temple": {
-          "temple-givenName": { weight: 1, parts: [['static', 'temple of '], ['pick', 'givenName']] },
+          "temple-nameFirst": { weight: 1, parts: [['static', 'temple of '], ['pick', 'nameFirst']] },
           "temple-epithet": { weight: 2, parts: [['static', 'temple of the '], ['pick', 'epithet']] },
           "temple-adjectivePersonality-tradeAdventurer(s)": { weight: 3, parts: [['static', 'temple of the '], ['pick', 'adjectivePersonality'], ['static', ' '], ['pick-pluralize-optional', 'tradeAdventurer']] },
         },
         "Small Town": {
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         },
         "Bazaar": {
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         },
         "Ship": {
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         }
       }
     }

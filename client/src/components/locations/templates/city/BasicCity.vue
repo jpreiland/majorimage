@@ -35,13 +35,13 @@ export default {
   components: {
     NameDescriptor
   },
-  inject: ['names'],
+  inject: ['words'],
   data() {
     return {
       cityNameFormats: {
           "color-geography": { weight: 1, parts: [['pick', 'color'], ['static', ' '], ['pick', 'geography']] },
-          "creature-geography": { weight: 1, parts: [['pick', 'creature'], ['static', ' '], ['pick', 'geography']] },
-          "givenName-geography": { weight: 1, parts: [['pick', 'givenName'], ['static', '\'s '], ['pick', 'geography']] },
+          "humanoidCommon-geography": { weight: 1, parts: [['pick', 'humanoidCommon'], ['static', ' '], ['pick', 'geography']] },
+          "nameFirst-geography": { weight: 1, parts: [['pick', 'nameFirst'], ['static', '\'s '], ['pick', 'geography']] },
         }
     }
   },

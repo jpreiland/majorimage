@@ -7,7 +7,7 @@ import pluralize from 'pluralize'
 
 export default {
   name: "NameDescriptor",
-  inject: ['names'],
+  inject: ['words'],
   props: {
     nameFormats: {
       type: Object,
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     async reroll() {
-      if (!this.names) return "(name)"
+      if (!this.words) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
 
       this.descriptorText = this.buildName(this.nameFormats[format].parts)
@@ -63,7 +63,7 @@ export default {
       return name
     },
     partPicker(part) {
-      return this.names[part][Math.floor(Math.random() * this.names[part].length)]
+      return this.words[part][Math.floor(Math.random() * this.words[part].length)]
     }
   }
 }

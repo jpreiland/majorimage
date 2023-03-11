@@ -9,7 +9,7 @@ const Stones = require('../../sample-data/materials/stones.json')
 const Woods = require('../../sample-data/materials/woods.json')
 const Metals = require('../../sample-data/materials/metals.json')
 const Textiles = require('../../sample-data/materials/textiles.json')
-const Names = require('../../sample-data/names.json')
+const Words = require('../../sample-data/words.json')
 const Locations = require('../../sample-data/locations/locations.json')
 
 const router = Router()
@@ -84,9 +84,9 @@ router.get('/material/textile', async (req, res) => {
   }
 })
 
-router.get('/names', async (req, res) => {
+router.get('/words', async (req, res) => {
   try {
-    res.status(200).json(Names)
+    res.status(200).json(Words)
   } catch (error) {
     res.status(500).json({ message: error.message })
   }

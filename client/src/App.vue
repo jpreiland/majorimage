@@ -14,13 +14,13 @@ const routes = {
 export default {
   provide() {
     return {
-      names: computed(() => this.names)
+      words: computed(() => this.words)
     }
   },
   data() {
     return {
       currentPath: window.location.hash,
-      names: null
+      words: null
     }
   },
   computed: {
@@ -29,8 +29,8 @@ export default {
     }
   },
   async beforeCreate() {
-    const namesResponse = await axios.get('api/names', { })
-    this.names = namesResponse.data
+    const wordsResponse = await axios.get('api/words', { })
+    this.words = wordsResponse.data
   },
   mounted() {
     window.addEventListener('hashchange', () => {
