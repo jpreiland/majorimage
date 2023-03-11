@@ -46,7 +46,7 @@
   "humanoidCommon": ["dwarf", "elf", "halfling", "human"],
   "jewelry": ["anklet", "armlet", "bangle", "bauble", "bracelet", "bracer", "brooch", "buckle", "chain", "charm", "choker", "circlet", "clasp", "coronet", "crown", "cuff link", "diadem", "earring", "emblem", "headdress", "insignia", "locket", "mask", "medal", "medallion", "necklace", "pendant", "pendant", "pin", "ring", "signet ringt", "talisman", "tiara", "toe ring", "torque"],
   "landscaping": ["bird bath", "fence", "flower bed", "garden", "gate", "hedge", "orchard", "pergola", "planter", "pond", "tree", "stepping stone", "water feature"],
-  "magicEffect": ["floating"],
+  "magicEffect": ["alluring", "animated", "cursed", "ethereal", "flaming", "fragrant", "glowing", "haunted", "holy", "humming", "hypnotic", "icy", "illusory", "immovable", "indestructible", "intelligent", "invisible", "levitating", "lucky", "oddly heavy", "oddly light", "poisoned", "shadowy", "smelly", "sparkling", "unholy", "unlucky", "unusually cool", "unusually warm", "vibrating"],
   "magicSpell": ["magic missile"],
   "metal": ["iron"],
   "monstrosity": ["ankheg", "drider", "harpy"],
@@ -54,6 +54,7 @@
   "nameLast": ["baker", "overhill", "parker", "smith"],
   "ooze": ["black pudding", "grey ooze", "ochre jelly"],
   "plantCreature": ["kelpie", "treant"],
+  "quality": ["aged", "ancient", "antique", "artisinal", "broken", "cracked", "damp", "decrepit", "dilapidated", "dusty", "elegant", "exquisite", "fine", "flawless", "gaudy", "immaculate", "magnificent", "new", "old", "old-fashioned", "ornate", "peculiar", "polished", "primitive", "pristine", "rugged", "ruined", "shoddy", "spotless", "uneven", "unfinished", "well-made", "worn-out"],
   "remains": ["blood", "guts", "hair", "skull", "tongue"],
   "room": ["alchemy lab", "antechamber", "attic", "atrium", "ballroom", "barroom", "basement", "bathroom", "bedroom", "break room", "catacomb", "cellar", "chamber", "chapel", "closet", "conservatory", "corridor", "court", "craft room", "crypt", "den", "dining room", "dressing room", "entry room", "entrance hall", "family room", "foyer", "front room", "gallery", "great hall", "great room", "hall", "hallway", "hearth", "kitchen", "laboratory", "laundry room", "lavatory", "library", "lobby", "loft", "living room", "meeting room", "music room", "office", "pantry", "parlor", "passage", "passageway", "play room", "privy", "quarters", "safe room", "salon", "sauna", "scullery", "secret room", "sewing room", "showroom", "spa room", "stockroom", "studio", "study", "theater", "throne room", "vault", "vestibule", "waiting room", "walk-in closet", "wine cellar", "work room", "workshop"],
   "stone": ["amethyst"],
@@ -72,4 +73,3 @@
   "wood": ["oak"],
   "writing": ["book", "scroll", "tome"]
 }
-
