@@ -130,6 +130,7 @@ router.get('/words', async (req, res) => {
       wordGroups: compiledWordGroups,
       dnfMap: compiledNameFormats
     }
+
     res.status(200).json(wordData)
   } catch (error) {
     res.status(500).json({ message: error.message })

@@ -1,5 +1,5 @@
 <template>
-  <span class="button descriptor name-descriptor" @click="reroll()">{{ descriptorText }}</span>
+  <span class="button descriptor name-descriptor" :style="setColor()" @click="reroll()">{{ descriptorText }}</span>
 </template>
 
 <script>
@@ -12,6 +12,9 @@ export default {
     nameFormats: {
       type: Object,
       required: true
+    },
+    color: {
+      type: String
     },
   },
   data () {
@@ -112,6 +115,9 @@ export default {
 
       // pick word
       return this.wordData.words[category][Math.floor(Math.random() * this.wordData.words[category].length)]
+    },
+    setColor() {
+      return `border-bottom-color: ${this.color};`
     }
   }
 }
