@@ -1,86 +1,24 @@
 const { Router } = require('express')
-const Item = require('../../models/Item')
-const Items = require('../../sample-data/objects/items.json')
-const Colors = require('../../sample-data/colors.json')
-const Qualities = require('../../sample-data/qualities.json')
-const Materials = require('../../sample-data/materials.json')
-const Effects = require('../../sample-data/effects.json')
-const Stones = require('../../sample-data/materials/stones.json')
-const Woods = require('../../sample-data/materials/woods.json')
-const Metals = require('../../sample-data/materials/metals.json')
-const Textiles = require('../../sample-data/materials/textiles.json')
-const Words = require('../../sample-data/words.json')
-const WordGroups = require('../../sample-data/word-groups.json')
-const Locations = require('../../sample-data/locations/locations.json')
-const Formats = require('../../sample-data/descriptor-formats/formats.json')
-const DescriptorFormatsMap = require('../../sample-data/descriptor-formats/descriptor-formats-map.json')
+const Stones = require('../../data/materials/stones.json')
+const Woods = require('../../data/materials/woods.json')
+const Metals = require('../../data/materials/metals.json')
+const Textiles = require('../../data/materials/textiles.json')
+const Words = require('../../data/words/words.json')
+const WordGroups = require('../../data/words/word-groups.json')
+const Locations = require('../../data/locations/locations.json')
+const Formats = require('../../data/descriptor-formats/formats.json')
+const DescriptorFormatsMap = require('../../data/descriptor-formats/descriptor-formats-map.json')
 
 const router = Router()
 
-router.get('/item', async (req, res) => {
+router.get('/materials', async (req, res) => {
   try {
-    let query = { $or: [] }
-    let trueCount = 0
-
-    for (const param in req.query) {
-      if (req.query[param] === 'true') {
-        const queryParam = {}
-        queryParam[param] = req.query[param]
-        query.$or.push(queryParam)
-        trueCount++
-      }
+    let data = {
+      stones: Stones.sort((a, b) => a.name.localeCompare(b.name)),
+      woods: Woods.sort((a, b) => a.name.localeCompare(b.name)),
+      metals: Metals.sort((a, b) => a.name.localeCompare(b.name)),
+      textiles: Textiles.sort((a, b) => a.name.localeCompare(b.name))
     }
-
-    let data = { 
-      "items": Items,
-      "colors": Colors,
-      "qualities": Qualities,
-      "materials": Materials,
-      "effects": Effects
-    }
-
-    // Don't send request to db if requesting all items
-    if (trueCount !== 0 && trueCount !== Object.keys(req.query).length) {
-      data.items = await Item.find(query).select({ name: 1 })
-    }
-
-    if (!data.items) throw new Error('No items found')
-    res.status(200).json(data)
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
-router.get('/material/stone', async (req, res) => {
-  try {
-    let data = { stones: Stones.sort((a, b) => a.name.localeCompare(b.name)) }
-    res.status(200).json(data)
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
-router.get('/material/wood', async (req, res) => {
-  try {
-    let data = { woods: Woods.sort((a, b) => a.name.localeCompare(b.name)) }
-    res.status(200).json(data)
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
-router.get('/material/metal', async (req, res) => {
-  try {
-    let data = { metals: Metals.sort((a, b) => a.name.localeCompare(b.name)) }
-    res.status(200).json(data)
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
-router.get('/material/textile', async (req, res) => {
-  try {
-    let data = { textiles: Textiles.sort((a, b) => a.name.localeCompare(b.name)) }
     res.status(200).json(data)
   } catch (error) {
     res.status(500).json({ message: error.message })
@@ -128,10 +66,11 @@ router.get('/words', async (req, res) => {
     const wordData = {
       words: Words, 
       wordGroups: compiledWordGroups,
-      dfMap: compiledFormats
+      dfMap: compiledFormats,
+      formats: Formats
     }
 
-    res.status(200).json(wordData)
+    res.status(200).json(wordData)    
   } catch (error) {
     res.status(500).json({ message: error.message })
   }

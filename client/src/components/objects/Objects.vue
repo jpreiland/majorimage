@@ -18,38 +18,25 @@
         <a class="button filter" :class="{ 'is-light': !params.isWriting }" @click="toggleItemType('isWriting')">Writing</a>
       </div>
     </div>
-    <div v-if="initialized">
+    <div>
       <template v-for="row in rows" v-bind:key="'item-'+row.id">
-        <ObjectRow  :rowId="row.id"
-                    :displayed-descriptors="displayedDescriptors"
-                    :effect="displayedEffects[row.id].name"
-                    :quality="displayedQualities[row.id].name"
-                    :color="displayedColors[row.id].name"
-                    :material="displayedMaterials[row.id].name"
-                    :item="displayedItems[row.id].name"
-                    @reroll-row="rerollRow(row.id)"
-                    @pick-effect="pickEffect(row.id)"
-                    @pick-quality="pickQuality(row.id)"
-                    @pick-color="pickColor(row.id)"
-                    @pick-material="pickMaterial(row.id)"
-                    @pick-item="pickItem(row.id)" />
+        <ObjectRow :displayed-descriptors="displayedDescriptors" :itemTypes="itemTypes" />
       </template>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios"
 import ObjectRow from "./ObjectRow.vue"
 
 export default {
   name: 'Objects',
   components: {
-    ObjectRow: ObjectRow
+    ObjectRow
   },
+  inject: ['wordData'],
   data() {
     return {
-      initialized: false,
       displayedDescriptors: {
         item: true,
         color: true,
@@ -67,73 +54,125 @@ export default {
         isWeapon: false,
         isWriting: false,
       },
-      numRows: 18,
-      displayedItems: [],
-      displayedColors: [],
-      displayedMaterials: [],
-      displayedQualities: [],
-      displayedEffects: [],
-      rows: []
+      itemTypes: {
+        compiled: false,
+        formatPicker: [],
+        formats: {}
+      },
+      numRows: 12,
+      rows: [],
+      itemFormats: [],
+      armorFormat: ["_armorShield", 1],
+      clothingFormat: ["_clothingHeadwear", 1],
+      containerFormat: ["_container", 1],
+      furnitureFormat: ["_furniture", 1],
+      miscFormat: ["_misc", 1],
+      treasureFormat: ["_treasure", 1],
+      weaponFormat: ["_weapon", 1],
+      writingFormat: ["_writing", 1]
     }
   },
   async created() {
-    const response = await axios.get('api/item', { params: this.params })
-    this.items = response.data.items
-    this.colors = response.data.colors
-    this.materials = response.data.materials
-    this.qualities = response.data.qualities
-    this.effects = response.data.effects
-
-    for (let i of Array(this.numRows).keys()) {
-      this.rerollRow(i)
+    this.compileItemTypes()
+    for (let i = 0; i < this.numRows; i++) {
       this.rows.push({id: i})
     }
-  
-    this.initialized = true
   },
   methods: {
-    async getData() {
-      const response = await axios.get('api/item', { params: this.params })
-      this.items = response.data.items
-      this.colors = response.data.colors
-      this.materials = response.data.materials
-      this.qualities = response.data.qualities
-      this.effects = response.data.effects
-    },
     async toggleDescriptor(descriptor) {
       this.displayedDescriptors[descriptor] = !this.displayedDescriptors[descriptor]
     },
     async toggleItemType(itemType) {
       this.params[itemType] = !this.params[itemType]
-      await this.getData()
-      this.rerollItems()
+      this.compileItemTypes()
     },
-    async rerollRow(rowNum) {
-      this.pickItem(rowNum)
-      this.pickColor(rowNum)
-      this.pickMaterial(rowNum)
-      this.pickQuality(rowNum)
-      this.pickEffect(rowNum)
+    async compileItemTypes() {
+      this.itemTypes.compiled = false
+      this.itemFormats = []
+
+      this.itemFormats = await this.applyItemFilters()      
+      this.itemTypes.formats = await this.compileDescriptorFormats()
+      this.itemTypes.formatPicker = await this.buildFormatPicker()
+
+      this.itemTypes.compiled = true
     },
-    async rerollItems() {
-      for (let i of Array(this.numRows).keys()) {
-        this.pickItem(i)
+    async applyItemFilters() {
+      let itemFormats = []
+
+      for (let param of Object.keys(this.params)) {
+        switch (param) {
+          case 'isArmor':
+            if (this.params[param]) itemFormats.push(this.armorFormat)
+            break;
+          
+          case 'isClothing':
+            if (this.params[param]) itemFormats.push(this.clothingFormat)
+            break;
+
+          case 'isContainer':
+            if (this.params[param]) itemFormats.push(this.containerFormat)
+            break;
+
+          case 'isFurniture':
+            if (this.params[param]) itemFormats.push(this.furnitureFormat)
+            break;
+          
+          case 'isMisc':
+            if (this.params[param]) itemFormats.push(this.miscFormat)
+            break;
+
+          case 'isTreasure':
+            if (this.params[param]) itemFormats.push(this.treasureFormat)
+            break;
+
+          case 'isWeapon':
+            if (this.params[param]) itemFormats.push(this.weaponFormat)
+            break;
+
+          case 'isWriting':
+            if (this.params[param]) itemFormats.push(this.writingFormat)
+            break;
+        
+        
+          default:
+            break;
+        }
       }
+
+      // if all filters are off, get all item types
+      if (itemFormats.length === 0) {
+        itemFormats.push(
+          this.armorFormat,
+          this.clothingFormat,
+          this.containerFormat,
+          this.furnitureFormat,
+          this.miscFormat,
+          this.treasureFormat,
+          this.weaponFormat,
+          this.writingFormat
+        )
+      }
+
+      return itemFormats
     },
-    async pickItem(rowNum) {
-      this.displayedItems[rowNum] = this.items[Math.floor(Math.random() * this.items.length)]
+    async compileDescriptorFormats() {
+      let compiledDescriptorFormats = {}
+
+      for (let nfWeightPair of this.itemFormats) {
+        compiledDescriptorFormats[nfWeightPair[0]] = {
+          weight: nfWeightPair[1],
+          format: this.wordData.formats[nfWeightPair[0]]
+        }
+      }
+    
+      return compiledDescriptorFormats
     },
-    async pickColor(rowNum) {
-      this.displayedColors[rowNum] = this.colors[Math.floor(Math.random() * this.colors.length)]
-    },
-    async pickMaterial(rowNum) {
-      this.displayedMaterials[rowNum] = this.materials[Math.floor(Math.random() * this.materials.length)]
-    },
-    async pickQuality(rowNum) {
-      this.displayedQualities[rowNum] = this.qualities[Math.floor(Math.random() * this.qualities.length)]
-    },
-    async pickEffect(rowNum) {
-      this.displayedEffects[rowNum] = this.effects[Math.floor(Math.random() * this.effects.length)]
+    async buildFormatPicker() {
+      let formatPicker = []
+      for (let format of Object.keys(this.itemTypes.formats)) {
+        formatPicker = formatPicker.concat(Array(this.itemTypes.formats[format].weight).fill(format))
+      }
+      return formatPicker
     }
   }
 }

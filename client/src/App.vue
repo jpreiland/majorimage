@@ -1,12 +1,12 @@
 <script>
 import { computed } from 'vue'
 import axios from "axios"
-import Objects from './components/objects/Objects.vue'
+import ObjectsPage from './components/objects/ObjectsPage.vue'
 import Materials from './components/materials/Materials.vue'
 import Locations from './components/locations/Locations.vue'
 
 const routes = {
-  '/': Objects,
+  '/': ObjectsPage,
   '/materials': Materials,
   '/locations': Locations
 }

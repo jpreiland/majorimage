@@ -66,28 +66,30 @@ export default {
   data() {
     return {
       fullLists: false,
+      params: {
+        stone: { category: 'All' },
+        wood: { category: 'All' },
+        metal: { category: 'All' },
+        textile: { category: 'All' }
+      },
       stone: {
         category: 0,
         categories: ['All', 'Precious', 'Magical'],
-        params: { category: 'All' },
         stones: []
       },
       wood: {
         category: 0,
         categories: ['All', 'Exotic', 'Magical'],
-        params: { category: 'All' },
         woods: []
       },
       metal: {
         category: 0,
         categories: ['All', 'Precious', 'Magical'],
-        params: { category: 'All' },
         metals: []
       },
       textile: {
         category: 0,
         categories: ['All', 'Cloth', 'Fur'],
-        params: { category: 'All' },
         textiles: []
       },
       activeMaterial: {
@@ -126,25 +128,13 @@ export default {
   },
   methods: {
     async getAllMaterials() {
-      this.getStones()
-      this.getWoods()
-      this.getMetals()
-      this.getTextiles()
+      this.getMaterials()
     },
-    async getStones() {
-      const response = await axios.get('api/material/stone', { params: this.stone.params })
+    async getMaterials() {
+      const response = await axios.get('api/materials', { params: this.params })
       this.stone.stones = response.data.stones
-    },
-    async getWoods() {
-      const response = await axios.get('api/material/wood', { params: this.wood.params })
       this.wood.woods = response.data.woods
-    },
-    async getMetals() {
-      const response = await axios.get('api/material/metal', { params: this.metal.params })
       this.metal.metals = response.data.metals
-    },
-    async getTextiles() {
-      const response = await axios.get('api/material/textile', { params: this.textile.params })
       this.textile.textiles = response.data.textiles
     },
     async cycleCategory(material) {
