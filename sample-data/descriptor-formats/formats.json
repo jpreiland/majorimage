@@ -1,6 +1,9 @@
 {
   "creature-verbing-object": [["pick-group", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["static", " a(n) "], ["pick-group", "object"]],
   "creature-verbing-objects": [["pick-group", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["static", " some "], ["pick-group-pluralize", "object"]],
+  "event-verbing-creature": [["pick-group", "event"], ["static", " "], ["pick-gerund", "verbEventToCreature"], ["static", " a(n) "], ["pick-group", "creature"]],
+  "event-verbing-event": [["pick-group", "event"], ["static", " "], ["pick-gerund", "verbEventToEvent"], ["static", " a(n) "], ["pick-group", "event"]],
+  "event-verbing-object": [["pick-group", "event"], ["static", " "], ["pick-gerund", "verbEventToObject"], ["static", " a(n) "], ["pick-group", "object"]],
   "novel-tradeNPC-verbed": [["static", "the "], ["pick", "tradeNPC"], ["static", " I "], ["pick-pastTense", "verbCreatureToCreature"]],
   "novel-tradeNPCs-verbed": [["static", "the "], ["pick-pluralize", "tradeNPC"], ["static", " I "], ["pick-pastTense-optional", "verbCreatureToCreature"]],
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
