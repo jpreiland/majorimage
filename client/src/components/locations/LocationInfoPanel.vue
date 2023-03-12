@@ -42,19 +42,11 @@ export default {
   },
   data() {
     return {
-      oneOrTwo: true,
-      testDescriptor: "one descriptor",
-      testDescriptor2: "another descriptor",
       locationName: "",
       locationNameFormats: {}
     }
   },
   async mounted() {
-  },
-  methods: {
-    testRollDescriptor() {
-      this.oneOrTwo = !this.oneOrTwo
-    }
   }
 }
 </script>
