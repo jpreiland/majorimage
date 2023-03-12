@@ -1,4 +1,5 @@
 {
+  "A(n)AdjectivePersonalityTradeNPC": [["a(n)-adjectivePersonality-tradeNPC", 1]],
   "Bazaar": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Book": [["novel-tradeNPC-verbed", 1], ["novel-tradeNPCs-verbed", 1]],
   "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
@@ -7,5 +8,6 @@
   "EventVerbing": [["event-verbing-creature", 1], ["event-verbing-event", 3], ["event-verbing-object", 1]],
   "Ship": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Small Town": [["color-geography", 1], ["humanoidCommon-geography", 1]],
-  "Temple": [["temple-adjectivePersonality-tradeAdventurer(s)", 1]]
+  "Temple": [["temple-adjectivePersonality-tradeAdventurer(s)", 1]],
+  "TestA(n)": [["some-animals", 1], ["some-accessories", 1], ["a(n)-animal(s)", 1], ["a(n)-animal", 1], ["a(n)-accesory(s)", 1], ["a(n)-accesory", 1]]
 }
