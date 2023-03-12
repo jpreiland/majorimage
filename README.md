@@ -10,19 +10,16 @@ Pages:
 - Materials: description, cost, and physical properties of various materials (test data only)  
 - Locations: sights seen while traveling through various locations (test data only)
 
-### Setup
-Host and populate your own data set in MongoDB.  
-Sample data is included in `/sample-data`.
+## Setup
+Prerequisites: `git` and `node.js`
 
-Create a `.env` file in the project's root directory with the following variable:  
-`MONGO_URI = <your mongodb connection string here>`
-
-Install server dependencies:  
+Install server & client dependencies:  
 `npm i`  
-Install client dependencies:  
 `cd client`  
-`npm i`
+`npm i`  
+`cd ../`  
 
 Run client and server in dev mode:  
 `npm run dev`  
 
+Open either the Local or Network url in the console output with your browser to use the app. Using the network url is recommended for performance.
