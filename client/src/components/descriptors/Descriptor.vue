@@ -64,7 +64,11 @@ export default {
             word = this.wordPicker(part[1])
 
             if (Math.random() >= 0.5) {
-              name += "some " + pluralize(word)
+              if (this.a_an_flag) {
+                name += "some "
+                this.a_an_flag = false
+              }
+              name += pluralize(word)
               break;
             }
 
@@ -112,7 +116,11 @@ export default {
             word = this.groupWordPicker(part[1])
 
             if (Math.random() >= 0.5) {
-              name += "some " + pluralize(word)
+              if (this.a_an_flag) {
+                name += "some "
+                this.a_an_flag = false
+              }
+              name += pluralize(word)
               break;
             }
 
