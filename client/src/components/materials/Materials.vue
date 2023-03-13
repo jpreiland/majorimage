@@ -67,29 +67,29 @@ export default {
     return {
       fullLists: false,
       params: {
-        stone: { category: 'All' },
-        wood: { category: 'All' },
-        metal: { category: 'All' },
-        textile: { category: 'All' }
+        stone: { category: 'Common' },
+        wood: { category: 'Common' },
+        metal: { category: 'Common' },
+        textile: { category: 'Common' }
       },
       stone: {
         category: 0,
-        categories: ['All', 'Precious', 'Magical'],
+        categories: ['Common', 'All', 'Precious', 'Magical'],
         stones: []
       },
       wood: {
         category: 0,
-        categories: ['All', 'Exotic', 'Magical'],
+        categories: ['Common', 'All', 'Exotic', 'Magical'],
         woods: []
       },
       metal: {
         category: 0,
-        categories: ['All', 'Precious', 'Magical'],
+        categories: ['Common', 'All', 'Precious', 'Magical'],
         metals: []
       },
       textile: {
         category: 0,
-        categories: ['All', 'Cloth', 'Fur'],
+        categories: ['Common', 'All', 'Cloth', 'Fur'],
         textiles: []
       },
       activeMaterial: {

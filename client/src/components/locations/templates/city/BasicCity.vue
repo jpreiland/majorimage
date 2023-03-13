@@ -12,7 +12,7 @@
       ligula vitae feugiat ullamcorper.
     </p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
+      <StealthDescriptor :type="'Book'"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
       sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
       velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
       ligula vitae feugiat ullamcorper.
@@ -28,11 +28,13 @@
 
 <script>
 import Descriptor from '../../../descriptors/Descriptor.vue'
+import StealthDescriptor from '../../../descriptors/StealthDescriptor.vue'
 
 export default {
   name: 'BasicCity',
   components: {
-    Descriptor
+    Descriptor,
+    StealthDescriptor
   },
   data() {
     return {
