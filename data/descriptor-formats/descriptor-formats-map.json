@@ -1,5 +1,6 @@
 {
   "A(n)AdjectivePersonalityTradeNPC": [["a(n)-adjectivePersonality-tradeNPC", 1]],
+  "A(n)AmountGroupCreature": [["a(n)-amountGroupCreature", 1]],
   "Bazaar": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Book": [["novel-tradeNPC-verbed", 1], ["novel-tradeNPCs-verbed", 1]],
   "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
@@ -10,6 +11,10 @@
   "Small Town": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "Temple": [["temple-adjectivePersonality-tradeAdventurer(s)", 1]],
   "TestA(n)": [["some-animals", 1], ["some-accessories", 1], ["a(n)-animal(s)", 1], ["a(n)-animal", 1], ["a(n)-accesory(s)", 1], ["a(n)-accesory", 1]],
+  "_AdjectivePersonality": [["_adjectivePersonality", 1]],
+  "_AmountGroupCreature": [["_amountGroupCreature", 1]],
+  "_Creature": [["_creature", 1]],
+  "_Creatures": [["_creatures", 1]],
   "_Effect": [["_effect", 1]],
   "_Quality": [["_quality", 1]],
   "_Color": [["_color", 1]],

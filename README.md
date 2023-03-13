@@ -22,4 +22,4 @@ Install server & client dependencies:
 Run client and server in dev mode:  
 `npm run dev`  
 
-Open either the Local or Network url in the console output with your browser to use the app. Using the network url is recommended for performance.
+Open either the Local or Network url from the console output with your browser to use the app. Using the network url is recommended for performance.

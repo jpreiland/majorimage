@@ -4,11 +4,13 @@ import axios from "axios"
 import ObjectsPage from './components/objects/ObjectsPage.vue'
 import Materials from './components/materials/Materials.vue'
 import Locations from './components/locations/Locations.vue'
+import AboutPage from './components/about/AboutPage.vue'
 
 const routes = {
   '/': ObjectsPage,
   '/materials': Materials,
-  '/locations': Locations
+  '/locations': Locations,
+  '/about': AboutPage
 }
 
 export default {
@@ -45,5 +47,6 @@ export default {
   <a href="#/">Objects</a> |
   <a href="#/materials">Materials</a> |
   <a href="#/locations">Locations</a> |
+  <a href="#/about">About</a> |
   <component :is="currentView" />
 </template>
