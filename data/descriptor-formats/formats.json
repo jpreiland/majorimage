@@ -34,5 +34,6 @@
   "_quality": [["pick", "quality"]],
   "_treasure": [["pick-group", "treasure"]],
   "_weapon": [["pick-group", "weapon"]],
-  "_writing": [["pick-group", "writing"]]
+  "_writing": [["pick-group", "writing"]],
+  "__price": [["price", 1, 20, "copper"]]
 }

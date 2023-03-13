@@ -18,5 +18,6 @@
   "_Effect": [["_effect", 1]],
   "_Quality": [["_quality", 1]],
   "_Color": [["_color", 1]],
-  "_Material": [["_material", 1]]
+  "_Material": [["_material", 1]],
+  "__Price": [["__price", 1]]
 }

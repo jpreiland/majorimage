@@ -20,6 +20,9 @@ export default {
     color: {
       type: String
     },
+    priceOverride: {
+      type: Object
+    }
   },
   data () {
     return {
@@ -34,7 +37,7 @@ export default {
     async reroll() {
       if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
-      this.descriptorText = stitch(this.filteredFormats[format].format, this.wordData)
+      this.descriptorText = stitch(this.filteredFormats[format].format, this.wordData, this.priceOverride)
     },
     setColor() {
       return `border-bottom-color: ${this.color};`

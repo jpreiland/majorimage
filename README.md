@@ -8,7 +8,8 @@ The aim of this tool is to quickly provide GMs with sample descriptions to spark
 Pages:  
 - Objects: list of randomized items    
 - Materials: description, cost, and physical properties of various materials (test data only)  
-- Locations: sights seen while traveling through various locations (test data only)
+- Locations: sights seen while traveling through various locations (test data only)  
+- About: information about the project
 
 ## Setup
 Prerequisites: `git` and `node.js`
