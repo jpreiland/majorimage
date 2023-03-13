@@ -1,13 +1,16 @@
-const pluralize = require('pluralize'),
-      tensify = require('../../lib/tensify/inflector'),
-      gerund = require('../../lib/gerunds/gerunds'),
-      AvsAnSimple = require('../../lib/a-vs-an/avs-an-simple')
+const AvsAnSimple = require('./../a-vs-an/avs-an-simple'),
+      gerund = require('./../gerunds/gerunds'),
+      pluralize = require('pluralize'),
+      tensify = require('./../tensify/inflector')
+      title = require('./../titleize/titleize')
 
+/* this function is a travesty, maybe it'll get cleaned up some day */
 function stitch(parts, wordData) {
   let name = ""
   let word
   let numWords = 1
   let a_an_flag = false
+  let isTitle = false
 
   for (let part of parts) {
     switch (part[0]) {
@@ -170,7 +173,13 @@ function stitch(parts, wordData) {
         break;
 
       case 'static':
-        name += part[1]
+        word = part[1]
+        if (a_an_flag) {
+          name += do_a_an(word)
+          a_an_flag = false
+        } else {
+          name += word
+        }
         break;
 
       case 'a(n)':
@@ -178,12 +187,16 @@ function stitch(parts, wordData) {
         a_an_flag = true
         break;
 
+      case 'title':
+        isTitle = true
+        break;
+
       default:
         break;
     }
   }
 
-  return name
+  return isTitle ? title(name) : name
 }
 
 function do_a_an(word) {
