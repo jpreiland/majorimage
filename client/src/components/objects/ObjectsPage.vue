@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.wordData">
+  <div class="objects-page" v-if="this.wordData">
     <Objects />
   </div>
 </template>

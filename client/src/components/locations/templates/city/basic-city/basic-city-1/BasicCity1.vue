@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import Descriptor from '../../../descriptors/Descriptor.vue'
-import StealthDescriptor from '../../../descriptors/StealthDescriptor.vue'
+import Descriptor from '../../../../../descriptors/Descriptor.vue'
+import StealthDescriptor from '../../../../../descriptors/StealthDescriptor.vue'
 
 export default {
   name: 'BasicCity',
@@ -36,9 +36,12 @@ export default {
     Descriptor,
     StealthDescriptor
   },
+  inject: ['wordData'],
   data() {
     return {
     }
+  },
+  async mounted() {
   },
   methods: {
   }

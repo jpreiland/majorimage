@@ -1,50 +1,53 @@
 <template>
-  <div class="location-page">
-    <div class="columns list locations">
-      <div class="column locations" :key="'stone'">
+  <div>
+    <div class="columns list left-scroll-menu">
+      <div class="column left-scroll-menu" :key="'stone'">
         <ul>
-          <li class="list-item location-list-item" v-for="(location, i) in locations" @click="select(location)" :key="'-location-'+i">{{ location.locationType }}</li>
+          <li class="list-item" v-for="(location, i) in wordData.templates.locations" @click="select(location)" :key="'-location-'+i">{{ location._displayName }}</li>
         </ul>
       </div>
-      <div class="column">
-        <LocationInfoPanel :locationType="activeLocationType" :locationTemplateType="activeTemplate" :locationTypes="locations"/>
+      <div class="column right-info-card-holder">
+        <div class="info-card right">
+          <component v-if="initialized" :is="computeType"></component>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios"
-import LocationInfoPanel from "./LocationInfoPanel.vue"
+import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'Locations',
-  components: {
-    LocationInfoPanel
-  },
+  inject: ['wordData'],
   data() {
     return {
-      locations: [],
-      activeLocationType: 'City',
-      activeTemplate: 'BasicCity'
+      types: [],
+      activeType: {},
+      activePath: "",
+      initialized: false
     }
   },
-  async beforeCreate() {
-    const locationsResponse = await axios.get('api/locations', { })
-    this.locations = locationsResponse.data
-    if (this.locations) {
-      this.activeLocationType = this.locations[0].locationType
-      this.activeTemplate = this.locations[0].templates[0]
+  async mounted() {
+    for (let key of Object.keys(this.wordData.templates.locations)) {
+      this.types.push(key)
     }
+    this.activeType = this.types[0]
+    this.activePath = this.wordData.templates.locations[this.activeType]._path
+    this.initialized = true
   },
   methods: {
-    async getLocationTypes() {
-    },
     async select(location) {
-      this.activeLocationType = location.locationType
-      this.activeTemplate = location.templates[0]
+      this.activePath = location._path
     }
   },
+  computed: {
+    computeType () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
+    }
+  }
 }
 </script>
 

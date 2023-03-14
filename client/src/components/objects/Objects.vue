@@ -1,5 +1,5 @@
 <template>
-  <div id="objects">
+  <div>
     <div class="control">
       <a class="button btn-effect" :class="{ 'is-light': !displayedDescriptors.effect }" @click="toggleDescriptor('effect')">Effect</a>
       <a class="button is-danger" :class="{ 'is-light': !displayedDescriptors.quality }" @click="toggleDescriptor('quality')">Quality</a>

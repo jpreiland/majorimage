@@ -3,13 +3,13 @@ import { computed } from 'vue'
 import axios from "axios"
 import ObjectsPage from './components/objects/ObjectsPage.vue'
 import Materials from './components/materials/Materials.vue'
-import Locations from './components/locations/Locations.vue'
+import LocationsPage from './components/locations/LocationsPage.vue'
 import AboutPage from './components/about/AboutPage.vue'
 
 const routes = {
   '/': ObjectsPage,
   '/materials': Materials,
-  '/locations': Locations,
+  '/locations': LocationsPage,
   '/about': AboutPage
 }
 
@@ -44,9 +44,11 @@ export default {
 
 <template>
   <div class="title">Major Image</div>
-  <a href="#/">Objects</a> |
-  <a href="#/materials">Materials</a> |
-  <a href="#/locations">Locations</a> |
-  <a href="#/about">About</a> |
+  <div class="navigation">
+    <a href="#/">Objects</a> |
+    <a href="#/materials">Materials</a> |
+    <a href="#/locations">Locations</a> |
+    <a href="#/about">About</a> |
+  </div>
   <component :is="currentView" />
 </template>

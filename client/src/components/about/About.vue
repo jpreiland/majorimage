@@ -1,5 +1,5 @@
 <template>
-  <div class="info-card material info-panel-description" style="padding-left: 12px;">
+  <div class="info-card material info-panel-description" style="padding-left: 12px; padding-right: 12px;">
     <div class="attribute-key">What is this place?</div>
     <div class="no-descriptors">
       <p>
@@ -28,8 +28,8 @@
       </p>
       <p>
         The word lists are typed by hand, as are the rules for randomly pulling from those lists. 
-        In fact, you've probably noticed some combinations that make no sense, which is an indicator
-        that there's no natural language processing going on here. This is a feature, not a bug.
+        You've probably noticed some combinations that make no sense, which is an indicator
+        that there's no natural language processing going on here. This is a feature, not a bug!
         Getting nonsensical combinations of words helps spark the imagination.
       </p>
     </div>

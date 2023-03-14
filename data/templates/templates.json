@@ -1,0 +1,68 @@
+{
+  "locations": {
+    "city": {
+      "_displayName": "City",
+      "_path": "./templates/city/City.vue",
+      "basic-city": {
+        "_displayName": "Basic",
+        "_path": "./basic-city/BasicCity.vue",
+        "basic-city-1": {
+          "_displayName": "Basic",
+          "_path": "./basic-city-1/BasicCity1.vue"
+        },
+        "basic-city-2": {
+          "_displayName": "Basic",
+          "_path": "./basic-city-2/BasicCity2.vue"
+        }
+      }
+    },
+    "temple": {
+      "_displayName": "Temple",
+      "_path": "./templates/temple/Temple.vue",
+      "basic-temple": {
+        "_displayName": "Basic",
+        "_path": "./basic-temple/BasicTemple.vue",
+        "basic-temple-1": {
+          "_displayName": "Basic",
+          "_path": "./basic-temple-1/BasicTemple1.vue"
+        },
+        "basic-temple-2": {
+          "_displayName": "Basic",
+          "_path": "./basic-temple-2/BasicTemple2.vue"
+        }
+      }
+    },
+    "small-town": {
+      "_displayName": "Small Town",
+      "_path": "./templates/small-town/SmallTown.vue",
+      "basic-small-town": {
+        "_displayName": "Basic",
+        "_path": "./basic-small-town/BasicSmallTown.vue",
+        "basic-small-town-1": {
+          "_displayName": "Basic",
+          "_path": "./basic-small-town-1/BasicSmallTown1.vue"
+        },
+        "basic-small-town-2": {
+          "_displayName": "Basic",
+          "_path": "./basic-small-town-2/BasicSmallTown2.vue"
+        }
+      }
+    },
+    "ship": {
+      "_displayName": "Ship",
+      "_path": "./templates/ship/Ship.vue",
+      "basic-ship": {
+        "_displayName": "Basic",
+        "_path": "./basic-ship/BasicShip.vue",
+        "basic-ship-1": {
+          "_displayName": "Basic",
+          "_path": "./basic-ship-1/BasicShip1.vue"
+        },
+        "basic-ship-2": {
+          "_displayName": "Basic",
+          "_path": "./basic-ship-2/BasicShip2.vue"
+        }
+      }
+    }
+  }
+}
