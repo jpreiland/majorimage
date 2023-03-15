@@ -23,8 +23,7 @@ export default {
   data () {
     return {
       descriptorText: "default name",
-      formatPicker: [],
-      a_an_flag: false
+      formatPicker: []
     }
   },
   async mounted() {
@@ -35,9 +34,7 @@ export default {
   },
   methods: {
     async reroll() {
-      if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
-
       this.descriptorText = stitch(this.wordData.dfMap[this.type][format].format, this.wordData, this.priceOverride)
     },
     setColor() {

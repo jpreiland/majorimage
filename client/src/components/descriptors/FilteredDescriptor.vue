@@ -26,8 +26,7 @@ export default {
   },
   data () {
     return {
-      descriptorText: "default name",
-      a_an_flag: false
+      descriptorText: "default name"
     }
   },
   async mounted() {
@@ -35,7 +34,6 @@ export default {
   },
   methods: {
     async reroll() {
-      if (!this.wordData) return "(name)"
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
       this.descriptorText = stitch(this.filteredFormats[format].format, this.wordData, this.priceOverride)
     },
