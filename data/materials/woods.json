@@ -13,10 +13,10 @@
       "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "oak to do",
+    "uses": "oak to do",
     "isCommon": true,
-    "isExotic": true,
+    "isExotic": false,
     "isMagical": false
   },
   {
@@ -33,10 +33,10 @@
       "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "ash to do",
+    "uses": "ash to do",
     "isCommon": true,
-    "isExotic": true,
+    "isExotic": false,
     "isMagical": false
   },
   {
@@ -53,10 +53,10 @@
       "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "pine to do",
+    "uses": "pine to do",
     "isCommon": true,
-    "isExotic": true,
+    "isExotic": false,
     "isMagical": false
   },
   {
@@ -73,8 +73,8 @@
       "units": "in³"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "rosewood to do",
+    "uses": "rosewood to do",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false

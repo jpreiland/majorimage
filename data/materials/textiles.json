@@ -13,10 +13,10 @@
       "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "c Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "linen to do",
+    "uses": "linen to do",
     "isCommon": true,
-    "isCloth": true,
+    "isFabric": true,
     "isFur": false
   },
   {
@@ -33,10 +33,10 @@
       "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "b Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "wool to do",
+    "uses": "wool to do",
     "isCommon": true,
-    "isCloth": true,
+    "isFabric": true,
     "isFur": false
   },
   {
@@ -53,10 +53,10 @@
       "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "silk to do",
+    "uses": "silk to do",
     "isCommon": true,
-    "isCloth": true,
+    "isFabric": true,
     "isFur": false
   },
   {
@@ -73,10 +73,10 @@
       "units": "in²"
     },
     "image": "https://via.placeholder.com/50",
-    "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-    "uses": "Lorem, ipsum, dolor, sit, and amet.",
+    "description": "cashmere to do",
+    "uses": "cashmere to do",
     "isCommon": true,
-    "isCloth": false,
+    "isFabric": true,
     "isFur": false
   }
 ]

@@ -4,47 +4,59 @@
       <div class="column header" :key="'stone-header'">
         <ul>
           <li class="list-header">Stone</li>
-          <span class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category] }}</span>
+          <span class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category][0] }}</span>
         </ul>
       </div>
       <div class="column header" :key="'wood-header'">
         <ul>
           <li class="list-header">Wood</li>
-          <li class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category] }}</li>
+          <li class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category][0] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'metal-header'">
         <ul>
           <li class="list-header">Metal</li>
-          <li class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category] }}</li>
+          <li class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category][0] }}</li>
         </ul>
       </div>
       <div class="column header" :key="'textile-header'">
         <ul>
           <li class="list-header">Textile</li>
-          <li class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category] }}</li>
+          <li class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category][0] }}</li>
         </ul>
       </div>
     </div>
     <div class="columns list">
       <div class="column" :key="'stone'">
         <ul>
-          <li class="list-item" v-for="(material, i) in stone.stones" @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
+          <span v-for="(material, i) in stone.stones">
+          <li v-if="stone.categories[stone.category][0] === 'All' ? true : material[stone.categories[stone.category][1]]" class="list-item"  
+              @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
+          </span>
         </ul>
       </div>
       <div class="column" :key="'wood'">
         <ul>
-          <li class="list-item" v-for="(material, i) in wood.woods" @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
+          <span v-for="(material, i) in wood.woods">
+          <li v-if="wood.categories[wood.category][0] === 'All' ? true : material[wood.categories[wood.category][1]]" class="list-item"  
+              @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
+          </span>
         </ul>
       </div>
       <div class="column" :key="'metal'">
         <ul>
-          <li class="list-item" v-for="(material, i) in metal.metals" @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
+          <span v-for="(material, i) in metal.metals">
+          <li v-if="metal.categories[metal.category][0] === 'All' ? true : material[metal.categories[metal.category][1]]" class="list-item"  
+              @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
+          </span>
         </ul>
       </div>
       <div class="column" :key="'textile'">
         <ul>
-          <li class="list-item" v-for="(material, i) in textile.textiles" @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
+          <span v-for="(material, i) in textile.textiles">
+          <li v-if="textile.categories[textile.category][0] === 'All' ? true : material[textile.categories[textile.category][1]]" class="list-item"  
+              @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
+          </span>
         </ul>
       </div>
     </div>
@@ -74,22 +86,22 @@ export default {
       },
       stone: {
         category: 0,
-        categories: ['Common', 'All', 'Precious', 'Magical'],
+        categories: [['Common', 'isCommon'], ['All', true], ['Precious', 'isPrecious'], ['Magical', 'isMagical']],
         stones: []
       },
       wood: {
         category: 0,
-        categories: ['Common', 'All', 'Exotic', 'Magical'],
+        categories: [['Common', 'isCommon'], ['All', true], ['Exotic', 'isExotic'], ['Magical', 'isMagical']],
         woods: []
       },
       metal: {
         category: 0,
-        categories: ['Common', 'All', 'Precious', 'Magical'],
+        categories: [['Common', 'isCommon'], ['All', true], ['Precious', 'isPrecious'], ['Magical', 'isMagical']],
         metals: []
       },
       textile: {
         category: 0,
-        categories: ['Common', 'All', 'Cloth', 'Fur'],
+        categories: [['Common', 'isCommon'], ['All', true], ['Fabric', 'isFabric'], ['Fur', 'isFur']],
         textiles: []
       },
       activeMaterial: {
