@@ -111,7 +111,7 @@ export default {
   },
   async mounted() {
     this.getMaterials()
-    this.select(this.stone.stones[0])
+    this.select(this.stone.stones[0], this.activeMaterialType)
     this.switchUnits()
     this.initialized = true
   },
