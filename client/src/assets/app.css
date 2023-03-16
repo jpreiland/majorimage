@@ -83,12 +83,20 @@
 .columns.list.left-scroll-menu {
   height: 90svh;
 }
+.columns.materials {
+  margin: 2px;
+}
 
 .column {
   overflow-y: auto; /* enable scrolling if column exceeds fixed height */
 }
-.column.header {
+.column.materials {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.column.materials.header {
   text-align: center;
+  padding: 0px;
 }
 .column.left-scroll-menu {
   max-width: 25%;

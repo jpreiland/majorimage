@@ -1,33 +1,33 @@
 <template>
-  <div class="material-page">
-    <div class="columns">
-      <div class="column header" :key="'stone-header'">
+  <div class="materials-page">
+    <div class="columns materials">
+      <div class="column materials header" :key="'stone-header'">
         <ul>
           <li class="list-header">Stone</li>
-          <span class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category][0] }}</span>
+          <span v-if="false" class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category][0] }}</span>
         </ul>
       </div>
-      <div class="column header" :key="'wood-header'">
+      <div class="column materials header" :key="'wood-header'">
         <ul>
           <li class="list-header">Wood</li>
-          <li class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category][0] }}</li>
+          <li v-if="false" class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category][0] }}</li>
         </ul>
       </div>
-      <div class="column header" :key="'metal-header'">
+      <div class="column materials header" :key="'metal-header'">
         <ul>
           <li class="list-header">Metal</li>
-          <li class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category][0] }}</li>
+          <li v-if="false" class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category][0] }}</li>
         </ul>
       </div>
-      <div class="column header" :key="'textile-header'">
+      <div class="column materials header" :key="'textile-header'">
         <ul>
           <li class="list-header">Textile</li>
-          <li class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category][0] }}</li>
+          <li v-if="false" class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category][0] }}</li>
         </ul>
       </div>
     </div>
-    <div class="columns list">
-      <div class="column" :key="'stone'">
+    <div class="columns materials list">
+      <div class="column materials" :key="'stone'">
         <ul>
           <span v-for="(material, i) in stone.stones">
           <li v-if="stone.categories[stone.category][0] === 'All' ? true : material[stone.categories[stone.category][1]]" class="list-item"  
@@ -35,7 +35,7 @@
           </span>
         </ul>
       </div>
-      <div class="column" :key="'wood'">
+      <div class="column materials" :key="'wood'">
         <ul>
           <span v-for="(material, i) in wood.woods">
           <li v-if="wood.categories[wood.category][0] === 'All' ? true : material[wood.categories[wood.category][1]]" class="list-item"  
@@ -43,7 +43,7 @@
           </span>
         </ul>
       </div>
-      <div class="column" :key="'metal'">
+      <div class="column materials" :key="'metal'">
         <ul>
           <span v-for="(material, i) in metal.metals">
           <li v-if="metal.categories[metal.category][0] === 'All' ? true : material[metal.categories[metal.category][1]]" class="list-item"  
@@ -51,7 +51,7 @@
           </span>
         </ul>
       </div>
-      <div class="column" :key="'textile'">
+      <div class="column materials" :key="'textile'">
         <ul>
           <span v-for="(material, i) in textile.textiles">
           <li v-if="textile.categories[textile.category][0] === 'All' ? true : material[textile.categories[textile.category][1]]" class="list-item"  
