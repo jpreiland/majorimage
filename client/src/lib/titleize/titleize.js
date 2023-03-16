@@ -11,6 +11,7 @@ const exceptions = [
   "From",
   "In",
   "Into",
+  "Is",
   "Near",
   "Nor",
   "Of",
