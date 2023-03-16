@@ -2,8 +2,8 @@ const specialGerunds = require('./special-gerunds'),
       symbols = require('symbols')
 
 function ends_with_two_vowels(verb, last) {
-  return symbols.is_vowel(verb[last - 1])
-      && symbols.is_vowel(verb[last - 2])
+  return symbols.is_vowel(verb[last])
+      && symbols.is_vowel(verb[last - 1])
 }
 
 function ends_with_e(verb, last) {
