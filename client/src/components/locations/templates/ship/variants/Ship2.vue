@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'BasicCity',
+  name: 'City2',
   inject: ['wordData'],
   data() {
     return {

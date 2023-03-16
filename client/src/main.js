@@ -6,7 +6,7 @@ import LinkedDescriptor from './components/descriptors/LinkedDescriptor.vue'
 import StealthDescriptor from './components/descriptors/StealthDescriptor.vue'
 import './assets/app.css';
 
-const app = createApp(App);
+const app = createApp(App)
 
 app
   .component('Descriptor', Descriptor)

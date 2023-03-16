@@ -6,17 +6,15 @@
     <div class="card-header-right">
       <Descriptor :type="'City'" />
     </div>
-    <div class="button" @click="select">
-      pick...
-    </div>
   </div>
   <CityOverview />
-  <component v-if="initialized" :is="computeSubtype"></component>
+  <component v-if="initialized" :is="loadVariant"></component>
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue"
 import CityOverview from "./CityOverview.vue"
+
 
 export default {
   name: 'City',
@@ -26,36 +24,31 @@ export default {
   inject: ['wordData'],
   data() {
     return {
-      types: [],
-      activeSubtype: {},
-      activeSubtypeVariants: [],
+      variants: [],
       activeVariant: 0,
       activePath: "",
       initialized: false
     }
   },
   async mounted() {
-    for (let subType of Object.keys(this.wordData.templates.locations.city)) {
-      if (subType.startsWith('_')) continue
-      this.types.push(subType)
-    }
-    this.activeSubtype = this.types[0]
-    for (let variant of Object.keys(this.wordData.templates.locations.city[this.activeSubtype])) {
-      if (variant.startsWith('_')) continue
-      this.activeSubtypeVariants.push(variant)
-    }
-    this.activeVariant = Math.floor(Math.random() * this.activeSubtypeVariants.length)
-    this.activePath = this.wordData.templates.locations.city[this.activeSubtype][this.activeSubtypeVariants[this.activeVariant]]
+    this.loadVariants()
+    this.rollVariant()
     this.initialized = true
   },
   methods: {
-    async select(subType) {
-      this.activeVariant = Math.floor(Math.random() * this.activeSubtypeVariants.length)
-      this.activePath = this.wordData.templates.locations.city[this.activeSubtype][this.activeSubtypeVariants[this.activeVariant]]
+    loadVariants() {
+      for (let variant of Object.keys(this.wordData.templates.locations.city)) {
+        if (variant.startsWith('_')) continue
+        this.variants.push(variant)
+      }
+    },
+    rollVariant() {
+      this.activeVariant = Math.floor(Math.random() * this.variants.length)
+      this.activePath = this.wordData.templates.locations.city[this.variants[this.activeVariant]]
     }
   },
   computed: {
-    computeSubtype () {
+    loadVariant () {
       if (this.activePath.includes('..')) return
       return defineAsyncComponent(() => import(`${this.activePath}`))
     }
