@@ -10,15 +10,8 @@
 </template>
 
 <script>
-  import Descriptor from '../descriptors/Descriptor.vue'
-  import FilteredDescriptor from '../descriptors/FilteredDescriptor.vue'
-
   export default {
     name: 'ObjectRow',
-    components: {
-      Descriptor,
-      FilteredDescriptor
-    },
     props: {
       displayedDescriptors: Object,
       itemTypes: Object

@@ -52,13 +52,9 @@
 </template>
 
 <script>
-import Descriptor from "./../descriptors/Descriptor.vue"
 
 export default {
   name: 'Objects',
-  components: {
-    Descriptor
-  },
   inject: ['wordData'],
   data() {
     return {

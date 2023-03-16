@@ -17,13 +17,11 @@
 <script>
 import { defineAsyncComponent } from "vue"
 import CityOverview from "./CityOverview.vue"
-import Descriptor from "./../../../descriptors/Descriptor.vue"
 
 export default {
   name: 'City',
   components: {
-    CityOverview,
-    Descriptor
+    CityOverview
   },
   inject: ['wordData'],
   data() {

@@ -8,13 +8,9 @@
 </template>
 
 <script>
-import Descriptor from '../../../descriptors/Descriptor.vue'
 
 export default {
   name: 'BasicTemple',
-  components: {
-    Descriptor
-  },
   data() {
     return {
     }

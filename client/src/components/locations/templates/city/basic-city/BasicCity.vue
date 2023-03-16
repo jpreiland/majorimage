@@ -4,15 +4,9 @@
 
 <script>
 import { defineAsyncComponent } from "vue"
-import Descriptor from '../../../../descriptors/Descriptor.vue'
-import StealthDescriptor from '../../../../descriptors/StealthDescriptor.vue'
 
 export default {
   name: 'BasicCity',
-  components: {
-    Descriptor,
-    StealthDescriptor
-  },
   inject: ['wordData'],
   data() {
     return {
