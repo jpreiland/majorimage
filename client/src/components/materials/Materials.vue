@@ -60,14 +60,13 @@
         </ul>
       </div>
     </div>
-    <div>
+    <div v-if="initialized">
       <MaterialInfoCard :material="activeMaterial" />
     </div>
   </div>
 </template>
 
 <script>
-import axios from "axios"
 import MaterialInfoCard from "./MaterialInfoCard.vue"
 
 export default {
@@ -75,15 +74,10 @@ export default {
   components: {
     MaterialInfoCard
   },
+  inject: ['data'],
   data() {
     return {
-      fullLists: false,
-      params: {
-        stone: { category: 'Common' },
-        wood: { category: 'Common' },
-        metal: { category: 'Common' },
-        textile: { category: 'Common' }
-      },
+      initialized: false,
       stone: {
         category: 0,
         categories: [['Common', 'isCommon'], ['All', true], ['Precious', 'isPrecious'], ['Magical', 'isMagical']],
@@ -104,26 +98,7 @@ export default {
         categories: [['Common', 'isCommon'], ['All', true], ['Fabric', 'isFabric'], ['Fur', 'isFur']],
         textiles: []
       },
-      activeMaterial: {
-        "name": "Diamond",
-        "attributes": {
-          "weightCost": {
-            "Weight": {"value": 146.8, "units": "lb"},
-            "Cost": {"value": 2, "units": "g"}
-          },
-          "other": {
-            "Hardness": {"value": 10},
-            "Cost/lb": {"value": 0.1, "units": "g"}
-          },
-          "units": "in³"
-        },
-        "image": "https://via.placeholder.com/50",
-        "description": "a Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.",
-        "uses": "Lorem, ipsum, dolor, sit, and amet.",
-        "isCommon": true,
-        "isPrecious": true,
-        "isMagical": false
-      },
+      activeMaterial: {},
       activeMaterialType: "stone",
       materialTypeDimensions: {
         "stone": 3,
@@ -135,19 +110,17 @@ export default {
     }
   },
   async mounted() {
-    this.getAllMaterials()
+    this.getMaterials()
+    this.select(this.stone.stones[0])
     this.switchUnits()
+    this.initialized = true
   },
   methods: {
-    async getAllMaterials() {
-      this.getMaterials()
-    },
     async getMaterials() {
-      const response = await axios.get('api/materials', { params: this.params })
-      this.stone.stones = response.data.stones
-      this.wood.woods = response.data.woods
-      this.metal.metals = response.data.metals
-      this.textile.textiles = response.data.textiles
+      this.stone.stones = this.data.materials.stones
+      this.wood.woods = this.data.materials.woods
+      this.metal.metals = this.data.materials.metals
+      this.textile.textiles = this.data.materials.textiles
     },
     async cycleCategory(material) {
       switch (material) {

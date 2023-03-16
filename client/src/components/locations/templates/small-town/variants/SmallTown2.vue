@@ -34,7 +34,7 @@
 <script>
 export default {
   name: 'City2',
-  inject: ['wordData'],
+  inject: ['data'],
   data() {
     return {
       links: {

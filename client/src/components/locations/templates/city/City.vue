@@ -21,7 +21,7 @@ export default {
   components: {
     CityOverview
   },
-  inject: ['wordData'],
+  inject: ['data'],
   data() {
     return {
       variants: [],
@@ -37,14 +37,14 @@ export default {
   },
   methods: {
     loadVariants() {
-      for (let variant of Object.keys(this.wordData.templates.locations.city)) {
+      for (let variant of Object.keys(this.data.templates.locations.city)) {
         if (variant.startsWith('_')) continue
         this.variants.push(variant)
       }
     },
     rollVariant() {
       this.activeVariant = Math.floor(Math.random() * this.variants.length)
-      this.activePath = this.wordData.templates.locations.city[this.variants[this.activeVariant]]
+      this.activePath = this.data.templates.locations.city[this.variants[this.activeVariant]]
     }
   },
   computed: {

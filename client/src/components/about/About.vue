@@ -5,8 +5,8 @@
       <p>
         There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> unique words in the Major Image data set, 
         which are randomly stitched together in an unimaginably large amount of combinations to create 
-        all kinds of interesting descriptions to present to your players during a ttrpg session. 
-        The goal of this site is to present a wide variety of options as quickly as possible so that you can 
+        all kinds of interesting ideas to present to your players during a ttrpg session. 
+        The goal of this site is to present a wide variety of descriptions as quickly as possible so that you can 
         keep the pace of play flowing and focus your brainpower on more important things like critting the party's healer.
       </p>
     </div>
@@ -55,7 +55,7 @@
 
 export default {
   name: 'Objects',
-  inject: ['wordData'],
+  inject: ['data'],
   data() {
     return {
       uniqueWordCount: 9001
@@ -63,8 +63,8 @@ export default {
   },
   async mounted() {
     let uniqueWords = new Set()
-    for (let wordList of Object.keys(this.wordData.words)) {
-      for (let word of this.wordData.words[wordList]) {
+    for (let wordList of Object.keys(this.data.words)) {
+      for (let word of this.data.words[wordList]) {
         uniqueWords.add(word)
       }
     }

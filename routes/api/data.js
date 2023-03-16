@@ -25,21 +25,23 @@ router.get('/materials', async (req, res) => {
   }
 })
 
-router.get('/words', async (req, res) => {
+router.get('/data', async (req, res) => {
   try {
     const compiledWordGroups = compileWordGroups()
     const compiledFormats = compileFormats()
     const compiledTemplates = compileTemplates()
+    const compiledMaterials = compileMaterials()
 
-    const wordData = {
+    const data = {
       dfMap: compiledFormats,
       formats: Formats,
+      materials: compiledMaterials,
       templates: compiledTemplates,
       words: Words, 
       wordGroups: compiledWordGroups
     }
 
-    res.status(200).json(wordData)    
+    res.status(200).json(data)    
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -97,6 +99,15 @@ function compileFormats() {
 
 function compileTemplates() {
   return Templates
+}
+
+function compileMaterials() {
+  return {
+    stones: Stones.sort((a, b) => a.name.localeCompare(b.name)),
+    woods: Woods.sort((a, b) => a.name.localeCompare(b.name)),
+    metals: Metals.sort((a, b) => a.name.localeCompare(b.name)),
+    textiles: Textiles.sort((a, b) => a.name.localeCompare(b.name))
+  }
 }
 
 module.exports = router

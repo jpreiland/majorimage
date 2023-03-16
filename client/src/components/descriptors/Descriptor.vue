@@ -7,7 +7,7 @@ import stitch from '../../lib/stitcher/stitcher'
 
 export default {
   name: "Descriptor",
-  inject: ['wordData'],
+  inject: ['data'],
   props: {
     type: {
       type: String,
@@ -27,15 +27,15 @@ export default {
     }
   },
   async mounted() {
-    for (let format of Object.keys(this.wordData.dfMap[this.type])) {
-      this.formatPicker = this.formatPicker.concat(Array(this.wordData.dfMap[this.type][format].weight).fill(format))
+    for (let format of Object.keys(this.data.dfMap[this.type])) {
+      this.formatPicker = this.formatPicker.concat(Array(this.data.dfMap[this.type][format].weight).fill(format))
     }
     this.reroll()
   },
   methods: {
     async reroll() {
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
-      this.descriptorText = stitch(this.wordData.dfMap[this.type][format].format, this.wordData, this.priceOverride)
+      this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride)
     },
     setColor() {
       return `border-bottom-color: ${this.color};`

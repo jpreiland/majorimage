@@ -2,13 +2,13 @@
 import { computed } from 'vue'
 import axios from "axios"
 import ObjectsPage from './components/objects/ObjectsPage.vue'
-import Materials from './components/materials/Materials.vue'
+import MaterialsPage from './components/materials/MaterialsPage.vue'
 import LocationsPage from './components/locations/LocationsPage.vue'
 import AboutPage from './components/about/AboutPage.vue'
 
 const routes = {
   '/': ObjectsPage,
-  '/materials': Materials,
+  '/materials': MaterialsPage,
   '/locations': LocationsPage,
   '/about': AboutPage
 }
@@ -16,13 +16,13 @@ const routes = {
 export default {
   provide() {
     return {
-      wordData: computed(() => this.wordData)
+      data: computed(() => this.data)
     }
   },
   data() {
     return {
       currentPath: window.location.hash,
-      wordData: null
+      data: null
     }
   },
   computed: {
@@ -31,8 +31,8 @@ export default {
     }
   },
   async beforeCreate() {
-    const wordsResponse = await axios.get('api/words', { })
-    this.wordData = wordsResponse.data
+    const wordsResponse = await axios.get('api/data', { })
+    this.data = wordsResponse.data
   },
   mounted() {
     window.addEventListener('hashchange', () => {

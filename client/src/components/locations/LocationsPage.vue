@@ -1,5 +1,5 @@
 <template>
-  <div class="locations-page" v-if="this.wordData">
+  <div class="locations-page" v-if="this.data">
     <Locations />
   </div>
 </template>
@@ -12,6 +12,6 @@ export default {
   components: {
     Locations
   },
-  inject: ['wordData']
+  inject: ['data']
 }
 </script>

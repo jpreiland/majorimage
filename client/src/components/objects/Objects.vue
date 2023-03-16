@@ -34,7 +34,7 @@ export default {
   components: {
     ObjectRow
   },
-  inject: ['wordData'],
+  inject: ['data'],
   data() {
     return {
       displayedDescriptors: {
@@ -161,7 +161,7 @@ export default {
       for (let nfWeightPair of this.itemFormats) {
         compiledDescriptorFormats[nfWeightPair[0]] = {
           weight: nfWeightPair[1],
-          format: this.wordData.formats[nfWeightPair[0]]
+          format: this.data.formats[nfWeightPair[0]]
         }
       }
     

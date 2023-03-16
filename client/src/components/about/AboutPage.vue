@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.wordData">
+  <div v-if="this.data">
     <About />
   </div>
 </template>
@@ -12,6 +12,6 @@ export default {
   components: {
     About
   },
-  inject: ['wordData']
+  inject: ['data']
 }
 </script>

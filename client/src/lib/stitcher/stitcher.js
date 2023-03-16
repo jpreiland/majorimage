@@ -5,7 +5,7 @@ const AvsAnSimple = require('./../a-vs-an/avs-an-simple'),
       title = require('./../titleize/titleize')
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitch(parts, wordData, priceOverride) {
+function stitch(parts, data, priceOverride) {
   let name = ""
   let word
   let numWords = 1
@@ -17,7 +17,7 @@ function stitch(parts, wordData, priceOverride) {
     switch (part[0]) {
       case 'pick':
         if (part.length !== 2) break;
-        word = wordPicker(part[1], wordData)
+        word = wordPicker(part[1], data)
         if (a_an_flag) {
           name += do_a_an(word)
           a_an_flag = false
@@ -32,12 +32,12 @@ function stitch(parts, wordData, priceOverride) {
           name += "some "
           a_an_flag = false
         }
-        name += pluralize(wordPicker(part[1], wordData))
+        name += pluralize(wordPicker(part[1], data))
         break;
 
       case 'pick-pluralize-optional':
         if (part.length !== 2) break;
-        word = wordPicker(part[1], wordData)
+        word = wordPicker(part[1], data)
 
         if (Math.random() >= 0.5) {
           if (a_an_flag) {
@@ -58,35 +58,35 @@ function stitch(parts, wordData, priceOverride) {
 
       case 'pick-pastTense':
         if (part.length !== 2) break;
-        name += tensify(wordPicker(part[1], wordData))
+        name += tensify(wordPicker(part[1], data))
         break;
 
       case 'pick-pastTense-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += tensify(wordPicker(part[1], wordData))
+          name += tensify(wordPicker(part[1], data))
         } else {
-          name += wordPicker(part[1], wordData)
+          name += wordPicker(part[1], data)
         }
         break;
 
       case 'pick-gerund':
         if (part.length !== 2) break;
-        name += gerund(wordPicker(part[1], wordData))
+        name += gerund(wordPicker(part[1], data))
         break;
 
       case 'pick-gerund-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += gerund(wordPicker(part[1], wordData))
+          name += gerund(wordPicker(part[1], data))
         } else {
-          name += wordPicker(part[1], wordData)
+          name += wordPicker(part[1], data)
         }
         break;
 
       case 'pick-group':
         if (part.length !== 2) break;
-        word = groupWordPicker(part[1], wordData)
+        word = groupWordPicker(part[1], data)
         if (a_an_flag) {
           name += do_a_an(word)
           a_an_flag = false
@@ -101,12 +101,12 @@ function stitch(parts, wordData, priceOverride) {
           name += "some "
           a_an_flag = false
         }
-        name += pluralize(groupWordPicker(part[1], wordData))
+        name += pluralize(groupWordPicker(part[1], data))
         break;
 
       case 'pick-group-pluralize-optional':
         if (part.length !== 2) break;
-        word = groupWordPicker(part[1], wordData)
+        word = groupWordPicker(part[1], data)
 
         if (Math.random() >= 0.5) {
           if (a_an_flag) {
@@ -127,36 +127,36 @@ function stitch(parts, wordData, priceOverride) {
 
       case 'pick-group-pastTense':
         if (part.length !== 2) break;
-        name += tensify(groupWordPicker(part[1], wordData))
+        name += tensify(groupWordPicker(part[1], data))
         break;
 
       case 'pick-group-pastTense-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += tensify(groupWordPicker(part[1], wordData))
+          name += tensify(groupWordPicker(part[1], data))
         } else {
-          name += groupWordPicker(part[1], wordData)
+          name += groupWordPicker(part[1], data)
         }
         break;
 
       case 'pick-group-gerund':
         if (part.length !== 2) break;
-        name += gerund(groupWordPicker(part[1], wordData))
+        name += gerund(groupWordPicker(part[1], data))
         break;
 
       case 'pick-group-gerund-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += gerund(groupWordPicker(part[1], wordData))
+          name += gerund(groupWordPicker(part[1], data))
         } else {
-          name += groupWordPicker(part[1], wordData)
+          name += groupWordPicker(part[1], data)
         }
         break;
 
       case 'pick-multi':
         if (part.length !== 3) break;
         numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
-        word = wordPicker(part[1], wordData)
+        word = wordPicker(part[1], data)
         if (a_an_flag) {
           name += do_a_an(word)
           a_an_flag = false
@@ -166,7 +166,7 @@ function stitch(parts, wordData, priceOverride) {
         numWords--
 
         while (numWords > 0) {
-          name += ' ' + wordPicker(part[1], wordData)
+          name += ' ' + wordPicker(part[1], data)
           numWords--
         }
         break;
@@ -174,7 +174,7 @@ function stitch(parts, wordData, priceOverride) {
       case 'pick-group-multi':
         if (part.length !== 3) break;
         numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
-        word = groupWordPicker(part[1], wordData)
+        word = groupWordPicker(part[1], data)
         if (a_an_flag) {
           name += do_a_an(word)
           a_an_flag = false
@@ -184,7 +184,7 @@ function stitch(parts, wordData, priceOverride) {
         numWords--
 
         while (numWords > 0) {
-          name += ' ' + groupWordPicker(part[1], wordData)
+          name += ' ' + groupWordPicker(part[1], data)
           numWords--
         }
         break;
@@ -252,23 +252,23 @@ function do_a_an(word) {
   return AvsAnSimple.query(word) + " " + word
 }
 
-function wordPicker(category, wordData) {
-  return wordData.words[category][Math.floor(Math.random() * wordData.words[category].length)]
+function wordPicker(category, data) {
+  return data.words[category][Math.floor(Math.random() * data.words[category].length)]
 }
 
-function groupWordPicker(wordGroup, wordData) {
+function groupWordPicker(wordGroup, data) {
   // pick category from word group
-  const groupsize = wordData.wordGroups[wordGroup].totalWords
+  const groupsize = data.wordGroups[wordGroup].totalWords
   const grouproll = Math.floor(Math.random() * groupsize)
   let category = ''
 
-  for (let categorySize of Object.keys(wordData.wordGroups[wordGroup].categoryMap)) {
-    category = wordData.wordGroups[wordGroup].categoryMap[categorySize]
+  for (let categorySize of Object.keys(data.wordGroups[wordGroup].categoryMap)) {
+    category = data.wordGroups[wordGroup].categoryMap[categorySize]
     if (categorySize >= grouproll) break
   }
 
   // pick word
-  return wordData.words[category][Math.floor(Math.random() * wordData.words[category].length)]
+  return data.words[category][Math.floor(Math.random() * data.words[category].length)]
 }
 
 function formatPrice(price) {

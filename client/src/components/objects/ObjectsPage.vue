@@ -1,5 +1,5 @@
 <template>
-  <div class="objects-page" v-if="this.wordData">
+  <div class="objects-page" v-if="this.data">
     <Objects />
   </div>
 </template>
@@ -12,6 +12,6 @@ export default {
   components: {
     Objects
   },
-  inject: ['wordData']
+  inject: ['data']
 }
 </script>
