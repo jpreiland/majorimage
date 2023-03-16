@@ -1,6 +1,6 @@
 const AvsAnSimple = require('./../a-vs-an/avs-an-simple'),
       gerund = require('./../gerunds/gerunds'),
-      pluralize = require('pluralize'),
+      plural = require('./../plural/plural'),
       tensify = require('./../tensify/inflector')
       title = require('./../titleize/titleize')
 
@@ -17,13 +17,9 @@ function stitch(parts, data, priceOverride) {
     switch (part[0]) {
       case 'pick':
         if (part.length !== 2) break;
-        word = wordPicker(part[1], data)
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
+        word = picker(part[1], data)
+        name += do_a_an(word, a_an_flag)
+        a_an_flag = false
         break;
 
       case 'pick-pluralize':
@@ -32,172 +28,71 @@ function stitch(parts, data, priceOverride) {
           name += "some "
           a_an_flag = false
         }
-        name += pluralize(wordPicker(part[1], data))
+        name += plural(picker(part[1], data))
         break;
 
       case 'pick-pluralize-optional':
         if (part.length !== 2) break;
-        word = wordPicker(part[1], data)
+        word = picker(part[1], data)
 
         if (Math.random() >= 0.5) {
           if (a_an_flag) {
             name += "some "
             a_an_flag = false
           }
-          name += pluralize(word)
+          name += plural(word)
           break;
         }
 
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
+        name += do_a_an(word, a_an_flag)
+        a_an_flag = false
         break;
 
       case 'pick-pastTense':
         if (part.length !== 2) break;
-        name += tensify(wordPicker(part[1], data))
+        name += tensify(picker(part[1], data))
         break;
 
       case 'pick-pastTense-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += tensify(wordPicker(part[1], data))
+          name += tensify(picker(part[1], data))
         } else {
-          name += wordPicker(part[1], data)
+          name += picker(part[1], data)
         }
         break;
 
       case 'pick-gerund':
         if (part.length !== 2) break;
-        name += gerund(wordPicker(part[1], data))
+        name += gerund(picker(part[1], data))
         break;
 
       case 'pick-gerund-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
-          name += gerund(wordPicker(part[1], data))
+          name += gerund(picker(part[1], data))
         } else {
-          name += wordPicker(part[1], data)
-        }
-        break;
-
-      case 'pick-group':
-        if (part.length !== 2) break;
-        word = groupWordPicker(part[1], data)
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
-        break;
-
-      case 'pick-group-pluralize':
-        if (part.length !== 2) break;
-        if (a_an_flag) {
-          name += "some "
-          a_an_flag = false
-        }
-        name += pluralize(groupWordPicker(part[1], data))
-        break;
-
-      case 'pick-group-pluralize-optional':
-        if (part.length !== 2) break;
-        word = groupWordPicker(part[1], data)
-
-        if (Math.random() >= 0.5) {
-          if (a_an_flag) {
-            name += "some "
-            a_an_flag = false
-          }
-          name += pluralize(word)
-          break;
-        }
-
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
-        break;
-
-      case 'pick-group-pastTense':
-        if (part.length !== 2) break;
-        name += tensify(groupWordPicker(part[1], data))
-        break;
-
-      case 'pick-group-pastTense-optional':
-        if (part.length !== 2) break;
-        if (Math.random() >= 0.5) {
-          name += tensify(groupWordPicker(part[1], data))
-        } else {
-          name += groupWordPicker(part[1], data)
-        }
-        break;
-
-      case 'pick-group-gerund':
-        if (part.length !== 2) break;
-        name += gerund(groupWordPicker(part[1], data))
-        break;
-
-      case 'pick-group-gerund-optional':
-        if (part.length !== 2) break;
-        if (Math.random() >= 0.5) {
-          name += gerund(groupWordPicker(part[1], data))
-        } else {
-          name += groupWordPicker(part[1], data)
+          name += picker(part[1], data)
         }
         break;
 
       case 'pick-multi':
         if (part.length !== 3) break;
         numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
-        word = wordPicker(part[1], data)
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
+        word = picker(part[1], data)
+        name += do_a_an(word, a_an_flag)
+        a_an_flag = false
         numWords--
 
         while (numWords > 0) {
-          name += ' ' + wordPicker(part[1], data)
-          numWords--
-        }
-        break;
-
-      case 'pick-group-multi':
-        if (part.length !== 3) break;
-        numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
-        word = groupWordPicker(part[1], data)
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
-        numWords--
-
-        while (numWords > 0) {
-          name += ' ' + groupWordPicker(part[1], data)
+          name += ' ' + picker(part[1], data)
           numWords--
         }
         break;
 
       case 'static':
         if (part.length !== 2) break;
-        word = part[1]
-        if (a_an_flag) {
-          name += do_a_an(word)
-          a_an_flag = false
-        } else {
-          name += word
-        }
+        name += part[1]
         break;
 
       case 'a(n)':
@@ -213,30 +108,7 @@ function stitch(parts, data, priceOverride) {
 
       case 'price':
         if (part.length < 3) break;
-        const lower = Math.min(part[1], part[2])
-        const higher = Math.max(part[1], part[2])
-        const min = priceOverride ? Math.ceil(priceOverride.min) : Math.ceil(lower)
-        const max = priceOverride ? Math.floor(priceOverride.max) : Math.floor(higher)
-        let denomination
-
-        if (priceOverride || part.length === 4) {
-          denomination = (priceOverride && priceOverride.denomination) ? priceOverride.denomination : part[3]
-        }
-
-        let price = Math.floor(Math.random() * (max - min + 1) + min)
-
-        switch (denomination) {
-          case 'gold':
-            price *= 100
-            break;
-          case 'silver':
-            price *= 10
-            break;
-        
-          default:
-            break;
-        }
-
+        const price = rollPrice(part, priceOverride)
         name += formatPrice(price)
         break;
 
@@ -248,8 +120,13 @@ function stitch(parts, data, priceOverride) {
   return isTitle ? title(name) : name
 }
 
-function do_a_an(word) {
-  return AvsAnSimple.query(word) + " " + word
+function do_a_an(word, a_an_flag) {
+  return a_an_flag ? AvsAnSimple.query(word) + " " + word : word
+}
+
+function picker(category, data) {
+  if (Object.hasOwn(data.wordGroups, category)) return groupWordPicker(category, data)
+  return wordPicker(category, data)
 }
 
 function wordPicker(category, data) {
@@ -267,8 +144,35 @@ function groupWordPicker(wordGroup, data) {
     if (categorySize >= grouproll) break
   }
 
-  // pick word
-  return data.words[category][Math.floor(Math.random() * data.words[category].length)]
+  return wordPicker(category, data)
+}
+
+function rollPrice(params, priceOverride) {
+  const lower = priceOverride ? Math.min(priceOverride.min, priceOverride.max) : Math.min(params[1], params[2])
+  const higher = priceOverride ? Math.max(priceOverride.min, priceOverride.max) : Math.max(params[1], params[2])
+  const min = priceOverride ? Math.ceil(priceOverride.min) : Math.ceil(lower)
+  const max = priceOverride ? Math.floor(priceOverride.max) : Math.floor(higher)
+  let denomination
+
+  if (priceOverride || params.length === 4) {
+    denomination = (priceOverride && priceOverride.denomination) ? priceOverride.denomination : params[3]
+  }
+
+  let price = Math.floor(Math.random() * (max - min + 1) + min)
+
+  switch (denomination) {
+    case 'gold':
+      price *= 100
+      break;
+    case 'silver':
+      price *= 10
+      break;
+  
+    default:
+      break;
+  }
+
+  return price
 }
 
 function formatPrice(price) {
