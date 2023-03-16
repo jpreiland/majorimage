@@ -5,15 +5,8 @@
       "_path": "./templates/city/City.vue",
       "basic-city": {
         "_displayName": "Basic",
-        "_path": "./basic-city/BasicCity.vue",
-        "basic-city-1": {
-          "_displayName": "Basic",
-          "_path": "./basic-city-1/BasicCity1.vue"
-        },
-        "basic-city-2": {
-          "_displayName": "Basic",
-          "_path": "./basic-city-2/BasicCity2.vue"
-        }
+        "basic-city-1": "./basic-city/BasicCity1.vue",
+        "basic-city-2": "./basic-city/BasicCity2.vue"
       }
     },
     "temple": {

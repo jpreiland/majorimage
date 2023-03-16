@@ -6,7 +6,7 @@
     <div class="card-header-right">
       <Descriptor :type="'City'" />
     </div>
-    <div class="button">
+    <div class="button" @click="select">
       pick...
     </div>
   </div>
@@ -28,22 +28,30 @@ export default {
     return {
       types: [],
       activeSubtype: {},
+      activeSubtypeVariants: [],
+      activeVariant: 0,
       activePath: "",
       initialized: false
     }
   },
   async mounted() {
-    for (let key of Object.keys(this.wordData.templates.locations.city)) {
-      if (key.startsWith('_')) continue
-      this.types.push(key)
+    for (let subType of Object.keys(this.wordData.templates.locations.city)) {
+      if (subType.startsWith('_')) continue
+      this.types.push(subType)
     }
     this.activeSubtype = this.types[0]
-    this.activePath = this.wordData.templates.locations.city[this.activeSubtype]._path
+    for (let variant of Object.keys(this.wordData.templates.locations.city[this.activeSubtype])) {
+      if (variant.startsWith('_')) continue
+      this.activeSubtypeVariants.push(variant)
+    }
+    this.activeVariant = Math.floor(Math.random() * this.activeSubtypeVariants.length)
+    this.activePath = this.wordData.templates.locations.city[this.activeSubtype][this.activeSubtypeVariants[this.activeVariant]]
     this.initialized = true
   },
   methods: {
-    async select(city) {
-      this.activeSubtype = city._path
+    async select(subType) {
+      this.activeVariant = Math.floor(Math.random() * this.activeSubtypeVariants.length)
+      this.activePath = this.wordData.templates.locations.city[this.activeSubtype][this.activeSubtypeVariants[this.activeVariant]]
     }
   },
   computed: {

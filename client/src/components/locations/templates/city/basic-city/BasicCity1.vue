@@ -1,6 +1,7 @@
 <template>
   <div class="info-panel-description">
     <p>
+      variant 1
       <Descriptor :type="'City'" />
       Lorem ipsum <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linkedParser="tlkParser" @link-update="linkUpdate" /> {{ links.tlk }} 
       dolor sit amet, consectetur adipiscing elit. <Descriptor :type="'Book'" :color="'red'"/>
