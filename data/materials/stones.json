@@ -1,71 +1,34 @@
 [
   {
-    "name": "Sapphire",
+    "name": "Basalt",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
-        "Cost": {"value": 0.53, "units": "g"}
+        "Weight": {"value": 0.10877927, "units": "lb"},
+        "Cost": {"value": 0.13624603, "units": "g"}
       },
       "other": {
-        "Hardness": {"value": 7.5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Hardness": {"value": 6},
+        "Cost/lb": {"value": 1.2525, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "sapphire to do",
-    "uses": "sapphire to do",
+    "description": "Basalt to do",
+    "uses": "Basalt to do",
     "isCommon": true,
-    "isPrecious": true,
-    "isMagical": false
-  },
-  {
-    "name": "Ruby",
-    "attributes": {
-      "weightCost": {
-        "Weight": {"value": 102, "units": "lb"},
-        "Cost": {"value": 0.59, "units": "g"}
-      },
-      "other": {
-        "Hardness": {"value": 8},
-        "Cost/lb": {"value": 0.1, "units": "g"}
-      },
-      "units": "in³"
-    },
-    "description": "ruby to do",
-    "uses": "ruby to do",
-    "isCommon": true,
-    "isPrecious": true,
-    "isMagical": false
-  },
-  {
-    "name": "Emerald",
-    "attributes": {
-      "weightCost": {
-        "Weight": {"value": 103.8, "units": "lb"},
-        "Cost": {"value": 0.57, "units": "g"}
-      },
-      "other": {
-        "Hardness": {"value": 7},
-        "Cost/lb": {"value": 0.1, "units": "g"}
-      },
-      "units": "in³"
-    },
-    "description": "emerald to do",
-    "uses": "emerald to do",
-    "isCommon": true,
-    "isPrecious": true,
+    "isPrecious": false,
     "isMagical": false
   },
   {
     "name": "Diamond",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 146.8, "units": "lb"},
-        "Cost": {"value": 2, "units": "g"}
+        "Weight": {"value": 0.126445522, "units": "lb"},
+        "Cost": {"value": 57354.724, "units": "g"}
       },
       "other": {
         "Hardness": {"value": 10},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Cost/lb": {"value": 453592.37, "units": "g"},
+        "Cost/carat": {"value": 1000, "units": "g"}
       },
       "units": "in³"
     },
@@ -76,20 +39,156 @@
     "isMagical": false
   },
   {
+    "name": "Emerald",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.099350053, "units": "lb"},
+        "Cost": {"value": 9012.885, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 90718.474, "units": "g"},
+        "Cost/carat": {"value": 200, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "emerald to do",
+    "uses": "emerald to do",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
     "name": "Granite",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 100, "units": "lb"},
-        "Cost": {"value": 0.20, "units": "g"}
+        "Weight": {"value": 0.09844687, "units": "lb"},
+        "Cost": {"value": 0.1644062, "units": "g"}
       },
       "other": {
         "Hardness": {"value": 5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Cost/lb": {"value": 1.67, "units": "g"}
       },
       "units": "in³"
     },
     "description": "granite to do",
     "uses": "granite to do",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Limestone",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.097904961, "units": "lb"},
+        "Cost": {"value": 0.04895248, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 3.5},
+        "Cost/lb": {"value": 0.5, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Limestone to do",
+    "uses": "Limestone to do",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Marble",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.097543688, "units": "lb"},
+        "Cost": {"value": 0.292631064, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 3},
+        "Cost/lb": {"value": 3, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Marble to do",
+    "uses": "Marble to do",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Ruby",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.144870441, "units": "lb"},
+        "Cost": {"value": 65712.126, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 9},
+        "Cost/lb": {"value": 453592.37, "units": "g"},
+        "Cost/carat": {"value": 1000, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "ruby to do",
+    "uses": "ruby to do",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Sandstone",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.08309277, "units": "lb"},
+        "Cost": {"value": 0.08309277, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 6},
+        "Cost/lb": {"value": 1, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Sandstone to do",
+    "uses": "Sandstone to do",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Sapphire",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.144147895, "units": "lb"},
+        "Cost": {"value": 13076.877, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 9},
+        "Cost/lb": {"value": 90718.474, "units": "g"},
+        "Cost/carat": {"value": 200, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "sapphire to do",
+    "uses": "sapphire to do",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Slate",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.100108726, "units": "lb"},
+        "Cost": {"value": 0.18019570, "units": "g"}
+      },
+      "other": {
+        "Hardness": {"value": 5.5},
+        "Cost/lb": {"value": 1.8, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Slate to do",
+    "uses": "Slate to do",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
