@@ -32,8 +32,9 @@
       },
       "units": "in³"
     },
-    "description": "diamond to do",
-    "uses": "diamond to do",
+    "description": "While a structurally perfect diamond is transparent with no hue, diamonds can vary widely in color. In order of increasing rarity, diamond hues can be yellow, brown, colorless, blue, green, black, pink, orange, purple, and red. While they are chiefly sought after for use in jewelry due to their appearance, diamonds and diamond dust are also used as spell components.",
+    "uses": "Engraving, jewelry, spell components",
+    "component": "Clone, Gate, Glyph of Warding, Greater Restoration, Nondetection, Raise Dead, Resurrection, Revivify, Sequester, Stoneskin, Symbol, True Resurrection",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -54,6 +55,7 @@
     },
     "description": "emerald to do",
     "uses": "emerald to do",
+    "component": "Sequester",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -73,6 +75,7 @@
     },
     "description": "granite to do",
     "uses": "granite to do",
+    "component": "Wall of Stone",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -131,6 +134,7 @@
     },
     "description": "ruby to do",
     "uses": "ruby to do",
+    "component": "Continual Flame, Forbiddance, Forcecage, Sequester, Simulacrum",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -170,6 +174,7 @@
     },
     "description": "sapphire to do",
     "uses": "sapphire to do",
+    "component": "Instant Summons, Sequester",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false

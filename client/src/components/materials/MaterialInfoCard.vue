@@ -23,6 +23,7 @@
     <div>
       <p class="card-description"><span class="attribute-key">Description:</span> {{ material.description }}</p>
       <p class="card-description"><span class="attribute-key">Common Uses:</span> {{ material.uses }}</p>
+      <p v-if="material.component" class="card-description"><span class="attribute-key">Component For:</span> {{ material.component }}</p>
     </div>
   </div>
 </template>

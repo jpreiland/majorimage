@@ -127,6 +127,7 @@
   padding-top: calc(0.25em - 1px);
   word-wrap: break-word; /* break words that exceed button width */
   overflow-wrap: break-word; /* break words that exceed button width */
+  touch-action: manipulation;
 
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
