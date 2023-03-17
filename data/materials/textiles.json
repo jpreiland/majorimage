@@ -12,7 +12,6 @@
       },
       "units": "in²"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "linen to do",
     "uses": "linen to do",
     "isCommon": true,
@@ -32,7 +31,6 @@
       },
       "units": "in²"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "wool to do",
     "uses": "wool to do",
     "isCommon": true,
@@ -52,7 +50,6 @@
       },
       "units": "in²"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "silk to do",
     "uses": "silk to do",
     "isCommon": true,
@@ -72,7 +69,6 @@
       },
       "units": "in²"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "cashmere to do",
     "uses": "cashmere to do",
     "isCommon": true,

@@ -1,21 +1,77 @@
 [
   {
-    "name": "Oak",
+    "name": "Alder",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
-        "Cost": {"value": 0.53, "units": "g"}
+        "Weight": {"value": 0.01932810, "units": "lb"},
+        "Cost": {"value": 55, "units": "g"}
       },
       "other": {
-        "Hardness": {"value": 7.5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Janka Hardness": {"value": 650, "units": "lbf"},
+        "Cost/lb": {"value": 55, "units": "g"}
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
-    "description": "oak to do",
-    "uses": "oak to do",
+    "description": "A light tan to reddish brown wood that darkens and reddens with age. The grain is typically straight and has a fine, even texture. It is soft and easy to work with. Its above-ground durability is limited, and is more suited for underwater structures.",
+    "uses": "Piles, plywood, turned items, veneer",
     "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Andiroba",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.02384401, "units": "lb"},
+        "Cost": {"value": 66, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1220, "units": "lbf"},
+        "Cost/lb": {"value": 66, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Also called crabwood, this hardwood is pale brown and darkens with age. It has a uniform, fine texture with a medium natural luster. The oil produced from the seeds of this tree is used for medicinal purposes as well as mosquito repellent.",
+    "uses": "Flooring, furniture, interior trim, medicine (oil), plywood, repellent (oil), turned items, veneer",
+    "isCommon": false,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Apple",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.02998565, "units": "lb"},
+        "Cost": {"value": 99, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1730, "units": "lbf"},
+        "Cost/lb": {"value": 99, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Apple heartwood ranges from a light reddish or greyish brown to a deeper red/brown, while the sapwood has a pale cream color. It has a straight grain and a very fine texture. Apple wood resembles cherry wood, but is harder and heavier.",
+    "uses": "Carvings, fine furniture, tool handles, turned items",
+    "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Apricot",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.02691483, "units": "lb"},
+        "Cost": {"value": 77, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1390, "units": "lbf"},
+        "Cost/lb": {"value": 77, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Apricot wood is light brown with darker brown streaks and sometimes has a reddish or orangish cast. It has an even, fine texture with a medium natural luster.",
+    "uses": "Carvings, musical instruments, tool handles, turned items",
+    "isCommon": false,
     "isExotic": false,
     "isMagical": false
   },
@@ -23,22 +79,173 @@
     "name": "Ash",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
-        "Cost": {"value": 0.53, "units": "g"}
+        "Weight": {"value": 0.02456655856, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "other": {
-        "Hardness": {"value": 7.5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Janka Hardness": {"value": 1480, "units": "lbf"},
+        "Cost/lb": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
-    "description": "ash to do",
-    "uses": "ash to do",
+    "description": "Common ash has a light to medium brown color with some darker streaks. The texture is medium/coarse, similar to that of oak, and the grain is straight. ",
+    "uses": "Flooring, furniture, millwork, turned items",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false
   },
+  {
+    "name": "Ash, Black",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.0196893741, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 850, "units": "lbf"},
+        "Cost/lb": {"value": 0.30, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Black ash has a light to medium brown heartwood and beige sapwood, and is overall a bit darker than white ash. The texture is medium/coarse, similar to that of oak, and the grain is straight.",
+    "uses": "Basket weaving, flooring, furniture, millwork, turned items",
+    "isCommon": false,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Ash, Red",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.0261922867, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1890, "units": "lbf"},
+        "Cost/lb": {"value": 0.30, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Red ash has orangish pink heartwood and pale yellow sapwood, and darkens in color with age. The texture is moderate to fine, and the grain is straight. It has an excellent strength-to-weight ratio.",
+    "uses": "Carvings, flooring, furniture, musical instruments, turned items, veneer",
+    "isCommon": false,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Ash, Tamo",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.02023128352, "units": "lb"},
+        "Cost": {"value": 999, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 850, "units": "lbf"},
+        "Cost/lb": {"value": 999, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Tamo ash refers to ash wood with specific, deeply figured grain pattern which somewhat resembles peanut shells. It is rare and highly sought after for its unique figure.",
+    "uses": "Fine furniture, luxury items, musical instruments, veneer",
+    "isCommon": false,
+    "isExotic": true,
+    "isMagical": false
+  },
+  {
+    "name": "Ash, White",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.024385922, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1320, "units": "lbf"},
+        "Cost/lb": {"value": 0.30, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "White ash has a light to medium brown heartwood and beige sapwood, and is overall a bit lighter than black ash. The texture is medium/coarse, similar to that of oak, and the grain is straight.",
+    "uses": "Flooring, furniture, millwork, turned items",
+    "isCommon": false,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Aspen",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.0162572814, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 380, "units": "lbf"},
+        "Cost/lb": {"value": 0.30, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Common aspen has a light brown heartwood, and its sapwood is pale yellow to almost white. It has straight grain with a uniform, medium texture and low natural luster.",
+    "uses": "Plywood, veneer",
+    "isCommon": false,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Balsa",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.0054190938, "units": "lb"},
+        "Cost": {"value": 0.9, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 67, "units": "lbf"},
+        "Cost/lb": {"value": 0.9, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Balsa is known for its exceptionally light and buoyant sapwood, which is off-white or tan in color. It has a straight grain with medium/coarse texture, and is very easy to work with.",
+    "uses": "Fishing lures, musical instruments, rafts, surfboards",
+    "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Bamboo",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 0.0243859221, "units": "lb"},
+        "Cost": {"value": 0.7, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 1510, "units": "lbf"},
+        "Cost/lb": {"value": 0.7, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Bamboo is a woody grass with a yellow to white color. Between its high strength-to-weight ratio and its fast-growing nature, it is a popular choice for many kinds of construction and crafts.",
+    "uses": "Carving, fishing rods, flooring, furniture, musical instruments, scaffolding, turned items",
+    "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  },
+  {
+    "name": "Oak",
+    "attributes": {
+      "weightCost": {
+        "Weight": {"value": 105, "units": "lb"},
+        "Cost": {"value": 0.30, "units": "g"}
+      },
+      "other": {
+        "Janka Hardness": {"value": 7.5},
+        "Cost/lb": {"value": 0.30, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "oak to do",
+    "uses": "oak to do",
+    "isCommon": true,
+    "isExotic": false,
+    "isMagical": false
+  },  
   {
     "name": "Pine",
     "attributes": {
@@ -47,12 +254,11 @@
         "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": {"value": 7.5},
+        "Janka Hardness": {"value": 7.5},
         "Cost/lb": {"value": 0.1, "units": "g"}
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "pine to do",
     "uses": "pine to do",
     "isCommon": true,
@@ -67,12 +273,11 @@
         "Cost": {"value": 0.53, "units": "g"}
       },
       "other": {
-        "Hardness": {"value": 7.5},
+        "Janka Hardness": {"value": 7.5},
         "Cost/lb": {"value": 0.1, "units": "g"}
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "rosewood to do",
     "uses": "rosewood to do",
     "isCommon": true,

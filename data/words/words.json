@@ -111,6 +111,7 @@
   "weaponAmmo": ["arrow", "crossbow bolt", "sling stone"],
   "weaponMelee": ["axe", "bardiche", "bastard sword", "battleaxe", "bill (polearm)", "brass knuckles", "cat-o'-nine tails", "claymore", "club", "cutlass", "dagger", "dire flail", "estoc", "falchion", "garrote", "gladius", "glaive", "greataxe", "greatclub", "greatsword", "guisarme", "halberd", "hammer", "handaxe", "harpoon", "heavy flail", "heavy mace", "heavy pick", "knife", "lance", "light flail", "light mace", "light pick", "longspear", "longsword", "machete", "morningstar", "pickaxe", "pike", "pitchfork", "punching dagger", "quarterstaff", "ranseur", "rapier", "sap", "scimitar", "scizore", "shortspear", "shortsword", "sickle", "spear", "spiked chain", "staff", "trident", "warhammer", "whip", "wooden stake"],
   "weaponRanged": ["composite longbow", "dart", "hand crossbow", "heavy crossbow", "javelin", "light crossbow", "longbow", "net", "shortbow", "sling", "throwing axe"],
-  "wood": ["oak"],
+  "wood": ["alder", "apple", "apricot", "ash", "aspen", "balsa", "bamboo", "black ash", "oak", "pine", "red ash", "rosewood", "tamo ash", "white ash"],
+  "woodExtra": ["ailanthus", "andiroba"],
   "writing": ["annal", "book", "flyer", "folio", "ledger", "letter", "manual", "manuscript", "map", "pamphlet", "scroll", "sheet music", "tome"]
 }

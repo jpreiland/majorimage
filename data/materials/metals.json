@@ -12,7 +12,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "iron to do.",
     "uses": "iron to do.",
     "isCommon": true,
@@ -32,7 +31,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "steel to do.",
     "uses": "steel to do.",
     "isCommon": true,
@@ -52,7 +50,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "tin to do.",
     "uses": "tin to do.",
     "isCommon": true,
@@ -72,7 +69,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "brass to do.",
     "uses": "brass to do.",
     "isCommon": true,
@@ -92,7 +88,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "bronze to do.",
     "uses": "bronze to do.",
     "isCommon": true,
@@ -112,7 +107,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "lead to do.",
     "uses": "lead to do.",
     "isCommon": true,
@@ -132,7 +126,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "copper to do.",
     "uses": "copper to do.",
     "isCommon": true,
@@ -152,7 +145,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "silver to do.",
     "uses": "silver to do.",
     "isCommon": true,
@@ -172,7 +164,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "gold to do.",
     "uses": "gold to do.",
     "isCommon": true,
@@ -192,7 +183,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "platinum to do.",
     "uses": "platinum to do.",
     "isCommon": true,
@@ -212,7 +202,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "mithril to do.",
     "uses": "mithril to do.",
     "isCommon": true,
@@ -232,7 +221,6 @@
       },
       "units": "in³"
     },
-    "image": "https://via.placeholder.com/50",
     "description": "adamantine to do.",
     "uses": "adamantine to do.",
     "isCommon": true,
