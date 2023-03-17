@@ -4,11 +4,11 @@
     "attributes": {
       "weightCost": {
         "Weight": {"value": 0.01932810, "units": "lb"},
-        "Cost": {"value": 55, "units": "g"}
+        "Cost": {"value": 0.55, "units": "g"}
       },
       "other": {
         "Janka Hardness": {"value": 650, "units": "lbf"},
-        "Cost/lb": {"value": 55, "units": "g"}
+        "Cost/lb": {"value": 0.55, "units": "g"}
       },
       "units": "in³"
     },
@@ -23,11 +23,11 @@
     "attributes": {
       "weightCost": {
         "Weight": {"value": 0.02384401, "units": "lb"},
-        "Cost": {"value": 66, "units": "g"}
+        "Cost": {"value": 0.66, "units": "g"}
       },
       "other": {
         "Janka Hardness": {"value": 1220, "units": "lbf"},
-        "Cost/lb": {"value": 66, "units": "g"}
+        "Cost/lb": {"value": 0.66, "units": "g"}
       },
       "units": "in³"
     },
@@ -42,11 +42,11 @@
     "attributes": {
       "weightCost": {
         "Weight": {"value": 0.02998565, "units": "lb"},
-        "Cost": {"value": 99, "units": "g"}
+        "Cost": {"value": 0.99, "units": "g"}
       },
       "other": {
         "Janka Hardness": {"value": 1730, "units": "lbf"},
-        "Cost/lb": {"value": 99, "units": "g"}
+        "Cost/lb": {"value": 0.99, "units": "g"}
       },
       "units": "in³"
     },
@@ -61,11 +61,11 @@
     "attributes": {
       "weightCost": {
         "Weight": {"value": 0.02691483, "units": "lb"},
-        "Cost": {"value": 77, "units": "g"}
+        "Cost": {"value": 0.77, "units": "g"}
       },
       "other": {
         "Janka Hardness": {"value": 1390, "units": "lbf"},
-        "Cost/lb": {"value": 77, "units": "g"}
+        "Cost/lb": {"value": 0.77, "units": "g"}
       },
       "units": "in³"
     },
@@ -222,7 +222,7 @@
       "units": "in³"
     },
     "description": "Bamboo is a woody grass with a yellow to white color. Between its high strength-to-weight ratio and its fast-growing nature, it is a popular choice for many kinds of construction and crafts.",
-    "uses": "Carving, fishing rods, flooring, furniture, musical instruments, scaffolding, turned items",
+    "uses": "Carvings, fishing rods, flooring, furniture, musical instruments, scaffolding, turned items",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false
@@ -231,17 +231,17 @@
     "name": "Oak",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
+        "Weight": {"value": 0.027276105, "units": "lb"},
         "Cost": {"value": 0.30, "units": "g"}
       },
       "other": {
-        "Janka Hardness": {"value": 7.5},
+        "Janka Hardness": {"value": 1350, "units": "lbf"},
         "Cost/lb": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "oak to do",
-    "uses": "oak to do",
+    "description": "Oak is a light to medium brown wood with an olive cast that has a straight grain and coarse, uneven texture. It is very durable and well-suited to building watertight structures.",
+    "uses": "Barrels, boats, flooring, furniture, interior trim, veneer",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false
@@ -250,17 +250,17 @@
     "name": "Pine",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
-        "Cost": {"value": 0.53, "units": "g"}
+        "Weight": {"value": 0.0144509168, "units": "lb"},
+        "Cost": {"value": 0.2, "units": "g"}
       },
       "other": {
-        "Janka Hardness": {"value": 7.5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Janka Hardness": {"value": 380, "units": "lbf"},
+        "Cost/lb": {"value": 0.2, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "pine to do",
-    "uses": "pine to do",
+    "description": "Pine heartwood is light brown and its sapwood is pale yellow to nearly white. It has a straight grain with an even, medium texture.",
+    "uses": "Boats, carvings, construction lumber, interior millwork",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false
@@ -269,17 +269,17 @@
     "name": "Rosewood",
     "attributes": {
       "weightCost": {
-        "Weight": {"value": 105, "units": "lb"},
-        "Cost": {"value": 0.53, "units": "g"}
+        "Weight": {"value": 0.0301662888, "units": "lb"},
+        "Cost": {"value": 9.9, "units": "g"}
       },
       "other": {
-        "Janka Hardness": {"value": 7.5},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Janka Hardness": {"value": 2790, "units": "lbf"},
+        "Cost/lb": {"value": 9.9, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "rosewood to do",
-    "uses": "rosewood to do",
+    "description": "Rosewood can vary in color from darker chocolate brown to lighter reddish or purplish brown, with dark contrasting streaks. It has a medium/coarse texture and typically has straight grain. It is a very durable wood that gives off a rose-like scent when being worked.",
+    "uses": "Fine furniture, flooring, musical instruments, turned items",
     "isCommon": true,
     "isExotic": false,
     "isMagical": false
