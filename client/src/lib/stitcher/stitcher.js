@@ -192,4 +192,18 @@ function formatPrice(price) {
   return (gold > 0 ? gold.toLocaleString() + "g" : "") + (silver > 0 ? silver + "s" : "") + (copper > 0 ? copper + "c" : "")
 }
 
+/* TODO: move this into unit tests */
+function testWordGroupStat(wordGroup, data, iterations) {
+  let testMap = {}
+  for (let i = 0; i < iterations; i++) {
+    let testWord = picker(wordGroup, data)
+    if (Object.hasOwn(testMap, testWord)) {
+      testMap[testWord]++
+    } else {
+      testMap[testWord] = 1
+    }
+  }
+  console.log(testMap)
+}
+
 module.exports = stitch

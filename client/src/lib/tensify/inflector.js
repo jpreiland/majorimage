@@ -3,7 +3,7 @@
 const find_irregular_verb = require('./verbs'),
       symbols = require('symbols')
 
-const stress_dict = ['consider', 'credit', 'deposit', 'exhibit', 'exit', 'inhabit', 'inherit', 'inhibit', 'limit', 'market', 'profit', 'target', 'ticket', 'trigger', 'visit']
+const stress_dict = ['consider', 'credit', 'deposit', 'exhibit', 'exit', 'inhabit', 'inherit', 'inhibit', 'limit', 'market', 'profit', 'remember', 'target', 'ticket', 'trigger', 'visit']
 
 function stress_at_the_end_of_the_word(word) {
   return stress_dict.indexOf(word) === -1
