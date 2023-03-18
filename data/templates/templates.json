@@ -24,5 +24,12 @@
       "ship-1": "./variants/Ship1.vue",
       "ship-2": "./variants/Ship2.vue"
     }
+  },
+  "magic": {
+    "spells": {
+      "_displayName": "Spells",
+      "_path": "./templates/spell/Spell.vue",
+      "spell-1": "./variants/Spell1.vue"
+    }
   }
 }

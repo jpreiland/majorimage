@@ -1,16 +1,18 @@
 <script>
 import { computed } from 'vue'
 import axios from "axios"
-import ObjectsPage from './components/objects/ObjectsPage.vue'
-import MaterialsPage from './components/materials/MaterialsPage.vue'
-import LocationsPage from './components/locations/LocationsPage.vue'
 import AboutPage from './components/about/AboutPage.vue'
+import LocationsPage from './components/locations/LocationsPage.vue'
+import MagicPage from './components/magic/MagicPage.vue'
+import MaterialsPage from './components/materials/MaterialsPage.vue'
+import ObjectsPage from './components/objects/ObjectsPage.vue'
 
 const routes = {
   '/': ObjectsPage,
-  '/materials': MaterialsPage,
+  '/about': AboutPage,
   '/locations': LocationsPage,
-  '/about': AboutPage
+  '/magic': MagicPage,
+  '/materials': MaterialsPage
 }
 
 export default {
@@ -48,6 +50,7 @@ export default {
     <a href="#/">Objects</a> |
     <a href="#/materials">Materials</a> |
     <a href="#/locations">Locations</a> |
+    <a href="#/magic">Magic</a> |
     <a href="#/about">About</a> |
   </div>
   <component :is="currentView" />

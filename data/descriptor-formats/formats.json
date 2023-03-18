@@ -30,6 +30,7 @@
   "_effect": [["pick", "magicEffect"]],
   "_amountGroupCreature": [["pick", "amountGroupCreature"]],
   "_furniture": [["pick", "furniture"]],
+  "_magicSpellSRD": [["pick", "magicSpellSRD"]],
   "_material": [["pick", "materialObject"]],
   "_misc": [["pick", "misc"]],
   "_quality": [["pick", "quality"]],

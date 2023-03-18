@@ -3,7 +3,7 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" v-for="(location, i) in data.templates.locations" @click="select(location)" :key="'-location-'+i">{{ location._displayName }}</li>
+          <li class="list-item" v-for="(magicSubpage, i) in data.templates.magic" @click="select(magicSubpage)" :key="'-magicSubpage-'+i">{{ magicSubpage._displayName }}</li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
@@ -19,7 +19,7 @@
 import { defineAsyncComponent } from 'vue'
 
 export default {
-  name: 'Locations',
+  name: 'Magic',
   inject: ['data'],
   data() {
     return {
@@ -32,17 +32,17 @@ export default {
   async mounted() {
     this.loadTypes()
     this.activeType = this.types[0]
-    this.activePath = this.data.templates.locations[this.activeType]._path
+    this.activePath = this.data.templates.magic[this.activeType]._path
     this.initialized = true
   },
   methods: {
     loadTypes() { 
-      for (let key of Object.keys(this.data.templates.locations)) {
+      for (let key of Object.keys(this.data.templates.magic)) {
         this.types.push(key)
       }
     },
-    async select(location) {
-      this.activePath = location._path
+    async select(magicSubpage) {
+      this.activePath = magicSubpage._path
     }
   },
   computed: {

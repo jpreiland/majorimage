@@ -1,0 +1,52 @@
+<template>
+  <div class="card-header">
+    <div class="card-header-left">
+      <h2 class="card-title">SRD Spells</h2>
+    </div>
+  </div>
+  <component v-if="initialized" :is="loadVariant"></component>
+</template>
+
+<script>
+import { defineAsyncComponent } from "vue"
+
+
+export default {
+  name: 'Spell',
+  inject: ['data'],
+  data() {
+    return {
+      variants: [],
+      activeVariant: 0,
+      activePath: "",
+      initialized: false
+    }
+  },
+  async mounted() {
+    this.loadVariants()
+    this.rollVariant()
+    this.initialized = true
+  },
+  methods: {
+    loadVariants() {
+      for (let variant of Object.keys(this.data.templates.magic.spells)) {
+        if (variant.startsWith('_')) continue
+        this.variants.push(variant)
+      }
+    },
+    rollVariant() {
+      this.activeVariant = Math.floor(Math.random() * this.variants.length)
+      this.activePath = this.data.templates.magic.spells[this.variants[this.activeVariant]]
+    }
+  },
+  computed: {
+    loadVariant () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
+    }
+  }
+}
+</script>
+
+<style>
+</style>
