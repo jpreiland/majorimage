@@ -28,8 +28,8 @@
   "magic": {
     "spells": {
       "_displayName": "Spells",
-      "_path": "./templates/spell/Spell.vue",
-      "spell-1": "./variants/Spell1.vue"
+      "_path": "./templates/spells/Spells.vue",
+      "spells-1": "./variants/Spells1.vue"
     }
   }
 }

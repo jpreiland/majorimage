@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'Spell1',
+  name: 'Spells1',
   inject: ['data'],
   data() {
     return {

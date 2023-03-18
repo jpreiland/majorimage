@@ -6,7 +6,7 @@
   "clothingHeadwear": ["clothing", "headwear"],
   "colorAll": ["color", "colorSpecific", "colorSpecial"],
   "container": ["container"],
-  "creature": ["aberration", "amphibian", "bird", "celestial", "construct", "dragon", "elemental", "fey", "fiend", "giant", "humanoid", "humanoidCommon", "mammal", "marineAnimal", "monstrosity", "ooze", "plantCreature", "reptile", "tradeAdventurer", "tradeNPC", "undead"],
+  "creature": ["aberration", "amphibian", "arthropod", "bird", "celestial", "construct", "dragon", "elemental", "fey", "fiend", "giant", "humanoid", "humanoidCommon", "mammal", "marineAnimal", "monstrosity", "ooze", "plantCreature", "reptile", "tradeAdventurer", "tradeNPC", "undead"],
   "event": ["performance", "eventCelestial", "eventMisc", "eventWeather"],
   "furniture": ["furniture"],
   "materialObject": ["materialMisc", "materialMetal", "materialStone", "materialGemstone", "materialTextile", "materialWood"],

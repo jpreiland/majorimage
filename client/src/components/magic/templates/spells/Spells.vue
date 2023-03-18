@@ -12,7 +12,7 @@ import { defineAsyncComponent } from "vue"
 
 
 export default {
-  name: 'Spell',
+  name: 'Spells',
   inject: ['data'],
   data() {
     return {

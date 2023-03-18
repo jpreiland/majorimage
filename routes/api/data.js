@@ -58,18 +58,18 @@ router.get('/locations', async (req, res) => {
 function compileWordGroups() {
   const compiledWordGroups = {}
 
-  for (let group of Object.keys(WordGroups)) {
+  for (let wordGroup of Object.keys(WordGroups)) {
     let totalWords = 0
     const compiledGroup = {}
 
-    for (let category of WordGroups[group]) {
+    for (let category of WordGroups[wordGroup]) {
       if (!Words[category] || Words[category].length <= 0) continue;
 
       totalWords += Words[category].length
       compiledGroup[(totalWords-1)] = category
     }
 
-    compiledWordGroups[group] = {
+    compiledWordGroups[wordGroup] = {
       categoryMap: compiledGroup,
       totalWords: totalWords
     }
