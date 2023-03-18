@@ -6,13 +6,15 @@ import LocationsPage from './components/locations/LocationsPage.vue'
 import MagicPage from './components/magic/MagicPage.vue'
 import MaterialsPage from './components/materials/MaterialsPage.vue'
 import ObjectsPage from './components/objects/ObjectsPage.vue'
+import NotFound from './components/notfound/NotFound.vue'
 
 const routes = {
   '/': ObjectsPage,
   '/about': AboutPage,
   '/locations': LocationsPage,
   '/magic': MagicPage,
-  '/materials': MaterialsPage
+  '/materials': MaterialsPage,
+  '/objects': ObjectsPage
 }
 
 export default {
@@ -29,16 +31,18 @@ export default {
   },
   computed: {
     currentView() {
+      if (!this.currentPath.includes('#')) return routes[window.location.pathname] || NotFound
       return routes[this.currentPath.slice(1) || '/'] || NotFound
     }
   },
   async beforeCreate() {
-    const wordsResponse = await axios.get('api/data', { })
+    const wordsResponse = await axios.get('/api/data', { })
     this.data = wordsResponse.data
   },
   mounted() {
     window.addEventListener('hashchange', () => {
 		  this.currentPath = window.location.hash
+      window.location.pathname = '/'
 		})
   }
 }

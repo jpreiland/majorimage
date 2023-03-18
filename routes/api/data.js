@@ -11,20 +11,6 @@ const DescriptorFormatsMap = require('../../data/descriptor-formats/descriptor-f
 
 const router = Router()
 
-router.get('/materials', async (req, res) => {
-  try {
-    let data = {
-      stones: Stones.sort((a, b) => a.name.localeCompare(b.name)),
-      woods: Woods.sort((a, b) => a.name.localeCompare(b.name)),
-      metals: Metals.sort((a, b) => a.name.localeCompare(b.name)),
-      textiles: Textiles.sort((a, b) => a.name.localeCompare(b.name))
-    }
-    res.status(200).json(data)
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
 router.get('/data', async (req, res) => {
   try {
     const wordCounts = buildWordCounts()
