@@ -2,7 +2,7 @@
   <div class="info-card material">
     <div class="card-header" @click="this.$parent.switchUnits()">
       <div class="card-header-left">
-        <img :src="material.image" class="card-image">
+        <img :src="$parent.iconPath" class="card-image">
       </div>
       <div class="card-header-right">
         <h2 class="card-title">{{ material.name }}</h2>

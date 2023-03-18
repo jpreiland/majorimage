@@ -163,9 +163,8 @@
 }
 
 .card-image {
-  width: 50px;
+  width: 3rem;
   height: auto;
-  border-radius: 50%;
 }
 
 .card-header-right {
