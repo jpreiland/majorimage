@@ -3,6 +3,7 @@ const pluralize = require('pluralize')
 const exceptions = {
   "avatar of death": "avatars of death",
   "cyclops": "cyclopes",
+  "koi": "koi",
   "man-at-arms": "men-at-arms",
   "pegasus": "pegasi",
   "squid": "squid"

@@ -19,6 +19,6 @@
   "_Quality": [["_quality", 1]],
   "_Color": [["_color", 5], ["modifiedColor", 3]],
   "_Material": [["_material", 1]],
-  "_Spell": [["_magicSpellSRD", 1]],
+  "_Spell": [["_magicSpellSRD", 4], ["modifiedSpellSRD", 1]],
   "__Price": [["__price", 1]]
 }

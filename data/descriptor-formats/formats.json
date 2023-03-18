@@ -7,6 +7,7 @@
   "a(n)-animal(s)": [["a(n)"], ["pick-pluralize-optional", "animal"]],
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
   "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "color"]],
+  "modifiedSpellSRD": [["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "magicSpellSRD"]],
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
   "creature-verbing-miscs": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick-pluralize", "misc"]],
   "event-verbing-creature": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToCreature"], ["a(n)"], ["pick", "creature"]],
