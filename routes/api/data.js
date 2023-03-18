@@ -3,8 +3,8 @@ const Stones = require('../../data/materials/stones.json')
 const Woods = require('../../data/materials/woods.json')
 const Metals = require('../../data/materials/metals.json')
 const Textiles = require('../../data/materials/textiles.json')
-const Words = require('../../data/words/words.json')
-const WordGroups = require('../../data/words/word-groups.json')
+const Categories = require('../../data/words/categories.json')
+const Groups = require('../../data/words/groups.json')
 const Templates = require('../../data/templates/templates.json')
 const Formats = require('../../data/descriptor-formats/formats.json')
 const DescriptorFormatsMap = require('../../data/descriptor-formats/descriptor-formats-map.json')
@@ -28,7 +28,7 @@ router.get('/materials', async (req, res) => {
 router.get('/data', async (req, res) => {
   try {
     const wordCounts = buildWordCounts()
-    const compiledWordGroups = compileWordGroups(wordCounts)
+    const compiledGroups = compileGroups(wordCounts)
     const compiledFormats = compileFormats()
     const compiledTemplates = compileTemplates()
     const compiledMaterials = compileMaterials()
@@ -38,8 +38,8 @@ router.get('/data', async (req, res) => {
       formats: Formats,
       materials: compiledMaterials,
       templates: compiledTemplates,
-      words: Words, 
-      wordGroups: compiledWordGroups
+      words: Categories, 
+      wordGroups: compiledGroups
     }
 
     res.status(200).json(data)    
@@ -60,31 +60,31 @@ function buildWordCounts() {
   wordCounts = {}
 
   // add base categories to word counts map
-  for (let category of Object.keys(Words)) {
-    wordCounts[category] = Words[category].length
+  for (let category of Object.keys(Categories)) {
+    wordCounts[category] = Categories[category].length
   }
 
   let groupQueue = []
-  for (let group of Object.keys(WordGroups)) {
+  for (let group of Object.keys(Groups)) {
     groupQueue.push(group)
   }
 
-  let niaveCycleCounter = 0
+  let naiveCycleCounter = 0
 
   while (groupQueue.length) {
-    if (niaveCycleCounter > 50) {
+    if (naiveCycleCounter > 50) {
       console.log(`cycle likely present. aborting.`)
       break
     }
 
     let group = groupQueue.shift()
     let totalWords = 0
-    for (let category of WordGroups[group]) {
+    for (let category of Groups[group]) {
       if (Object.hasOwn(wordCounts, category)) {
         totalWords += wordCounts[category]
       } else {
         groupQueue.push(group)
-        niaveCycleCounter++
+        naiveCycleCounter++
         totalWords = 0
         break
       }
@@ -92,34 +92,34 @@ function buildWordCounts() {
 
     if (totalWords > 0) {
       wordCounts[group] = totalWords
-      niaveCycleCounter = 0
+      naiveCycleCounter = 0
     }
   }
 
   return wordCounts
 }
 
-function compileWordGroups(wordCounts) {
-  const compiledWordGroups = {}
+function compileGroups(wordCounts) {
+  const compiledGroups = {}
 
-  for (let group of Object.keys(WordGroups)) {
+  for (let group of Object.keys(Groups)) {
     totalWords = 0
     const compiledGroup = {}
 
-    for (let category of WordGroups[group]) {
+    for (let category of Groups[group]) {
       if (!wordCounts[category]) continue
 
       totalWords += wordCounts[category]
       compiledGroup[(totalWords - 1)] = category
     }
 
-    compiledWordGroups[group] = {
+    compiledGroups[group] = {
       categoryMap: compiledGroup,
       totalWords: totalWords
     }
   }
 
-  return compiledWordGroups
+  return compiledGroups
 }
 
 function compileFormats() {

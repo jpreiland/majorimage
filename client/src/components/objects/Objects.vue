@@ -87,6 +87,7 @@ export default {
       this.compileItemTypes()
     },
     async compileItemTypes() {
+      // TODO fix this to work with new nested groups
       this.itemTypes.compiled = false
       this.itemFormats = []
 
