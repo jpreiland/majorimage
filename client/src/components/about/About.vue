@@ -63,8 +63,8 @@ export default {
   },
   async mounted() {
     let uniqueWords = new Set()
-    for (let wordList of Object.keys(this.data.words)) {
-      for (let word of this.data.words[wordList]) {
+    for (let category of Object.keys(this.data.categories)) {
+      for (let word of this.data.categories[category]) {
         uniqueWords.add(word)
       }
     }

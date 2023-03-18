@@ -38,8 +38,8 @@ router.get('/data', async (req, res) => {
       formats: Formats,
       materials: compiledMaterials,
       templates: compiledTemplates,
-      words: Categories, 
-      wordGroups: compiledGroups
+      categories: Categories,
+      groups: compiledGroups
     }
 
     res.status(200).json(data)    

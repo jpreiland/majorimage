@@ -125,27 +125,27 @@ function do_a_an(word, a_an_flag) {
 }
 
 function picker(category, data) {
-  if (Object.hasOwn(data.wordGroups, category)) {
+  if (Object.hasOwn(data.groups, category)) {
     category = categoryPicker(category, data)
   }
   return wordPicker(category, data)
 }
 
 function wordPicker(category, data) {
-  return data.words[category][Math.floor(Math.random() * data.words[category].length)]
+  return data.categories[category][Math.floor(Math.random() * data.categories[category].length)]
 }
 
 function categoryPicker(group, data) {
-  const groupsize = data.wordGroups[group].totalWords
+  const groupsize = data.groups[group].totalWords
   const grouproll = Math.floor(Math.random() * groupsize)
   let categoryCandidate = ''
 
-  for (let categorySize of Object.keys(data.wordGroups[group].categoryMap)) {
-    categoryCandidate = data.wordGroups[group].categoryMap[categorySize]
+  for (let categorySize of Object.keys(data.groups[group].categoryMap)) {
+    categoryCandidate = data.groups[group].categoryMap[categorySize]
     if (categorySize >= grouproll) break
   }
 
-  if (Object.hasOwn(data.wordGroups, categoryCandidate)) {
+  if (Object.hasOwn(data.groups, categoryCandidate)) {
     return categoryPicker(categoryCandidate, data)
   }
 
@@ -198,10 +198,10 @@ function formatPrice(price) {
 }
 
 /* TODO: move this into unit tests */
-function testWordGroupStat(wordGroup, data, iterations) {
+function testCategoryStat(category, data, iterations) {
   let testMap = {}
   for (let i = 0; i < iterations; i++) {
-    let testWord = picker(wordGroup, data)
+    let testWord = picker(category, data)
     if (Object.hasOwn(testMap, testWord)) {
       testMap[testWord]++
     } else {
