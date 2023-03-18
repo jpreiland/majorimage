@@ -16,27 +16,18 @@ router.get('/data', async (req, res) => {
     const wordCounts = buildWordCounts()
     const compiledGroups = compileGroups(wordCounts)
     const compiledFormats = compileFormats()
-    const compiledTemplates = compileTemplates()
     const compiledMaterials = compileMaterials()
 
     const data = {
+      categories: Categories,
       dfMap: compiledFormats,
       formats: Formats,
+      groups: compiledGroups,
       materials: compiledMaterials,
-      templates: compiledTemplates,
-      categories: Categories,
-      groups: compiledGroups
+      templates: Templates
     }
 
     res.status(200).json(data)    
-  } catch (error) {
-    res.status(500).json({ message: error.message })
-  }
-})
-
-router.get('/locations', async (req, res) => {
-  try {
-    res.status(200).json(Locations)
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
@@ -125,10 +116,6 @@ function compileFormats() {
   }
 
   return compiledFormats
-}
-
-function compileTemplates() {
-  return Templates
 }
 
 function compileMaterials() {
