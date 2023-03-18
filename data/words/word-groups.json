@@ -1,6 +1,6 @@
 {
   "amountGroupCreature": ["amount", "groupCreature"],
-  "animal": ["amphibian", "bird", "mammal", "marineAnimal", "reptile"],
+  "animal": ["amphibian", "arthropod", "bird", "mammal", "marineAnimal", "reptile"],
   "animalNonMarine": ["amphibian", "bird", "mammal", "reptile"],
   "armorShield": ["armor", "shield"],
   "clothingHeadwear": ["clothing", "headwear"],
