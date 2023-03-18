@@ -28,10 +28,7 @@ router.get('/materials', async (req, res) => {
 router.get('/data', async (req, res) => {
   try {
     const wordCounts = buildWordCounts()
-    const compiledWordGroupsNew = compileWordGroupsNew(wordCounts)
-
-
-    const compiledWordGroups = compileWordGroups()
+    const compiledWordGroups = compileWordGroups(wordCounts)
     const compiledFormats = compileFormats()
     const compiledTemplates = compileTemplates()
     const compiledMaterials = compileMaterials()
@@ -66,19 +63,11 @@ function buildWordCounts() {
   for (let category of Object.keys(Words)) {
     wordCounts[category] = Words[category].length
   }
-  // console.log(wordCounts)
 
-  // add word groups to word counts map
-  // console.log('counting group contents...')
-  // put all groups onto queue
-
-  // pop from queue, process
-  // if error, push to end of queue
   let groupQueue = []
   for (let group of Object.keys(WordGroups)) {
     groupQueue.push(group)
   }
-  // console.log(groupQueue)
 
   let niaveCycleCounter = 0
 
@@ -89,17 +78,14 @@ function buildWordCounts() {
     }
 
     let group = groupQueue.shift()
-    // console.log(`pulled ${group} from group queue...`)
     let totalWords = 0
     for (let category of WordGroups[group]) {
       if (Object.hasOwn(wordCounts, category)) {
         totalWords += wordCounts[category]
       } else {
-        console.log(`----------couldn't find count for ${category} used in ${group} group, putting ${group} in back of queue ---------`)
         groupQueue.push(group)
         niaveCycleCounter++
         totalWords = 0
-        // console.log(`cycle count: ${niaveCycleCounter}`)
         break
       }
     }
@@ -109,12 +95,11 @@ function buildWordCounts() {
       niaveCycleCounter = 0
     }
   }
-  // console.log('counted group contents.')
-  // console.log(wordCounts)
+
   return wordCounts
 }
 
-function compileWordGroupsNew(wordCounts) {
+function compileWordGroups(wordCounts) {
   const compiledWordGroups = {}
 
   for (let group of Object.keys(WordGroups)) {
@@ -134,31 +119,6 @@ function compileWordGroupsNew(wordCounts) {
     }
   }
 
-  console.log(compiledWordGroups)
-
-  return compiledWordGroups
-}
-
-function compileWordGroups() {
-  const compiledWordGroups = {}
-
-  for (let wordGroup of Object.keys(WordGroups)) {
-    let totalWords = 0
-    const compiledGroup = {}
-
-    for (let category of WordGroups[wordGroup]) {
-      if (!Words[category] || Words[category].length <= 0) continue;
-
-      totalWords += Words[category].length
-      compiledGroup[(totalWords-1)] = category
-    }
-
-    compiledWordGroups[wordGroup] = {
-      categoryMap: compiledGroup,
-      totalWords: totalWords
-    }
-  }
-  
   return compiledWordGroups
 }
 

@@ -125,7 +125,9 @@ function do_a_an(word, a_an_flag) {
 }
 
 function picker(category, data) {
-  if (Object.hasOwn(data.wordGroups, category)) return groupWordPicker(category, data)
+  if (Object.hasOwn(data.wordGroups, category)) {
+    category = categoryPicker(category, data)
+  }
   return wordPicker(category, data)
 }
 
@@ -133,18 +135,21 @@ function wordPicker(category, data) {
   return data.words[category][Math.floor(Math.random() * data.words[category].length)]
 }
 
-function groupWordPicker(wordGroup, data) {
-  // pick category from word group
-  const groupsize = data.wordGroups[wordGroup].totalWords
+function categoryPicker(group, data) {
+  const groupsize = data.wordGroups[group].totalWords
   const grouproll = Math.floor(Math.random() * groupsize)
-  let category = ''
+  let categoryCandidate = ''
 
-  for (let categorySize of Object.keys(data.wordGroups[wordGroup].categoryMap)) {
-    category = data.wordGroups[wordGroup].categoryMap[categorySize]
+  for (let categorySize of Object.keys(data.wordGroups[group].categoryMap)) {
+    categoryCandidate = data.wordGroups[group].categoryMap[categorySize]
     if (categorySize >= grouproll) break
   }
 
-  return wordPicker(category, data)
+  if (Object.hasOwn(data.wordGroups, categoryCandidate)) {
+    return categoryPicker(categoryCandidate, data)
+  }
+
+  return categoryCandidate
 }
 
 function rollPrice(params, priceOverride) {
