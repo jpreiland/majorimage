@@ -19,9 +19,12 @@
       </div>
     </div>
     <div>
-      <template v-for="row in rows" v-bind:key="'item-'+row.id">
+      <template v-for="row in rows" :key="'item-'+row.id+'-'+rerollToggle">
         <ObjectRow :displayed-descriptors="displayedDescriptors" :itemTypes="itemTypes" />
       </template>
+    </div>
+    <div class="center">
+      <button class="button reroll-all" @click="rerollAll()">Reroll All</button>
     </div>
   </div>
 </template>
@@ -69,7 +72,8 @@ export default {
       miscFormat: ["_misc", 1],
       treasureFormat: ["_treasure", 1],
       weaponFormat: ["_weapon", 1],
-      writingFormat: ["_writing", 1]
+      writingFormat: ["_writing", 1],
+      rerollToggle: true
     }
   },
   async created() {
@@ -174,6 +178,9 @@ export default {
         formatPicker = formatPicker.concat(Array(this.itemTypes.formats[format].weight).fill(format))
       }
       return formatPicker
+    },
+    async rerollAll() {
+      this.rerollToggle = !this.rerollToggle
     }
   }
 }

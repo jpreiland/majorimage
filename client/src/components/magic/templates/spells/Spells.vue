@@ -1,9 +1,4 @@
 <template>
-  <div class="card-header">
-    <div class="card-header-left">
-      <h2 class="card-title">SRD Spells</h2>
-    </div>
-  </div>
   <component v-if="initialized" :is="loadVariant"></component>
 </template>
 

@@ -20,6 +20,17 @@
   margin: 1px;
   touch-action: manipulation;
 }
+.center {
+  text-align: center;
+}
+button.reroll-all {
+  margin-top: 2.5rem;
+  width: 12rem;
+}
+.button.info-panel.reroll-all {
+  width: 10rem;
+}
+
 .descriptor {
   height: 2.2em;
   padding-left: 5px;
@@ -41,7 +52,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
 .button.btn-effect {
   background-color: #6800df;
   color: #fff;
@@ -77,11 +87,8 @@
   display: flex;
   justify-content: space-between;
 }
-.columns.list {
-  height: min(50vh, 600px); /* 50% of the viewport height */
-}
 .columns.list.left-scroll-menu {
-  height: 90svh;
+  max-height: 90svh;
 }
 .columns.materials {
   margin: 2px;
@@ -114,7 +121,6 @@
   letter-spacing: 2px;
 }
 .list-item {
-  background-color: #fff;
   border: solid #b4b4b4;
   border-radius: 3px;
   border-width: 1px;
@@ -136,7 +142,7 @@
 }
 
 .info-card {
-  border: 1px solid #ccc;
+  border: 1px solid #b4b4b4;
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   padding: 1rem;
