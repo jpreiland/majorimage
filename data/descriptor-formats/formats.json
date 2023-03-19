@@ -34,7 +34,7 @@
   "_magicSpellSRD": [["pick", "magicSpellSRD"]],
   "_material": [["pick", "materialObject"]],
   "_misc": [["pick", "misc"]],
-  "_quality": [["pick", "adjectiveQuality"]],
+  "_quality": [["pick", "qualityObject"]],
   "_treasure": [["pick", "treasure"]],
   "_weapon": [["pick", "weapon"]],
   "_writing": [["pick", "writing"]],
