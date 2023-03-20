@@ -12,6 +12,8 @@ function stitch(parts, data, priceOverride) {
   let a_an_flag = false
   let isTitle = false
 
+  if (parts === null || parts === undefined) console.log(`Missing descriptor format!`)
+
   for (let part of parts) {
     if (part.length === 0) continue;
     switch (part[0]) {

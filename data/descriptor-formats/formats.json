@@ -15,13 +15,15 @@
   "spellFormOfVirtue": [["title"], ["pick", "magicSpellPartFormPrefix"], ["static", " "], ["pick", "virtue"]],
   "spellFormOfVirtueModified": [["title"], ["pick", "spellModifiers"], ["static", " "],  ["pick", "magicSpellPartFormPrefix"], ["static", " "], ["pick", "virtue"]],
   "spellElementOf": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "spellFormSuffixesElement"]],
+  "spellElementOfWithNounSuffix": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "spellFormSuffixesElement"], ["static", " of "], ["pick", "spellNounSuffixes"]],
   "spellElementOfModified": [["title"], ["pick", "spellModifiers"], ["static", " "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "spellFormSuffixesElement"]],
   "spellOfElement": [["title"], ["pick", "spellFormPrefixesElement"], ["static", " "], ["pick", "spellElementSuffixes"]],
   "spellOfElementModified": [["title"], ["pick", "spellModifiers"], ["static", " "],  ["pick", "spellFormPrefixesElement"], ["static", " "], ["pick", "spellElementSuffixes"]],
   "spellOfCreature": [["title"], ["pick", "spellFormPrefixesCreature"], ["static", " "], ["pick", "animalAndMonsterBasic"]],
   "spellOfCreatures": [["title"], ["pick", "spellFormPrefixesCreaturePlural"], ["static", " "], ["pick-pluralize", "animalAndMonsterBasic"]],
   "spellCreatureOf": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"]],
-  "spellCreaturesOf": [["title"], ["pick-pluralize", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreature"]],
+  "spellCreatureOfWithNounSuffix": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"], ["static", " of "], ["pick", "spellNounSuffixes"]],
+  "spellCreaturesWithNounSuffix": [["title"], ["pick-pluralize", "animalAndMonsterBasic"], ["static", " of "], ["pick", "spellNounSuffixes"]],
 
   "spellSRDModified": [["title"], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "magicSpellSRD"]],
 

@@ -68,7 +68,7 @@
   "foodPlural": ["beans", "rice"],
   "fruit": ["apple", "pear"],
   "fur": ["arctic fox fur", "bear fur", "ermine fur", "leopard fur", "marten fur", "mink fur", "rabbit fur", "red fox fur", "sable fur", "skunk fur", "wolf fur"],
-  "furniture": ["altar", "bed", "bench", "bookcase", "bunk", "cabinet", "casket", "chair", "chandelier", "chest", "coat rack", "coffee table", "coffin", "cot", "couch", "cupboard", "desk", "dining table", "drawing board", "dresser", "end table", "footstool", "hammock", "hutch", "love seat", "mirror", "oven", "pew", "pillar", "platform", "podium", "pool", "rack", "rocking chair", "room divider", "sarcophagus", "screen", "shelf", "sliding wall", "stage", "stand", "stool", "table", "throne", "tripod", "trough", "tub", "wall basin", "wardrobe", "weapon rack", "wine table", "workbench"],
+  "furniture": ["altar", "bed", "bench", "bookcase", "bunk", "cabinet", "casket", "chair", "chandelier", "chest", "coat rack", "coffee table", "coffin", "cot", "couch", "cupboard", "desk", "dining table", "drawing board", "dresser", "end table", "footstool", "hammock", "hutch", "love seat", "mirror", "pew", "pillar", "platform", "podium", "pool", "rack", "rocking chair", "room divider", "sarcophagus", "screen", "shelf", "sliding wall", "stage", "stand", "stool", "table", "throne", "tripod", "trough", "tub", "wall basin", "wardrobe", "weapon rack", "wine table", "workbench"],
   "gem": ["aquamarine", "azurite", "banded agate", "black opal", "black sapphire", "bloodstone", "blue quartz", "blue sapphire", "blue spinel", "carnelian", "chalcedony", "chrysoprase", "citrine", "diamond", "emerald", "eye agate", "fire opal", "gem", "gemstone", "hematite", "jacinth", "jasper", "lapis lazuli", "malachite", "moonstone", "moss agate", "onyx", "opal", "peridot", "quartz", "rhodochrosite", "ruby", "sardonyx", "star rose quartz", "star ruby", "star sapphire", "tiger eye", "topaz", "turquoise", "yellow sapphire", "zircon"],
   "geography": ["cross", "hill", "peak", "point", "quarry", "shore", "vale", "water"],
   "groupCreature": ["alliance", "band", "battalion", "caravan", "cast", "committee", "company", "coven", "crew", "family", "flock", "gaggle", "gang", "group", "herd", "horde", "jury", "panel", "party", "phallanx", "platoon", "posse", "raid group", "squad", "squadron", "team", "troupe"],
@@ -88,13 +88,12 @@
 
 
 
-  "magicSpellPartPrefix": ["arcane", "detect", "remove", "locate", "conjure", "summon", "astral", "banish", "chaos", "illusory", "phantasmal", "planar", "primordial", "protection from", "spirit", "ethereal", "unearthly"],
+  "magicSpellPartPrefix": ["arcane", "detect", "remove", "locate", "conjure", "summon", "astral", "banish", "chaos", "illusory", "phantasmal", "planar", "primordial", "protection from", "spirit", "ethereal", "unearthly", "spectral", "spinning"],
   "magicSpellPartPrefixPlural": ["swarm of", "rain of"],
-  "magicSpellPartSuffixSingular": ["dance"],
+  "magicSpellPartSuffixSingular": ["dance", "slam", "smash", "barrage", "volley"],
 
   "magicSpellPartCreaturePrefix": ["befriend", "charm", "hold", "raise"],
-  "magicSpellPartCreatureSuffix": ["of death", "of doom", "of victory"],
-  "magicSpellPartCreatureSuffixSingular": ["form", "bond"],
+  "magicSpellPartCreatureSuffixSingular": ["form", "bond", "ambush"],
 
   "magicSpellPartInanimatePrefix": ["animate", "awaken"],
   "magicSpellPartInanimatePrefixSingular": ["meld into", "alter"],
@@ -102,17 +101,21 @@
   "magicSpellPartInanimateSuffix": ["shower"],
 
   "magicSpellPartFormPrefix": ["zone of", "blade of", "aura of", "ray of", "wall of", "circle of", "cloud of", "cone of", "crown of", "globe of", "glyph of"],
-  "magicSpellPartFormPrefixElement": ["absorb", "control", "create", "ensnaring", "hand of", "burst of", "investiture of", "shape", "song of"],
-  "magicSpellPartFormSuffix": ["stampede", "parade", "explosion", "avalanche", "blizzard", "quake", "carnival", "armor", "shield", "orb", "cloud", "missile", "ward", "wave", "breath", "cage", "blast", "form", "cannon", "bolt", "storm", "strike", "bite", "pit", "burst", "tower", "fortress", "snare", "web", "tsunami", "tornado", "hurricane", "plague"],
-  "magicSpellPartFormSuffixElement": ["flood", "stream", "bubble", "field", "splash", "eclipse", "step", "walk", "ball", "arrow", "whip", "knife", "sliver", "spike", "crush", "barbs", "disk", "execution", "lash", "meteor", "slide", "weapon", "spray", "beam", "mantle", "star", "tendrils", "cube", "sphere"],
+  "magicSpellPartFormPrefixElement": ["absorb", "siphon", "control", "create", "ensnaring", "hand of", "burst of", "investiture of", "shape", "song of"],
+  "magicSpellPartFormSuffix": ["stampede", "parade", "explosion", "avalanche", "blizzard", "quake", "carnival", "armor", "shield", "orb", "cloud", "missile", "ward", "wave", "breath", "cage", "blast", "form", "cannon", "bolt", "storm", "strike", "bite", "pit", "burst", "tower", "fortress", "snare", "web", "tsunami", "tornado", "hurricane", "plague", "chomp", "crunch", "cyclone", "monsoon", "maelstrom", "rupture", "touch", "rush", "charge"],
+  "magicSpellPartFormSuffixElement": ["flood", "stream", "bubble", "field", "splash", "eclipse", "step", "walk", "ball", "arrow", "whip", "knife", "sliver", "spike", "crush", "barbs", "disk", "execution", "lash", "meteor", "slide", "weapon", "spray", "beam", "mantle", "star", "tendrils", "cube", "sphere", "shroud", "cloak", "flare", "cleave"],
 
-  "magicSpellPartElement": ["fire", "air", "water", "earth", "lightning", "thunder", "death", "life", "light", "lava", "chaos", "cold", "heat", "power", "magic", "ice", "energy", "wind", "acid", "poison", "shadow", "starlight", "force"],
-  "magicSpellPartElementPrefix": ["chromatic", "prismatic", "chilling", "dark", "elemental", "dimension", "psychic", "psionic", "scorching", "freezing", "radiant", "sun", "temporal", "vampiric", "necrotic", "psychedelic"],
-  "magicSpellPartElementSuffix": ["darkness", "elements", "radiance", "silence"],
+  "magicSpellPartElement": ["fire", "air", "water", "earth", "lightning", "thunder", "death", "life", "light", "lava", "chaos", "cold", "heat", "power", "magic", "ice", "energy", "wind", "acid", "poison", "shadow", "starlight", "force", "dawn", "dusk", "mystery", "plasma", "sand", "silver", "smoke", "static", "fate"],
+  "magicSpellPartElementPrefix": ["chromatic", "prismatic", "chilling", "dark", "elemental", "dimension", "psychic", "psionic", "scorching", "freezing", "radiant", "sun", "temporal", "vampiric", "necrotic", "psychedelic", "dream", "magnetic", "mystic", "nether", "grasping", "phase", "seismic", "soul", "spark", "spell", "terror", "umbral", "invisible", "void", "wild", "withering"],
+  "magicSpellPartElementSuffix": ["darkness", "elements", "radiance", "silence", "dreams", "magnetism", "malice", "souls", "sparks", "fear", "invisibility"],
 
   "magicSpellPartVerbPrefix": ["power word"],
+  "magicSpellPartNounSuffix": ["judgment", "destiny", "chaos", "fate", "surprise", "immortality", "power"],
+  "magicSpellPartNounSuffixNegative": ["destruction", "annihilation", "murder", "suppression", "pulverization", "mutilation", "defenestration", "carnage", "ruin", "slaughter", "assassination", "havoc", "mayhem", "slaying", "disintegration", "disruption", "the apocalypse", "war", "homicide", "devastation", "confusion", "vandalism", "catastrophe", "oppression", "desolation", "harm", "abduction", "breaching", "division", "concussion", "striking", "damnation", "deception", "decimation", "defiance", "doom", "death", "devouring", "flaying", "hallucination", "vengeance", "distortion", "obliteration", "malice", "subjugation"],
+  "magicSpellPartNounSuffixPositive": ["victory", "absolution", "glory", "redemption", "valor", "justice", "peace", "rebirth", "renewal"],
 
-  "magicSpellPartModifier": ["greater", "lesser", "major", "minor"],
+
+  "magicSpellPartModifier": ["greater", "lesser", "major", "minor", "super", "mega", "ultra", "ultimate", "supreme", "mythic"],
   "magicSpellModifier": ["mass"],
 
   "physicalDamageType": ["bludgeoning", "piercing", "slashing"],
@@ -133,7 +136,7 @@
   "marineAnimal": ["anglerfish", "blowfish", "blue whale", "catfish", "clam", "cod", "flatfish", "goblin shark", "goldfish", "great white shark", "hammerhead shark", "mantis shrimp", "oarfish", "sea cucumber", "sea lion", "sea otter", "sea slug", "sea turtle", "sea urchin", "seahorse", "starfish", "stingray", "swordfish", "tiger shark", "whale shark"],
   "marineAnimalBasic": ["barnacle", "bass", "carp", "crab", "dolphin", "eel", "fish", "jellyfish", "koi", "lobster", "mackerel", "manatee", "narwhal", "nautilus", "octopus", "orca", "oyster", "piranha", "salmon", "seal", "shark", "squid", "tuna", "walrus", "whale", "ray"],
   "materialMetal": ["metal", "iron", "steel", "mithril", "adamantine", "gold", "silver", "bronze", "brass", "copper", "lead", "tin", "platinum"],
-  "materialMisc": ["bone", "candy", "clay", "glass", "ice", "ivory", "porcelain", "wax", "wicker"],
+  "materialMisc": ["bone", "candy", "clay", "glass", "ice", "ivory", "porcelain", "wax", "wicker", "paper"],
   "materialGemstone": ["aquamarine", "bloodstone", "diamond", "emerald", "moonstone", "onyx", "opal", "quartz", "ruby", "sapphire", "turquoise"],
   "materialStone": ["stone", "obsidian", "marble", "granite", "jade"],
   "materialTextile": ["cloth", "wool", "silk", "linen", "fur", "calico", "velvet", "burlap", "cashmere"],
@@ -172,11 +175,11 @@
   "verbObjectToEvent": ["approach", "avoid", "begin", "create", "decide", "determine", "follow", "get", "has", "improve", "protect", "receive", "require", "solve", "want"],
   "verbEventToEvent": ["approach", "avoid", "become", "create", "decide", "determine", "develop", "follow", "improve", "protect", "require", "solve"],
   "virtueNegative": ["antagonism", "apathy", "carelessness", "chaos", "corruption", "cowardice", "criticism", "denial", "despair", "disagreement", "discord", "discouragement", "dishonesty", "dishonor", "disinterest", "disloyalty", "dismissiveness", "disorder", "disregard", "disrespect", "dissatisfaction", "distrust", "domination", "doubt", "envy", "fakeness", "folly", "forcefulness", "greed", "hate", "idleness", "immodesty", "impatience", "incompetence", "indecency", "indecision", "indifference", "indulgence", "inflexibility", "ingratitude", "injustice", "insincerity", "intolerance", "irresponsibility", "irreverence", "laziness", "lethargy", "meekness", "mercilessness", "misunderstanding", "negligence", "nihilism", "noncommitment", "obsession", "pessimism", "pride", "skepticism", "sorrow", "tactlessness", "thankfulness", "unaccountability", "uncharitableness", "uncleanliness", "unfairness", "unfriendliness", "ungraciousness", "unhelpfulness", "unkindness", "unpreparedness", "unreliability", "wavering", "woe"],
-  "virtuePositive": ["acceptance", "accountability", "ambition", "appreciation", "assertiveness", "authenticity", "beauty", "caring", "cleanliness", "charity", "commitment", "compassion", "confidence", "consideration", "contentment", "cooperation", "courage", "creativity", "detachment", "determination", "devotion", "dignity", "diligence", "encouragement", "enthusiasm", "excellence", "fairness", "faith", "flexibility", "forgiveness", "friendliness", "generosity", "gentleness", "graciousness", "gratitude", "harmony", "helpfulness", "honesty", "honor", "hope", "humility", "idealism", "integrity", "imagination", "joy", "justice", "kindness", "love", "loyalty", "moderation", "modesty", "optimism", "order", "passion", "patience", "peace", "perseverance", "preparedness", "purposefulness", "reliability", "respect", "responsibility", "reverence", "self-discipline", "service", "sincerity", "tact", "temperance", "tenacity", "thankfulness", "tolerance", "trust", "understanding", "unity", "wisdom", "wit", "wonder"],
+  "virtuePositive": ["acceptance", "accountability", "ambition", "appreciation", "assertiveness", "authenticity", "beauty", "caring", "cleanliness", "charity", "commitment", "compassion", "confidence", "consideration", "contentment", "cooperation", "courage", "creativity", "detachment", "determination", "devotion", "dignity", "diligence", "encouragement", "enthusiasm", "excellence", "fairness", "faith", "flexibility", "forgiveness", "friendliness", "generosity", "gentleness", "graciousness", "gratitude", "harmony", "helpfulness", "honesty", "honor", "hope", "humility", "idealism", "integrity", "imagination", "joy", "justice", "kindness", "love", "loyalty", "moderation", "modesty", "optimism", "order", "passion", "patience", "peace", "perseverance", "preparedness", "purposefulness", "reliability", "respect", "responsibility", "reverence", "self-discipline", "service", "sincerity", "tact", "temperance", "tenacity", "thankfulness", "tolerance", "trust", "understanding", "unity", "wisdom", "wit", "wonder", "whimsy", "humor"],
   "weaponAmmo": ["crossbow bolt", "sling stone"],
   "weaponAmmoBasic": ["arrow", "bolt", "stone"],
   "weaponMelee": ["bastard sword", "battleaxe", "bill (polearm)", "brass knuckles", "cat-o'-nine tails", "dire flail", "estoc", "falchion", "greataxe", "greatclub", "greatsword", "handaxe", "heavy flail", "heavy mace", "heavy pick", "light flail", "light mace", "light pick", "longspear", "longsword", "pickaxe", "pitchfork", "punching dagger", "quarterstaff", "shortspear", "shortsword", "spiked chain", "warhammer", "wooden stake"],
-  "weaponMeleeBasic": ["axe", "bardiche", "claymore", "club", "cutlass", "dagger", "estoc", "falchion", "garrote", "gladius", "glaive", "guisarme", "halberd", "hammer", "harpoon", "knife", "lance", "machete", "morningstar", "pike", "ranseur", "rapier", "sap", "scimitar", "scizore", "sickle", "spear", "staff", "trident", "whip", "sword"],
+  "weaponMeleeBasic": ["axe", "bardiche", "claymore", "club", "cutlass", "dagger", "estoc", "falchion", "garrote", "gladius", "glaive", "guisarme", "halberd", "hammer", "harpoon", "knife", "lance", "machete", "morningstar", "pike", "ranseur", "rapier", "sap", "scimitar", "scizore", "sickle", "spear", "staff", "trident", "whip", "sword", "razor"],
   "weaponRanged": ["composite longbow", "hand crossbow", "heavy crossbow", "light crossbow", "throwing axe"],
   "weaponRangedBasic": ["dart", "crossbow", "javelin", "longbow", "net", "shortbow", "sling", "bow"],
   "wood": ["alder", "apple", "apricot", "ash", "aspen", "balsa", "bamboo", "black ash", "oak", "pine", "red ash", "rosewood", "tamo ash", "white ash"],
