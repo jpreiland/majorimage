@@ -90,7 +90,7 @@
 
   "magicSpellPartPrefix": ["arcane", "detect", "remove", "locate", "conjure", "summon", "astral", "banish", "chaos", "illusory", "phantasmal", "planar", "primordial", "protection from", "spirit", "ethereal", "unearthly"],
   "magicSpellPartPrefixPlural": ["swarm of", "rain of"],
-  "magicSpellPartSuffix": ["dance"],
+  "magicSpellPartSuffixSingular": ["dance"],
 
   "magicSpellPartCreaturePrefix": ["befriend", "charm", "hold", "raise"],
   "magicSpellPartCreatureSuffix": ["form", "of death", "of doom", "of victory"],
