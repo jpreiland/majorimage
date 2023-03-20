@@ -5,7 +5,7 @@
   "Book": [["novel-tradeNPC-verbed", 1], ["novel-tradeNPCs-verbed", 1]],
   "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
   "Countryside": [["color-geography", 1], ["humanoidCommon-geography", 1]],
-  "CustomSpell": [["modifiedSpellSRD", 1]],
+  "CustomSpell": [["spellFormOfVirtue", 3], ["spellFormOfVirtueModified", 1], ["spellElementOf", 9], ["spellElementOfModified", 1], ["spellOfElement", 9], ["spellOfElementModified", 1], ["spellSRDModified", 2], ["spellSummonElementCreature", 4], ["spellSummonModifiedElementCreature", 1], ["spellConjureElementObject", 1], ["spellOfCreature", 1], ["spellOfCreatures", 1], ["spellCreatureOf", 1], ["spellCreaturesOf", 1]],
   "CreatureVerbingMisc(s)": [["creature-verbing-misc", 1], ["creature-verbing-miscs", 1]],
   "EventVerbing": [["event-verbing-creature", 1], ["event-verbing-event", 3], ["event-verbing-misc", 1]],
   "Ship": [["color-geography", 1], ["humanoidCommon-geography", 1]],
@@ -20,6 +20,6 @@
   "_Quality": [["_quality", 1]],
   "_Color": [["_color", 5], ["modifiedColor", 3]],
   "_Material": [["_material", 1]],
-  "_Spell": [["_magicSpellSRD", 1]],
+  "_Spell": [["_spellSRD", 1]],
   "__Price": [["__price", 1]]
 }

@@ -6,7 +6,7 @@
   </div>
   <div class="info-panel-description">
     <div>
-      <template v-for="spell in spells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
+      <template v-for="spell in srdSpells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
         <p>
           <Descriptor :type="'_Spell'" :color="'#FF8C58'" />
         </p>
@@ -20,7 +20,7 @@
   </div>
   <div class="info-panel-description">
     <div>
-      <template v-for="spell in spells" :key="'CustomSpell-'+spell.id+'-'+rerollToggle">
+      <template v-for="spell in customSpells" :key="'CustomSpell-'+spell.id+'-'+rerollToggle">
         <p>
           <Descriptor :type="'CustomSpell'" :color="'#58CBFF'" />
         </p>
@@ -38,14 +38,19 @@ export default {
   inject: ['data'],
   data() {
     return {
-      numSpells: 8,
-      spells: [],
+      numSRDSpells: 6,
+      srdSpells: [],
+      numCustomSpells: 10,
+      customSpells: [],
       rerollToggle: true
     }
   },
   mounted() {
-    for (let i = 0; i < this.numSpells; i++) {
-      this.spells.push({id: i})
+    for (let i = 0; i < this.numSRDSpells; i++) {
+      this.srdSpells.push({id: i})
+    }
+    for (let i = 0; i < this.numCustomSpells; i++) {
+      this.customSpells.push({id: i})
     }
   },
   methods: {

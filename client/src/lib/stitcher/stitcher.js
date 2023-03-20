@@ -132,6 +132,7 @@ function picker(category, data) {
 }
 
 function wordPicker(category, data) {
+  if (!data.categories[category])  console.log(`category ${category} does not exist`)
   return data.categories[category][Math.floor(Math.random() * data.categories[category].length)]
 }
 
