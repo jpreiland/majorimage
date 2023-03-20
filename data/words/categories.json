@@ -93,8 +93,8 @@
   "magicSpellPartSuffixSingular": ["dance"],
 
   "magicSpellPartCreaturePrefix": ["befriend", "charm", "hold", "raise"],
-  "magicSpellPartCreatureSuffix": ["form", "of death", "of doom", "of victory"],
-  "magicSpellPartCreatureSuffixSingular": ["bond"],
+  "magicSpellPartCreatureSuffix": ["of death", "of doom", "of victory"],
+  "magicSpellPartCreatureSuffixSingular": ["form", "bond"],
 
   "magicSpellPartInanimatePrefix": ["animate", "awaken"],
   "magicSpellPartInanimatePrefixSingular": ["meld into", "alter"],
