@@ -8,7 +8,6 @@
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
   "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "color"]],
 
-
   "spellConjureElementObject": [["title"], ["static", "conjure "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "itemNonEquipment"]],
   "spellSummonElementCreature": [["title"], ["static", "summon "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "animalAndMonsterBasic"]],
   "spellSummonModifiedElementCreature": [["title"], ["static", "summon "], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "animalAndMonsterBasic"]],
@@ -24,7 +23,6 @@
   "spellCreatureOf": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"]],
   "spellCreatureOfWithNounSuffix": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"], ["static", " of "], ["pick", "spellNounSuffixes"]],
   "spellCreaturesWithNounSuffix": [["title"], ["pick-pluralize", "animalAndMonsterBasic"], ["static", " of "], ["pick", "spellNounSuffixes"]],
-
   "spellSRDModified": [["title"], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "magicSpellSRD"]],
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
@@ -49,7 +47,7 @@
   "_creatures": [["pick-pluralize", "creature"]],
   "_effect": [["pick", "magicEffect"]],
   "_amountGroupCreature": [["pick", "amountGroupCreature"]],
-  "_furniture": [["pick", "furniture"]],
+  "_furniture": [["pick", "furnitureAll"]],
   "_spellSRD": [["title"], ["pick", "magicSpellSRD"]],
   "_material": [["pick", "materialObject"]],
   "_misc": [["pick", "misc"]],
