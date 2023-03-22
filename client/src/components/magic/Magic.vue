@@ -16,11 +16,12 @@
 </template>
 
 <script>
+import { parenthesizedExpression } from '@babel/types'
 import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'Magic',
-  inject: ['data'],
+  inject: ['data', 'menuSelections'],
   data() {
     return {
       types: [],
@@ -31,7 +32,11 @@ export default {
   },
   async mounted() {
     this.loadTypes()
-    this.activeType = this.types[0]
+    if (!this.menuSelections.magic) {
+      this.menuSelections.magic = this.types[0]
+    }
+    this.activeType = this.menuSelections.magic
+    console.log(this.activeType)
     this.activePath = this.data.templates.magic[this.activeType]._path
     this.initialized = true
   },
@@ -42,6 +47,8 @@ export default {
       }
     },
     async select(magicSubpage) {
+      const pathParts = magicSubpage._path.split('/')
+      this.menuSelections.magic = pathParts[pathParts.length-2]
       this.activePath = magicSubpage._path
     }
   },

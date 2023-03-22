@@ -20,13 +20,15 @@ const routes = {
 export default {
   provide() {
     return {
-      data: computed(() => this.data)
+      data: computed(() => this.data),
+      menuSelections: computed(() => this.menuSelections)
     }
   },
   data() {
     return {
       currentPath: window.location.hash,
-      data: null
+      data: null,
+      menuSelections: {}
     }
   },
   computed: {

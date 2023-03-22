@@ -25,6 +25,11 @@
   "spellCreaturesWithNounSuffix": [["title"], ["pick-pluralize", "animalAndMonsterBasic"], ["static", " of "], ["pick", "spellNounSuffixes"]],
   "spellSRDModified": [["title"], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "magicSpellSRD"]],
 
+  "weaponAnimalVerber": [["title"], ["pick", "animalBasic"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponElementVerber": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponMonsterVerber": [["title"], ["pick", "monsterBasic"], ["static", " "], ["pick-verber", "verbViolent"]],
+  
+
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
   "creature-verbing-miscs": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick-pluralize", "misc"]],
   "event-verbing-creature": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToCreature"], ["a(n)"], ["pick", "creature"]],

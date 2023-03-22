@@ -1,8 +1,9 @@
 const AvsAnSimple = require('./../a-vs-an/avs-an-simple'),
       gerund = require('./../gerunds/gerunds'),
       plural = require('./../plural/plural'),
-      tensify = require('./../tensify/inflector')
-      title = require('./../titleize/titleize')
+      tensify = require('./../tensify/inflector'),
+      title = require('./../titleize/titleize'),
+      verber = require('./../verber/verber')
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitch(parts, data, priceOverride) {
@@ -53,6 +54,11 @@ function stitch(parts, data, priceOverride) {
       case 'pick-pastTense':
         if (part.length !== 2) break;
         name += tensify(picker(part[1], data))
+        break;
+
+      case 'pick-verber':
+        if (part.length !== 2) break;
+        name += verber(picker(part[1], data))
         break;
 
       case 'pick-pastTense-optional':

@@ -20,7 +20,7 @@ import { defineAsyncComponent } from 'vue'
 
 export default {
   name: 'Locations',
-  inject: ['data'],
+  inject: ['data', 'menuSelections'],
   data() {
     return {
       types: [],
@@ -31,7 +31,10 @@ export default {
   },
   async mounted() {
     this.loadTypes()
-    this.activeType = this.types[0]
+    if (!this.menuSelections.locations) {
+      this.menuSelections.locations = this.types[0]
+    }
+    this.activeType = this.menuSelections.locations
     this.activePath = this.data.templates.locations[this.activeType]._path
     this.initialized = true
   },
@@ -42,6 +45,8 @@ export default {
       }
     },
     async select(location) {
+      const pathParts = location._path.split('/')
+      this.menuSelections.locations = pathParts[pathParts.length-2]
       this.activePath = location._path
     }
   },

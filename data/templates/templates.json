@@ -30,6 +30,11 @@
       "_displayName": "Spells",
       "_path": "./templates/spells/Spells.vue",
       "spells-1": "./variants/Spells1.vue"
+    },
+    "magic-weapons": {
+      "_displayName": "Magic Weapons",
+      "_path": "./templates/magic-weapons/MagicWeapons.vue",
+      "magic-weapons-1": "./variants/MagicWeapons1.vue"
     }
   }
 }
