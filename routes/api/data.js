@@ -47,14 +47,15 @@ function buildWordCounts() {
   }
 
   let naiveCycleCounter = 0
+  let group = null
 
   while (groupQueue.length) {
     if (naiveCycleCounter > 50) {
-      console.log(`cycle likely present. aborting.`)
+      console.log(`cycle likely present. aborting at group ${group}.`)
       break
     }
 
-    let group = groupQueue.shift()
+    group = groupQueue.shift()
     let totalWords = 0
     for (let category of Groups[group]) {
       if (Object.hasOwn(wordCounts, category)) {

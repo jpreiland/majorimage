@@ -65,7 +65,7 @@ export default {
       numRows: 12,
       rows: [],
       itemFormats: [],
-      armorFormat: ["_armorShield", 1],
+      armorFormat: ["_armorShieldUntyped", 1],
       clothingFormat: ["_clothingHeadwear", 1],
       containerFormat: ["_container", 1],
       furnitureFormat: ["_furniture", 1],

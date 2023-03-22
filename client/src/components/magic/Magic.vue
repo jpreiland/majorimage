@@ -36,7 +36,6 @@ export default {
       this.menuSelections.magic = this.types[0]
     }
     this.activeType = this.menuSelections.magic
-    console.log(this.activeType)
     this.activePath = this.data.templates.magic[this.activeType]._path
     this.initialized = true
   },

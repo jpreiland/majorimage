@@ -23,12 +23,12 @@
   "spellCreatureOf": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"]],
   "spellCreatureOfWithNounSuffix": [["title"], ["pick", "animalAndMonsterBasic"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"], ["static", " of "], ["pick", "spellNounSuffixes"]],
   "spellCreaturesWithNounSuffix": [["title"], ["pick-pluralize", "animalAndMonsterBasic"], ["static", " of "], ["pick", "spellNounSuffixes"]],
-  "spellSRDModified": [["title"], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "magicSpellSRD"]],
 
   "weaponAnimalVerber": [["title"], ["pick", "animalBasic"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponWithNounSuffix": [["title"], ["pick", "weaponBasic"], ["static", " of "], ["pick", "spellNounSuffixes"]],
   "weaponElementVerber": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick-verber", "verbViolent"]],
-  "weaponMonsterVerber": [["title"], ["pick", "monsterBasic"], ["static", " "], ["pick-verber", "verbViolent"]],
-  
+  "weaponMonsterVerber": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponVerber": [["title"], ["pick-verber", "verbViolent"]],
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
   "creature-verbing-miscs": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick-pluralize", "misc"]],
@@ -44,7 +44,7 @@
   "some-animals": [["a(n)"], ["pick-pluralize", "animal"]],
   "temple-adjectivePersonality-tradeAdventurer(s)": [["title"], ["static", "temple of the "], ["pick", "adjectivePersonality"], ["static", " "], ["pick-pluralize-optional", "tradeAdventurer"]],
   "_adjectivePersonality": [["pick", "adjectivePersonality"]],
-  "_armorShield": [["pick", "armorShield"]],
+  "_armorShieldUntyped": [["pick", "armorShieldUntyped"]],
   "_clothingHeadwear": [["pick", "clothingHeadwear"]],
   "_color": [["pick", "colorAll"]],
   "_container": [["pick", "container"]],
@@ -53,7 +53,7 @@
   "_effect": [["pick", "magicEffect"]],
   "_amountGroupCreature": [["pick", "amountGroupCreature"]],
   "_furniture": [["pick", "furnitureAll"]],
-  "_spellSRD": [["title"], ["pick", "magicSpellSRD"]],
+  "_spellSRD": [["title"], ["pick", "spellSRD"]],
   "_material": [["pick", "materialObject"]],
   "_misc": [["pick", "misc"]],
   "_quality": [["pick", "qualityObject"]],
