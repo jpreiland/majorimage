@@ -1,9 +1,9 @@
-const AvsAnSimple = require('./../a-vs-an/avs-an-simple'),
-      gerund = require('./../gerunds/gerunds'),
-      plural = require('./../plural/plural'),
-      tensify = require('./../tensify/inflector'),
-      title = require('./../titleize/titleize'),
-      verber = require('./../verber/verber')
+const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
+      gerund = require('../gerunds/gerunds'),
+      plural = require('../plural/plural'),
+      tensify = require('../tensify/inflector'),
+      title = require('../titleize/titleize'),
+      verber = require('../verber/verber')
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitch(parts, data, priceOverride) {

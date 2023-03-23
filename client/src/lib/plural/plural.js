@@ -9,6 +9,7 @@ const exceptions = {
   "man-at-arms": "men-at-arms",
   "mongoose": "mongeese",
   "pegasus": "pegasi",
+  "rug of smothering": "rugs of smothering",
   "squid": "squid"
 }
 

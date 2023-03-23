@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import stitch from '../../lib/stitcher/stitcher'
+import stitch from '../../lib/descriptor-utils/stitcher'
+import { mapFormats, pickFormat } from '../../lib/descriptor-utils/formats'
 
 export default {
   name: "Descriptor",
@@ -23,18 +24,19 @@ export default {
   data () {
     return {
       descriptorText: "default name",
-      formatPicker: []
+      formatMap: {},
+      totalWeight: 0
     }
   },
   async mounted() {
-    for (let format of Object.keys(this.data.dfMap[this.type])) {
-      this.formatPicker = this.formatPicker.concat(Array(this.data.dfMap[this.type][format].weight).fill(format))
-    }
+    const res = mapFormats(this.data.dfMap[this.type])
+    this.formatMap = res.formatMap
+    this.totalWeight = res.totalWeight
     this.reroll()
   },
   methods: {
     async reroll() {
-      const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
+      const format = pickFormat(this.formatMap, this.totalWeight)
       this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride)
     },
     setColor() {
