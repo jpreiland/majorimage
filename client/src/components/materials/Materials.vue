@@ -29,33 +29,37 @@
     <div class="columns materials list">
       <div class="column materials" :key="'stone'">
         <ul>
-          <span v-for="(material, i) in stone.stones">
-          <li v-if="stone.categories[stone.category][0] === 'All' ? true : material[stone.categories[stone.category][1]]" class="list-item"  
-              @click="select(material, 'stone')" :key="'-stone-'+i">{{ material.name }}</li>
+          <span v-for="(material, matkey, i) in stone.stones">
+          <li v-if="stone.categories[stone.category][0] === 'All' ? true : material[stone.categories[stone.category][1]]" class="list-item"
+              :class="{ 'selected': material === activeMaterial }"
+              @click="select(material, 'stone')" :key="'stone-'+matkey">{{ material.name }}</li>
           </span>
         </ul>
       </div>
       <div class="column materials" :key="'wood'">
         <ul>
-          <span v-for="(material, i) in wood.woods">
-          <li v-if="wood.categories[wood.category][0] === 'All' ? true : material[wood.categories[wood.category][1]]" class="list-item"  
-              @click="select(material, 'wood')" :key="'-wood-'+i">{{ material.name }}</li>
+          <span v-for="(material, matkey, i) in wood.woods">
+          <li v-if="wood.categories[wood.category][0] === 'All' ? true : material[wood.categories[wood.category][1]]" class="list-item"
+              :class="{ 'selected': material === activeMaterial }"
+              @click="select(material, 'wood')" :key="'wood-'+matkey">{{ material.name }}</li>
           </span>
         </ul>
       </div>
       <div class="column materials" :key="'metal'">
         <ul>
-          <span v-for="(material, i) in metal.metals">
-          <li v-if="metal.categories[metal.category][0] === 'All' ? true : material[metal.categories[metal.category][1]]" class="list-item"  
-              @click="select(material, 'metal')" :key="'-metal-'+i">{{ material.name }}</li>
+          <span v-for="(material, key, i) in metal.metals">
+          <li v-if="metal.categories[metal.category][0] === 'All' ? true : material[metal.categories[metal.category][1]]" class="list-item"
+              :class="{ 'selected': material === activeMaterial }"
+              @click="select(material, 'metal')" :key="'metal-'+key">{{ material.name }}</li>
           </span>
         </ul>
       </div>
       <div class="column materials" :key="'textile'">
         <ul>
-          <span v-for="(material, i) in textile.textiles">
-          <li v-if="textile.categories[textile.category][0] === 'All' ? true : material[textile.categories[textile.category][1]]" class="list-item"  
-              @click="select(material, 'textile')" :key="'-textile-'+i">{{ material.name }}</li>
+          <span v-for="(material, key, i) in textile.textiles">
+          <li v-if="textile.categories[textile.category][0] === 'All' ? true : material[textile.categories[textile.category][1]]" class="list-item"
+              :class="{ 'selected': material === activeMaterial }"
+              @click="select(material, 'textile')" :key="'textile-'+key">{{ material.name }}</li>
           </span>
         </ul>
       </div>
@@ -78,7 +82,7 @@ export default {
   components: {
     MaterialInfoCard
   },
-  inject: ['data'],
+  inject: ['data', 'menuSelections'],
   data() {
     return {
       initialized: false,
@@ -119,7 +123,16 @@ export default {
   },
   async mounted() {
     this.getMaterials()
-    this.select(this.stone.stones[0], this.activeMaterialType)
+    if (!this.menuSelections.materials) {
+      this.menuSelections.materials = { type: this.activeMaterialType, name: this.stone.stones[0].name }
+      this.select(this.stone.stones[0], this.activeMaterialType)
+    } else {
+      for (let material of this[this.menuSelections.materials.type][this.menuSelections.materials.type+'s']) {
+        if (material.name === this.menuSelections.materials.name) {
+          this.select(material, this.menuSelections.materials.type)
+        }
+      }
+    }
     this.switchUnits()
     this.initialized = true
   },
@@ -149,6 +162,7 @@ export default {
     async select(material, materialType) {
       this.activeMaterial = material
       this.activeMaterialType = materialType
+      this.menuSelections.materials = { type: this.activeMaterialType, name: this.activeMaterial.name }
       this.iconPath = this[materialType].iconPath
       if (!this.activeMaterial.attributes.units.includes(this.isInInches ? 'in' : 'ft')) {
         this.adjustMaterialUnits(this.materialTypeDimensions[this.activeMaterialType])
