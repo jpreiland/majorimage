@@ -72,10 +72,6 @@
 
 <script>
 import MaterialInfoCard from "./MaterialInfoCard.vue"
-import metalIcon from './../../assets/icons/metal.svg'
-import stoneIcon from './../../assets/icons/stone.svg'
-import textileIcon from './../../assets/icons/textile.svg'
-import woodIcon from './../../assets/icons/wood.svg'
 
 export default {
   name: 'Materials',
@@ -89,26 +85,22 @@ export default {
       stone: {
         category: 0,
         categories: [['Common', 'isCommon'], ['All', true], ['Precious', 'isPrecious'], ['Magical', 'isMagical']],
-        stones: [],
-        iconPath: stoneIcon
+        stones: []
       },
       wood: {
         category: 0,
         categories: [['Common', 'isCommon'], ['All', true], ['Exotic', 'isExotic'], ['Magical', 'isMagical']],
-        woods: [],
-        iconPath: woodIcon
+        woods: []
       },
       metal: {
         category: 0,
         categories: [['Common', 'isCommon'], ['All', true], ['Precious', 'isPrecious'], ['Magical', 'isMagical']],
-        metals: [],
-        iconPath: metalIcon
+        metals: []
       },
       textile: {
         category: 0,
         categories: [['Common', 'isCommon'], ['All', true], ['Fabric', 'isFabric'], ['Fur', 'isFur']],
-        textiles: [],
-        iconPath: textileIcon
+        textiles: []
       },
       activeMaterial: {},
       activeMaterialType: "stone",
@@ -163,7 +155,6 @@ export default {
       this.activeMaterial = material
       this.activeMaterialType = materialType
       this.menuSelections.materials = { type: this.activeMaterialType, name: this.activeMaterial.name }
-      this.iconPath = this[materialType].iconPath
       if (!this.activeMaterial.attributes.units.includes(this.isInInches ? 'in' : 'ft')) {
         this.adjustMaterialUnits(this.materialTypeDimensions[this.activeMaterialType])
       }

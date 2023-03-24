@@ -2,9 +2,6 @@
   <div class="info-card material">
     <div class="card-header" @click="this.$parent.switchUnits()">
       <div class="card-header-left">
-        <img :src="$parent.iconPath" class="card-image">
-      </div>
-      <div class="card-header-right">
         <h2 class="card-title">{{ material.name }}</h2>
         <ul class="card-attributes">
           <li v-for="(val, key) in material.attributes.weightCost" :key="key">

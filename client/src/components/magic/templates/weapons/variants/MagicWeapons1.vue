@@ -14,7 +14,7 @@
   </div>
   <div class="card-header">
     <div class="card-header-left">
-      <h2 class="card-title">Magic Weapons</h2>
+      <h2 class="card-title">Magic Weapon Names</h2>
     </div>
   </div>
   <div class="info-panel-description">

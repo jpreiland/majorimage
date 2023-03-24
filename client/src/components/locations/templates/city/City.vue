@@ -1,9 +1,6 @@
 <template>
   <div class="card-header">
     <div class="card-header-left">
-      <h2 class="card-title">icon</h2>
-    </div>
-    <div class="card-header-right">
       <Descriptor :type="'City'" />
     </div>
   </div>
