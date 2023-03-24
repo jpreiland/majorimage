@@ -3,7 +3,7 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" v-for="(location, i) in data.templates.locations" @click="select(location)" :key="'-location-'+i">{{ location._displayName }}</li>
+          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(location, key, i) in data.templates.locations" @click="select(location, i)" :key="'location-'+key">{{ location._displayName }}</li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
@@ -32,22 +32,31 @@ export default {
   async mounted() {
     this.loadTypes()
     if (!this.menuSelections.locations) {
-      this.menuSelections.locations = this.types[0]
+      this.menuSelections.locations = this.types[0].name
     }
     this.activeType = this.menuSelections.locations
     this.activePath = this.data.templates.locations[this.activeType]._path
+    this.setSelected()
     this.initialized = true
   },
   methods: {
     loadTypes() { 
       for (let key of Object.keys(this.data.templates.locations)) {
-        this.types.push(key)
+        this.types.push({name: key, selected: false})
       }
     },
-    async select(location) {
+    setSelected() {
+      for (let type of this.types) {
+        type.selected = (type.name === this.menuSelections.locations)
+      }
+    },
+    async select(location, listIndex) {
       const pathParts = location._path.split('/')
       this.menuSelections.locations = pathParts[pathParts.length-2]
       this.activePath = location._path
+      for (let i in this.types) {
+        this.types[i].selected = (i == listIndex)
+      }
     }
   },
   computed: {

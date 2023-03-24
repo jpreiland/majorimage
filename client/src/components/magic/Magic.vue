@@ -3,7 +3,7 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" v-for="(magicSubpage, i) in data.templates.magic" @click="select(magicSubpage)" :key="'-magicSubpage-'+i">{{ magicSubpage._displayName }}</li>
+          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(magicSubpage, key, i) in data.templates.magic" @click="select(magicSubpage, i)" :key="'magicSubpage-'+key">{{ magicSubpage._displayName }}</li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
@@ -32,22 +32,31 @@ export default {
   async mounted() {
     this.loadTypes()
     if (!this.menuSelections.magic) {
-      this.menuSelections.magic = this.types[0]
+      this.menuSelections.magic = this.types[0].name
     }
     this.activeType = this.menuSelections.magic
     this.activePath = this.data.templates.magic[this.activeType]._path
+    this.setSelected()
     this.initialized = true
   },
   methods: {
     loadTypes() { 
       for (let key of Object.keys(this.data.templates.magic)) {
-        this.types.push(key)
+        this.types.push({name: key, selected: false})
       }
     },
-    async select(magicSubpage) {
+    setSelected() {
+      for (let type of this.types) {
+        type.selected = (type.name === this.menuSelections.magic)
+      }
+    },
+    async select(magicSubpage, listIndex) {
       const pathParts = magicSubpage._path.split('/')
       this.menuSelections.magic = pathParts[pathParts.length-2]
       this.activePath = magicSubpage._path
+      for (let i in this.types) {
+        this.types[i].selected = (i == listIndex)
+      }
     }
   },
   computed: {

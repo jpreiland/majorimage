@@ -141,6 +141,11 @@ button.reroll-all {
   user-select: none; /* Standard */
 }
 
+.list-item.selected {
+  border-color:#0f77ff;
+  border-inline-end-width: 0.4rem;
+}
+
 .info-card {
   border: 1px solid #b4b4b4;
   border-radius: 4px;
