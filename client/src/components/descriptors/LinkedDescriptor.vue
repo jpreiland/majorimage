@@ -21,6 +21,9 @@ export default {
     priceOverride: {
       type: Object
     },
+    numRangeOverride: {
+      type: Object
+    },
     link: {
       type: String,
       required: true
@@ -46,7 +49,7 @@ export default {
   methods: {
     async reroll() {
       const format = pickFormat(this.formatMap, this.totalWeight)
-      this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride)
+      this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride, this.numRangeOverride)
 
       const linkResponse = {
         linkKey: this.link, 

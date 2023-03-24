@@ -7,6 +7,8 @@
   "a(n)-animalAndMonster(s)": [["a(n)"], ["pick-pluralize-optional", "animalAndMonster"]],
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
   "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "color"]],
+  "numberFiveToSeventeen": [["number", 5, 17]],
+  "numberZeroToNine(no)": [["number", 0, 9, "no"]],
 
   "spellAdjectivePrefix": [["title"], ["pick", "magicSpellPartAdjectivePrefix"], ["static", " "], ["pick", "spellSuffixesNoGerund"]],
   "spellConjureElementObject": [["title"], ["static", "conjure "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "itemNonEquipment"]],
@@ -36,6 +38,7 @@
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
   "creature-verbing-miscs": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick-pluralize", "misc"]],
+  "enhancementBonus": [["static", "+"], ["number", 1, 5]],
   "event-verbing-creature": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToCreature"], ["a(n)"], ["pick", "creature"]],
   "event-verbing-event": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToEvent"], ["a(n)"], ["pick", "event"]],
   "event-verbing-misc": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToObject"], ["a(n)"], ["pick", "misc"]],

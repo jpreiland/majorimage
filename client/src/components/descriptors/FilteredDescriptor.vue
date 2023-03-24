@@ -22,6 +22,9 @@ export default {
     },
     priceOverride: {
       type: Object
+    },
+    numRangeOverride: {
+      type: Object
     }
   },
   data () {
@@ -35,7 +38,7 @@ export default {
   methods: {
     async reroll() {
       const format = this.formatPicker[Math.floor(Math.random() * this.formatPicker.length)]
-      this.descriptorText = stitch(this.filteredFormats[format].format, this.data, this.priceOverride)
+      this.descriptorText = stitch(this.filteredFormats[format].format, this.data, this.priceOverride, this.numRangeOverride)
     },
     setColor() {
       return `border-bottom-color: ${this.color};`

@@ -95,7 +95,7 @@ button.reroll-all {
 }
 
 .column {
-  overflow-y: auto; /* enable scrolling if column exceeds fixed height */
+  overflow-y: auto;
 }
 .column.materials {
   padding-top: 0px;
@@ -131,8 +131,8 @@ button.reroll-all {
   padding-left: 0.25em;
   padding-right: 0.25em;
   padding-top: calc(0.25em - 1px);
-  word-wrap: break-word; /* break words that exceed button width */
-  overflow-wrap: break-word; /* break words that exceed button width */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   touch-action: manipulation;
 
   -webkit-user-select: none; /* Safari */        
@@ -156,7 +156,7 @@ button.reroll-all {
   margin: 10px;
 }
 .info-card.right {
-  height: 100%; /* 75% of the viewport height */
+  height: 100%;
   overflow: auto;
 }
 
@@ -164,6 +164,11 @@ button.reroll-all {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+
+  -webkit-user-select: none; /* Safari */        
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
 }
 
 .card-header-left {

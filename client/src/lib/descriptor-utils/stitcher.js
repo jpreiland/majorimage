@@ -6,7 +6,7 @@ const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
       verber = require('../verber/verber')
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitch(parts, data, priceOverride) {
+function stitch(parts, data, priceOverride, numRangeOverride) {
   let name = ""
   let word
   let numWords = 1
@@ -114,9 +114,27 @@ function stitch(parts, data, priceOverride) {
         isTitle = true
         break;
 
+      case 'number': 
+        if (part.length < 3) break;
+        let numParts = [...part]
+        if (numRangeOverride) {
+          if (!isNaN(numRangeOverride.min)) numParts[1] = numRangeOverride.min
+          if (!isNaN(numRangeOverride.max)) numParts[2] = numRangeOverride.max
+          if (numRangeOverride.zeroString) numParts[3] = numRangeOverride.zeroString
+        }
+        const rng = Math.floor(Math.random() * (numParts[2] - numParts[1] + 1)) + numParts[1]
+        name += (rng === 0 && numParts[3]) ? numParts[3] : rng
+        break;
+
       case 'price':
         if (part.length < 3) break;
-        const price = rollPrice(part, priceOverride)
+        let priceParts = [...part]
+        if (priceOverride) {
+          if (!isNaN(priceOverride.min)) priceParts[1] = priceOverride.min
+          if (!isNaN(priceOverride.max)) priceParts[2] = priceOverride.max
+          if (priceOverride.denomination) priceParts[3] = priceOverride.denomination
+        }
+        const price = rollPrice(priceParts)
         name += formatPrice(price)
         break;
 
@@ -161,15 +179,13 @@ function categoryPicker(group, data) {
   return categoryCandidate
 }
 
-function rollPrice(params, priceOverride) {
-  const lower = priceOverride ? Math.min(priceOverride.min, priceOverride.max) : Math.min(params[1], params[2])
-  const higher = priceOverride ? Math.max(priceOverride.min, priceOverride.max) : Math.max(params[1], params[2])
-  const min = priceOverride ? Math.ceil(priceOverride.min) : Math.ceil(lower)
-  const max = priceOverride ? Math.floor(priceOverride.max) : Math.floor(higher)
+function rollPrice(params) {
+  const min = Math.ceil(Math.min(params[1], params[2]))
+  const max = Math.floor(Math.max(params[1], params[2]))
   let denomination
 
-  if (priceOverride || params.length === 4) {
-    denomination = (priceOverride && priceOverride.denomination) ? priceOverride.denomination : params[3]
+  if (params.length === 4) {
+    denomination = params[3]
   }
 
   let price = Math.floor(Math.random() * (max - min + 1) + min)

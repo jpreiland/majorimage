@@ -19,6 +19,9 @@ export default {
     },
     priceOverride: {
       type: Object
+    },
+    numRangeOverride: {
+      type: Object
     }
   },
   data () {
@@ -34,7 +37,7 @@ export default {
     this.totalWeight = res.totalWeight
 
     const format = pickFormat(this.formatMap, this.totalWeight)
-    this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride)
+    this.descriptorText = stitch(this.data.dfMap[this.type][format].format, this.data, this.priceOverride, this.numRangeOverride)
   }
 }
 
