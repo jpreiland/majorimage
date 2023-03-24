@@ -33,8 +33,16 @@ export default {
   },
   computed: {
     currentView() {
-      if (!this.currentPath.includes('#')) return routes[window.location.pathname] || NotFound
-      return routes[this.currentPath.slice(1) || '/'] || NotFound
+      let urlParts = window.location.hash ? window.location.hash.split('/') : window.location.pathname.split('/')
+      if (urlParts.length === 3) {
+        this.menuSelections[urlParts[1]] = urlParts.pop()
+        if (this.data && (Object.hasOwn(this.data, 'templates') ||
+        !Object.hasOwn(this.data.templates[urlParts[1]], this.menuSelections[urlParts[1]]))) return NotFound
+      }
+      if (!this.currentPath.includes('#')) {
+        // no-op, mysterious requirement
+      }
+      return routes['/' + urlParts[1] || '/'] || NotFound
     }
   },
   async beforeCreate() {

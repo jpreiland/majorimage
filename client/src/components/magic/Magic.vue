@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import { parenthesizedExpression } from '@babel/types'
 import { defineAsyncComponent } from 'vue'
 
 export default {

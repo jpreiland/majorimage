@@ -24,14 +24,14 @@ export default {
   },
   methods: {
     loadVariants() {
-      for (let variant of Object.keys(this.data.templates.magic['magic-weapons'])) {
+      for (let variant of Object.keys(this.data.templates.magic['weapons'])) {
         if (variant.startsWith('_')) continue
         this.variants.push(variant)
       }
     },
     rollVariant() {
       this.activeVariant = Math.floor(Math.random() * this.variants.length)
-      this.activePath = this.data.templates.magic['magic-weapons'][this.variants[this.activeVariant]]
+      this.activePath = this.data.templates.magic['weapons'][this.variants[this.activeVariant]]
     }
   },
   computed: {
