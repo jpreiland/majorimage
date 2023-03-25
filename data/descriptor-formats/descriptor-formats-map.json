@@ -16,6 +16,7 @@
   "TestA(n)": [["some-animalAndMonsters", 2], ["some-accessories", 1], ["a(n)-animalAndMonster(s)", 3], ["a(n)-animalAndMonster", 3], ["a(n)-accesory(s)", 1], ["a(n)-accesory", 1]],
   "TestNum5-17": [["numberFiveToSeventeen", 1]],
   "TestNum0-9-no": [["numberZeroToNine(no)", 1]],
+  "TestPickMulti0-3": [["a(n)-0to3-adjectivePersonality-tradeNPC", 1]],
   "_AdjectivePersonality": [["_adjectivePersonality", 1]],
   "_AmountGroupCreature": [["_amountGroupCreature", 1]],
   "_Creature": [["_creature", 1]],

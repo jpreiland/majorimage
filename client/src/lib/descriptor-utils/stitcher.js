@@ -9,7 +9,7 @@ const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
 function stitch(parts, data, priceOverride, numRangeOverride) {
   let name = ""
   let word
-  let numWords = 1
+  let numWords = 0
   let a_an_flag = false
   let isTitle = false
 
@@ -85,8 +85,19 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         break;
 
       case 'pick-multi':
-        if (part.length !== 3) break;
-        numWords = part[2] ? (Math.floor(Math.random() * part[2]) + 1) : 1
+        if (part.length !== 4) break;
+        let minWords = part[2]
+        let maxWords = part[3]
+        if (isNaN(minWords) || isNaN(maxWords)) break;
+
+        numWords = Math.floor(Math.random() * (maxWords - minWords + 1)) + minWords
+        if (numWords <= 0) {
+          if (name[name.length-1] === ' ') {
+            name = name.slice(0, name.length-1)
+          }
+          break;
+        }
+
         word = picker(part[1], data)
         name += do_a_an(word, a_an_flag)
         a_an_flag = false

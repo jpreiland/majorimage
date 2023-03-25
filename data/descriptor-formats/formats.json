@@ -1,5 +1,6 @@
 {
   "a(n)-adjectivePersonality-tradeNPC": [["a(n)"], ["pick", "adjectivePersonality"], ["static", " "], ["pick", "tradeNPC"]],
+  "a(n)-0to3-adjectivePersonality-tradeNPC": [["a(n)"], ["pick-multi", "adjectivePersonality", 0, 3], ["static", " "], ["pick", "tradeNPC"]],
   "a(n)-accesory": [["a(n)"], ["pick", "accessoryAll"]],
   "a(n)-accesory(s)": [["a(n)"], ["pick-pluralize-optional", "accessoryAll"]],
   "a(n)-amountGroupCreature": [["a(n)"], ["pick", "amountGroupCreature"]],
