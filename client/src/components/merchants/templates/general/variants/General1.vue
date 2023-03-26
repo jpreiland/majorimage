@@ -1,7 +1,7 @@
 <template>
   <div class="card-header">
     <div class="card-header-left">
-      <h2 class="card-title">Magic Weapon Description</h2>
+      <h2 class="card-title">General Store Description</h2>
     </div>
   </div>
   <div class="info-panel-description">
@@ -12,16 +12,16 @@
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
       </p>
   </div>
-  <div class="card-header">
+  <div class="card-header" style="margin-top:2.5rem">
     <div class="card-header-left">
-      <h2 class="card-title">Magic Weapon Names</h2>
+      <h2 class="card-title">Inventory</h2>
     </div>
   </div>
   <div class="info-panel-description">
     <div>
-      <template v-for="weapon in weapons" :key="'Weapon-'+weapon.id+'-'+rerollToggle">
+      <template v-for="item in inventory" :key="'Item-'+item.id+'-'+rerollToggle">
         <p>
-          <Descriptor :type="'CustomWeapon'" :color="'#EE3AA3'" />
+          <Descriptor :type="'CustomSpell'" :color="'#58CBFF'" />
         </p>
       </template>
     </div>
@@ -33,18 +33,18 @@
 
 <script>
 export default {
-  name: 'MagicWeapons1',
+  name: 'General1',
   inject: ['data'],
   data() {
     return {
-      numWeapons: 10,
-      weapons: [],
+      numInventory: 10,
+      inventory: [],
       rerollToggle: true
     }
   },
   mounted() {
-    for (let i = 0; i < this.numWeapons; i++) {
-      this.weapons.push({id: i})
+    for (let i = 0; i < this.numInventory; i++) {
+      this.inventory.push({id: i})
     }
   },
   methods: {

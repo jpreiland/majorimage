@@ -5,6 +5,7 @@ import AboutPage from './components/about/AboutPage.vue'
 import LocationsPage from './components/locations/LocationsPage.vue'
 import MagicPage from './components/magic/MagicPage.vue'
 import MaterialsPage from './components/materials/MaterialsPage.vue'
+import MerchantsPage from './components/merchants/MerchantsPage.vue'
 import ObjectsPage from './components/objects/ObjectsPage.vue'
 import NotFound from './components/notfound/NotFound.vue'
 
@@ -14,6 +15,7 @@ const routes = {
   '/locations': LocationsPage,
   '/magic': MagicPage,
   '/materials': MaterialsPage,
+  '/merchants': MerchantsPage,
   '/objects': ObjectsPage
 }
 
@@ -62,9 +64,10 @@ export default {
   <div class="title">Major Image</div>
   <div class="navigation">
     <a href="#/">Objects</a> |
-    <a href="#/materials">Materials</a> |
     <a href="#/locations">Locations</a> |
     <a href="#/magic">Magic</a> |
+    <a href="#/merchants">Merchants</a> |
+    <a href="#/materials">Materials</a> |
     <a href="#/about">About</a> |
   </div>
   <component :is="currentView" />

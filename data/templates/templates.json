@@ -36,5 +36,17 @@
       "_path": "./templates/weapons/MagicWeapons.vue",
       "weapons-1": "./variants/MagicWeapons1.vue"
     }
+  },
+  "merchants": {
+    "general": {
+      "_displayName": "General",
+      "_path": "./templates/general/General.vue",
+      "general-1": "./variants/General1.vue"
+    },
+    "blacksmith": {
+      "_displayName": "Blacksmith",
+      "_path": "./templates/blacksmith/Blacksmith.vue",
+      "blacksmith-1": "./variants/Blacksmith1.vue"
+    }
   }
 }
