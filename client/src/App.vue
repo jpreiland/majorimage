@@ -56,7 +56,7 @@ export default {
       for (let navKey of Object.keys(this.nav)) {
         this.nav[navKey] = urlParts[1] === navKey ? true : false
       }
-      this.nav.objects = urlParts[1] === ''
+      this.nav.objects = (urlParts[1] === '' || urlParts[1] === 'objects')
 
       return routes['/' + urlParts[1] || '/'] || NotFound
     }

@@ -11,7 +11,7 @@
   "adjectiveAgeObject": ["antique", "new", "old-fashioned", "vintage"],
   "adjectiveCondition": ["banged up", "broken", "cracked", "damaged", "decrepit", "dented", "deteriorating", "dilapidated", "disintegrated", "flawless", "pristine", "ruined", "worn", "worn-out"],
   "adjectiveCleanliness": ["bloodstained", "contaminated", "damp", "dirty", "disgusting", "dusty", "moldy", "polished", "spotless", "sticky", "tainted", "wet"],
-  "adjectiveQuality": ["artisinal", "atrocious", "decent", "extraordinary", "fabulous", "high quality", "immaculate", "inferior", "low quality", "magnificent", "majestic", "marvelous", "modest", "peculiar", "respectable", "superior", "world-class"],
+  "adjectiveQuality": ["artisinal", "atrocious", "decent", "extraordinary", "fabulous", "high quality", "immaculate", "inferior", "low quality", "magnificent", "majestic", "marvelous", "modest", "peculiar", "respectable", "superior", "unique", "world-class"],
   "adjectiveSize": ["big", "bulky", "colossal", "enormous", "gargantuan", "giant", "huge", "immense", "itty bitty", "little", "massive", "miniature", "oversized", "petite", "short", "shrunken", "small", "thick", "thin", "tiny", "undersized"],
   "adjectiveStructural": ["coarse", "crooked", "dainty", "delicate", "elaborate", "flimsy", "frail", "intricate", "primitive", "rough", "rugged", "shoddy", "uneven", "unfinished", "well-made"],
   "adjectiveWeight": ["heavy", "lightweight", "weighty"],
