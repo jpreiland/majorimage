@@ -37,6 +37,18 @@
       "weapons-1": "./variants/MagicWeapons1.vue"
     }
   },
+  "objects": {
+    "set-dressing": {
+      "_displayName": "Set Dressing",
+      "_path": "./templates/set-dressing/SetDressing.vue",
+      "set-dressing-1": "./variants/SetDressing1.vue"
+    },
+    "art": {
+      "_displayName": "Art",
+      "_path": "./templates/art/Art.vue",
+      "art-1": "./variants/Art1.vue"
+    }    
+  },
   "shops": {
     "general": {
       "_displayName": "General",

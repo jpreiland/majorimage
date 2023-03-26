@@ -23,6 +23,7 @@
   "_Creatures": [["_creatures", 1]],
   "_Effect": [["_effect", 1]],
   "_Quality": [["_quality", 1]],
+  "_A(n)Quality": [["_a(n)quality", 1]],
   "_Color": [["_color", 5], ["modifiedColor", 2]],
   "_Material": [["_material", 1]],
   "_Spell": [["_spellSRD", 1]],
