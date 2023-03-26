@@ -37,7 +37,7 @@
       "weapons-1": "./variants/MagicWeapons1.vue"
     }
   },
-  "merchants": {
+  "shops": {
     "general": {
       "_displayName": "General",
       "_path": "./templates/general/General.vue",

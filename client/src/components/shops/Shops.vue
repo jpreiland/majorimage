@@ -3,7 +3,7 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(merchantSubpage, key, i) in data.templates.merchants" @click="select(merchantSubpage, i)" :key="'merchantSubpage-'+key">{{ merchantSubpage._displayName }}</li>
+          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(shopSubpage, key, i) in data.templates.shops" @click="select(shopSubpage, i)" :key="'shopSubpage-'+key">{{ shopSubpage._displayName }}</li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
@@ -19,7 +19,7 @@
 import { defineAsyncComponent } from 'vue'
 
 export default {
-  name: 'Merchants',
+  name: 'Shops',
   inject: ['data', 'menuSelections'],
   data() {
     return {
@@ -31,29 +31,29 @@ export default {
   },
   async mounted() {
     this.loadTypes()
-    if (!this.menuSelections.merchants) {
-      this.menuSelections.merchants = this.types[0].name
+    if (!this.menuSelections.shops) {
+      this.menuSelections.shops = this.types[0].name
     }
-    this.activeType = this.menuSelections.merchants
-    this.activePath = this.data.templates.merchants[this.activeType]._path
+    this.activeType = this.menuSelections.shops
+    this.activePath = this.data.templates.shops[this.activeType]._path
     this.setSelected()
     this.initialized = true
   },
   methods: {
     loadTypes() { 
-      for (let key of Object.keys(this.data.templates.merchants)) {
+      for (let key of Object.keys(this.data.templates.shops)) {
         this.types.push({name: key, selected: false})
       }
     },
     setSelected() {
       for (let type of this.types) {
-        type.selected = (type.name === this.menuSelections.merchants)
+        type.selected = (type.name === this.menuSelections.shops)
       }
     },
-    async select(merchantSubpage, listIndex) {
-      const pathParts = merchantSubpage._path.split('/')
-      this.menuSelections.merchants = pathParts[pathParts.length-2]
-      this.activePath = merchantSubpage._path
+    async select(shopSubpage, listIndex) {
+      const pathParts = shopSubpage._path.split('/')
+      this.menuSelections.shops = pathParts[pathParts.length-2]
+      this.activePath = shopSubpage._path
       for (let i in this.types) {
         this.types[i].selected = (i == listIndex)
       }

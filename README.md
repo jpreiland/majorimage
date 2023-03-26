@@ -7,10 +7,12 @@ The aim of this tool is to quickly provide GMs with sample descriptions to spark
 
 Pages:  
 - Objects: list of randomized items    
-- Materials: description, cost, and physical properties of various materials (test data only)  
 - Locations: sights seen while traveling through various locations (test data only)  
 - Magic: spells and magic items (test data only)  
-- Merchants: shops, shopkeeps, and their inventory (test data only)  
+- Shops: shops, shopkeeps, and their inventory (test data only)  
+- NPCs: (to be implemented)  
+- Quests: (to be implemented)  
+- Materials: description, cost, and physical properties of various materials (test data only)  
 - About: information about the project
 
 ## Setup

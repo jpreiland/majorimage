@@ -1,25 +1,25 @@
 <template>
   <div class="materials-page">
     <div class="columns materials">
-      <div class="column materials header" :key="'stone-header'">
+      <div class="column materials head" :key="'stone-header'">
         <ul>
           <li class="list-header">Stone</li>
           <span v-if="false" class='button material-category' @click="cycleCategory('stone')">{{ stone.categories[stone.category][0] }}</span>
         </ul>
       </div>
-      <div class="column materials header" :key="'wood-header'">
+      <div class="column materials head" :key="'wood-header'">
         <ul>
           <li class="list-header">Wood</li>
           <li v-if="false" class="button material-category" @click="cycleCategory('wood')">{{ wood.categories[wood.category][0] }}</li>
         </ul>
       </div>
-      <div class="column materials header" :key="'metal-header'">
+      <div class="column materials head" :key="'metal-header'">
         <ul>
           <li class="list-header">Metal</li>
           <li v-if="false" class="button material-category" @click="cycleCategory('metal')">{{ metal.categories[metal.category][0] }}</li>
         </ul>
       </div>
-      <div class="column materials header" :key="'textile-header'">
+      <div class="column materials head" :key="'textile-header'">
         <ul>
           <li class="list-header">Textile</li>
           <li v-if="false" class="button material-category" @click="cycleCategory('textile')">{{ textile.categories[textile.category][0] }}</li>
@@ -64,7 +64,7 @@
         </ul>
       </div>
     </div>
-    <div v-if="initialized">
+    <div style="margin-top: 0.5rem;" v-if="initialized">
       <MaterialInfoCard :material="activeMaterial" />
     </div>
   </div>

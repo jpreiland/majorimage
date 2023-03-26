@@ -5,7 +5,7 @@ import AboutPage from './components/about/AboutPage.vue'
 import LocationsPage from './components/locations/LocationsPage.vue'
 import MagicPage from './components/magic/MagicPage.vue'
 import MaterialsPage from './components/materials/MaterialsPage.vue'
-import MerchantsPage from './components/merchants/MerchantsPage.vue'
+import ShopsPage from './components/shops/ShopsPage.vue'
 import ObjectsPage from './components/objects/ObjectsPage.vue'
 import NotFound from './components/notfound/NotFound.vue'
 
@@ -15,7 +15,7 @@ const routes = {
   '/locations': LocationsPage,
   '/magic': MagicPage,
   '/materials': MaterialsPage,
-  '/merchants': MerchantsPage,
+  '/shops': ShopsPage,
   '/objects': ObjectsPage
 }
 
@@ -30,7 +30,16 @@ export default {
     return {
       currentPath: window.location.hash,
       data: null,
-      menuSelections: {}
+      menuSelections: {},
+      nav: {
+        objects: true,
+        locations: false,
+        magic: false,
+        shops: false,
+        npcs: false,
+        quests: false,
+        materials: false
+      }
     }
   },
   computed: {
@@ -44,6 +53,11 @@ export default {
       if (!this.currentPath.includes('#')) {
         // no-op, mysterious requirement
       }
+      for (let navKey of Object.keys(this.nav)) {
+        this.nav[navKey] = urlParts[1] === navKey ? true : false
+      }
+      this.nav.objects = urlParts[1] === ''
+
       return routes['/' + urlParts[1] || '/'] || NotFound
     }
   },
@@ -56,19 +70,36 @@ export default {
 		  this.currentPath = window.location.hash
       window.location.pathname = '/'
 		})
+  },
+  methods: {
+    async navigate(path, key) {
+      window.location.hash = path
+      for (let navKey of Object.keys(this.nav)) {
+        this.nav[navKey] = key === navKey ? true : false
+      }
+    }
   }
 }
 </script>
 
 <template>
-  <div class="title">Major Image</div>
-  <div class="navigation">
-    <a href="#/">Objects</a> |
-    <a href="#/locations">Locations</a> |
-    <a href="#/magic">Magic</a> |
-    <a href="#/merchants">Merchants</a> |
-    <a href="#/materials">Materials</a> |
-    <a href="#/about">About</a> |
+  <div class="banner">
+    <div class="header">
+      <p>
+        <img class="header-icon" src="../public/apple-touch-icon.png" />
+        <span class="title-text">Major Image</span>
+      </p>
+    </div>
+    <div class="navigation">
+      <button class="button nav-btn red" :class="{ 'nav-selected': nav.objects }" @click="navigate('#/', 'objects')" key="objects">Objects</button>
+      <button class="button nav-btn orange" :class="{ 'nav-selected': nav.locations }"  @click="navigate('#/locations', 'locations')" key="locations">Locations</button> 
+      <button class="button nav-btn yellow" :class="{ 'nav-selected': nav.magic }" @click="navigate('#/magic', 'magic')" key="magic">Magic</button> 
+      <button class="button nav-btn green" :class="{ 'nav-selected': nav.shops }" @click="navigate('#/shops', 'shops')" key="shops">Shops</button> 
+      <button class="button nav-btn blue" key="npcs">NPCs</button> 
+      <button class="button nav-btn indigo" key="quests">Quests</button> 
+      <button class="button nav-btn violet" :class="{ 'nav-selected': nav.materials }" @click="navigate('#/materials', 'materials')" key="more">Materials</button> 
+      <button class="button nav-btn" @click="navigate('#/about')" key="about">About</button> 
+    </div>
   </div>
-  <component :is="currentView" />
+  <component class="page" :is="currentView" />
 </template>
