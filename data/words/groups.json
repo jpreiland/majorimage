@@ -8,6 +8,7 @@
   "animalAndMonsterBasicNoBeast": ["animalBasic", "monsterBasicNoBeast"],
   "animalNonMarine": ["amphibian", "amphibianBasic", "bird", "birdBasic", "mammal", "mammalBasic", "reptile", "reptileBasic"],
   "clothingHeadwear": ["clothing", "headwear"],
+  "color": ["colorBasic", "colorUnmodifiable"],
   "colorAll": ["color", "colorSpecific", "colorSpecial"],
   "creature": ["humanoidCommon","tradeAdventurer", "tradeNPC", "monster", "animal"],
   "event": ["performance", "eventCelestial", "eventMisc", "eventWeather"],
@@ -55,5 +56,6 @@
   "verbToCreature": ["verbCreatureToCreature", "verbEventToCreature", "verbObjectToCreature"],
   "verbToObject": ["verbCreatureToObject", "verbEventToObject", "verbObjectToObject"],
   "verbToEvent": ["verbCreatureToEvent", "verbEventToEvent", "verbObjectToEvent"],
-  "verbTitle": ["verbSpeech", "verbViolent"]
+  "verbTitle": ["verbSpeech", "verbViolent"],
+  "verbViolentAll": ["verbViolent", "verbViolentToCreature"]
 }

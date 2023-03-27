@@ -7,7 +7,7 @@
   "a(n)-animalAndMonster": [["a(n)"], ["pick", "animalAndMonster"]],
   "a(n)-animalAndMonster(s)": [["a(n)"], ["pick-pluralize-optional", "animalAndMonster"]],
   "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
-  "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "color"]],
+  "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "colorBasic"]],
   "numberFiveToSeventeen": [["number", 5, 17]],
   "numberZeroToNine(no)": [["number", 0, 9, "no"]],
 
@@ -28,13 +28,13 @@
   "spellCreatureOfWithNounSuffix": [["title"], ["pick", "animalAndMonsterBasicNoBeast"], ["static", " "], ["pick", "spellFormSuffixesCreatureSingular"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
   "spellCreaturesWithNounSuffix": [["title"], ["pick-pluralize", "animalAndMonsterBasicNoBeast"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
 
-  "weaponAnimalVerber": [["title"], ["pick", "animalBasic"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponAnimalVerber": [["title"], ["pick", "animalBasic"], ["static", " "], ["pick-verber", "verbViolentAll"]],
+  "weaponBodyPartVerber": [["title"], ["pick", "bodyPartTarget"], ["static", " "], ["pick-verber", "verbViolent"]],
   "weaponWithNounSuffix": [["title"], ["pick", "weaponBasic"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
   "weaponElementVerber": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick-verber", "verbViolent"]],
   "weaponElementWeaponWithNounSuffix": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "weaponBasic"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
-  "weaponMonsterVerber": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick-verber", "verbViolent"]],
+  "weaponMonsterVerber": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick-verber", "verbViolentAll"]],
   "weaponMonsterWeapon": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick", "weaponBasic"]],
-  "weaponMonsterWeaponWithNounSuffix": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick", "weaponBasic"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
   "weaponVerber": [["title"], ["pick-verber", "verbTitle"]],
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
