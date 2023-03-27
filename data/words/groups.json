@@ -41,7 +41,7 @@
   
   "spellElementSuffixes": ["magicSpellPartElement", "magicSpellPartElementSuffix"],
   "spellFormPrefixesElement": ["magicSpellPartFormPrefix", "magicSpellPartFormPrefixElement", "magicSpellPartPrefix", "magicSpellPartInanimatePrefix", "magicSpellPartInanimatePrefixSingular"],
-  "spellFormPrefixesCreature": ["magicSpellPartPrefix", "magicSpellPartInanimatePrefix", "magicSpellPartCreaturePrefix"],
+  "spellFormPrefixesCreature": ["magicSpellPartPrefix", "magicSpellPartInanimatePrefix", "magicSpellPartCreaturePrefix", "magicSpellPartAdjectivePrefix"],
   "spellFormPrefixesCreaturePlural": ["spellFormPrefixesCreature", "magicSpellPartInanimatePrefixPlural", "magicSpellPartPrefixPlural"],
   "spellElementPrefixes": ["magicSpellPartElement", "magicSpellPartElementPrefix"],
   "spellFormSuffixesElement": ["magicSpellPartFormSuffix", "magicSpellPartFormSuffixElement", "magicSpellPartInanimateSuffix", "magicSpellPartSuffixSingular"],
