@@ -27,6 +27,7 @@
   padding-top: 0.2rem;
   padding-left: 0.2rem;
 }
+
 .title-text {  
   font-size: 1.25rem;
   font-weight: 600;
@@ -121,15 +122,61 @@
   margin: 1px;
   touch-action: manipulation;
 }
-.center {
-  text-align: center;
-}
 button.reroll-all {
   margin-top: 2.5rem;
   width: 12rem;
 }
 .button.info-panel.reroll-all {
   width: 10rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.item-type-filters {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.75rem;
+  border-color: rgb(180, 180, 180);
+  border-width: 1px;
+  border-bottom-style: solid;
+}
+.button.filter {
+  padding: 0.5rem;
+  height: 2rem;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-color: rgb(62, 142, 208);
+  background-color: #4199ff;
+  color: rgb(255, 255, 255);
+  margin: 2px;
+}
+.button.filter.is-light {
+  border: 1px solid;
+  border-color: rgb(62, 142, 208);
+  color: rgb(62, 142, 208);
+  background-color: #d0e6ff;
+  margin: 2px;
+}
+
+.button.btn-effect {
+  background-color: #6800df;
+  color: #fff;
+}
+.button.btn-effect.is-light {
+  background-color: #e4cdff;
+  color: #43008f;
+}
+.button.material-category {
+  background-color: #3e8ed0;
+  color: #fff;
+  font-weight: 400;
+  min-width: 90%;
+}
+.button.is-info {
+  height: 2.5em;
 }
 
 .descriptor {
@@ -143,42 +190,6 @@ button.reroll-all {
   border-right: 0px;
 }
 
-.item-type-filters {
-  background-color: lightsteelblue;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.button.btn-effect {
-  background-color: #6800df;
-  color: #fff;
-}
-.button.btn-effect.is-light {
-  background-color: #e4cdff;
-  color: #43008f;
-}
-.button.filter {
-  box-sizing: border-box;
-  border: 2px solid;
-  border-color: #3e8ed0;
-  margin: 2px;
-}
-.button.filter.is-light {
-  border: 0px solid;
-  background-color: lightsteelblue;
-  color: #ffffff;
-  margin: 2px;
-}
-.button.material-category {
-  background-color: #3e8ed0;
-  color: #fff;
-  font-weight: 400;
-  min-width: 90%;
-}
-.button.is-info {
-  height: 2.5em;
-}
-
 .columns {
   display: flex;
   justify-content: space-between;
@@ -189,6 +200,9 @@ button.reroll-all {
 .columns.materials.list {
   padding-right: 0.25rem
 }
+.columns:not(:last-child) {
+  margin-bottom: 0;
+}
 .column {
   overflow-y: auto;
 }
@@ -197,9 +211,6 @@ button.reroll-all {
   padding-left: 0.5rem;
   padding-bottom: 0.25rem;
   margin: 0;
-}
-.columns:not(:last-child) {
-  margin-bottom: 0;
 }
 .column.materials.head {
   text-align: center;
@@ -211,6 +222,8 @@ button.reroll-all {
 }
 .column.right-info-card-holder {
   padding-left: 0px;
+  padding-top: 0.75rem;
+  margin-top: 2px;
 }
 
 .list-header {
@@ -219,9 +232,8 @@ button.reroll-all {
   letter-spacing: 2px;
 }
 .list-item {
-  border: solid #b4b4b4;
+  border: 1px solid #b4b4b4;
   border-radius: 3px;
-  border-width: 1px;
   cursor: pointer;
   justify-content: center;
   margin: 2px;
@@ -247,7 +259,6 @@ button.reroll-all {
 .info-card {
   border: 1px solid #b4b4b4;
   border-radius: 4px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   padding: 0.75rem;
 }
 
@@ -257,8 +268,6 @@ button.reroll-all {
 }
 
 .card-header {
-  display: flex;
-  align-items: center;
   margin-bottom: 1rem;
 
   -webkit-user-select: none; /* Safari */        
@@ -274,15 +283,6 @@ button.reroll-all {
   margin-top: 0.2rem;
 }
 
-.card-image {
-  width: 3rem;
-  height: auto;
-}
-
-.card-header-right {
-  flex: 1;
-}
-
 .card-title {
   font-size: 1.25rem;
   margin: 0;
@@ -296,13 +296,12 @@ button.reroll-all {
   align-items: center;
 }
 
-.attribute-key {
+.attribute {
   margin-right: 0.5rem;
-  font-weight: bold;
 }
 
-.attribute-value {
-  margin-right: 0.5rem;
+.attribute.key {
+  font-weight: bold;
 }
 
 .card-description {
@@ -314,6 +313,7 @@ button.reroll-all {
   margin: 0;
   line-height: 2.5em;
 }
+
 .no-descriptors {
   margin: 0;
   line-height: 1.3em;

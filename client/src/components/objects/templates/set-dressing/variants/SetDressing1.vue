@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="item-type-filters">
+    <div class="card-header">
       <div class="control">
         <a class="button filter" :class="{ 'is-light': !params.isArmor }" @click="toggleItemType('isArmor')">Armor</a>
         <a class="button filter" :class="{ 'is-light': !params.isClothing }" @click="toggleItemType('isClothing')">Clothing</a>

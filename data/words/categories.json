@@ -133,7 +133,6 @@
   "magicSpellPartGerundSuffixNegative": ["breaching", "devouring", "flaying", "slaying", "striking"],
   "magicSpellPartGerundSuffixPositive": ["healing"],
 
-
   "magicSpellPartModifier": ["empowered", "enhanced", "greater", "improved", "lesser", "major", "mega", "minor", "mythic", "super", "superior", "supreme", "ultimate", "ultra"],
   "magicSpellModifier": ["mass"],
 
