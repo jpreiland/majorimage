@@ -16,8 +16,8 @@
 
 .header {
   line-height: 1rem;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  color: #000000;
 }
 .header p {
   padding: 0.25rem;
@@ -40,8 +40,8 @@
   overflow-x: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  background-color: black;
-  border: white;
+  background-color: #000000;
+  border: #ffffff;
   border-style: solid;
   border-width: 0.25rem 0;
   border-top-width: 0;
@@ -67,19 +67,19 @@
   margin-left: 0;
   height: 1.75rem;
 
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 
-  border:rgba(0, 0, 0);
+  border:#000000;
   border-radius: 0;
 
-  color: rgb(245, 245, 245);
+  color: #f5f5f5;
   font-variant: small-caps;
 }
 .button.nav-btn.red:hover {
-  color: rgb(226, 56, 56);
+  color: #e23838;
 }
 .button.nav-btn.red.nav-selected {
-  color: rgb(226, 56, 56);
+  color: #e23838;
 }
 .button.nav-btn.orange:hover {
   color: #ffa43b;
@@ -106,16 +106,16 @@
   color: #4199ff;
 }
 .button.nav-btn.indigo:hover {
-  color: rgb(168, 92, 255);
+  color: #a85cff;
 }
 .button.nav-btn.indigo.nav-selected {
-  color: rgb(168, 92, 255);
+  color: #a85cff;
 }
 .button.nav-btn.violet:hover {
-  color: violet;
+  color: #ee82ee;
 }
 .button.nav-btn.violet.nav-selected {
-  color: violet;
+  color: #ee82ee;
 }
 
 .button {
@@ -139,7 +139,7 @@ button.reroll-all {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.75rem;
-  border-color: rgb(180, 180, 180);
+  border-color: #b4b4b4;
   border-width: 1px;
   border-bottom-style: solid;
 }
@@ -148,22 +148,22 @@ button.reroll-all {
   height: 2rem;
   box-sizing: border-box;
   border: 1px solid;
-  border-color: rgb(62, 142, 208);
+  border-color: #3e8ed0;
   background-color: #4199ff;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   margin: 2px;
 }
 .button.filter.is-light {
   border: 1px solid;
-  border-color: rgb(62, 142, 208);
-  color: rgb(62, 142, 208);
+  border-color: #3e8ed0;
+  color: #3e8ed0;
   background-color: #d0e6ff;
   margin: 2px;
 }
 
 .button.btn-effect {
   background-color: #6800df;
-  color: #fff;
+  color: #ffffff;
 }
 .button.btn-effect.is-light {
   background-color: #e4cdff;
@@ -171,7 +171,7 @@ button.reroll-all {
 }
 .button.material-category {
   background-color: #3e8ed0;
-  color: #fff;
+  color: #ffffff;
   font-weight: 400;
   min-width: 90%;
 }
@@ -331,10 +331,10 @@ button.reroll-all {
 
 /* Color of the scrollbar thumb */
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
+  background-color: #888888;
 }
 
 /* Hover state of the scrollbar thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+  background-color: #555555;
 }

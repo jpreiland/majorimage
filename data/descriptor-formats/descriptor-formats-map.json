@@ -6,7 +6,7 @@
   "City": [["color-geography", 1], ["humanoidCommon-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
   "Countryside": [["color-geography", 1], ["humanoidCommon-geography", 1]],
   "CustomSpell": [["spellAdjectivePrefix", 4], ["spellFormOfVirtue", 2], ["spellFormOfVirtueModified", 1], ["spellElementOf", 8], ["spellElementOfModified", 1], ["spellElementOfWithNounSuffix", 1], ["spellOfElement", 8], ["spellOfElementModified", 1], ["spellSummonElementCreature", 3], ["spellSummonModifiedElementCreature", 1], ["spellConjureElementObject", 1], ["spellOfCreature", 1], ["spellOfCreatures", 1], ["spellCreatureOf", 1], ["spellCreatureOfWithNounSuffix", 1], ["spellCreaturesWithNounSuffix", 1]],
-  "CustomWeapon": [["weaponElementVerber", 4], ["weaponBodyPartVerber", 3], ["weaponAnimalVerber", 1], ["weaponMonsterVerber", 2], ["weaponVerber", 1], ["weaponWithNounSuffix", 3], ["weaponElementWeaponWithNounSuffix", 2], ["weaponMonsterWeapon", 1]],
+  "CustomWeapon": [["weaponElementVerber", 4], ["weaponBodyPartVerber", 3], ["weaponAnimalVerber", 1], ["weaponMonsterVerber", 2], ["weaponVerber", 1], ["weaponWithNounSuffix", 3], ["weaponElementWeaponWithNounSuffix", 2], ["weaponMonsterWeapon", 1], ["weaponWeaponoftheMonster", 2]],
   "CreatureVerbingMisc(s)": [["creature-verbing-misc", 1], ["creature-verbing-miscs", 1]],
   "EnhancementBonus": [["enhancementBonus"]],
   "EventVerbing": [["event-verbing-creature", 1], ["event-verbing-event", 3], ["event-verbing-misc", 1]],

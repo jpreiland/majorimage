@@ -35,6 +35,7 @@
   "weaponElementWeaponWithNounSuffix": [["title"], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "weaponBasic"], ["static", " of "], ["pick", "spellNounSuffixesAll"]],
   "weaponMonsterVerber": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick-verber", "verbViolentAll"]],
   "weaponMonsterWeapon": [["title"], ["pick", "monsterBasicNoBeast"], ["static", " "], ["pick", "weaponBasic"]],
+  "weaponWeaponoftheMonster": [["title"], ["pick", "weaponBasic"], ["static", " of the "], ["pick", "monsterBasicNoBeast"]],
   "weaponVerber": [["title"], ["pick-verber", "verbTitle"]],
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
