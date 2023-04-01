@@ -3,7 +3,8 @@ const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
       plural = require('../plural/plural'),
       tensify = require('../tensify/inflector'),
       title = require('../titleize/titleize'),
-      verber = require('../verber/verber')
+      verber = require('../verber/verber'),
+      { mapFormats, pickFormat } = require('../descriptor-utils/formats')
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitch(parts, data, priceOverride, numRangeOverride) {
@@ -147,6 +148,23 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         }
         const price = rollPrice(priceParts)
         name += formatPrice(price)
+        break;
+
+      case 'format':
+        if (part.length < 2) break;
+        let formatParts
+
+        // if descriptor type, build format map and roll for format
+        if (Object.hasOwn(data.dfMap, part[1])) {
+          const res = mapFormats(data.dfMap[part[1]])
+          formatParts = data.formats[pickFormat(res.formatMap, res.totalWeight)]
+        } else {
+          formatParts = data.formats[part[1]]
+        }
+
+        if (formatParts) {
+          name += stitch(formatParts, data, priceOverride, numRangeOverride)
+        }
         break;
 
       default:

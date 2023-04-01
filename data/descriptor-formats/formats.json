@@ -11,6 +11,8 @@
   "numberFiveToSeventeen": [["number", 5, 17]],
   "numberZeroToNine(no)": [["number", 0, 9, "no"]],
 
+  "scrollOf": [["title"], ["static", "scroll of "], ["format", "CustomSpell"]],
+  "wandOf": [["title"], ["static", "wand of "], ["format", "CustomSpell"]],
   "spellAdjectivePrefix": [["title"], ["pick", "magicSpellPartAdjectivePrefix"], ["static", " "], ["pick", "spellSuffixesNoGerund"]],
   "spellConjureElementObject": [["title"], ["static", "conjure "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "itemNonEquipment"]],
   "spellSummonElementCreature": [["title"], ["static", "summon "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "animalAndMonsterBasicNoBeast"]],
