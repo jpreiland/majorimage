@@ -6,7 +6,6 @@
   "a(n)-amountGroupCreature": [["a(n)"], ["pick", "amountGroupCreature"]],
   "a(n)-animalAndMonster": [["a(n)"], ["pick", "animalAndMonster"]],
   "a(n)-animalAndMonster(s)": [["a(n)"], ["pick-pluralize-optional", "animalAndMonster"]],
-  "color-geography": [["pick", "color"], ["static", " "], ["pick", "geography"]],
   "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "colorBasic"]],
   "numberFiveToSeventeen": [["number", 5, 17]],
   "numberZeroToNine(no)": [["number", 0, 9, "no"]],
@@ -46,9 +45,11 @@
   "event-verbing-creature": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToCreature"], ["a(n)"], ["pick", "creature"]],
   "event-verbing-event": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToEvent"], ["a(n)"], ["pick", "event"]],
   "event-verbing-misc": [["pick", "event"], ["static", " "], ["pick-gerund", "verbEventToObject"], ["a(n)"], ["pick", "misc"]],
-  "humanoidCommon-geography": [["pick", "humanoidCommon"], ["static", " "], ["pick", "geography"]],
-  "monster-geography": [["pick", "monster"], ["static", " "], ["pick", "geography"]],
-  "nameFirst-geography": [["pick", "nameFirst"], ["static", "'s "], ["pick", "geography"]],
+
+  "color-geography": [["title"], ["pick", "color"], ["static", " "], ["pick", "geographySuffix"]],
+  "monster-geography": [["title"], ["pick", "monster"], ["static", " "], ["pick", "geographySuffix"]],
+  "nameFirst-geography": [["title"], ["pick", "nameAll"], ["static", "'s "], ["pick", "geographySuffix"]],
+
   "novel-tradeNPC-verbed": [["title"], ["static", "the "], ["pick", "tradeNPC"], ["static", " I "], ["pick-pastTense", "verbCreatureToCreature"]],
   "novel-tradeNPCs-verbed": [["title"], ["static", "the "], ["pick-pluralize", "tradeNPC"], ["static", " I "], ["pick-pastTense-optional", "verbCreatureToCreature"]],
   "some-accessories": [["a(n)"], ["pick-pluralize", "accessoryAll"]],

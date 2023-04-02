@@ -57,11 +57,6 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         name += tensify(picker(part[1], data))
         break;
 
-      case 'pick-verber':
-        if (part.length !== 2) break;
-        name += verber(picker(part[1], data))
-        break;
-
       case 'pick-pastTense-optional':
         if (part.length !== 2) break;
         if (Math.random() >= 0.5) {
@@ -69,6 +64,11 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         } else {
           name += picker(part[1], data)
         }
+        break;
+
+      case 'pick-verber':
+        if (part.length !== 2) break;
+        name += verber(picker(part[1], data))
         break;
 
       case 'pick-gerund':

@@ -57,5 +57,14 @@
   "verbToObject": ["verbCreatureToObject", "verbEventToObject", "verbObjectToObject"],
   "verbToEvent": ["verbCreatureToEvent", "verbEventToEvent", "verbObjectToEvent"],
   "verbTitle": ["verbSpeech", "verbViolent"],
-  "verbViolentAll": ["verbViolent", "verbViolentToCreature"]
+  "verbViolentAll": ["verbViolent", "verbViolentToCreature"],
+
+  "geographySuffix": ["geographyBasic", "geographyWaterBasic", "geographyBiomeBasic"],
+
+  "nameAll": ["name1Syllable", "name2Syllable", "name3Syllable", "name4Syllable", "name5+Syllable"],
+  "name1Syllable": ["name1a", "name1b", "name1c"],
+  "name2Syllable": ["name2a", "name2b", "name2c"],
+  "name3Syllable": ["name3a", "name3b", "name3c"],
+  "name4Syllable": ["name4a", "name4b", "name4c"],
+  "name5+Syllable": ["name5+a", "name5+b", "name5+c"]
 }
