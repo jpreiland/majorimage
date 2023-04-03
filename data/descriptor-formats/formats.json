@@ -71,6 +71,8 @@
   "_quality": [["pick", "qualityObject"]],
   "_a(n)quality": [["a(n)"], ["pick", "qualityObject"]],
   "_treasure": [["pick", "treasure"]],
+  "_virtueNegative": [["pick", "virtueNegative"]],
+  "_virtuePositive": [["pick", "virtuePositive"]],
   "_weapon": [["pick", "weapon"]],
   "_writing": [["pick", "writing"]],
   "__price": [["price", 1, 20, "copper"]]

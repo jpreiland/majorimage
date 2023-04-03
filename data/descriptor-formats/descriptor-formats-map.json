@@ -26,6 +26,8 @@
   "_Quality": [["_quality", 1]],
   "_A(n)Quality": [["_a(n)quality", 1]],
   "_Color": [["_color", 5], ["modifiedColor", 2]],
+  "_VirtueNegative": [["_virtueNegative", 1]],
+  "_VirtuePositive": [["_virtuePositive", 1]],
   "_Material": [["_material", 1]],
   "_Spell": [["_spellSRD", 1]],
   "__Price": [["__price", 1]]
