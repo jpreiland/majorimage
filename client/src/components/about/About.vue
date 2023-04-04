@@ -42,7 +42,7 @@
       </p>
       <p>
         <Descriptor :type="'A(n)AmountGroupCreature'" :color="'red'" /> 
-        of <Descriptor :type="'_AdjectivePersonality'" :color="'green'" />
+        of <Descriptor :type="'_AdjectivePerson'" :color="'green'" />
         <Descriptor :type="'_Creatures'" :color="'blue'" />
       </p>
     </div>

@@ -11,7 +11,7 @@
       velit nulla placerat nisi, sit amet vestibulum sapien <Descriptor :type="'CreatureVerbingMisc(s)'" :color="'blue'"/> et magna.<Descriptor :type="'City'" /> 
       ipsum dolor sit <Descriptor :type="'City'" />, consectetur adipiscing elit. <Descriptor :type="'City'" /> hendrerit, 
       ligula vitae feugiat ullamcorper.
-      Lorem ipsum dolor sit amet, consectetur adipiscing <Descriptor :type="'A(n)AdjectivePersonalityTradeNPC'" :color="'silver'"/>. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
+      Lorem ipsum dolor sit amet, consectetur adipiscing <Descriptor :type="'A(n)AdjectivePersonTradeNPC'" :color="'silver'"/>. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
       sit amet <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk2'" @link-update="linkUpdate" /> {{ links.tlk2 }} vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
       velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
       ligula vitae feugiat ullamcorper.
