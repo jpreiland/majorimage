@@ -13,6 +13,7 @@
   "scrollOf": [["title"], ["static", "scroll of "], ["format", "CustomSpell"]],
   "wandOf": [["title"], ["static", "wand of "], ["format", "CustomSpell"]],
   "spellAdjectivePrefix": [["title"], ["pick", "magicSpellPartAdjectivePrefix"], ["static", " "], ["pick", "spellSuffixesNoGerund"]],
+  "spellConjureObject": [["title"], ["static", "conjure "], ["pick", "itemNonEquipment"]],
   "spellConjureElementObject": [["title"], ["static", "conjure "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "itemNonEquipment"]],
   "spellSummonElementCreature": [["title"], ["static", "summon "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "animalAndMonsterBasicNoBeast"]],
   "spellSummonModifiedElementCreature": [["title"], ["static", "summon "], ["pick", "magicSpellPartModifier"], ["static", " "], ["pick", "spellElementPrefixes"], ["static", " "], ["pick", "animalAndMonsterBasicNoBeast"]],
@@ -43,6 +44,11 @@
   "weaponWeaponoftheAdventurer": [["title"], ["pick", "weaponBasic"], ["static", " of the "], ["pick", "tradeAdventurerBasic"]],
   "weaponWeaponoftheEpithetAdventurer": [["title"], ["pick", "weaponBasic"], ["static", " of the "], ["pick", "adjectiveEpithet"], ["static", " "], ["pick", "tradeAdventurerBasic"]],
   "weaponVerber": [["title"], ["pick-verber", "verbTitle"]],
+
+  "maneuverAnimalForm": [["title"], ["pick", "animalBasic"], ["static", " "], ["pick", "maneuverForm"]],
+  "maneuverMovementAnimalForm": [["title"], ["pick", "maneuverPartMovement"], ["static", " "], ["pick", "animalBasic"], ["static", " "], ["pick", "maneuverForm"]],
+  "maneuverEpithetAnimalForm": [["title"], ["pick", "adjectiveEpithet"], ["static", " "], ["pick", "animalBasic"], ["static", " "], ["pick", "maneuverForm"]],
+  "maneuverNumberPartForm": [["title"], ["pick", "maneuverPartNumber"], ["static", " "], ["pick", "maneuverPart"], ["static", " "], ["pick", "maneuverForm"]],
 
   "creature-verbing-misc": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick", "misc"]],
   "creature-verbing-miscs": [["pick", "creature"], ["static", " "], ["pick-gerund", "verbCreatureToObject"], ["a(n)"], ["pick-pluralize", "misc"]],

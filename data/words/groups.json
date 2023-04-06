@@ -53,6 +53,8 @@
   "spellNounSuffixesAll": ["spellNounSuffixes", "magicSpellPartGerundSuffixNegative", "magicSpellPartGerundSuffixPositive"],
   "spellSuffixesNoGerund": ["spellFormSuffixesCreatureSingular", "spellElementSuffixes", "spellNounSuffixes", "magicSpellPartInanimateSuffix", "magicSpellPartFormSuffixElement"],
 
+  "maneuverForm": ["maneuverPartStrike", "maneuverPartUnarmedStrike", "maneuverPartWeaponStrike", "maneuverPartType"],
+
   "verbAll": ["verbCreatureAlone", "verbEventAlone", "verbObjectAlone", "verbCreatureToCreature", "verbCreatureToEvent", "verbCreatureToObject", "verbObjectToCreature", "verbObjectToEvent", "verbObjectToObject", "verbEventToCreature", "verbEventToEvent", "verbEventToObject"],
   "verbAlone": ["verbCreatureAlone", "verbEventAlone", "verbObjectAlone"],
   "verbToCreature": ["verbCreatureToCreature", "verbEventToCreature", "verbObjectToCreature"],

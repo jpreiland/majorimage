@@ -26,7 +26,7 @@
     <div>
       <template v-for="art in artwork" :key="'Art-'+art.id+'-'+rerollToggle">
         <p>
-          <Descriptor :type="'CustomWeapon'" :color="'#EE3AA3'" />
+          <Descriptor :type="'MartialManeuver'" :color="'#EE3AA3'" />
         </p>
       </template>
     </div>
