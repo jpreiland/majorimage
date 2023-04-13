@@ -24,6 +24,7 @@
   "monsterBasic": ["monsterBasicNoBeast", "beastBasic"],
   "monsterBasicNoBeast": ["aberrationBasic", "celestialBasic", "constructBasic", "dragonBasic", "elementalBasic", "feyBasic", "fiendBasic", "giantBasic", "humanoidBasic", "humanoidBasicClass", "monstrosityBasic", "oozeBasic", "plantCreatureBasic", "undeadBasic", "monsterMiscBasic"],
   "qualityObject": ["adjectiveAesthetic", "adjectiveAge", "adjectiveAgeObject", "adjectiveCondition", "adjectiveCleanliness", "adjectiveQuality", "adjectiveSize", "adjectiveStructural", "adjectiveWeight"],
+  "structure": ["building", "buildingWaterside", "tree"],
   "tradeAdventurerAll": ["tradeAdventurer", "tradeAdventurerBasic"],
   "treasure": ["art", "artBasic", "jewelryAll", "miscTreasure", "miscTreasureBasic"],
   "treasureBasic": ["artBasic", "jewelryBasic", "miscTreasureBasic"],
@@ -53,7 +54,9 @@
   "spellNounSuffixesAll": ["spellNounSuffixes", "magicSpellPartGerundSuffixNegative", "magicSpellPartGerundSuffixPositive"],
   "spellSuffixesNoGerund": ["spellFormSuffixesCreatureSingular", "spellElementSuffixes", "spellNounSuffixes", "magicSpellPartInanimateSuffix", "magicSpellPartFormSuffixElement"],
 
-  "maneuverForm": ["maneuverPartStrike", "maneuverPartUnarmedStrike", "maneuverPartWeaponStrike", "maneuverPartType"],
+  "maneuverForm": ["maneuverPartUnarmedStrike", "maneuverPartWeaponStrike", "maneuverPartType"],
+  "maneuverPartAll": ["maneuverPart", "maneuverBodyPart"],
+  "maneuverNumbers": ["number2-9", "number11-19", "numberTens", "numberLarge", "numberAlternate"],
 
   "verbAll": ["verbCreatureAlone", "verbEventAlone", "verbObjectAlone", "verbCreatureToCreature", "verbCreatureToEvent", "verbCreatureToObject", "verbObjectToCreature", "verbObjectToEvent", "verbObjectToObject", "verbEventToCreature", "verbEventToEvent", "verbEventToObject"],
   "verbAlone": ["verbCreatureAlone", "verbEventAlone", "verbObjectAlone"],
