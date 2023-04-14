@@ -5,8 +5,9 @@ import AboutPage from './components/about/AboutPage.vue'
 import LocationsPage from './components/locations/LocationsPage.vue'
 import MagicPage from './components/magic/MagicPage.vue'
 import MaterialsPage from './components/materials/MaterialsPage.vue'
-import ShopsPage from './components/shops/ShopsPage.vue'
+import NpcsPage from './components/npcs/NpcsPage.vue'
 import ObjectsPage from './components/objects/ObjectsPage.vue'
+import ShopsPage from './components/shops/ShopsPage.vue'
 import NotFound from './components/notfound/NotFound.vue'
 
 const routes = {
@@ -15,8 +16,9 @@ const routes = {
   '/locations': LocationsPage,
   '/magic': MagicPage,
   '/materials': MaterialsPage,
-  '/shops': ShopsPage,
-  '/objects': ObjectsPage
+  '/npcs': NpcsPage,
+  '/objects': ObjectsPage,
+  '/shops': ShopsPage
 }
 
 export default {
@@ -95,7 +97,7 @@ export default {
       <button class="button nav-btn orange" :class="{ 'nav-selected': nav.locations }"  @click="navigate('#/locations', 'locations')" key="locations">Locations</button> 
       <button class="button nav-btn yellow" :class="{ 'nav-selected': nav.magic }" @click="navigate('#/magic', 'magic')" key="magic">Magic</button> 
       <button class="button nav-btn green" :class="{ 'nav-selected': nav.shops }" @click="navigate('#/shops', 'shops')" key="shops">Shops</button> 
-      <button class="button nav-btn blue" key="npcs">NPCs</button> 
+      <button class="button nav-btn blue" :class="{ 'nav-selected': nav.npcs }" @click="navigate('#/npcs', 'npcs')" key="npcs">NPCs</button> 
       <button class="button nav-btn indigo" key="quests">Quests</button> 
       <button class="button nav-btn violet" :class="{ 'nav-selected': nav.materials }" @click="navigate('#/materials', 'materials')" key="more">Materials</button> 
       <button class="button nav-btn" @click="navigate('#/about')" key="about">About</button> 

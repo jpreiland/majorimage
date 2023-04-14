@@ -1,4 +1,16 @@
 {
+  "objects": {
+    "set-dressing": {
+      "_displayName": "Set Dressing",
+      "_path": "./templates/set-dressing/SetDressing.vue",
+      "set-dressing-1": "./variants/SetDressing1.vue"
+    },
+    "art": {
+      "_displayName": "Art",
+      "_path": "./templates/art/Art.vue",
+      "art-1": "./variants/Art1.vue"
+    }    
+  },
   "locations": {
     "city": {
       "_displayName": "City",
@@ -37,18 +49,6 @@
       "weapons-1": "./variants/MagicWeapons1.vue"
     }
   },
-  "objects": {
-    "set-dressing": {
-      "_displayName": "Set Dressing",
-      "_path": "./templates/set-dressing/SetDressing.vue",
-      "set-dressing-1": "./variants/SetDressing1.vue"
-    },
-    "art": {
-      "_displayName": "Art",
-      "_path": "./templates/art/Art.vue",
-      "art-1": "./variants/Art1.vue"
-    }    
-  },
   "shops": {
     "general": {
       "_displayName": "General",
@@ -59,6 +59,18 @@
       "_displayName": "Blacksmith",
       "_path": "./templates/blacksmith/Blacksmith.vue",
       "blacksmith-1": "./variants/Blacksmith1.vue"
+    }
+  },
+  "npcs": {
+    "noble": {
+      "_displayName": "Noble",
+      "_path": "./templates/noble/Noble.vue",
+      "noble-1": "./variants/Noble1.vue"
+    },
+    "wizard": {
+      "_displayName": "Wizard",
+      "_path": "./templates/wizard/Wizard.vue",
+      "wizard-1": "./variants/Wizard1.vue"
     }
   }
 }
