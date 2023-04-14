@@ -72,5 +72,17 @@
       "_path": "./templates/wizard/Wizard.vue",
       "wizard-1": "./variants/Wizard1.vue"
     }
+  },
+  "quests": {
+    "rumor": {
+      "_displayName": "Rumors",
+      "_path": "./templates/rumor/Rumor.vue",
+      "rumor-1": "./variants/Rumor1.vue"
+    },
+    "wanted": {
+      "_displayName": "Wanted",
+      "_path": "./templates/wanted/Wanted.vue",
+      "wanted-1": "./variants/Wanted1.vue"
+    }
   }
 }
