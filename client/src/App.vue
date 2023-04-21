@@ -1,26 +1,26 @@
 <script>
 import { computed } from 'vue'
 import axios from "axios"
-import AboutPage from './components/about/AboutPage.vue'
-import LocationsPage from './components/locations/LocationsPage.vue'
-import MagicPage from './components/magic/MagicPage.vue'
-import MaterialsPage from './components/materials/MaterialsPage.vue'
-import NpcsPage from './components/npcs/NpcsPage.vue'
-import ObjectsPage from './components/objects/ObjectsPage.vue'
-import QuestsPage from './components/quests/QuestsPage.vue'
-import ShopsPage from './components/shops/ShopsPage.vue'
+import About from './components/about/About.vue'
+import Locations from './components/locations/Locations.vue'
+import Magic from './components/magic/Magic.vue'
+import Materials from './components/materials/Materials.vue'
+import Npcs from './components/npcs/Npcs.vue'
+import Objects from './components/objects/Objects.vue'
+import Quests from './components/quests/Quests.vue'
+import Shops from './components/shops/Shops.vue'
 import NotFound from './components/notfound/NotFound.vue'
 
 const routes = {
-  '/': ObjectsPage,
-  '/about': AboutPage,
-  '/locations': LocationsPage,
-  '/magic': MagicPage,
-  '/materials': MaterialsPage,
-  '/npcs': NpcsPage,
-  '/objects': ObjectsPage,
-  '/quests': QuestsPage,
-  '/shops': ShopsPage
+  '/': Objects,
+  '/about': About,
+  '/locations': Locations,
+  '/magic': Magic,
+  '/materials': Materials,
+  '/npcs': Npcs,
+  '/objects': Objects,
+  '/quests': Quests,
+  '/shops': Shops
 }
 
 export default {
@@ -105,5 +105,5 @@ export default {
       <button class="button nav-btn" @click="navigate('#/about')" key="about">About</button> 
     </div>
   </div>
-  <component class="page" :is="currentView" />
+  <component v-if="this.data" class="page" :is="currentView" />
 </template>
