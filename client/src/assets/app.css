@@ -195,7 +195,7 @@ button.reroll-all {
   justify-content: space-between;
 }
 .columns.list.left-scroll-menu {
-  max-height:calc(95svh - 1rem);
+  max-height:calc(94svh - 1rem);
 }
 .columns.materials.list {
   padding-right: 0.25rem
