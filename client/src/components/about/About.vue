@@ -4,11 +4,12 @@
       <div class="attribute key">What is this place?</div>
       <div class="no-descriptors">
         <p>
-          There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> unique words in the Major Image data set, 
-          which are randomly stitched together in an unimaginably large amount of combinations to create 
-          all kinds of interesting ideas to present to your players during a ttrpg session. 
-          The goal of this site is to present a wide variety of descriptions as quickly as possible so that you can 
-          keep the pace of play flowing and focus your brainpower on more important things like critting the party's healer.
+          There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> 
+          unique words in the Major Image data set, which are randomly stitched together in a wide
+          variety of permutations to create all kinds of interesting ideas to present to your players 
+          during a ttrpg session. The goal of this site is to quickly present descriptions so that you 
+          can keep the pace of play flowing and focus your brainpower on more important things like 
+          critting the party's healer.
         </p>
       </div>
 
@@ -29,9 +30,11 @@
         </p>
         <p>
           The word lists are typed by hand, as are the rules for randomly pulling from those lists. 
-          You've probably noticed some combinations that make no sense, which is an indicator
-          that there's no natural language processing going on here. This is a feature, not a bug!
-          Getting nonsensical combinations of words helps spark the imagination.
+          You've probably noticed some output that makes no sense, which is a side effect of 
+          this approach. However, since this site is meant to be a supplement rather than a replacement
+          for the imagination, the nonsensical output can still be useful. If you find yourself asking
+          how a given bit of output could have its existence justified, then this tool is working!
+          Embrace the emergent worldbuilding.
         </p>
       </div>
 

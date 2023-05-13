@@ -198,7 +198,7 @@ button.reroll-all {
   max-height:calc(94svh - 1rem);
 }
 .columns.materials.list {
-  padding-right: 0.25rem
+  padding-right: 0.25rem;
 }
 .columns:not(:last-child) {
   margin-bottom: 0;
