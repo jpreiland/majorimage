@@ -1,22 +1,14 @@
 <template>
-  <div class="card-header">
-    <div class="card-header-left">
-      <Descriptor :type="'City'" />
-    </div>
-  </div>
-  <CityOverview />
   <component v-if="initialized" :is="loadVariant"></component>
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue"
-import CityOverview from "./CityOverview.vue"
 
 
 export default {
   name: 'City',
   components: {
-    CityOverview
   },
   inject: ['data'],
   data() {

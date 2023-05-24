@@ -1,9 +1,21 @@
 <template>
+  <div class="card-header">
+    <div class="card-header-left">
+      <LinkedDescriptor :type="'City'" :link="'cityName'" @link-update="linkUpdate" :color="'purple'" />
+    </div>
+  </div>
+  <CityOverview />
   <div class="info-panel-description">
+    <p>
+      {{ links.cityName }} is
+      <Descriptor :type="'A(n)AdjectiveSizeBasic'" :color="'#c42b68'" /> city located 
+      <Descriptor :type="'DistanceLarge'" :color="'#61d0ff'" /> <Descriptor :type="'_Direction'" :color="'#2b7fc4'" /> 
+      of <Descriptor :type="'GeographicFeature'" :color="'brown'" />. 
+    </p>
     <p>
       variant 2
       <Descriptor :type="'City'" />
-      Lorem ipsum <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linkedParser="tlkParser" @link-update="linkUpdate" /> {{ links.tlk }} 
+      Lorem ipsum  
       dolor sit amet, consectetur adipiscing elit. <Descriptor :type="'Book'" :color="'red'"/>
       hendrerit, ligula vitae feugiat ullamcorper, velit <Descriptor  :type="'EventVerbing'" :color="'gold'" /> placerat nisi, sit 
       <Descriptor :type="'Temple'" :color="'green'"/> vestibulum <Descriptor :type="'TestA(n)'" :color="'orange'" /> enim et magna.Lorem <Descriptor :type="'City'" /> 
@@ -16,29 +28,22 @@
       velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
       ligula vitae feugiat ullamcorper.
     </p>
-    <p>
-      <StealthDescriptor :type="'Book'"/> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
-      sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
-      velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
-      ligula vitae feugiat ullamcorper.
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, 
-      sit amet vestibulum sapien enim et magna.Lorem <Descriptor :type="'City'" /> ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, 
-      velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
-      ligula vitae feugiat ullamcorper.
-    </p>
   </div>
 </template>
 
 <script>
+import CityOverview from "./../CityOverview.vue"
+
 export default {
   name: 'City2',
+  components: {
+    CityOverview
+  },
   inject: ['data'],
   data() {
     return {
       links: {
-        tlk: 'the thing',
+        cityName: 'the city',
         tlk2: 'the other thing'
       }
     }
@@ -49,9 +54,8 @@ export default {
     async linkUpdate(linkResponse) {
       this.links[linkResponse.linkKey] = linkResponse.linkVal
     },
-    tlkParser(descriptorText) {
-      let parts = descriptorText.split(' ')
-      return parts[parts.length-1]
+    cityNameParser(descriptorText) {
+      return descriptorText
     }
   }
 }

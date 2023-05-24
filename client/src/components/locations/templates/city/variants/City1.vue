@@ -1,4 +1,10 @@
 <template>
+  <div class="card-header">
+    <div class="card-header-left">
+      <Descriptor :type="'City'" />
+    </div>
+  </div>
+  <CityOverview />
   <div class="info-panel-description">
     <p>
       variant 1
@@ -32,8 +38,13 @@
 </template>
 
 <script>
+import CityOverview from "./../CityOverview.vue"
+
 export default {
   name: 'City1',
+  components: {
+    CityOverview
+  },
   inject: ['data'],
   data() {
     return {

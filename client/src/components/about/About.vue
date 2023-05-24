@@ -7,7 +7,7 @@
           There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> 
           unique words in the Major Image data set, which are randomly stitched together in a wide
           variety of permutations to create all kinds of interesting ideas to present to your players 
-          during a ttrpg session. The goal of this site is to quickly present descriptions so that you 
+          during a ttrpg session. The goal of this site is to quickly generate descriptions so that you 
           can keep the pace of play flowing and focus your brainpower on more important things like 
           critting the party's healer.
         </p>
