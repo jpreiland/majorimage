@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["vue", "standard", "plugin:vue/recommended"],
+  extends: ["eslint:recommended", "plugin:vue/recommended"],
   overrides: [
   ],
   parser: '@babel/eslint-parser',

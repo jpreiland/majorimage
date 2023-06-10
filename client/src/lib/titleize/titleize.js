@@ -1,12 +1,12 @@
 const exceptions = [
   "A",
+  "About",
   "An",
   "And",
   "As",
   "At",
   "But",
   "By",
-  "For",
   "For",
   "From",
   "In",
@@ -24,6 +24,8 @@ const exceptions = [
 ]
 
 function title(string) {
+  if (typeof string !== 'string') return string
+
   string = string.replace(/([^\W_]+[^\s-]*) */g,
     function(txt) {
       return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()

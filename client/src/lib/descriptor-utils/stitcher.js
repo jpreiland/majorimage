@@ -1,7 +1,7 @@
 const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
       gerund = require('../gerunds/gerunds'),
       plural = require('../plural/plural'),
-      tensify = require('../tensify/inflector'),
+      tensify = require('../tensify/inflector').default,
       title = require('../titleize/titleize'),
       verber = require('../verber/verber'),
       { mapFormats, pickFormat } = require('../descriptor-utils/formats')

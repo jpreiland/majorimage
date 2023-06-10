@@ -7,6 +7,7 @@
 var irregular_verbs = [
   ['am', 'was', 'been'],
   ['are', 'were', 'been'],
+  ['arc', 'arced', 'arc'],
   ['awake', 'awoke', 'awoken'],
   ['bear', 'bore', 'born'],
   ['beat', 'beat', 'beat'],
@@ -99,7 +100,8 @@ var irregular_verbs = [
   ['overtake', 'overtook', 'overtaken'],
   ['overthrow', 'overthrew', 'overthrown'],
   ['pay', 'paid', 'paid'],
-  ['plead', 'pled', 'pled'],
+  ['plea', 'pleaded', 'pled'],
+  ['plead', 'pleaded', 'pled'],
   ['prove', 'proved', 'proved'],
   ['put', 'put', 'put'],
   ['quit', 'quit', 'quit'],
@@ -195,6 +197,6 @@ function find(verb) {
   }
 
   return false;
-};
+}
 
-module.exports = find;
+export default find;

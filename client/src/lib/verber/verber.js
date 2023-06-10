@@ -35,7 +35,7 @@ function erer(verb) {
 }
 
 function verber(verb) {
-  if (!verb || verb.length < 2) return verb
+  if (typeof verb !== 'string' || verb.length < 2) return verb
   const special = exceptions[verb]
 
   return special ? special : erer(verb)
