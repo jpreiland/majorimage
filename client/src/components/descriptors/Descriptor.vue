@@ -26,7 +26,7 @@ export default {
   },
   data () {
     return {
-      descriptorText: "default name",
+      descriptorText: "Descriptor",
       formatMap: {},
       totalWeight: 0
     }

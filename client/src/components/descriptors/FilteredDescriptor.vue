@@ -29,7 +29,7 @@ export default {
   },
   data () {
     return {
-      descriptorText: "default name"
+      descriptorText: "Filtered Descriptor"
     }
   },
   async mounted() {

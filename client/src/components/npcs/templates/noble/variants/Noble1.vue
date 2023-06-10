@@ -6,7 +6,7 @@
   </div>
   <div class="info-panel-description">
       <p>
-        Lorem ipsum <Descriptor :type="'TestNum5-17'" :color="'#00ffff'"/> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <Descriptor :type="'TestNum0-9-no'" :color="'#ff00ff'"/> incididunt ut labore et dolore magna aliqua. 
+        <SimpleDescriptor :type="'nameAll'" :properNoun="true" :color="'pink'" /> Lorem ipsum <Descriptor :type="'TestNum5-17'" :color="'#00ffff'"/> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <Descriptor :type="'TestNum0-9-no'" :color="'#ff00ff'"/> incididunt ut labore et dolore magna aliqua.
         Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris <Descriptor :type="'TestNum5-17'" :color="'#ff0000'" :numRangeOverride="{min: 0, max: 3, zeroString: 'nothing!'}"/> nisi ut aliquip ex ea commodo consequat. 
         Duis <Descriptor :type="'EnhancementBonus'" :color="'#00ff00'"/> Sword aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.

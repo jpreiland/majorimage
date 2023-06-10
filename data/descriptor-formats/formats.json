@@ -86,7 +86,7 @@
   "_distanceRelative": [["pick", "distanceRelative"]],
 
   "novel-tradeNPC-verbed": [["title"], ["static", "the "], ["pick", "tradeNPC"], ["static", " I "], ["pick-pastTense", "verbCreatureToCreature"]],
-  "novel-tradeNPCs-verbed": [["title"], ["static", "the "], ["pick-pluralize", "tradeNPC"], ["static", " I "], ["pick-pastTense-optional", "verbCreatureToCreature"]],
+  "novel-tradeNPCs-verbed": [["title"], ["static", "the "], ["pick-pluralize", "tradeNPC"], ["static", " I "], ["pick-pastTense", "verbCreatureToCreature"]],
   "some-accessories": [["a(n)"], ["pick-pluralize", "accessoryAll"]],
   "some-animalAndMonsters": [["a(n)"], ["pick-pluralize", "animalAndMonster"]],
   "_adjectivePerson": [["pick", "adjectivePerson"]],

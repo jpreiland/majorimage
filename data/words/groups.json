@@ -29,7 +29,7 @@
   "qualityObject": ["adjectiveAesthetic", "adjectiveAge", "adjectiveAgeObject", "adjectiveCondition", "adjectiveCleanliness", "adjectiveQuality", "adjectiveSizeAll", "adjectiveStructural", "adjectiveWeight"],
   "structure": ["building", "buildingReligious", "buildingWaterside", "tree"],
   "tradeAdventurerAll": ["tradeAdventurer", "tradeAdventurerBasic"],
-  "treasure": ["art", "artBasic", "jewelryAll", "miscTreasure", "miscTreasureBasic"],
+  "treasure": ["art", "jewelry", "miscTreasure", "treasureBasic"],
   "treasureBasic": ["artBasic", "jewelryBasic", "miscTreasureBasic"],
   "virtue": ["virtueNegative", "virtuePositive", "feeling"],
   "weapon": ["weaponAmmo", "weaponMelee", "weaponRanged", "weaponBasic"],

@@ -57,15 +57,6 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         name += tensify(picker(part[1], data))
         break;
 
-      case 'pick-pastTense-optional':
-        if (part.length !== 2) break;
-        if (Math.random() >= 0.5) {
-          name += tensify(picker(part[1], data))
-        } else {
-          name += picker(part[1], data)
-        }
-        break;
-
       case 'pick-verber':
         if (part.length !== 2) break;
         name += verber(picker(part[1], data))
@@ -74,15 +65,6 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
       case 'pick-gerund':
         if (part.length !== 2) break;
         name += gerund(picker(part[1], data))
-        break;
-
-      case 'pick-gerund-optional':
-        if (part.length !== 2) break;
-        if (Math.random() >= 0.5) {
-          name += gerund(picker(part[1], data))
-        } else {
-          name += picker(part[1], data)
-        }
         break;
 
       case 'pick-multi':

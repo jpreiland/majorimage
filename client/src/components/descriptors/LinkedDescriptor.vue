@@ -34,7 +34,7 @@ export default {
   },
   data () {
     return {
-      descriptorText: "default name",
+      descriptorText: "Linked Descriptor",
       linkValue: 0,
       formatMap: {},
       totalWeight: 0
