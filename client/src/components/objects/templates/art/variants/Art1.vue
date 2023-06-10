@@ -7,9 +7,9 @@
   <div class="info-panel-description">
       <p>
         The work evokes themes of 
-        <Descriptor :type="'_VirtuePositive'" :color="'#65d1db'"/>
+        <SimpleDescriptor :type="'virtuePositive'" :color="'#65d1db'"/>
         and 
-        <Descriptor :type="'_VirtueNegative'" :color="'#8f2f34'"/>
+        <SimpleDescriptor :type="'virtueNegative'" :color="'#8f2f34'"/>
         . <br />
         Lorem ipsum <Descriptor :type="'TestNum5-17'" :color="'#00ffff'"/> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor <Descriptor :type="'TestNum0-9-no'" :color="'#ff00ff'"/> incididunt ut labore et dolore magna aliqua. 
         Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris <Descriptor :type="'TestNum5-17'" :color="'#ff0000'" :numRangeOverride="{min: 0, max: 3, zeroString: 'nothing!'}"/> nisi ut aliquip ex ea commodo consequat. 

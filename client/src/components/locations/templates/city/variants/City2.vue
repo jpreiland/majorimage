@@ -8,8 +8,8 @@
   <div class="info-panel-description">
     <p>
       {{ links.cityName }} is
-      <Descriptor :type="'A(n)AdjectiveSizeBasic'" :color="'#c42b68'" /> city located 
-      <Descriptor :type="'DistanceLarge'" :color="'#61d0ff'" /> <Descriptor :type="'_Direction'" :color="'#2b7fc4'" /> 
+      <SimpleDescriptor :type="'adjectiveSizeBasic'" :a_an="true" :color="'#c42b68'" /> city located 
+      <Descriptor :type="'DistanceLarge'" :color="'#61d0ff'" /> <SimpleDescriptor :type="'direction'" :color="'#2b7fc4'" /> 
       of <Descriptor :type="'GeographicFeature'" :color="'brown'" />. 
     </p>
     <p>

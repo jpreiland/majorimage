@@ -7,6 +7,7 @@ const exceptions = {
   "fey": "fey",
   "koi": "koi",
   "man-at-arms": "men-at-arms",
+  "marquis": "marquises",
   "mongoose": "mongeese",
   "pegasus": "pegasi",
   "rug of smothering": "rugs of smothering",

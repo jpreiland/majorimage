@@ -45,9 +45,9 @@
           Lovingly created by <a href="https://twitter.com/barcodedm" target="_blank">BarcodeDM</a> with help from 
         </p>
         <p>
-          <Descriptor :type="'A(n)AmountGroupCreature'" :color="'red'" /> 
-          of <Descriptor :type="'_AdjectivePerson'" :color="'green'" />
-          <Descriptor :type="'_Creatures'" :color="'blue'" />
+          <SimpleDescriptor :type="'amountGroupCreature'" :a_an="true" :color="'red'" /> 
+          of <SimpleDescriptor :type="'adjectivePerson'" :color="'green'" />
+          <SimpleDescriptor :type="'creature'" :pickStyle="'pick-pluralize'" :color="'blue'" />
         </p>
       </div>
 

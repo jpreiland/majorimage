@@ -8,7 +8,7 @@
     <div>
       <template v-for="spell in srdSpells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
         <p>
-          <Descriptor :type="'_Spell'" :color="'#FF8C58'" />
+          <SimpleDescriptor :type="'spellSRD'" :properNoun="true" :color="'#FF8C58'" />
         </p>
       </template>
     </div>
