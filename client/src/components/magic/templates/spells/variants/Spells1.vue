@@ -1,34 +1,42 @@
 <template>
-  <div class="card-header">
-    <div class="card-header-left">
-      <h2 class="card-title">SRD Spells</h2>
+  <div>
+    <div class="card-header">
+      <div class="card-header-left">
+        <h2 class="card-title">
+          SRD Spells
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="info-panel-description">
-    <div>
-      <template v-for="spell in srdSpells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
-        <p>
-          <SimpleDescriptor :type="'spellSRD'" :properNoun="true" :color="'#FF8C58'" />
-        </p>
-      </template>
+    <div class="info-panel-description">
+      <div>
+        <template v-for="spell in srdSpells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
+          <p>
+            <SimpleDescriptor :type="'spellSRD'" :proper-noun="true" :color="'#FF8C58'" />
+          </p>
+        </template>
+      </div>
     </div>
-  </div>
-  <div class="card-header" style="margin-top:2.5rem">
-    <div class="card-header-left">
-      <h2 class="card-title">Custom Spells</h2>
+    <div class="card-header" style="margin-top:2.5rem">
+      <div class="card-header-left">
+        <h2 class="card-title">
+          Custom Spells
+        </h2>
+      </div>
     </div>
-  </div>
-  <div class="info-panel-description">
-    <div>
-      <template v-for="spell in customSpells" :key="'CustomSpell-'+spell.id+'-'+rerollToggle">
-        <p>
-          <Descriptor :type="'CustomSpell'" :color="'#58CBFF'" />
-        </p>
-      </template>
+    <div class="info-panel-description">
+      <div>
+        <template v-for="spell in customSpells" :key="'CustomSpell-'+spell.id+'-'+rerollToggle">
+          <p>
+            <Descriptor :type="'CustomSpell'" :color="'#58CBFF'" />
+          </p>
+        </template>
+      </div>
     </div>
-  </div>
-  <div class="center">
-    <button class="button info-panel reroll-all" @click="rerollAll()">Reroll All</button>
+    <div class="center">
+      <button class="button info-panel reroll-all" @click="rerollAll()">
+        Reroll All
+      </button>
+    </div>
   </div>
 </template>
 

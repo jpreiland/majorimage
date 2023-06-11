@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <div class="columns list left-scroll-menu">
-      <div class="column left-scroll-menu">
-        <ul>
-          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(magicSubpage, key, i) in data.templates.magic" @click="select(magicSubpage, i)" :key="'magicSubpage-'+key">{{ magicSubpage._displayName }}</li>
-        </ul>
-      </div>
-      <div class="column right-info-card-holder">
-        <div class="info-card right">
-          <component v-if="initialized" :is="computeType"></component>
-        </div>
+  <div class="columns">
+    <div class="column list left-scroll-menu">
+      <ul>
+        <li v-for="(magicSubpage, key, i) in data.templates.magic" :key="'magicSubpage-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(magicSubpage, i)">
+          {{ magicSubpage._displayName }}
+        </li>
+      </ul>
+    </div>
+    <div class="column right-info-card-holder">
+      <div class="info-card right">
+        <component :is="computeType" v-if="initialized" />
       </div>
     </div>
   </div>
@@ -27,6 +27,12 @@ export default {
       activeType: {},
       activePath: "",
       initialized: false
+    }
+  },
+  computed: {
+    computeType () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
     }
   },
   async mounted() {
@@ -58,16 +64,6 @@ export default {
         this.types[i].selected = (i == listIndex)
       }
     }
-  },
-  computed: {
-    computeType () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
-    }
   }
 }
 </script>
-
-<style>
-
-</style>
