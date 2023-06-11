@@ -1,3 +1,5 @@
 <template>
-  welcome aboard!
+  <div class="info-panel-description">
+    welcome aboard!
+  </div>
 </template>

@@ -3,12 +3,14 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(location, key, i) in data.templates.locations" @click="select(location, i)" :key="'location-'+key">{{ location._displayName }}</li>
+          <li v-for="(location, key, i) in data.templates.locations" :key="'location-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(location, i)">
+            {{ location._displayName }}
+          </li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
         <div class="info-card right">
-          <component v-if="initialized" :is="computeType"></component>
+          <component :is="computeType" v-if="initialized" />
         </div>
       </div>
     </div>
@@ -27,6 +29,12 @@ export default {
       activeType: {},
       activePath: "",
       initialized: false
+    }
+  },
+  computed: {
+    computeType () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
     }
   },
   async mounted() {
@@ -58,16 +66,6 @@ export default {
         this.types[i].selected = (i == listIndex)
       }
     }
-  },
-  computed: {
-    computeType () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
-    }
   }
 }
 </script>
-
-<style>
-
-</style>

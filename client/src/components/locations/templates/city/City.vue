@@ -1,5 +1,5 @@
 <template>
-  <component v-if="initialized" :is="loadVariant"></component>
+  <component :is="loadVariant" v-if="initialized" />
 </template>
 
 <script>
@@ -19,6 +19,12 @@ export default {
       initialized: false
     }
   },
+  computed: {
+    loadVariant () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
+    }
+  },
   async mounted() {
     this.loadVariants()
     this.rollVariant()
@@ -35,15 +41,6 @@ export default {
       this.activeVariant = Math.floor(Math.random() * this.variants.length)
       this.activePath = this.data.templates.locations.city[this.variants[this.activeVariant]]
     }
-  },
-  computed: {
-    loadVariant () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
-    }
   }
 }
 </script>
-
-<style>
-</style>

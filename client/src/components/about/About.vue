@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="info-card material info-panel-description" style="padding-left: 12px; padding-right: 12px;">
-      <div class="attribute key">What is this place?</div>
+      <div class="attribute key">
+        What is this place?
+      </div>
       <div class="no-descriptors">
         <p>
           There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> 
@@ -13,7 +15,9 @@
         </p>
       </div>
 
-      <div class="attribute key">How does it work?</div>
+      <div class="attribute key">
+        How does it work?
+      </div>
       <div class="no-descriptors">
         <p>
           The color-coded underlined bits of text you see around the site are called Descriptors. 
@@ -23,7 +27,9 @@
         </p>
       </div>
 
-      <div class="attribute key">Does Major Image use AI?</div>
+      <div class="attribute key">
+        Does Major Image use AI?
+      </div>
       <div class="no-descriptors">
         <p>
           No.
@@ -38,7 +44,9 @@
         </p>
       </div>
 
-      <div class="attribute key"><hr /></div>
+      <div class="attribute key">
+        <hr>
+      </div>
 
       <div style="text-align: center;">
         <p>
@@ -47,11 +55,13 @@
         <p>
           <SimpleDescriptor :type="'amountGroupCreature'" :a_an="true" :color="'red'" /> 
           of <SimpleDescriptor :type="'adjectivePerson'" :color="'green'" />
-          <SimpleDescriptor :type="'creature'" :pickStyle="'pick-pluralize'" :color="'blue'" />
+          <SimpleDescriptor :type="'creature'" :pick-style="'pick-pluralize'" :color="'blue'" />
         </p>
       </div>
 
-      <div class="attribute key"><hr /></div>
+      <div class="attribute key">
+        <hr>
+      </div>
     </div>
   </div>
 </template>
