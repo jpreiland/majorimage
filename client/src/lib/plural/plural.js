@@ -1,4 +1,4 @@
-const pluralize = require('pluralize')
+import pluralize from 'pluralize'
 
 const exceptions = {
   "avatar of death": "avatars of death",
@@ -6,6 +6,7 @@ const exceptions = {
   "fae": "fae",
   "fey": "fey",
   "koi": "koi",
+  "lens": "lenses",
   "man-at-arms": "men-at-arms",
   "marquis": "marquises",
   "mongoose": "mongeese",
@@ -15,7 +16,8 @@ const exceptions = {
 }
 
 function plural(word) {
+  if (typeof word !== 'string') return word
   return Object.hasOwn(exceptions, word) ? exceptions[word] : pluralize(word)
 }
 
-module.exports = plural
+export default plural

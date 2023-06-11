@@ -1,10 +1,11 @@
-const AvsAnSimple = require('../a-vs-an/avs-an-simple'),
-      gerund = require('../gerunds/gerunds'),
-      plural = require('../plural/plural'),
-      tensify = require('../tensify/inflector').default,
-      title = require('../titleize/titleize'),
-      verber = require('../verber/verber'),
-      { mapFormats, pickFormat } = require('../descriptor-utils/formats')
+/* eslint-disable no-case-declarations */
+import AvsAnSimple from '../a-vs-an/avs-an-simple'
+import gerund from '../gerunds/gerunds'
+import plural from '../plural/plural'
+import tensify from '../tensify/inflector'
+import title from '../titleize/titleize'
+import verber from '../verber/verber'
+import { mapFormats, pickFormat } from '../descriptor-utils/formats'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitch(parts, data, priceOverride, numRangeOverride) {
@@ -228,12 +229,13 @@ function formatPrice(price) {
   price = (price - silver) / 10
 
   //gold
-  gold = price
+  let gold = price
 
   return (gold > 0 ? gold.toLocaleString() + "g" : "") + (silver > 0 ? silver + "s" : "") + (copper > 0 ? copper + "c" : "")
 }
 
 /* TODO: move this into unit tests */
+// eslint-disable-next-line no-unused-vars
 function testCategoryStat(category, data, iterations) {
   let testMap = {}
   for (let i = 0; i < iterations; i++) {
@@ -247,4 +249,4 @@ function testCategoryStat(category, data, iterations) {
   console.log(testMap)
 }
 
-module.exports = stitch
+export default stitch

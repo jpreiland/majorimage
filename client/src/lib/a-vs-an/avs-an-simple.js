@@ -24,6 +24,7 @@ var AvsAnSimple = (function (root) {
 				c = word[sI++];
 			} while ('"‘’“”$\'-('.indexOf(c) >= 0);//also terminates on end-of-string "undefined".
 
+			// eslint-disable-next-line no-constant-condition
 			while (1) {
 				result = node.article || result;
 				node = node[c];
@@ -34,4 +35,4 @@ var AvsAnSimple = (function (root) {
 	};
 })({});
 
-module.exports = AvsAnSimple
+export default AvsAnSimple

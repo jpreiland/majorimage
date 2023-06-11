@@ -1,9 +1,9 @@
-const specialGerunds = require('./special-gerunds'),
-      symbols = require('symbols')
+import specialGerunds from './special-gerunds'
+import { is_vowel } from 'symbols'
 
 function ends_with_two_vowels(verb, last) {
-  return symbols.is_vowel(verb[last])
-      && symbols.is_vowel(verb[last - 1])
+  return is_vowel(verb[last])
+      && is_vowel(verb[last - 1])
 }
 
 function ends_with_e(verb, last) {
@@ -25,10 +25,10 @@ function ingify(verb) {
 }
 
 function gerund(verb) {
-  if (!verb || verb.length < 1) return verb
+  if (typeof verb !== 'string' || verb.length < 1) return verb
   const special = specialGerunds[verb]
 
   return special ? special : ingify(verb)
 }
 
-module.exports = gerund
+export default gerund

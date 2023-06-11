@@ -44,7 +44,7 @@ describe('#tensify', () => {
     expect(tensify('seed')).toBe('seeded')
   })
 
-  it('returns past tense verb if input ends with vowel-consonant, except consonants w or x', () => {
+  it('returns past tense verb if input ends with vowel-consonant, except consonants r, w, or x', () => {
     expect(tensify('sunder')).toBe('sundered')
     expect(tensify('allow')).toBe('allowed')
     expect(tensify('tax')).toBe('taxed')
