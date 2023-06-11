@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <div class="columns list left-scroll-menu">
-      <div class="column left-scroll-menu">
-        <ul>
-          <li v-for="(objectSubpage, key, i) in data.templates.objects" :key="'objectSubpage-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(objectSubpage, i)">
-            {{ objectSubpage._displayName }}
-          </li>
-        </ul>
-      </div>
-      <div class="column right-info-card-holder">
-        <div class="info-card right">
-          <component :is="computeType" v-if="initialized" />
-        </div>
+  <div class="columns list left-scroll-menu">
+    <div class="column left-scroll-menu">
+      <ul>
+        <li v-for="(objectSubpage, key, i) in data.templates.objects" :key="'objectSubpage-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(objectSubpage, i)">
+          {{ objectSubpage._displayName }}
+        </li>
+      </ul>
+    </div>
+    <div class="column right-info-card-holder">
+      <div class="info-card right">
+        <component :is="computeType" v-if="initialized" />
       </div>
     </div>
   </div>

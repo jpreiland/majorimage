@@ -1,5 +1,5 @@
 <template>
-  <div class="columns">
+  <div class="columns list left-scroll-menu">
     <div class="column list left-scroll-menu">
       <ul>
         <li v-for="(location, key, i) in data.templates.locations" :key="'location-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(location, i)">

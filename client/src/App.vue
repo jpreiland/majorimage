@@ -48,6 +48,7 @@ export default {
     }
   },
   computed: {
+    // TODO: rework routing so that it isn't so horrendous
     currentView() {
       let urlParts = window.location.hash ? window.location.hash.split('/') : window.location.pathname.split('/')
       if (urlParts.length === 3) {
