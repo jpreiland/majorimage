@@ -7,7 +7,7 @@ import stitch from '../../lib/descriptor-utils/stitcher'
 import { mapFormats, pickFormat } from '../../lib/descriptor-utils/formats'
 
 export default {
-  name: "StealthDescriptor",
+  name: 'StealthDescriptor',
   inject: ['data'],
   props: {
     type: {
@@ -15,11 +15,14 @@ export default {
       required: true
     },
     color: {
-      type: String
+      type: String,
+      default: 'black'
     },
+    // eslint-disable-next-line vue/require-default-prop
     priceOverride: {
       type: Object
     },
+    // eslint-disable-next-line vue/require-default-prop
     numRangeOverride: {
       type: Object
     }

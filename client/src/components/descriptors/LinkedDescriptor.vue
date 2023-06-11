@@ -7,20 +7,22 @@ import stitch from '../../lib/descriptor-utils/stitcher'
 import { mapFormats, pickFormat } from '../../lib/descriptor-utils/formats'
 
 export default {
-  name: "Linked",
+  name: 'LinkedDescriptor',
   inject: ['data'],
-  emits: ['linkUpdate'],
   props: {
     type: {
       type: String,
       required: true
     },
     color: {
-      type: String
+      type: String,
+      default: 'black'
     },
+    // eslint-disable-next-line vue/require-default-prop
     priceOverride: {
       type: Object
     },
+    // eslint-disable-next-line vue/require-default-prop
     numRangeOverride: {
       type: Object
     },
@@ -28,10 +30,12 @@ export default {
       type: String,
       required: true
     },
+    // eslint-disable-next-line vue/require-default-prop
     linkedParser: {
       type: Function,
     }
   },
+  emits: ['linkUpdate'],
   data () {
     return {
       descriptorText: "Linked Descriptor",

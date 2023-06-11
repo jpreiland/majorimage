@@ -6,7 +6,7 @@
 import stitch from '../../lib/descriptor-utils/stitcher'
 
 export default {
-  name: "SimpleDescriptor",
+  name: 'SimpleDescriptor',
   inject: ['data'],
   props: {
     type: {
@@ -14,8 +14,10 @@ export default {
       required: true
     },
     color: {
-      type: String
+      type: String,
+      default: 'black'
     },
+    // eslint-disable-next-line vue/prop-name-casing
     a_an: {
       type: Boolean
     },
@@ -23,7 +25,8 @@ export default {
       type: Boolean
     },
     pickStyle: {
-      type: String
+      type: String,
+      default: "pick"
     }
   },
   data () {
@@ -44,7 +47,7 @@ export default {
     if (this.properNoun) this.format.push(["title"])
     if (this.a_an) this.format = [["a(n)"]].concat(this.format)
 
-    if (this.pickStyle && this.pickStyles.indexOf(this.pickStyle) >= 0) {
+    if (this.pickStyles.indexOf(this.pickStyle) >= 0) {
       this.format.push([this.pickStyle, this.type])
     } else {
       this.format.push(["pick", this.type])

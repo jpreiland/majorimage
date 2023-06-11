@@ -4,10 +4,10 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ["eslint:recommended", "plugin:vue/recommended"],
+  extends: ["eslint:recommended", "plugin:vue/vue3-recommended", "plugin:vue/recommended"],
   overrides: [
   ],
-  parser: '@babel/eslint-parser',
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: "@babel/eslint-parser",
     ecmaVersion: 2020,
@@ -19,6 +19,9 @@ module.exports = {
   },
   plugins: ["import", "vue"],
   rules: {
-    'vue/no-template-key': 0
+    'vue/max-attributes-per-line': 0,
+    'vue/no-template-key': 0,
+    'vue/no-v-for-template-key': 0,
+    'vue/multi-word-component-names': 0
   },
 };

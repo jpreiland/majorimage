@@ -6,7 +6,7 @@
 import stitch from '../../lib/descriptor-utils/stitcher'
 
 export default {
-  name: "FilteredDescriptor",
+  name: 'FilteredDescriptor',
   inject: ['data'],
   props: {
     filteredFormats: {
@@ -18,11 +18,14 @@ export default {
       required: true
     },
     color: {
-      type: String
+      type: String,
+      default: 'black'
     },
+    // eslint-disable-next-line vue/require-default-prop
     priceOverride: {
       type: Object
     },
+    // eslint-disable-next-line vue/require-default-prop
     numRangeOverride: {
       type: Object
     }

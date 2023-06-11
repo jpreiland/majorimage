@@ -3,8 +3,10 @@ function formatMapper(dfMap) {
   let totalWeight = 0
 
   for (let format of Object.keys(dfMap)) {
+    if (!dfMap[format].weight || isNaN(dfMap[format].weight) || dfMap[format].weight < 1) continue
+    if (!dfMap[format].format || !Array.isArray(dfMap[format].format)) continue
     totalWeight += dfMap[format].weight
-    formatMap[totalWeight-1] = format
+    formatMap[totalWeight - 1] = format
   }
 
   return {
