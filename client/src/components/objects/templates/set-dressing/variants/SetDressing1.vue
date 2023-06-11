@@ -6,7 +6,7 @@
         <a class="button filter" :class="{ 'is-light': !params.isClothing }" @click="toggleItemType('isClothing')">Clothing</a>
         <a class="button filter" :class="{ 'is-light': !params.isContainer }" @click="toggleItemType('isContainer')">Container</a>
         <a class="button filter" :class="{ 'is-light': !params.isFurniture }" @click="toggleItemType('isFurniture')">Furniture</a>
-        <br />
+        <br>
         <a class="button filter" :class="{ 'is-light': !params.isMisc }" @click="toggleItemType('isMisc')">Misc</a>
         <a class="button filter" :class="{ 'is-light': !params.isTreasure }" @click="toggleItemType('isTreasure')">Treasure</a>
         <a class="button filter" :class="{ 'is-light': !params.isWeapon }" @click="toggleItemType('isWeapon')">Weapon</a>
@@ -15,11 +15,13 @@
     </div>
     <div>
       <template v-for="row in rows" :key="'item-'+row.id+'-'+rerollToggle">
-        <ObjectRow :itemTypes="itemTypes" />
+        <ObjectRow :item-types="itemTypes" />
       </template>
     </div>
     <div class="center">
-      <button class="button reroll-all" @click="rerollAll()">Reroll All</button>
+      <button class="button reroll-all" @click="rerollAll()">
+        Reroll All
+      </button>
     </div>
   </div>
 </template>
@@ -76,7 +78,6 @@ export default {
       this.compileItemTypes()
     },
     async compileItemTypes() {
-      // TODO fix this to work with new nested groups
       this.itemTypes.compiled = false
       this.itemFormats = []
 

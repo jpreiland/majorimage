@@ -3,12 +3,14 @@
     <div class="columns list left-scroll-menu">
       <div class="column left-scroll-menu">
         <ul>
-          <li class="list-item" :class="{ 'selected': this.initialized && types[i].selected }" v-for="(shopSubpage, key, i) in data.templates.shops" @click="select(shopSubpage, i)" :key="'shopSubpage-'+key">{{ shopSubpage._displayName }}</li>
+          <li v-for="(shopSubpage, key, i) in data.templates.shops" :key="'shopSubpage-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(shopSubpage, i)">
+            {{ shopSubpage._displayName }}
+          </li>
         </ul>
       </div>
       <div class="column right-info-card-holder">
         <div class="info-card right">
-          <component v-if="initialized" :is="computeType"></component>
+          <component :is="computeType" v-if="initialized" />
         </div>
       </div>
     </div>
@@ -27,6 +29,12 @@ export default {
       activeType: {},
       activePath: "",
       initialized: false
+    }
+  },
+  computed: {
+    computeType () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
     }
   },
   async mounted() {
@@ -57,12 +65,6 @@ export default {
       for (let i in this.types) {
         this.types[i].selected = (i == listIndex)
       }
-    }
-  },
-  computed: {
-    computeType () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
     }
   }
 }

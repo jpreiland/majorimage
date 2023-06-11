@@ -1,10 +1,9 @@
 <template>
-  <component v-if="initialized" :is="loadVariant"></component>
+  <component :is="loadVariant" v-if="initialized" />
 </template>
 
 <script>
 import { defineAsyncComponent } from "vue"
-
 
 export default {
   name: 'Rumor',
@@ -15,6 +14,12 @@ export default {
       activeVariant: 0,
       activePath: "",
       initialized: false
+    }
+  },
+  computed: {
+    loadVariant () {
+      if (this.activePath.includes('..')) return
+      return defineAsyncComponent(() => import(`${this.activePath}`))
     }
   },
   async mounted() {
@@ -33,15 +38,6 @@ export default {
       this.activeVariant = Math.floor(Math.random() * this.variants.length)
       this.activePath = this.data.templates.quests.rumor[this.variants[this.activeVariant]]
     }
-  },
-  computed: {
-    loadVariant () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
-    }
   }
 }
 </script>
-
-<style>
-</style>

@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <script>
 import { computed } from 'vue'
 import axios from "axios"
@@ -71,7 +72,7 @@ export default {
   },
   mounted() {
     window.addEventListener('hashchange', () => {
-		  this.currentPath = window.location.hash
+      this.currentPath = window.location.hash
       window.location.pathname = '/'
 		})
   },
@@ -87,23 +88,41 @@ export default {
 </script>
 
 <template>
-  <div class="banner">
-    <div class="header">
-      <p>
-        <img class="header-icon" src="../public/apple-touch-icon.png" />
-        <span class="title-text">Major Image</span>
-      </p>
+  <div>
+    <div class="banner">
+      <div class="header">
+        <p>
+          <img class="header-icon" src="../public/apple-touch-icon.png">
+          <span class="title-text">Major Image</span>
+        </p>
+      </div>
+      <div class="navigation">
+        <button key="objects" class="button nav-btn red" :class="{ 'nav-selected': nav.objects }" @click="navigate('#/', 'objects')">
+          Objects
+        </button>
+        <button key="locations" class="button nav-btn orange" :class="{ 'nav-selected': nav.locations }" @click="navigate('#/locations', 'locations')">
+          Locations
+        </button> 
+        <button key="magic" class="button nav-btn yellow" :class="{ 'nav-selected': nav.magic }" @click="navigate('#/magic', 'magic')">
+          Magic
+        </button> 
+        <button key="shops" class="button nav-btn green" :class="{ 'nav-selected': nav.shops }" @click="navigate('#/shops', 'shops')">
+          Shops
+        </button> 
+        <button key="npcs" class="button nav-btn blue" :class="{ 'nav-selected': nav.npcs }" @click="navigate('#/npcs', 'npcs')">
+          NPCs
+        </button> 
+        <button key="quests" class="button nav-btn indigo" :class="{ 'nav-selected': nav.quests }" @click="navigate('#/quests', 'quests')">
+          Quests
+        </button> 
+        <button key="materials" class="button nav-btn violet" :class="{ 'nav-selected': nav.materials }" @click="navigate('#/materials', 'materials')">
+          Materials
+        </button> 
+        <button key="about" class="button nav-btn" @click="navigate('#/about')">
+          About
+        </button> 
+      </div>
     </div>
-    <div class="navigation">
-      <button class="button nav-btn red" :class="{ 'nav-selected': nav.objects }" @click="navigate('#/', 'objects')" key="objects">Objects</button>
-      <button class="button nav-btn orange" :class="{ 'nav-selected': nav.locations }"  @click="navigate('#/locations', 'locations')" key="locations">Locations</button> 
-      <button class="button nav-btn yellow" :class="{ 'nav-selected': nav.magic }" @click="navigate('#/magic', 'magic')" key="magic">Magic</button> 
-      <button class="button nav-btn green" :class="{ 'nav-selected': nav.shops }" @click="navigate('#/shops', 'shops')" key="shops">Shops</button> 
-      <button class="button nav-btn blue" :class="{ 'nav-selected': nav.npcs }" @click="navigate('#/npcs', 'npcs')" key="npcs">NPCs</button> 
-      <button class="button nav-btn indigo" :class="{ 'nav-selected': nav.quests }" @click="navigate('#/quests', 'quests')" key="quests">Quests</button> 
-      <button class="button nav-btn violet" :class="{ 'nav-selected': nav.materials }" @click="navigate('#/materials', 'materials')" key="more">Materials</button> 
-      <button class="button nav-btn" @click="navigate('#/about')" key="about">About</button> 
-    </div>
+    <component :is="currentView" v-if="data" class="page" />
   </div>
-  <component v-if="this.data" class="page" :is="currentView" />
 </template>
