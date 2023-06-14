@@ -1,10 +1,12 @@
+// TODO: Move formatMapper to server alongside the rest of the data compilation process
+// so that there isn't this intermediate schema for format maps. This will simplify
+// Descriptors and Stitcher.
 function formatMapper(dfMap) {
   const formatMap = {}
   let totalWeight = 0
 
   for (let format of Object.keys(dfMap)) {
-    if (!dfMap[format].weight || isNaN(dfMap[format].weight) || dfMap[format].weight < 1) continue
-    if (!dfMap[format].format || !Array.isArray(dfMap[format].format)) continue
+    if (!isFormatValid(dfMap[format])) continue
     totalWeight += dfMap[format].weight
     formatMap[totalWeight - 1] = format
   }
@@ -13,6 +15,12 @@ function formatMapper(dfMap) {
     "totalWeight": totalWeight,
     "formatMap": formatMap
   }
+}
+
+function isFormatValid(format) {
+  if (!format.weight || isNaN(format.weight) || format.weight < 1) return false
+  if (!format.format || !Array.isArray(format.format)) return false
+  return true
 }
 
 function formatPicker(formatMap, totalWeight) {

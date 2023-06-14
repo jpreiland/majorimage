@@ -8,14 +8,14 @@ import verber from '../verber/verber'
 import { mapFormats, pickFormat } from '../descriptor-utils/formats'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitch(parts, data, priceOverride, numRangeOverride) {
+function stitcher(parts, data, priceOverride, numRangeOverride) {
   let name = ""
   let word
   let numWords = 0
   let a_an_flag = false
   let isTitle = false
 
-  if (parts === null || parts === undefined) console.log(`Missing descriptor format!`)
+  if (parts === null || parts === undefined) return "" 
 
   for (let part of parts) {
     if (part.length === 0) continue;
@@ -122,7 +122,7 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         break;
 
       case 'price':
-        if (part.length < 3) break;
+        if (part.length !== 3) break;
         let priceParts = [...part]
         if (priceOverride) {
           if (!isNaN(priceOverride.min)) priceParts[1] = priceOverride.min
@@ -134,10 +134,11 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
         break;
 
       case 'format':
-        if (part.length < 2) break;
+        if (part.length !== 2) break;
         let formatParts
 
         // if descriptor type, build format map and roll for format
+        // TODO: mapFormats here should be redundant after it is moved to server
         if (Object.hasOwn(data.dfMap, part[1])) {
           const res = mapFormats(data.dfMap[part[1]])
           formatParts = data.formats[pickFormat(res.formatMap, res.totalWeight)]
@@ -155,11 +156,11 @@ function stitch(parts, data, priceOverride, numRangeOverride) {
     }
   }
 
-  return isTitle ? title(name) : name
+  return (isTitle ? title(name) : name).trim()
 }
 
 function do_a_an(word, a_an_flag) {
-  return a_an_flag ? AvsAnSimple.query(word) + " " + word : word
+  return a_an_flag ? (AvsAnSimple.query(word) + " " + word) : word
 }
 
 function picker(category, data) {
@@ -170,7 +171,10 @@ function picker(category, data) {
 }
 
 function wordPicker(category, data) {
-  if (!data.categories[category])  console.log(`category ${category} does not exist`)
+  if (!data.categories[category]) {
+    console.log(`category ${category} does not exist`)
+    return ""
+  }
   return data.categories[category][Math.floor(Math.random() * data.categories[category].length)]
 }
 
@@ -234,19 +238,5 @@ function formatPrice(price) {
   return (gold > 0 ? gold.toLocaleString() + "g" : "") + (silver > 0 ? silver + "s" : "") + (copper > 0 ? copper + "c" : "")
 }
 
-/* TODO: move this into unit tests */
-// eslint-disable-next-line no-unused-vars
-function testCategoryStat(category, data, iterations) {
-  let testMap = {}
-  for (let i = 0; i < iterations; i++) {
-    let testWord = picker(category, data)
-    if (Object.hasOwn(testMap, testWord)) {
-      testMap[testWord]++
-    } else {
-      testMap[testWord] = 1
-    }
-  }
-  console.log(testMap)
-}
-
-export default stitch
+export const pick = picker
+export const stitch = stitcher

@@ -1,0 +1,231 @@
+{
+  "categories": {
+    "accessory": [
+      "acc1",
+      "acc2",
+      "acc3"
+    ],
+    "accessoryBasic": [
+      "basic1",
+      "basic2",
+      "basic3"
+    ],
+    "name1a": [
+      "1a1",
+      "1a2",
+      "1a3"
+    ],
+    "name2a": [
+      "2a1",
+      "2a2",
+      "2a3"
+    ],
+    "name3a": [
+      "3a1",
+      "3a2",
+      "3a3"
+    ],
+    "name4a": [
+      "4a1",
+      "4a2",
+      "4a3"
+    ],
+    "name5+a": [
+      "5a1",
+      "5a2",
+      "5a3"
+    ],
+    "name1b": [
+      "1b1",
+      "1b2",
+      "1b3"
+    ],
+    "name2b": [
+      "2b1",
+      "2b2",
+      "2b3"
+    ],
+    "name3b": [
+      "3b1",
+      "3b2",
+      "3b3"
+    ],
+    "name4b": [
+      "4b1",
+      "4b2",
+      "4b3"
+    ],
+    "name5+b": [
+      "5b1",
+      "5b2",
+      "5b3"
+    ],
+    "name1c": [
+      "1c1",
+      "1c2",
+      "1c3"
+    ],
+    "name2c": [
+      "2c1",
+      "2c2",
+      "2c3"
+    ],
+    "name3c": [
+      "3c1",
+      "3c2",
+      "3c3"
+    ],
+    "name4c": [
+      "4c1",
+      "4c2",
+      "4c3"
+    ],
+    "name5+c": [
+      "5c1",
+      "5c2",
+      "5c3"
+    ]
+  },
+  "dfMap": {
+    "Accessory": {
+      "a(n)-accesory": {
+        "weight": 1,
+        "format": [
+          [
+            "a(n)"
+          ],
+          [
+            "pick",
+            "accessoryAll"
+          ]
+        ]
+      }
+    },
+    "Accessory(s)": {
+      "some-accessories": {
+        "weight": 1,
+        "format": [
+          [
+            "a(n)"
+          ],
+          [
+            "pick-pluralize",
+            "accessoryAll"
+          ]
+        ]
+      },
+      "a(n)-accesory(s)": {
+        "weight": 1,
+        "format": [
+          [
+            "a(n)"
+          ],
+          [
+            "pick-pluralize-optional",
+            "accessoryAll"
+          ]
+        ]
+      },
+      "a(n)-accesory": {
+        "weight": 1,
+        "format": [
+          [
+            "a(n)"
+          ],
+          [
+            "pick",
+            "accessoryAll"
+          ]
+        ]
+      }
+    }
+  },
+  "formats": {
+    "some-accessories": [
+      [
+        "a(n)"
+      ],
+      [
+        "pick-pluralize",
+        "accessoryAll"
+      ]
+    ],
+    "a(n)-accesory(s)": [
+      [
+        "a(n)"
+      ],
+      [
+        "pick-pluralize-optional",
+        "accessoryAll"
+      ]
+    ],
+    "a(n)-accesory": [
+      [
+        "a(n)"
+      ],
+      [
+        "pick",
+        "accessoryAll"
+      ]
+    ]
+  },
+  "groups": {
+    "accessoryAll": {
+      "categoryMap": {
+        "2": "accessory",
+        "5": "accessoryBasic"
+      },
+      "totalWords": 6
+    },
+    "nameAll": {
+      "categoryMap": {
+        "8": "name1Syllable",
+        "17": "name2Syllable",
+        "26": "name3Syllable",
+        "35": "name4Syllable",
+        "44": "name5+Syllable"
+      },
+      "totalWords": 45
+    },
+    "name1Syllable": {
+      "categoryMap": {
+        "2": "name1a",
+        "5": "name1b",
+        "8": "name1c"
+      },
+      "totalWords": 9
+    },
+    "name2Syllable": {
+      "categoryMap": {
+        "2": "name2a",
+        "5": "name2b",
+        "8": "name2c"
+      },
+      "totalWords": 9
+    },
+    "name3Syllable": {
+      "categoryMap": {
+        "2": "name3a",
+        "5": "name3b",
+        "8": "name3c"
+      },
+      "totalWords": 9
+    },
+    "name4Syllable": {
+      "categoryMap": {
+        "2": "name4a",
+        "5": "name4b",
+        "8": "name4c"
+      },
+      "totalWords": 9
+    },
+    "name5+Syllable": {
+      "categoryMap": {
+        "2": "name5+a",
+        "5": "name5+b",
+        "8": "name5+c"
+      },
+      "totalWords": 9
+    }
+  }
+}

@@ -26,7 +26,7 @@ var AvsAnSimple = (function (root) {
 
 			// eslint-disable-next-line no-constant-condition
 			while (1) {
-				result = node.article || result;
+				result = node.article;
 				node = node[c];
 				if (!node) return result;
 				c = word[sI++] || " ";

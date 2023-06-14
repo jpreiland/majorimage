@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import stitch from '../../lib/descriptor-utils/stitcher'
+import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { mapFormats, pickFormat } from '../../lib/descriptor-utils/formats'
 
 export default {
