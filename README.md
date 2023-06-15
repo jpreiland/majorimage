@@ -1,7 +1,7 @@
 ![Major Image](/client/public/apple-touch-icon.png)
 # Major Image
 
-A web based tool for generating descriptions for use in tabletop rpgs.  
+A web based tool for generating descriptions for use in tabletop RPGs.  
 
 The aim of this tool is to quickly provide GMs with sample descriptions to spark their imagination and keep the pace of play going at the table.  
 
