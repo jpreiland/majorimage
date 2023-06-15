@@ -118,8 +118,8 @@
   "jewelry": ["anklet", "armlet", "bangle", "black pearl", "bracelet", "buckle", "clasp", "cuff link", "earring", "headdress", "signet ring", "thumb ring", "toe ring", "torc"],
   "jewelryBasic": ["amulet", "bauble", "bracer", "brooch", "chain", "charm", "choker", "circlet", "coronet", "crown", "diadem", "emblem", "insignia", "locket", "mask", "medal", "medallion", "necklace", "pearl", "pendant", "pin", "ring", "talisman", "tiara"],
   "landscaping": ["bird bath", "fence", "flower bed", "garden", "gate", "hedge", "orchard", "pergola", "planter", "pond", "tree", "stepping stone", "water feature"],
+  
   "magicEffect": ["alluring", "animated", "bleeding", "cursed", "ethereal", "flaming", "fragrant", "glowing", "haunted", "holy", "humming", "hypnotic", "icy", "illusory", "immovable", "indestructible", "intelligent", "invisible", "levitating", "lucky", "oddly heavy", "oddly light", "poisoned", "shadowy", "smelly", "sparkling", "unholy", "unlucky", "unusually cool", "unusually warm", "vibrating"],
-
   "magicSpellPartPrefix": ["arcane", "astral", "banish", "chaos", "conjure", "detect", "ethereal", "illusory", "locate", "phantasmal", "planar", "primordial", "protection from", "remove", "spectral", "spinning", "spirit", "summon", "unearthly"],
   "magicSpellPartPrefixPlural": ["rain of", "swarm of"],
   "magicSpellPartSuffixSingular": ["barrage", "dance", "slam", "smash", "volley"],
