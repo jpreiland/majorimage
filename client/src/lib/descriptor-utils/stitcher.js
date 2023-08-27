@@ -122,7 +122,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
         break;
 
       case 'price':
-        if (part.length !== 3) break;
+        if (!(part.length === 3 || part.length === 4)) break;
         let priceParts = [...part]
         if (priceOverride) {
           if (!isNaN(priceOverride.min)) priceParts[1] = priceOverride.min
