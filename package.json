@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test --prefix client",
     "server": "npm run start --prefix server",
-    "client": "npm run serve --prefix client",
+    "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {

@@ -26,13 +26,14 @@ export default {
       types: [],
       activeType: {},
       activePath: "",
+      activeComponent: "",
       initialized: false
     }
   },
   computed: {
     computeType () {
       if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
+      return defineAsyncComponent(() => import(`./templates/${this.activePath}/${this.activeComponent}.vue`))
     }
   },
   async mounted() {
@@ -42,6 +43,7 @@ export default {
     }
     this.activeType = this.menuSelections.magic
     this.activePath = this.data.templates.magic[this.activeType]._path
+    this.activeComponent = this.data.templates.magic[this.activeType]._component
     this.setSelected()
     this.initialized = true
   },
@@ -60,6 +62,7 @@ export default {
       const pathParts = magicSubpage._path.split('/')
       this.menuSelections.magic = pathParts[pathParts.length-2]
       this.activePath = magicSubpage._path
+      this.activeComponent = magicSubpage._component
       for (let i in this.types) {
         this.types[i].selected = (i == listIndex)
       }

@@ -1,23 +1,10 @@
 module.exports = {
   env: {
-    browser: true,
-    es2021: true,
     node: true,
+    es2022: true,
   },
-  extends: ["eslint:recommended", "plugin:vue/vue3-recommended", "plugin:vue/recommended"],
-  overrides: [
-  ],
+  extends: ["eslint:recommended", "plugin:vue/vue3-recommended"],
   parser: 'vue-eslint-parser',
-  parserOptions: {
-    parser: "@babel/eslint-parser",
-    ecmaVersion: 2020,
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true,
-    },
-    requireConfigFile: false,
-    sourceType: 'module',
-  },
-  plugins: ["import", "vue"],
   rules: {
     'vue/max-attributes-per-line': 0,
     'vue/no-template-key': 0,

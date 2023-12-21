@@ -26,13 +26,14 @@ export default {
       types: [],
       activeType: {},
       activePath: "",
+      activeComponent: "",
       initialized: false
     }
   },
   computed: {
     computeType () {
       if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
+      return defineAsyncComponent(() => import(`./templates/${this.activePath}/${this.activeComponent}.vue`))
     }
   },
   async mounted() {
@@ -42,6 +43,7 @@ export default {
     }
     this.activeType = this.menuSelections.locations
     this.activePath = this.data.templates.locations[this.activeType]._path
+    this.activeComponent = this.data.templates.locations[this.activeType]._component
     this.setSelected()
     this.initialized = true
   },
@@ -56,10 +58,11 @@ export default {
         type.selected = (type.name === this.menuSelections.locations)
       }
     },
-    async select(location, listIndex) {
-      const pathParts = location._path.split('/')
+    async select(locationSubpage, listIndex) {
+      const pathParts = locationSubpage._path.split('/')
       this.menuSelections.locations = pathParts[pathParts.length-2]
-      this.activePath = location._path
+      this.activePath = locationSubpage._path
+      this.activeComponent = locationSubpage._component
       for (let i in this.types) {
         this.types[i].selected = (i == listIndex)
       }

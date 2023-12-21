@@ -2,87 +2,101 @@
   "objects": {
     "set-dressing": {
       "_displayName": "Set Dressing",
-      "_path": "./templates/set-dressing/SetDressing.vue",
-      "set-dressing-1": "./variants/SetDressing1.vue"
+      "_path": "set-dressing",
+      "_component": "SetDressing",
+      "set-dressing-1": "SetDressing1"
     },
     "art": {
       "_displayName": "Art",
-      "_path": "./templates/art/Art.vue",
-      "art-1": "./variants/Art1.vue"
+      "_path": "art",
+      "_component": "Art",
+      "art-1": "Art1"
     }    
   },
   "locations": {
     "city": {
       "_displayName": "City",
-      "_path": "./templates/city/City.vue",
-      "city-1": "./variants/City1.vue",
-      "city-2": "./variants/City2.vue"
+      "_path": "city",
+      "_component": "City",
+      "city-1": "City1",
+      "city-2": "City2"
     },
     "temple": {
       "_displayName": "Temple",
-      "_path": "./templates/temple/Temple.vue",
-      "temple-1": "./variants/Temple1.vue",
-      "temple-2": "./variants/Temple2.vue"
+      "_path": "temple",
+      "_component": "Temple",
+      "temple-1": "Temple1",
+      "temple-2": "Temple2"
     },
     "small-town": {
       "_displayName": "Small Town",
-      "_path": "./templates/small-town/SmallTown.vue",
-      "small-town-1": "./variants/SmallTown1.vue",
-      "small-town-2": "./variants/SmallTown2.vue"
+      "_path": "small-town",
+      "_component": "SmallTown",
+      "small-town-1": "SmallTown1",
+      "small-town-2": "SmallTown2"
     },
     "ship": {
       "_displayName": "Ship",
-      "_path": "./templates/ship/Ship.vue",
-      "ship-1": "./variants/Ship1.vue",
-      "ship-2": "./variants/Ship2.vue"
+      "_path": "ship",
+      "_component": "Ship",
+      "ship-1": "Ship1",
+      "ship-2": "Ship2"
     }
   },
   "magic": {
     "spells": {
       "_displayName": "Spells",
-      "_path": "./templates/spells/Spells.vue",
-      "spells-1": "./variants/Spells1.vue"
+      "_path": "spells",
+      "_component": "Spells",
+      "spells-1": "Spells1"
     },
     "weapons": {
       "_displayName": "Magic Weapons",
-      "_path": "./templates/weapons/MagicWeapons.vue",
-      "weapons-1": "./variants/MagicWeapons1.vue"
+      "_path": "weapons",
+      "_component": "MagicWeapons",
+      "weapons-1": "MagicWeapons1"
     }
   },
   "shops": {
     "general": {
       "_displayName": "General",
-      "_path": "./templates/general/General.vue",
-      "general-1": "./variants/General1.vue"
+      "_path": "general",
+      "_component": "General",
+      "general-1": "General1"
     },
     "blacksmith": {
       "_displayName": "Blacksmith",
-      "_path": "./templates/blacksmith/Blacksmith.vue",
-      "blacksmith-1": "./variants/Blacksmith1.vue"
+      "_path": "blacksmith",
+      "_component": "Blacksmith",
+      "blacksmith-1": "Blacksmith1"
     }
   },
   "npcs": {
     "noble": {
       "_displayName": "Noble",
-      "_path": "./templates/noble/Noble.vue",
-      "noble-1": "./variants/Noble1.vue"
+      "_path": "noble",
+      "_component": "Noble",
+      "noble-1": "Noble1"
     },
     "wizard": {
       "_displayName": "Wizard",
-      "_path": "./templates/wizard/Wizard.vue",
-      "wizard-1": "./variants/Wizard1.vue"
+      "_path": "wizard",
+      "_component": "Wizard",
+      "wizard-1": "Wizard1"
     }
   },
   "quests": {
     "rumor": {
       "_displayName": "Rumors",
-      "_path": "./templates/rumor/Rumor.vue",
-      "rumor-1": "./variants/Rumor1.vue"
+      "_path": "rumor",
+      "_component": "Rumor",
+      "rumor-1": "Rumor1"
     },
     "wanted": {
       "_displayName": "Wanted",
-      "_path": "./templates/wanted/Wanted.vue",
-      "wanted-1": "./variants/Wanted1.vue"
+      "_path": "wanted",
+      "_component": "Wanted",
+      "wanted-1": "Wanted1"
     }
   }
 }

@@ -17,7 +17,7 @@
         variant 2
         <Descriptor :type="'City'" />
         Lorem ipsum 
-        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linked-parser="tlkParser" @link-update="linkUpdate" /> {{ links.tlk }} 
+        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linked-parser="cityNameParser" @link-update="linkUpdate" /> {{ links.tlk }} 
         dolor sit amet, consectetur adipiscing elit. 
         <Descriptor :type="'Book'" :color="'red'" />
         hendrerit, ligula vitae feugiat ullamcorper, velit 

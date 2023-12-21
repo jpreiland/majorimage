@@ -20,7 +20,7 @@ export default {
   computed: {
     loadVariant () {
       if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`${this.activePath}`))
+      return defineAsyncComponent(() => import(`./variants/${this.activePath}.vue`))
     }
   },
   async mounted() {

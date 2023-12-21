@@ -93,7 +93,7 @@ export default {
     <div class="banner">
       <div class="header">
         <p>
-          <img class="header-icon" src="../public/apple-touch-icon.png">
+          <img class="header-icon" src="../apple-touch-icon.png">
           <span class="title-text">Major Image</span>
         </p>
       </div>

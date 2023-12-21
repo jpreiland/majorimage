@@ -1,11 +1,11 @@
-const exceptions = require('./exceptions'),
-      symbols = require('symbols')
+import exceptions from './exceptions'
+import { is_vowel, is_consonant } from 'symbols'
 
 function ends_vowel_consonant_not_ywnr_not_doublevowel(verb, last) {
-  return symbols.is_vowel(verb[last - 1])
-      && symbols.is_consonant(verb[last])
+  return is_vowel(verb[last - 1])
+      && is_consonant(verb[last])
       && !'ywnr'.includes(verb[last])
-      && (verb.length > 2 && symbols.is_consonant(verb[last-2]))
+      && (verb.length > 2 && is_consonant(verb[last-2]))
 }
 
 function ends_with_e(verb, last) {
@@ -13,7 +13,7 @@ function ends_with_e(verb, last) {
 }
 
 function ends_consonant_y(verb, last) {
-  return symbols.is_consonant(verb[last - 1])
+  return is_consonant(verb[last - 1])
       && verb[last].toLowerCase() === 'y'
 }
 
@@ -41,4 +41,4 @@ function verber(verb) {
   return special ? special : erer(verb)
 }
 
-module.exports = verber
+export default verber
