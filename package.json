@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/jpreiland/majorimage#readme",
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^8.2.2"
   }
 }
