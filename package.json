@@ -13,7 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/jpreiland/majorimage.git"
   },
-  "keywords": [],
   "author": "JP Reiland",
   "license": "MIT License",
   "bugs": {
