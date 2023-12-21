@@ -1,5 +1,5 @@
 module.exports = {
-	plugins: [
-		require('@volar-plugins/vetur')(),
+	services: [
+		require('@volar-service-vetur').create(),
 	],
 };

@@ -72,9 +72,9 @@
   "geographySuffix": ["geographyBasic", "geographyWaterBasic", "geographyBiomeBasic"],
 
   "nameAll": ["name1Syllable", "name2Syllable", "name3Syllable", "name4Syllable", "name5+Syllable"],
-  "name1Syllable": ["name1a", "name1b", "name1c", "name1d"],
-  "name2Syllable": ["name2a", "name2b", "name2c", "name2d"],
-  "name3Syllable": ["name3a", "name3b", "name3c", "name3d"],
-  "name4Syllable": ["name4a", "name4b", "name4c", "name4d"],
-  "name5+Syllable": ["name5+a", "name5+b", "name5+c", "name5+d"]
+  "name1Syllable": ["name1a", "name1b", "name1c", "name1d", "name1e"],
+  "name2Syllable": ["name2a", "name2b", "name2c", "name2d", "name2e"],
+  "name3Syllable": ["name3a", "name3b", "name3c", "name3d", "name3e"],
+  "name4Syllable": ["name4a", "name4b", "name4c", "name4d", "name4e"],
+  "name5+Syllable": ["name5+a", "name5+b", "name5+c", "name5+d", "name5+e"]
 }
