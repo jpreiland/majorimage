@@ -9,7 +9,7 @@
     "test": "vitest --coverage"
   },
   "dependencies": {
-    "axios": "^0.26.1",
+    "axios": "^1.6.2",
     "core-js": "^3.34.0",
     "pluralize": "^8.0.0",
     "symbols": "^0.0.6",
