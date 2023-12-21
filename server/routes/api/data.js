@@ -35,7 +35,6 @@ router.get('/data', async (req, res) => {
 
 function buildWordCounts() {
   wordCounts = {}
-
   // add base categories to word counts map
   for (let category of Object.keys(Categories)) {
     wordCounts[category] = Categories[category].length
