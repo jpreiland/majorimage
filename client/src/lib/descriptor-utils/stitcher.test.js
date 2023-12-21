@@ -172,7 +172,7 @@ describe('#pick', () => {
   // There's probably better statistical tests that can be implemented here, but this is good enough for now
   it('picks words from base categories in a group at roughly equal probability', () => {
     let testMap = {}
-    for (let i = 0; i < 50_000; i++) {
+    for (let i = 0; i < 50000; i++) {
       let testWord = pick("nameAll", data)
       if (Object.hasOwn(testMap, testWord)) {
         testMap[testWord]++
@@ -190,6 +190,6 @@ describe('#pick', () => {
       expect(count).toBeGreaterThanOrEqual(950)
       expect(count).toBeLessThanOrEqual(1250)
     }
-    expect(total).toBe(50_000)
+    expect(total).toBe(50000)
   })
 })
