@@ -20,9 +20,11 @@ Pages:
 ## Setup
 Prerequisites: `git` and `node.js`
 
-Install server & client dependencies:  
+Install dependencies:  
 `npm i`  
 `cd client`  
+`npm i`  
+`cd ../server`  
 `npm i`  
 `cd ../`  
 
