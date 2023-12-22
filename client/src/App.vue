@@ -1,7 +1,6 @@
 <!-- eslint-disable vue/no-side-effects-in-computed-properties -->
 <script>
 import { computed } from 'vue'
-import axios from "axios"
 import About from './components/about/About.vue'
 import Locations from './components/locations/Locations.vue'
 import Magic from './components/magic/Magic.vue'
@@ -68,8 +67,8 @@ export default {
     }
   },
   async beforeCreate() {
-    const wordsResponse = await axios.get('/api/data', { })
-    this.data = wordsResponse.data
+    const wordsResponse = await fetch('/api/data')
+    this.data = await wordsResponse.json()
   },
   mounted() {
     window.addEventListener('hashchange', () => {
