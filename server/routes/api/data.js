@@ -13,6 +13,8 @@ const router = Router()
 
 router.get('/data', async (req, res) => {
   try {
+    // TODO: this compilaton is only here for development convenience.
+    // Eventually move to a script that compiles data once at startup rather than on each request.
     const wordCounts = buildWordCounts()
     const compiledGroups = compileGroups(wordCounts)
     const compiledFormats = compileFormats()
@@ -100,7 +102,7 @@ function compileGroups(wordCounts) {
 }
 
 function compileFormats() {
-  const compiledFormats = {}
+  const dfMap = {}
 
   for (let descriptorType of Object.keys(DescriptorFormatsMap)) {
     const compiledDescriptorType = {}
@@ -112,10 +114,34 @@ function compileFormats() {
       }
     }
 
-    compiledFormats[descriptorType] = compiledDescriptorType
+    const mappedFormat = formatMapper(compiledDescriptorType)
+
+    dfMap[descriptorType] = mappedFormat
   }
 
-  return compiledFormats
+  return dfMap
+}
+
+function formatMapper(dfMap) {
+  const formatMap = {}
+  let totalWeight = 0
+
+  for (let format of Object.keys(dfMap)) {
+    if (!isFormatValid(dfMap[format])) continue
+    totalWeight += dfMap[format].weight
+    formatMap[totalWeight - 1] = format
+  }
+
+  return {
+    "totalWeight": totalWeight,
+    "formatMap": formatMap
+  }
+}
+
+function isFormatValid(format) {
+  if (!format.weight || isNaN(format.weight) || format.weight < 1) return false
+  if (!format.format || !Array.isArray(format.format)) return false
+  return true
 }
 
 function compileMaterials() {

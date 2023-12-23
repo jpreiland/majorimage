@@ -5,7 +5,7 @@ import plural from '../plural/plural'
 import tensify from '../tensify/inflector'
 import title from '../titleize/titleize'
 import verber from '../verber/verber'
-import { mapFormats, pickFormat } from '../descriptor-utils/formats'
+import { pickFormat } from '../descriptor-utils/formats'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitcher(parts, data, priceOverride, numRangeOverride) {
@@ -137,10 +137,9 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
         if (part.length !== 2) break;
         let formatParts
 
-        // if descriptor type, build format map and roll for format
-        // TODO: mapFormats here should be redundant after it is moved to server
+        // if descriptor type, roll for format
         if (Object.hasOwn(data.dfMap, part[1])) {
-          const res = mapFormats(data.dfMap[part[1]])
+          const res = data.dfMap[part[1]]
           formatParts = data.formats[pickFormat(res.formatMap, res.totalWeight)]
         } else {
           formatParts = data.formats[part[1]]

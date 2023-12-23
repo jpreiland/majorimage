@@ -88,17 +88,9 @@
   },
   "dfMap": {
     "Accessory": {
-      "a(n)-accesory": {
-        "weight": 1,
-        "format": [
-          [
-            "a(n)"
-          ],
-          [
-            "pick",
-            "accessoryAll"
-          ]
-        ]
+      "totalWeight": 1,
+      "formatMap": {
+        "0": "a(n)-accessory"
       }
     },
     "Accessory(s)": {
@@ -114,7 +106,7 @@
           ]
         ]
       },
-      "a(n)-accesory(s)": {
+      "a(n)-accessory(s)": {
         "weight": 1,
         "format": [
           [
@@ -126,7 +118,7 @@
           ]
         ]
       },
-      "a(n)-accesory": {
+      "a(n)-accessory": {
         "weight": 1,
         "format": [
           [
@@ -150,7 +142,7 @@
         "accessoryAll"
       ]
     ],
-    "a(n)-accesory(s)": [
+    "a(n)-accessory(s)": [
       [
         "a(n)"
       ],
@@ -159,7 +151,7 @@
         "accessoryAll"
       ]
     ],
-    "a(n)-accesory": [
+    "a(n)-accessory": [
       [
         "a(n)"
       ],

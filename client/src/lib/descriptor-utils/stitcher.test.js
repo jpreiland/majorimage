@@ -146,7 +146,7 @@ describe('#stitch', () => {
     expect(stitch(formatFormat, data, null, null)).toMatch(/^some (acc[1-3]|basic[1-3])s$/)
   })
 
-  it('returns an accessory, pluralized, and prepended with "some " when using a "format" format part', () => {
+  it('returns an accessory prepended with "an " when using a "type" format part', () => {
     expect(stitch(formatType, data, null, null)).toMatch(/^(an acc[1-3]|a basic[1-3])$/)
   })
 

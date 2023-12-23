@@ -1,6 +1,5 @@
-// TODO: Move formatMapper to server alongside the rest of the data compilation process
-// so that there isn't this intermediate schema for format maps. This will simplify
-// Descriptors and Stitcher.
+// TODO: Now that this (and isFormatValid) is in the server, 
+// remove these once the associated unit tests have been moved.
 function formatMapper(dfMap) {
   const formatMap = {}
   let totalWeight = 0
