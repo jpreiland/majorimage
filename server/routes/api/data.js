@@ -1,13 +1,13 @@
-const { Router } = require('express')
-const Stones = require('../../data/materials/stones.json')
-const Woods = require('../../data/materials/woods.json')
-const Metals = require('../../data/materials/metals.json')
-const Textiles = require('../../data/materials/textiles.json')
-const Categories = require('../../data/words/categories.json')
-const Groups = require('../../data/words/groups.json')
-const Templates = require('../../data/templates/templates.json')
-const Formats = require('../../data/descriptor-formats/formats.json')
-const DescriptorFormatsMap = require('../../data/descriptor-formats/descriptor-formats-map.json')
+import { Router } from 'express'
+import Stones from '../../data/materials/stones.json' assert { type: "json" }
+import Woods from '../../data/materials/woods.json' assert { type: "json" }
+import Metals from '../../data/materials/metals.json' assert { type: "json" }
+import Textiles from '../../data/materials/textiles.json' assert { type: "json" }
+import Categories from '../../data/words/categories.json' assert { type: "json" }
+import Groups from '../../data/words/groups.json' assert { type: "json" }
+import Templates from '../../data/templates/templates.json' assert { type: "json" }
+import Formats from '../../data/descriptor-formats/formats.json' assert { type: "json" }
+import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' assert { type: "json" }
 
 const router = Router()
 
@@ -34,7 +34,7 @@ router.get('/data', async (req, res) => {
 })
 
 function buildWordCounts() {
-  wordCounts = {}
+  const wordCounts = {}
   // add base categories to word counts map
   for (let category of Object.keys(Categories)) {
     wordCounts[category] = Categories[category].length
@@ -80,7 +80,7 @@ function compileGroups(wordCounts) {
   const compiledGroups = {}
 
   for (let group of Object.keys(Groups)) {
-    totalWords = 0
+    let totalWords = 0
     const compiledGroup = {}
 
     for (let category of Groups[group]) {
@@ -127,4 +127,4 @@ function compileMaterials() {
   }
 }
 
-module.exports = router
+export default router

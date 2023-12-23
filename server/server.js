@@ -1,9 +1,9 @@
-const { PORT } = require('./config')
-const cors = require('cors')
-const morgan = require('morgan')
-const express = require('express')
-const bodyParser = require('body-parser')
-const dataRoutes = require('./routes/api/data')
+import { PORT } from './config.js'
+import cors from 'cors'
+import morgan from 'morgan'
+import express from 'express'
+import bodyParser from 'body-parser'
+import dataRoutes from './routes/api/data.js'
 const app = express()
 
 app.use(cors())
