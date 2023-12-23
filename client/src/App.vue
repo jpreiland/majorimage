@@ -10,6 +10,7 @@ import Objects from './components/objects/Objects.vue'
 import Quests from './components/quests/Quests.vue'
 import Shops from './components/shops/Shops.vue'
 import NotFound from './components/notfound/NotFound.vue'
+import precompiledData from './assets/data.json'
 
 const routes = {
   '/': Objects,
@@ -33,7 +34,7 @@ export default {
   data() {
     return {
       currentPath: window.location.hash,
-      data: null,
+      data: precompiledData,
       menuSelections: {},
       nav: {
         objects: true,
@@ -92,7 +93,7 @@ export default {
     <div class="banner">
       <div class="header">
         <p>
-          <img class="header-icon" src="../apple-touch-icon.png">
+          <img class="header-icon" src="./assets/icon.png">
           <span class="title-text">Major Image</span>
         </p>
       </div>
