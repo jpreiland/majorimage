@@ -1,42 +1,32 @@
 <template>
-  <component :is="loadVariant" v-if="initialized" />
+  <Blacksmith1 v-if="variants[0]" />
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue"
+import Blacksmith1 from "./variants/Blacksmith1.vue"
 
 export default {
   name: 'Blacksmith',
+  components: {
+    Blacksmith1
+  },
   inject: ['data'],
   data() {
     return {
-      variants: [],
-      activeVariant: 0,
-      activePath: "",
-      initialized: false
-    }
-  },
-  computed: {
-    loadVariant () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`./variants/${this.activePath}.vue`))
+      variants: [
+        true
+      ]
     }
   },
   async mounted() {
-    this.loadVariants()
     this.rollVariant()
-    this.initialized = true
   },
   methods: {
-    loadVariants() {
-      for (let variant of Object.keys(this.data.templates.shops.blacksmith)) {
-        if (variant.startsWith('_')) continue
-        this.variants.push(variant)
-      }
-    },
     rollVariant() {
-      this.activeVariant = Math.floor(Math.random() * this.variants.length)
-      this.activePath = this.data.templates.shops.blacksmith[this.variants[this.activeVariant]]
+      const variant = Math.floor(Math.random() * this.variants.length)
+      for (let i in this.variants) {
+        this.variants[i] = i == variant ? true : false
+      }
     }
   }
 }

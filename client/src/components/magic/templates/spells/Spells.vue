@@ -1,47 +1,33 @@
 <template>
-  <component :is="loadVariant" v-if="initialized" />
+  <Spells1 v-if="variants[0]" />
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue"
-
+import Spells1 from "./variants/Spells1.vue"
 
 export default {
   name: 'Spells',
+  components: {
+    Spells1
+  },
   inject: ['data'],
   data() {
     return {
-      variants: [],
-      activeVariant: 0,
-      activePath: "",
-      initialized: false
-    }
-  },
-  computed: {
-    loadVariant () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`./variants/${this.activePath}.vue`))
+      variants: [
+        true
+      ]
     }
   },
   async mounted() {
-    this.loadVariants()
     this.rollVariant()
-    this.initialized = true
   },
   methods: {
-    loadVariants() {
-      for (let variant of Object.keys(this.data.templates.magic.spells)) {
-        if (variant.startsWith('_')) continue
-        this.variants.push(variant)
-      }
-    },
     rollVariant() {
-      this.activeVariant = Math.floor(Math.random() * this.variants.length)
-      this.activePath = this.data.templates.magic.spells[this.variants[this.activeVariant]]
+      const variant = Math.floor(Math.random() * this.variants.length)
+      for (let i in this.variants) {
+        this.variants[i] = i == variant ? true : false
+      }
     }
   }
 }
 </script>
-
-<style>
-</style>

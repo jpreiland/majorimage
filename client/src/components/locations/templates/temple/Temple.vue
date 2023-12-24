@@ -1,16 +1,37 @@
 <template>
-  <div class="info-panel-description">
-    here is the basic temple template 
-    <Descriptor :type="'__Price'" :color="'purple'" />
-    <Descriptor :type="'__Price'" :color="'gold'" />
-    <Descriptor :type="'__Price'" :color="'silver'" />
-    <Descriptor :type="'__Price'" :color="'orange'" />
-    <Descriptor :type="'__Price'" :color="'gold'" :price-override="{min: 123, max: 555, denomination: 'gold'}" />
-  </div>
+  <Temple1 v-if="variants[0]" />
+  <Temple2 v-if="variants[1]" />
 </template>
 
 <script>
+import Temple1 from "./variants/Temple1.vue"
+import Temple2 from "./variants/Temple2.vue"
+
 export default {
-  name: 'BasicTemple'
+  name: 'Temple',
+  components: {
+    Temple1,
+    Temple2
+  },
+  inject: ['data'],
+  data() {
+    return {
+      variants: [
+        true,
+        false
+      ]
+    }
+  },
+  async mounted() {
+    this.rollVariant()
+  },
+  methods: {
+    rollVariant() {
+      const variant = Math.floor(Math.random() * this.variants.length)
+      for (let i in this.variants) {
+        this.variants[i] = i == variant ? true : false
+      }
+    }
+  }
 }
 </script>

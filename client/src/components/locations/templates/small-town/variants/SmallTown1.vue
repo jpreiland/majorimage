@@ -1,7 +1,7 @@
 <template>
   <div class="info-panel-description">
     <p>
-      variant 1
+      smalltown variant 1
       <Descriptor :type="'City'" />
       Lorem ipsum
     </p>

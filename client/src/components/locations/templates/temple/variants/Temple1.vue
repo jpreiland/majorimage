@@ -1,8 +1,8 @@
 <template>
   <div class="info-panel-description">
     <p>
-      variant 1
-      <Descriptor :type="'City'" />
+      temple variant 1
+      <Descriptor :type="'Temple'" :color="'green'" />
       Lorem ipsum
     </p>
   </div>

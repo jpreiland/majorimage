@@ -1,4 +1,5 @@
 {
+  "version": "0.1.0",
   "categories": {
       "aberration": [
           "gibbering mouther",
@@ -12118,100 +12119,82 @@
           "set-dressing": {
               "_displayName": "Set Dressing",
               "_path": "set-dressing",
-              "_component": "SetDressing",
-              "set-dressing-1": "SetDressing1"
+              "_component": "SetDressing"
           },
           "art": {
               "_displayName": "Art",
               "_path": "art",
-              "_component": "Art",
-              "art-1": "Art1"
+              "_component": "Art"
           }
       },
       "locations": {
           "city": {
               "_displayName": "City",
               "_path": "city",
-              "_component": "City",
-              "city-1": "City1",
-              "city-2": "City2"
+              "_component": "City"
           },
           "temple": {
               "_displayName": "Temple",
               "_path": "temple",
-              "_component": "Temple",
-              "temple-1": "Temple1",
-              "temple-2": "Temple2"
+              "_component": "Temple"
           },
           "small-town": {
               "_displayName": "Small Town",
               "_path": "small-town",
-              "_component": "SmallTown",
-              "small-town-1": "SmallTown1",
-              "small-town-2": "SmallTown2"
+              "_component": "SmallTown"
           },
           "ship": {
               "_displayName": "Ship",
               "_path": "ship",
-              "_component": "Ship",
-              "ship-1": "Ship1",
-              "ship-2": "Ship2"
+              "_component": "Ship"
           }
       },
       "magic": {
           "spells": {
               "_displayName": "Spells",
               "_path": "spells",
-              "_component": "Spells",
-              "spells-1": "Spells1"
+              "_component": "Spells"
           },
           "weapons": {
               "_displayName": "Magic Weapons",
               "_path": "weapons",
-              "_component": "MagicWeapons",
-              "weapons-1": "MagicWeapons1"
+              "_component": "MagicWeapons"
           }
       },
       "shops": {
           "general": {
               "_displayName": "General",
               "_path": "general",
-              "_component": "General",
-              "general-1": "General1"
+              "_component": "General"
           },
           "blacksmith": {
               "_displayName": "Blacksmith",
               "_path": "blacksmith",
-              "_component": "Blacksmith",
-              "blacksmith-1": "Blacksmith1"
+              "_component": "Blacksmith"
           }
       },
       "npcs": {
           "noble": {
               "_displayName": "Noble",
               "_path": "noble",
-              "_component": "Noble",
-              "noble-1": "Noble1"
+              "_component": "Noble"
           },
           "wizard": {
               "_displayName": "Wizard",
               "_path": "wizard",
-              "_component": "Wizard",
-              "wizard-1": "Wizard1"
+              "_component": "Wizard"
           }
       },
       "quests": {
           "rumor": {
               "_displayName": "Rumors",
               "_path": "rumor",
-              "_component": "Rumor",
-              "rumor-1": "Rumor1"
+              "_component": "Rumor"
           },
           "wanted": {
               "_displayName": "Wanted",
               "_path": "wanted",
-              "_component": "Wanted",
-              "wanted-1": "Wanted1"
+              "_component": "Wanted"
           }
       }
   }

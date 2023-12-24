@@ -1,45 +1,36 @@
 <template>
-  <component :is="loadVariant" v-if="initialized" />
+  <City1 v-if="variants[0]" />
+  <City2 v-if="variants[1]" />
 </template>
 
 <script>
-import { defineAsyncComponent } from "vue"
-
+import City1 from "./variants/City1.vue"
+import City2 from "./variants/City2.vue"
 
 export default {
   name: 'City',
   components: {
+    City1,
+    City2
   },
   inject: ['data'],
   data() {
     return {
-      variants: [],
-      activeVariant: 0,
-      activePath: "",
-      initialized: false
-    }
-  },
-  computed: {
-    loadVariant () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`./variants/${this.activePath}.vue`))
+      variants: [
+        true,
+        false
+      ]
     }
   },
   async mounted() {
-    this.loadVariants()
     this.rollVariant()
-    this.initialized = true
   },
   methods: {
-    loadVariants() {
-      for (let variant of Object.keys(this.data.templates.locations.city)) {
-        if (variant.startsWith('_')) continue
-        this.variants.push(variant)
-      }
-    },
     rollVariant() {
-      this.activeVariant = Math.floor(Math.random() * this.variants.length)
-      this.activePath = this.data.templates.locations.city[this.variants[this.activeVariant]]
+      const variant = Math.floor(Math.random() * this.variants.length)
+      for (let i in this.variants) {
+        this.variants[i] = i == variant ? true : false
+      }
     }
   }
 }

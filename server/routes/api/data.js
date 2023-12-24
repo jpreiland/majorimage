@@ -21,6 +21,7 @@ router.get('/data', async (req, res) => {
     const compiledMaterials = compileMaterials()
 
     const data = {
+      version: "0.1.0",
       categories: Categories,
       dfMap: compiledFormats,
       formats: Formats,

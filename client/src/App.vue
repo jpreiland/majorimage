@@ -35,6 +35,7 @@ export default {
     return {
       currentPath: window.location.hash,
       data: precompiledData,
+      version: "0.1.0",
       menuSelections: {},
       nav: {
         objects: true,
@@ -67,11 +68,9 @@ export default {
       return routes['/' + urlParts[1] || '/'] || NotFound
     }
   },
-  async beforeCreate() {
-    const wordsResponse = await fetch('/api/data')
-    this.data = await wordsResponse.json()
-  },
-  mounted() {
+  async mounted() {
+    // uncomment to load data from dev server
+    // this.data = await this.loadData()
     window.addEventListener('hashchange', () => {
       this.currentPath = window.location.hash
       window.location.pathname = '/'
@@ -83,6 +82,11 @@ export default {
       for (let navKey of Object.keys(this.nav)) {
         this.nav[navKey] = key === navKey ? true : false
       }
+    },
+    async loadData() {
+      const wordsResponse = await fetch('/api/data')
+      const data = await wordsResponse.json()
+      return data?.version === this.version ? data : this.data
     }
   }
 }

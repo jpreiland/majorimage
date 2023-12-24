@@ -2,7 +2,7 @@
   <div class="info-panel-description">
     <p>
       variant 2
-      <Descriptor :type="'City'" />
+      <Descriptor :type="'Temple'" :color="'green'" />
       Lorem ipsum
     </p>
   </div>
