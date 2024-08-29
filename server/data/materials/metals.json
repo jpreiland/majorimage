@@ -2,18 +2,22 @@
   {
     "name": "Iron",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.284466, "units": "lb"},
-        "Cost": {"value": 0.0284466, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.284466, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 4},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Relative Value": {"value": "Low"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.1, "units": "g"},
+        "Cost": {"value": 0.0284466, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "iron to do.",
-    "uses": "iron to do.",
+    "description": "Iron is a dark, silvery, magnetic metal. Iron oxidates easily, forming orange-red rust.",
+    "occurrence": "Occurs in iron ores such as hematite and magnetite, often alongside nickel.",
+    "uses": "Tools, construction, wrought iron decorations, alloys (steel)",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -21,18 +25,21 @@
   {
     "name": "Steel",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.283599239, "units": "lb"},
-        "Cost": {"value": 1.134396956, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.283599239, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 4.5},
-        "Cost/lb": {"value": 4, "units": "g"}
+        "Relative Value": {"value": "Moderate"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 4, "units": "g"},
+        "Cost": {"value": 1.134396956, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "steel to do.",
-    "uses": "steel to do.",
+    "description": "Steel is a strong alloy of iron and carbon that is grey in color. Various types of steel include other metals such as chromium and nickel.",
+    "uses": "Armor, weapons, tools, jewelry, art, construction.",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -40,18 +47,22 @@
   {
     "name": "Tin",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.26246477, "units": "lb"},
-        "Cost": {"value": 0.07873943, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.26246477, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 1.5},
-        "Cost/lb": {"value": 0.3, "units": "g"}
+        "Relative Value": {"value": "Low"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.3, "units": "g"},
+        "Cost": {"value": 0.07873943, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "tin to do.",
-    "uses": "tin to do.",
+    "description": "Tin is a very soft, rust-resistant, silvery metal that is easily workable and may contain a bluish tinge in purer forms.",
+    "occurrence": "Somewhat scarcely occurring elemental metal typically found in the mineral cassiterite in various settings such as igneous rocks, alluvial deposits, and hydrothermal veins in granite.",
+    "uses": "Art, jewelry, protective coatings, alloys (pewter, bronze)",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -59,18 +70,21 @@
   {
     "name": "Brass",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.30635943, "units": "lb"},
-        "Cost": {"value": 0.09190783, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.30635943, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3},
-        "Cost/lb": {"value": 0.3, "units": "g"}
+        "Relative Value": {"value": "Moderate"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.3, "units": "g"},
+        "Cost": {"value": 0.09190783, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "brass to do.",
-    "uses": "brass to do.",
+    "description": "Brass is a soft, workable alloy of copper and zinc that is yellow-gold in color with green and grey undertones.",
+    "uses": "Musical instruments, tools, utensils, hardware, art",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -78,18 +92,21 @@
   {
     "name": "Bronze",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.31719762, "units": "lb"},
-        "Cost": {"value": 0.95159286, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.31719762, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3},
-        "Cost/lb": {"value": 0.3, "units": "g"}
+        "Relative Value": {"value": "Moderate"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.3, "units": "g"},
+        "Cost": {"value": 0.095159286, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "bronze to do.",
-    "uses": "bronze to do.",
+    "description": "Bronze is a soft, workable alloy of copper and tin that has a warm brown color with hints of yellow and orange. It can oxidize and form a pale green patina.",
+    "uses": "Tools, coins, hardware, art, jewelry, weapons, armor",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -97,18 +114,22 @@
   {
     "name": "Lead",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.40968348, "units": "lb"},
-        "Cost": {"value": 0.081936696, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.40968348, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 1.5},
-        "Cost/lb": {"value": 0.2, "units": "g"}
+        "Relative Value": {"value": "Low"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.2, "units": "g"},
+        "Cost": {"value": 0.081936696, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "lead to do.",
-    "uses": "lead to do.",
+    "description": "Lead is a dull grey, dense, very soft metal.",
+    "occurrence": "Found in ores such as galena, which typically occurs in hydrothermal veins or lead-zinc deposits in limestone beds.",
+    "uses": "Pipes, bullets, pigments, protective coatings",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -116,18 +137,22 @@
   {
     "name": "Copper",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.3237005329, "units": "lb"},
-        "Cost": {"value": 0.161850266, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.3237005329, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3},
-        "Cost/lb": {"value": 0.5, "units": "g"}
+        "Relative Value": {"value": "Moderate"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.5, "units": "g"},
+        "Cost": {"value": 0.161850266, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "copper to do.",
-    "uses": "copper to do.",
+    "description": "Copper is a soft, ductile red-orange metal.",
+    "occurrence": "Occurs in its natural metal form as well as in mineral ores like chalcopyrite and malachite. Most commonly found in porphyry copper deposits, formed when copper-rich fluids are released into rocks from cooling magma.",
+    "uses": "Jewelry, coins, art, pipes, antibacterial coatings, wires, alloys (brass, bronze)",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -135,18 +160,22 @@
   {
     "name": "Silver",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.37897528, "units": "lb"},
-        "Cost": {"value": 1.894876, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.37897528, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 2.5},
-        "Cost/lb": {"value": 5, "units": "g"}
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 5, "units": "g"},
+        "Cost": {"value": 1.894876, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "silver to do.",
-    "uses": "silver to do.",
+    "description": "A soft, lustrous, precious metal that is bright but prone to tarnishing. It is prized for its appearance as well as magical potency, particularly as protection against magical creatures.",
+    "occurrence": "Found in sulfide ores such as acanthite, often in hydrothermal veins, and more rarely in its native metal form.",
+    "uses": "Jewelry, coins, weapons, protective charms, utensils, musical instruments, alloys (electrum)",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -154,18 +183,22 @@
   {
     "name": "Gold",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.69125, "units": "lb"},
-        "Cost": {"value": 34.5625, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.69125, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 2.5},
-        "Cost/lb": {"value": 50, "units": "g"}
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 50, "units": "g"},
+        "Cost": {"value": 34.5625, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "gold to do.",
-    "uses": "gold to do.",
+    "description": "Gold is a bright yellow precious metal that is soft and workable, as well as very resilient against discoloration and tarnishing.",
+    "occurrence": "Typically occurs in its native metal form as flakes or nuggets in alluvial deposits or embedded in rock alongside minerals such as quartz and pyrite.",
+    "uses": "Jewelry, coins, alloys (electrum, white gold, rose gold)",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -173,18 +206,22 @@
   {
     "name": "Platinum",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.7749304, "units": "lb"},
-        "Cost": {"value": 387.4652, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.7749304, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3.5},
-        "Cost/lb": {"value": 500, "units": "g"}
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 500, "units": "g"},
+        "Cost": {"value": 387.4652, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "platinum to do.",
-    "uses": "platinum to do.",
+    "description": "Platinum is a rare, silver-white metal that is malleable and highly ductile. Its resistance to wear and tarnishing as well as its rarity and appearance make it a highly desirable metal for use in jewelry.",
+    "occurrence": "Found in alluvial deposits and igneous rocks, often alloyed with other platinoids such as rhodium and palladium. In rare cases may occur in a somewhat cubic crystal form.",
+    "uses": "Jewelry, coins",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": false
@@ -192,18 +229,22 @@
   {
     "name": "Mithril",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.1417996, "units": "lb"},
-        "Cost": {"value": 141.7996, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.1417996, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 4.5},
-        "Cost/lb": {"value": 1000, "units": "g"}
+        "Relative Value": {"value": "Extreme"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 1000, "units": "g"},
+        "Cost": {"value": 141.7996, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "mithril to do.",
-    "uses": "mithril to do.",
+    "description": "Mithril is an extraordinarily rare silvery metal prized for its strength and unusual lightness.",
+    "occurrence": "One of the rarest metals, mithril is sparsely found in veins deep beneath a select few mountain ranges.",
+    "uses": "Armor, jewelry, architecture, weapons, enchantments",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": true
@@ -211,18 +252,21 @@
   {
     "name": "Adamantine",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.283599239, "units": "lb"},
-        "Cost": {"value": 708.9980975, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.283599239, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 10},
-        "Cost/lb": {"value": 2500, "units": "g"}
+        "Relative Value": {"value": "Extreme"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 2500, "units": "g"},
+        "Cost": {"value": 708.9980975, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "adamantine to do.",
-    "uses": "adamantine to do.",
+    "description": "Adamantine is an extremely strong alloy of adamant and mithril. It is black with a green sheen.",
+    "uses": "Weapons, armor, tools",
     "isCommon": true,
     "isPrecious": true,
     "isMagical": true

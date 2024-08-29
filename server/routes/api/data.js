@@ -1,13 +1,13 @@
 import { Router } from 'express'
-import Stones from '../../data/materials/stones.json' assert { type: "json" }
-import Woods from '../../data/materials/woods.json' assert { type: "json" }
-import Metals from '../../data/materials/metals.json' assert { type: "json" }
-import Textiles from '../../data/materials/textiles.json' assert { type: "json" }
-import Categories from '../../data/words/categories.json' assert { type: "json" }
-import Groups from '../../data/words/groups.json' assert { type: "json" }
-import Templates from '../../data/templates/templates.json' assert { type: "json" }
-import Formats from '../../data/descriptor-formats/formats.json' assert { type: "json" }
-import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' assert { type: "json" }
+import Stones from '../../data/materials/stones.json' with { type: "json" }
+import Woods from '../../data/materials/woods.json' with { type: "json" }
+import Metals from '../../data/materials/metals.json' with { type: "json" }
+import Textiles from '../../data/materials/textiles.json' with { type: "json" }
+import Categories from '../../data/words/categories.json' with { type: "json" }
+import Groups from '../../data/words/groups.json' with { type: "json" }
+import Templates from '../../data/templates/templates.json' with { type: "json" }
+import Formats from '../../data/descriptor-formats/formats.json' with { type: "json" }
+import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' with { type: "json" }
 
 const router = Router()
 

@@ -102,8 +102,9 @@ describe('#stitch', () => {
     expect(stitch(formatPickGerund, data, null, null)).toMatch(/^[1-5][a-c][1-3]ing$/)
   })
 
-  it('returns 2-3 names separated by spaces when pick-multi is used', () => {
-    expect(stitch(formatPickMulti, data, null, null)).toMatch(/^[1-5][a-c][1-3] [1-5][a-c][1-3]( [1-5][a-c][1-3])?$/)
+  // passing in range of 2-3, but picking only 1 is possible in the event of duplicates (which are skipped)
+  it('returns 1-3 names separated by spaces when pick-multi is used', () => {
+    expect(stitch(formatPickMulti, data, null, null)).toMatch(/^[1-5][a-c][1-3]( [1-5][a-c][1-3]){0,2}$/)
   })
 
   it('returns 0 names when pick-multi is used and 0 is the amount of words rolled', () => {

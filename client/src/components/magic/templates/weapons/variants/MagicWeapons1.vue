@@ -23,6 +23,18 @@
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
+          Modified Weapon
+        </h2>
+      </div>
+    </div>
+    <div class="info-panel-description">
+      <p>
+        <Descriptor :type="'ModifiedWeapon'" :color="'#8e1fde'" :key="rerollToggle" />
+      </p>
+    </div>
+    <div class="card-header">
+      <div class="card-header-left">
+        <h2 class="card-title">
           Magic Weapon Names
         </h2>
       </div>

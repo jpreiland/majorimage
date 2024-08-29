@@ -2,13 +2,16 @@
   {
     "name": "Linen",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.003858, "units": "oz"},
-        "Cost": {"value": 0.0038580246, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.003858, "units": "oz"}
       },
-      "other": {
+      "row2": {
         "Texture": {"value": "Medium"},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Relative Value": {"value": "Low"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.1, "units": "g"},
+        "Cost": {"value": 0.0038580246, "units": "g"}
       },
       "units": "in²"
     },
@@ -21,13 +24,16 @@
   {
     "name": "Wool",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.00925925925, "units": "oz"},
-        "Cost": {"value": 0.12, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.00925925925, "units": "oz"}
       },
-      "other": {
+      "row2": {
         "Texture": {"value": "Rough"},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Relative Value": {"value": "Low"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.1, "units": "g"},
+        "Cost": {"value": 0.12, "units": "g"}
       },
       "units": "in²"
     },
@@ -40,13 +46,16 @@
   {
     "name": "Silk",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0015432, "units": "oz"},
-        "Cost": {"value": 0.007716049, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0015432, "units": "oz"}
       },
-      "other": {
+      "row2": {
         "Texture": {"value": "Fine"},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.1, "units": "g"},
+        "Cost": {"value": 0.007716049, "units": "g"}
       },
       "units": "in²"
     },
@@ -59,13 +68,16 @@
   {
     "name": "Cashmere",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 18, "units": "oz"},
-        "Cost": {"value": 0.20, "units": "g"}
+      "row1": {
+        "Weight": {"value": 18, "units": "oz"}
       },
-      "other": {
+      "row2": {
         "Texture": {"value": "Soft"},
-        "Cost/lb": {"value": 0.1, "units": "g"}
+        "Relative Value": {"value": "Moderate"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.1, "units": "g"},
+        "Cost": {"value": 0.20, "units": "g"}
       },
       "units": "in²"
     },

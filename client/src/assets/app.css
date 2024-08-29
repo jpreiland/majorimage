@@ -45,7 +45,6 @@
   border-style: solid;
   border-width: 0.25rem 0;
   border-top-width: 0;
-  margin-bottom: 0.5rem;
 }
 .navigation::-webkit-scrollbar {
   display: none;
@@ -197,6 +196,9 @@ button.reroll-all {
 .columns.list.left-scroll-menu {
   max-height:calc(94svh - 1rem);
 }
+.columns.materials {
+  margin-top: -0.25rem;
+}
 .columns.materials.list {
   padding-right: 0.25rem;
 }
@@ -205,6 +207,8 @@ button.reroll-all {
 }
 .column {
   overflow-y: auto;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
 }
 .column.materials {
   padding-right: 0.25rem;
@@ -219,11 +223,10 @@ button.reroll-all {
   max-width: 25%;
   padding-right: 0.25rem;
   padding-left: 0.5rem;
+  margin-top: -2px;
 }
 .column.right-info-card-holder {
   padding-left: 0px;
-  padding-top: 0.75rem;
-  margin-top: 2px;
 }
 
 .list-header {
@@ -267,9 +270,11 @@ button.reroll-all {
   overflow: auto;
 }
 
-.card-header {
-  margin-bottom: 1rem;
+.info-card.material {
+  margin-bottom: 0.5rem;
+}
 
+.card-header {
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -304,13 +309,18 @@ button.reroll-all {
   font-weight: bold;
 }
 
+.attribute.key.info {
+  line-height: 2em;
+}
+
 .card-description {
-  margin: 0;
+  margin-top: 0.25rem;
   font-size: 0.875rem;
 }
 
 .info-panel-description {
-  margin: 0;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   line-height: 2.5em;
 }
 

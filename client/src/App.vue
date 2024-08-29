@@ -2,6 +2,7 @@
 <script>
 import { computed } from 'vue'
 import About from './components/about/About.vue'
+import Acknowledgements from './components/acknowledgements/Acknowledgements.vue'
 import Locations from './components/locations/Locations.vue'
 import Magic from './components/magic/Magic.vue'
 import Materials from './components/materials/Materials.vue'
@@ -15,6 +16,7 @@ import precompiledData from './assets/data.json'
 const routes = {
   '/': Objects,
   '/about': About,
+  '/acknowledgements': Acknowledgements,
   '/locations': Locations,
   '/magic': Magic,
   '/materials': Materials,
@@ -70,7 +72,7 @@ export default {
   },
   async mounted() {
     // uncomment to load data from dev server
-    // this.data = await this.loadData()
+    this.data = await this.loadData()
     window.addEventListener('hashchange', () => {
       this.currentPath = window.location.hash
       window.location.pathname = '/'
@@ -123,11 +125,18 @@ export default {
         <button key="materials" class="button nav-btn violet" :class="{ 'nav-selected': nav.materials }" @click="navigate('#/materials', 'materials')">
           Materials
         </button> 
-        <button key="about" class="button nav-btn" @click="navigate('#/about')">
-          About
-        </button> 
       </div>
     </div>
     <component :is="currentView" v-if="data" class="page" />
+    <div class="">
+      <div class="navigation">
+        <button key="about" class="button nav-btn" @click="navigate('#/about')">
+          About
+        </button> 
+        <button key="about" class="button nav-btn" @click="navigate('#/acknowledgements')">
+          Acknowledgements
+        </button>
+      </div>
+    </div>
   </div>
 </template>

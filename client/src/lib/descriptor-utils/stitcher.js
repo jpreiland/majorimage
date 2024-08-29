@@ -69,28 +69,49 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
         break;
 
       case 'pick-multi':
-        if (part.length !== 4) break;
-        let minWords = part[2]
-        let maxWords = part[3]
+        // 3rd, 4th params (required): [lower and upper bounds] integer range (inclusive) of amount of words attempted to be picked, equal chance of any result within range, skips duplicates
+        // 5th param (optional, 0.01-0.99): [bonus chance] percent chance of each additional word beyond the initial amount picked from the lower/upper bounded range being added, skips duplicates
+        // 6th param (optional, 0.01-0.99): [bonus decay] amount to reduce percent chance (5th param) on each subsequent roll
+        // eg: "1, 3, 0.25" - between 1 and 3 words will be picked at least (equal chance of 1, 2, or 3), and then a repeating 25% chance of additional words being appended
+        if (part.length < 4 && part.length > 6) break;
+        const minWords = part[2]
+        const maxWords = part[3]
+        let bonusPct = part[4]
+        const bonusDecay = part[5]
         if (isNaN(minWords) || isNaN(maxWords)) break;
 
         numWords = Math.floor(Math.random() * (maxWords - minWords + 1)) + minWords
-        if (numWords <= 0) {
+        if (numWords <= 0 && part.length === 4) {
           if (name[name.length-1] === ' ') {
             name = name.slice(0, name.length-1)
           }
           break;
         }
 
-        word = picker(part[1], data)
-        name += do_a_an(word, a_an_flag)
-        a_an_flag = false
-        numWords--
-
         while (numWords > 0) {
-          name += ' ' + picker(part[1], data)
+          word = picker(part[1], data)
+          if (!name.includes(word)) {
+            name += ' ' + do_a_an(word, a_an_flag)
+            a_an_flag = false
+          }
           numWords--
         }
+
+        if (part.length > 4 && bonusPct >= 0.01 && bonusPct <= 0.99) {
+          let rng = Math.random()
+          while (rng <= bonusPct) {
+            word = picker(part[1], data)
+            if (!name.includes(word)) {
+              name += ' ' + do_a_an(word, a_an_flag)
+              a_an_flag = false
+            }
+            if (part.length === 6) {
+              bonusPct -= bonusDecay
+            }
+            rng = Math.random()
+          }
+        }
+
         break;
 
       case 'static':
@@ -155,7 +176,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
     }
   }
 
-  return (isTitle ? title(name) : name).trim()
+  return (isTitle ? title(name.trim()) : name.trim())
 }
 
 function do_a_an(word, a_an_flag) {

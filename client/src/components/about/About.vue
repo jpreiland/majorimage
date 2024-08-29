@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="info-card material info-panel-description" style="padding-left: 12px; padding-right: 12px;">
-      <div class="attribute key">
+    <div class="info-card info-panel-description" style="padding-left: 12px; padding-right: 12px;">
+      <div class="attribute key info">
         What is this place?
       </div>
       <div class="no-descriptors">
@@ -69,7 +69,7 @@
 <script>
 
 export default {
-  name: 'Objects',
+  name: 'About',
   inject: ['data'],
   data() {
     return {

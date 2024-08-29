@@ -2,18 +2,22 @@
   {
     "name": "Basalt",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.10877927, "units": "lb"},
-        "Cost": {"value": 0.13624603, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.10877927, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 6},
-        "Cost/lb": {"value": 1.2525, "units": "g"}
+        "Relative Value": {"value": "Low?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 1.2525, "units": "g"},
+        "Cost": {"value": 0.13624603, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "Basalt to do",
-    "uses": "Basalt to do",
+    "description": "Basalt is a dark, often grey or brown colored, volcanic rock. It is hard and can be porous.",
+    "occurrence": "Found commonly across the world, especially on the floor of the ocean and volcanic islands. It can occur in a variety of formations from pillowy cooled lava flows to neatly structured hexagonal columns.",
+    "uses": "Architecture, art",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -21,18 +25,22 @@
   {
     "name": "Diamond",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.126445522, "units": "lb"},
-        "Cost": {"value": 57354.724, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.126445522, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 10},
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
         "Cost/lb": {"value": 453592.37, "units": "g"},
+        "Cost": {"value": 57354.724, "units": "g"},
         "Cost/carat": {"value": 1000, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "While a structurally perfect diamond is transparent with no hue, diamonds can vary widely in color. In order of increasing rarity, diamond hues can be yellow, brown, colorless, blue, green, black, pink, orange, purple, and red. While they are chiefly sought after for use in jewelry due to their appearance, diamonds and diamond dust are also used as spell components.",
+    "description": "A structurally perfect diamond is transparent with no hue, but diamonds can vary widely in color. In order of increasing rarity, diamond hues can be yellow, brown, colorless, blue, green, black, pink, orange, purple, and red. While they are chiefly sought after for use in jewelry due to their appearance, diamonds and diamond dust are also used as spell components.",
+    "occurrence": "Diamonds move to the surface via igneous host rocks. They can be found by themselves deposited in sand and sediment near bodies of water that transported them, or embedded in volcanic rock.",
     "uses": "Engraving, jewelry, spell components",
     "component": "Clone, Gate, Glyph of Warding, Greater Restoration, Nondetection, Raise Dead, Resurrection, Revivify, Sequester, Stoneskin, Symbol, True Resurrection",
     "isCommon": true,
@@ -42,19 +50,23 @@
   {
     "name": "Emerald",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.099350053, "units": "lb"},
-        "Cost": {"value": 9012.885, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.099350053, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 7.5},
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
         "Cost/lb": {"value": 90718.474, "units": "g"},
+        "Cost": {"value": 9012.885, "units": "g"},
         "Cost/carat": {"value": 200, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "emerald to do",
-    "uses": "emerald to do",
+    "description": "Emerald is a green precious gemstone. Since emeralds commonly have cloudy inclusions, clear specimens are rare and valuable.",
+    "occurrence": "Found in black shale beds or where shale and limestone are layered, as well as in granite deposits.",
+    "uses": "Jewelry, spell components",
     "component": "Sequester",
     "isCommon": true,
     "isPrecious": true,
@@ -63,18 +75,22 @@
   {
     "name": "Granite",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.09844687, "units": "lb"},
-        "Cost": {"value": 0.1644062, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.09844687, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 5},
-        "Cost/lb": {"value": 1.67, "units": "g"}
+        "Relative Value": {"value": "Low?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 1.67, "units": "g"},
+        "Cost": {"value": 0.1644062, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "granite to do",
-    "uses": "granite to do",
+    "description": "Granite is a speckled rock that typically contains grey, white, and sometimes slight reddish hues. It is formed from an array of crystals, primarily quartz and feldspar.",
+    "occurrence": "Commonly found in huge deposits in mountains.",
+    "uses": "Architecture, art, spell components",
     "component": "Wall of Stone",
     "isCommon": true,
     "isPrecious": false,
@@ -83,18 +99,22 @@
   {
     "name": "Limestone",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.097904961, "units": "lb"},
-        "Cost": {"value": 0.04895248, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.097904961, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3.5},
-        "Cost/lb": {"value": 0.5, "units": "g"}
+        "Relative Value": {"value": "Low-Mod?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.5, "units": "g"},
+        "Cost": {"value": 0.04895248, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "Limestone to do",
-    "uses": "Limestone to do",
+    "description": "Limestone is a somewhat soft rock that ranges in color from light grey to white.",
+    "occurrence": "Found in large amounts in bodies of water and caves.",
+    "uses": "Architecture, agriculture (soil additive), art",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -102,18 +122,22 @@
   {
     "name": "Marble",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.097543688, "units": "lb"},
-        "Cost": {"value": 0.292631064, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.097543688, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 3},
-        "Cost/lb": {"value": 3, "units": "g"}
+        "Relative Value": {"value": "Low-Mod?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 3, "units": "g"},
+        "Cost": {"value": 0.292631064, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "Marble to do",
-    "uses": "Marble to do",
+    "description": "Marble commonly occurs as a white rock with plenty of impurities that give it a \"marbled\" appearance. It is soft, polishes well, and can have a glitzy appearance with a slight amount of translucence.",
+    "occurrence": "Occurs commonly in old layers of the planet's crust, where tectonic plates converge and fold under high heat and pressure.",
+    "uses": "Architecture, art",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -121,19 +145,23 @@
   {
     "name": "Ruby",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.144870441, "units": "lb"},
-        "Cost": {"value": 65712.126, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.144870441, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 9},
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
         "Cost/lb": {"value": 453592.37, "units": "g"},
+        "Cost": {"value": 65712.126, "units": "g"},
         "Cost/carat": {"value": 1000, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "ruby to do",
-    "uses": "ruby to do",
+    "description": "A red or pink precious gemstone that can range from being transparent with a glassy luster to being very opaque and dull.",
+    "occurrence": "Rubies can be found in marble and basalt.",
+    "uses": "Jewelry, spell components",
     "component": "Continual Flame, Forbiddance, Forcecage, Sequester, Simulacrum",
     "isCommon": true,
     "isPrecious": true,
@@ -142,18 +170,22 @@
   {
     "name": "Sandstone",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.08309277, "units": "lb"},
-        "Cost": {"value": 0.08309277, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.08309277, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 6},
-        "Cost/lb": {"value": 1, "units": "g"}
+        "Relative Value": {"value": "Low?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 1, "units": "g"},
+        "Cost": {"value": 0.08309277, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "Sandstone to do",
-    "uses": "Sandstone to do",
+    "description": "Sandstone is a sedimentary rock that forms from heavily compacted and cemented sand. It is often tan or yellowish in color, but can also be found in grey, white, and black.",
+    "occurrence": "Forms in areas that sand is deposited and buried, such as deserts and near bodies of water.",
+    "uses": "Architecture, art",
     "isCommon": true,
     "isPrecious": false,
     "isMagical": false
@@ -161,41 +193,26 @@
   {
     "name": "Sapphire",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.144147895, "units": "lb"},
-        "Cost": {"value": 13076.877, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.144147895, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Hardness": {"value": 9},
+        "Relative Value": {"value": "High"}
+      },
+      "unused": {
         "Cost/lb": {"value": 90718.474, "units": "g"},
+        "Cost": {"value": 13076.877, "units": "g"},
         "Cost/carat": {"value": 200, "units": "g"}
       },
       "units": "in³"
     },
-    "description": "sapphire to do",
-    "uses": "sapphire to do",
+    "description": "Sapphire is a precious gemstone typically blue in color, though they can occur in just about any other hue. The pink to reddish-pink range of hues that sapphires can have at times make some specimens difficult to distinguish from rubies, which can also lean towards a pinkish-red hue, but sapphires are never fully red in the way that many rubies are.",
+    "occurrence": "Found in granite, gneiss, schist, and various other igneous and metamorphic rocks, as well as in alluvial deposits.",
+    "uses": "Jewelry, spell components",
     "component": "Instant Summons, Sequester",
     "isCommon": true,
     "isPrecious": true,
-    "isMagical": false
-  },
-  {
-    "name": "Slate",
-    "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.100108726, "units": "lb"},
-        "Cost": {"value": 0.18019570, "units": "g"}
-      },
-      "other": {
-        "Hardness": {"value": 5.5},
-        "Cost/lb": {"value": 1.8, "units": "g"}
-      },
-      "units": "in³"
-    },
-    "description": "Slate to do",
-    "uses": "Slate to do",
-    "isCommon": true,
-    "isPrecious": false,
     "isMagical": false
   }
 ]

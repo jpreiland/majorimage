@@ -2,13 +2,16 @@
   {
     "name": "Alder",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.01932810, "units": "lb"},
-        "Cost": {"value": 0.55, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.01932810, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 650, "units": "lbf"},
-        "Cost/lb": {"value": 0.55, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.55, "units": "g"},
+        "Cost": {"value": 0.55, "units": "g"}
       },
       "units": "in³"
     },
@@ -21,13 +24,16 @@
   {
     "name": "Andiroba",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.02384401, "units": "lb"},
-        "Cost": {"value": 0.66, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.02384401, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1220, "units": "lbf"},
-        "Cost/lb": {"value": 0.66, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.66, "units": "g"},
+        "Cost": {"value": 0.66, "units": "g"}
       },
       "units": "in³"
     },
@@ -40,13 +46,16 @@
   {
     "name": "Apple",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.02998565, "units": "lb"},
-        "Cost": {"value": 0.99, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.02998565, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1730, "units": "lbf"},
-        "Cost/lb": {"value": 0.99, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.99, "units": "g"},
+        "Cost": {"value": 0.99, "units": "g"}
       },
       "units": "in³"
     },
@@ -59,13 +68,16 @@
   {
     "name": "Apricot",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.02691483, "units": "lb"},
-        "Cost": {"value": 0.77, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.02691483, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1390, "units": "lbf"},
-        "Cost/lb": {"value": 0.77, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.77, "units": "g"},
+        "Cost": {"value": 0.77, "units": "g"}
       },
       "units": "in³"
     },
@@ -78,13 +90,16 @@
   {
     "name": "Ash",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.02456655856, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.02456655856, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1480, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -97,13 +112,16 @@
   {
     "name": "Ash, Black",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0196893741, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0196893741, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 850, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -116,13 +134,16 @@
   {
     "name": "Ash, Red",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0261922867, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0261922867, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1890, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -135,13 +156,16 @@
   {
     "name": "Ash, Tamo",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.02023128352, "units": "lb"},
-        "Cost": {"value": 999, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.02023128352, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 850, "units": "lbf"},
-        "Cost/lb": {"value": 999, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 999, "units": "g"},
+        "Cost": {"value": 999, "units": "g"}
       },
       "units": "in³"
     },
@@ -154,13 +178,16 @@
   {
     "name": "Ash, White",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.024385922, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.024385922, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1320, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -173,13 +200,16 @@
   {
     "name": "Aspen",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0162572814, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0162572814, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 380, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -192,13 +222,16 @@
   {
     "name": "Balsa",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0054190938, "units": "lb"},
-        "Cost": {"value": 0.9, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0054190938, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 67, "units": "lbf"},
-        "Cost/lb": {"value": 0.9, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.9, "units": "g"},
+        "Cost": {"value": 0.9, "units": "g"}
       },
       "units": "in³"
     },
@@ -211,13 +244,16 @@
   {
     "name": "Bamboo",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0243859221, "units": "lb"},
-        "Cost": {"value": 0.7, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0243859221, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1510, "units": "lbf"},
-        "Cost/lb": {"value": 0.7, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.7, "units": "g"},
+        "Cost": {"value": 0.7, "units": "g"}
       },
       "units": "in³"
     },
@@ -230,13 +266,16 @@
   {
     "name": "Oak",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.027276105, "units": "lb"},
-        "Cost": {"value": 0.30, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.027276105, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 1350, "units": "lbf"},
-        "Cost/lb": {"value": 0.30, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.30, "units": "g"},
+        "Cost": {"value": 0.30, "units": "g"}
       },
       "units": "in³"
     },
@@ -249,13 +288,16 @@
   {
     "name": "Pine",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0144509168, "units": "lb"},
-        "Cost": {"value": 0.2, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0144509168, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 380, "units": "lbf"},
-        "Cost/lb": {"value": 0.2, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 0.2, "units": "g"},
+        "Cost": {"value": 0.2, "units": "g"}
       },
       "units": "in³"
     },
@@ -268,13 +310,16 @@
   {
     "name": "Rosewood",
     "attributes": {
-      "weightCost": {
-        "Weight": {"value": 0.0301662888, "units": "lb"},
-        "Cost": {"value": 9.9, "units": "g"}
+      "row1": {
+        "Weight": {"value": 0.0301662888, "units": "lb"}
       },
-      "other": {
+      "row2": {
         "Janka Hardness": {"value": 2790, "units": "lbf"},
-        "Cost/lb": {"value": 9.9, "units": "g"}
+        "Relative Value": {"value": "?"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 9.9, "units": "g"},
+        "Cost": {"value": 9.9, "units": "g"}
       },
       "units": "in³"
     },

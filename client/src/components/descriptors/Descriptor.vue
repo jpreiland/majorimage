@@ -27,7 +27,7 @@ export default {
       type: Object
     }
   },
-  data () {
+  data() {
     return {
       descriptorText: "Descriptor",
       formatMap: {},
