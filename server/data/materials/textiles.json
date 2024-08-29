@@ -69,7 +69,7 @@
     "name": "Cashmere",
     "attributes": {
       "row1": {
-        "Weight": {"value": 18, "units": "oz"}
+        "Weight": {"value": 0.00978566, "units": "oz"}
       },
       "row2": {
         "Texture": {"value": "Soft"},
