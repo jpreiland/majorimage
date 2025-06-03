@@ -10,6 +10,13 @@
   "buildingReligious-divine-being": [["title"], ["pick", "buildingReligious"], ["static", " of the "], ["format", "DivineBeing"]],
   "portfolio-divineBeing": [["pick", "divinePortfolioPrefixes"], ["static", " "], ["pick", "divineTitle"]],
   "divineBeing-of-portfolio": [["pick", "divineTitle"], ["static", " of "], ["pick", "divinePortfolioSuffixes"]],
+
+  "light-source-plural": [["pick", "lightingQuality"], ["static", " by "], ["a(n)"], ["pick-pluralize", "lightingSource"]],
+  "light-source-amount-plural": [["pick", "lightingQuality"], ["static", " by "], ["a(n)"], ["pick", "amount"], ["static", " of "],  ["pick-pluralize", "lightingSource"]],
+  "light-source-singular": [["pick", "lightingQuality"], ["static", " by "], ["a(n)"], ["pick-multi", "amountSingular", 0, 0, 0.25, 0.99], ["static", " "],  ["pick", "lightingSource"]],
+  "light-source-uncountable": [["pick", "lightingQuality"], ["static", " by "], ["pick", "lightingSourceUncountable"]],
+  "_lightingQuality": [["pick", "lightingQuality"]],
+  "_lightingQualityNone": [["pick", "lightingQualityNone"]],
   
   "modifiedColor": [["pick", "colorModifier"], ["static", " "], ["pick", "colorBasic"]],
   "numberFiveToSeventeen": [["number", 5, 17]],

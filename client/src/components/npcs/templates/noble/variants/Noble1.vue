@@ -32,7 +32,7 @@
       <div>
         <template v-for="item in inventory" :key="'Item-'+item.id+'-'+rerollToggle">
           <p>
-            <Descriptor :type="'CustomWeapon'" :color="'#EE3AA3'" />
+            <SimpleDescriptor :type="'nameAll'" :proper-noun="true" :color="'pink'" />
           </p>
         </template>
       </div>

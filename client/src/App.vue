@@ -72,7 +72,7 @@ export default {
   },
   async mounted() {
     // uncomment to load data from dev server
-    // this.data = await this.loadData()
+    this.data = await this.loadData()
     window.addEventListener('hashchange', () => {
       this.currentPath = window.location.hash
       window.location.pathname = '/'

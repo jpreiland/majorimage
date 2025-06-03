@@ -202,10 +202,10 @@ export default {
     async adjustMaterialUnits(dimension) {
       if (this.isInInches) {
         this.activeMaterial.attributes.row1.Weight.value /= Math.pow(12, dimension)
-        // this.activeMaterial.attributes.row1.Cost.value /= Math.pow(12, dimension)  // old display value
+        // this.activeMaterial.attributes.unused.Cost.value /= Math.pow(12, dimension)  // old display value
       } else {
         this.activeMaterial.attributes.row1.Weight.value *= Math.pow(12, dimension)
-        // this.activeMaterial.attributes.row1.Cost.value *= Math.pow(12, dimension)  // old display value
+        // this.activeMaterial.attributes.unused.Cost.value *= Math.pow(12, dimension)  // old display value
       }
 
       const dimensionSuperscript = dimension === 3 ? '³' : '²'

@@ -28,6 +28,13 @@
       "temple-1": "Temple1",
       "temple-2": "Temple2"
     },
+    "dungeon-room": {
+      "_displayName": "Dungeon Room",
+      "_path": "dungeon-room",
+      "_component": "DungeonRoom",
+      "dungeon-room-1": "DungeonRoom1",
+      "dungeon-room-2": "DungeonRoom2"
+    },
     "small-town": {
       "_displayName": "Small Town",
       "_path": "small-town",
