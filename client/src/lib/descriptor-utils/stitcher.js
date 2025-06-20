@@ -73,7 +73,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
         // 5th param (optional, 0.01-0.99): [bonus chance] percent chance of each additional word beyond the initial amount picked from the lower/upper bounded range being added, skips duplicates
         // 6th param (optional, 0.01-0.99): [bonus decay] amount to reduce percent chance (5th param) on each subsequent roll
         // eg: "1, 3, 0.25" - between 1 and 3 words will be picked at least (equal chance of 1, 2, or 3), and then a repeating 25% chance of additional words being appended
-        if (part.length < 4 && part.length > 6) break;
+        if (part.length < 4 || part.length > 6) break;
         const minWords = part[2]
         const maxWords = part[3]
         let bonusPct = part[4]
@@ -105,7 +105,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
               name += ' ' + do_a_an(word, a_an_flag)
               a_an_flag = false
             }
-            if (part.length === 6) {
+            if (part.length === 6 && bonusDecay >= 0.01 && bonusDecay <= 0.99) {
               bonusPct -= bonusDecay
             }
             rng = Math.random()

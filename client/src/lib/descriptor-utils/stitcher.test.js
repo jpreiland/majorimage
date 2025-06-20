@@ -16,6 +16,7 @@ const formatPickPast = [["pick-pastTense", "nameAll"]]
 const formatPickVerber = [["pick-verber", "nameAll"]]
 const formatPickGerund = [["pick-gerund", "nameAll"]]
 const formatPickMulti = [["pick-multi", "nameAll", 2, 3]]
+const formatPickMultiBonusPctDecay = [["pick-multi", "nameAll", 3, 3, 0.99, 0.35]]
 const formatPickMultiZero = [["pick-multi", "nameAll", 0, 0]]
 const formatPickMultiNaN = [["pick-multi", "nameAll", "hey", 0]]
 const formatStaticThenPickMultiZero = [["static", "test multi "], ["pick-multi", "nameAll", 0, 0]]
@@ -36,7 +37,8 @@ const formatPickPluralOptionalInvalidLength = [["pick-pluralize-optional", "name
 const formatPickPastInvalidLength = [["pick-pastTense", "nameAll", 1]]
 const formatPickVerberInvalidLength = [["pick-verber", "nameAll", 1]]
 const formatPickGerundInvalidLength = [["pick-gerund", "nameAll", 1]]
-const formatPickMultiInvalidLength = [["pick-multi", "nameAll", 1, 1, 1, 1]]
+const formatPickMultiInvalidLengthShort = [["pick-multi", "nameAll", 1]]
+const formatPickMultiInvalidLengthLong = [["pick-multi", "nameAll", 1, 1, 1, 1, 1]]
 const formatNumberInvalidLength = [["number", 5]]
 const formatPriceInvalidLength = [["price", 5]]
 const formatFormatInvalidLength = [["format", "nameAll", 1]]
@@ -107,6 +109,10 @@ describe('#stitch', () => {
     expect(stitch(formatPickMulti, data, null, null)).toMatch(/^[1-5][a-c][1-3]( [1-5][a-c][1-3]){0,2}$/)
   })
 
+  it('returns 2-5 names separated by spaces when pick-multi is used with bonus pecent and decay', () => {
+    expect(stitch(formatPickMultiBonusPctDecay, data, null, null)).toMatch(/^[1-5][a-c][1-3]( [1-5][a-c][1-3]){2,5}$/)
+  })
+
   it('returns 0 names when pick-multi is used and 0 is the amount of words rolled', () => {
     expect(stitch(formatPickMultiZero, data, null, null)).toBe("")
     expect(stitch(formatStaticThenPickMultiZero, data, null, null)).toBe("test multi")
@@ -162,7 +168,8 @@ describe('#stitch', () => {
     expect(stitch(formatPickPastInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatPickVerberInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatPickGerundInvalidLength, data, null, null)).toBe("")
-    expect(stitch(formatPickMultiInvalidLength, data, null, null)).toBe("")
+    expect(stitch(formatPickMultiInvalidLengthShort, data, null, null)).toBe("")
+    expect(stitch(formatPickMultiInvalidLengthLong, data, null, null)).toBe("")
     expect(stitch(formatNumberInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatPriceInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatFormatInvalidLength, data, null, null)).toBe("")
