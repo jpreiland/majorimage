@@ -50,7 +50,7 @@
 
       <div style="text-align: center;">
         <p>
-          Lovingly created by <a href="https://twitter.com/barcodedm" target="_blank">BarcodeDM</a> with help from 
+          Lovingly created by <a href="https://bsky.app/profile/barcodedm.bsky.social" target="_blank">BarcodeDM</a> with help from
         </p>
         <p>
           <SimpleDescriptor :type="'amountGroupCreature'" :a_an="true" :color="'red'" /> 
