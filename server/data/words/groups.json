@@ -1,7 +1,7 @@
 {
   "accessoryAll": ["accessory", "accessoryBasic"],
   "adjectivePerson": ["adjectivePersonality", "adjectiveEpithet"],
-  "adjectiveSizeAll": ["aadjectiveSizeAndBasic", "adjectiveSizeCreatureOrObject", "adjectiveSizeLocation", "adjectiveSizeExtra"],
+  "adjectiveSizeAll": ["adjectiveSizeAndBasic", "adjectiveSizeCreatureOrObject", "adjectiveSizeLocation", "adjectiveSizeExtra"],
   "adjectiveSizeAndBasic": ["adjectiveSize", "adjectiveSizeBasic"], 
   "adjectiveSizeAndBasicLocation": ["adjectiveSizeAndBasic", "adjectiveSizeLocation"], 
   "amountGroupCreature": ["amount", "amountExtra", "groupCreature"],
@@ -55,8 +55,12 @@
   "enchantmentPrefixesWeapon": ["enchantmentPrefix", "enchantmentPrefixWeapon"],
   
   "spellElementSuffixes": ["magicSpellPartElement", "magicSpellPartElementSuffix"],
-  "spellFormPrefixesElement": ["magicSpellPartFormPrefix", "magicSpellPartFormPrefixElement", "magicSpellPartPrefix", "magicSpellPartInanimatePrefix", "magicSpellPartInanimatePrefixSingular"],
-  "spellFormPrefixesCreature": ["magicSpellPartPrefix", "magicSpellPartInanimatePrefix", "magicSpellPartCreaturePrefix", "magicSpellPartAdjectivePrefix"],
+  "spellPrefixesEntity": ["magicSpellPartPrefix", "magicSpellPartInanimatePrefix"],
+  "spellPrefixesItem": ["spellPrefixesEntity", "magicSpellPartAdjectivePrefix", "magicSpellPartElementPrefix"],
+  "spellPrefixesItemSingular": ["spellPrefixesItem", "magicSpellPartInanimatePrefixSingular"],
+  "spellPrefixesItemPlural": ["spellPrefixesItem", "magicSpellPartInanimatePrefixPlural", "magicSpellPartPrefixPlural"],
+  "spellFormPrefixesElement": ["spellPrefixesEntity", "magicSpellPartFormPrefix", "magicSpellPartFormPrefixElement", "magicSpellPartInanimatePrefixSingular"],
+  "spellFormPrefixesCreature": ["spellPrefixesEntity", "magicSpellPartCreaturePrefix", "magicSpellPartAdjectivePrefix"],
   "spellFormPrefixesCreaturePlural": ["spellFormPrefixesCreature", "magicSpellPartInanimatePrefixPlural", "magicSpellPartPrefixPlural"],
   "spellElementPrefixes": ["magicSpellPartElement", "magicSpellPartElementPrefix"],
   "spellFormSuffixesElement": ["magicSpellPartFormSuffix", "magicSpellPartFormSuffixElement", "magicSpellPartInanimateSuffix", "magicSpellPartSuffixSingular"],
