@@ -13,7 +13,8 @@
   "dependencies": {
     "pluralize": "^8.0.0",
     "symbols": "^0.0.6",
-    "vue": "^3.5.31"
+    "vue": "^3.5.31",
+    "vue-router": "^5.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.5",
