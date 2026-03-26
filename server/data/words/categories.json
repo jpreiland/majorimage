@@ -208,7 +208,7 @@
 
   "metal": ["iron", "steel"],
   "miscItem": ["ball bearing", "bear trap", "bedroll", "chess set", "firewood", "fishhook", "hemp rope", "holy symbol", "hourglass", "inkpen", "oil lamp", "parchment", "signal horn", "signal whistle", "silk rope", "spyglass", "teapot", "waterskin", "whetstone", "wine glass"],
-  "miscItemBasic": ["banner", "beaker", "bell", "blanket", "bowl", "brick", "candle", "clamp", "cloth", "compass", "cork", "cup", "flag", "flask", "fork", "funnel", "glue", "goblet", "vial of ink", "key", "knife", "ladder", "lock", "marble", "paper", "pennant", "pitcher", "plate", "ruler", "soap", "spoon", "string", "tent", "tongs", "torch", "twine", "vase", "vial", "wheel"],
+  "miscItemBasic": ["banner", "beaker", "bell", "blanket", "bowl", "brick", "candle", "clamp", "cloth", "compass", "cork", "cup", "flag", "flask", "fork", "funnel", "glue", "goblet", "ink vial", "key", "knife", "ladder", "lock", "marble", "paper", "pennant", "pitcher", "plate", "ruler", "soap", "spoon", "string", "tent", "tongs", "torch", "twine", "vase", "vial", "wheel"],
   "miscTreasure": ["candelabra", "diptych", "gemstone", "music box", "puzzle box", "set of dice", "triptych"],
   "miscTreasureBasic": ["chalice", "coin", "gem", "goblet", "idol", "medallion"],
   "modeOfTravel": ["by foot", "on horseback"],

@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import CityOverview from "./../CityOverview.vue"
+import CityOverview from "./../overview/CityOverview.vue"
 
 export default {
   name: 'City1',

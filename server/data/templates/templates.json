@@ -14,38 +14,28 @@
     }    
   },
   "locations": {
-    "city": {
+    "City": {
       "_displayName": "City",
-      "_path": "city",
-      "_component": "City",
       "city-1": "City1",
       "city-2": "City2"
     },
-    "temple": {
+    "Temple": {
       "_displayName": "Temple",
-      "_path": "temple",
-      "_component": "Temple",
       "temple-1": "Temple1",
       "temple-2": "Temple2"
     },
-    "dungeon-room": {
+    "DungeonRoom": {
       "_displayName": "Dungeon Room",
-      "_path": "dungeon-room",
-      "_component": "DungeonRoom",
       "dungeon-room-1": "DungeonRoom1",
       "dungeon-room-2": "DungeonRoom2"
     },
-    "small-town": {
+    "SmallTown": {
       "_displayName": "Small Town",
-      "_path": "small-town",
-      "_component": "SmallTown",
       "small-town-1": "SmallTown1",
       "small-town-2": "SmallTown2"
     },
-    "ship": {
+    "Ship": {
       "_displayName": "Ship",
-      "_path": "ship",
-      "_component": "Ship",
       "ship-1": "Ship1",
       "ship-2": "Ship2"
     }
