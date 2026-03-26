@@ -1,11 +1,4 @@
 <!-- eslint-disable vue/no-side-effects-in-computed-properties -->
-<script setup>
-import { inject } from 'vue'
-
-const data = inject('data')
-
-</script>
-
 <template>
   <div>
     <div class="banner">

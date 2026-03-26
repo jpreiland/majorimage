@@ -51,16 +51,12 @@
     }
   },
   "magic": {
-    "spells": {
+    "Spells": {
       "_displayName": "Spells",
-      "_path": "spells",
-      "_component": "Spells",
       "spells-1": "Spells1"
     },
-    "weapons": {
+    "MagicWeapons": {
       "_displayName": "Magic Weapons",
-      "_path": "weapons",
-      "_component": "MagicWeapons",
       "weapons-1": "MagicWeapons1"
     }
   },
