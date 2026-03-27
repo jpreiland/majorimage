@@ -1,40 +1,43 @@
 {
   "objects": {
-    "set-dressing": {
+    "SetDressing": {
+      "_order": 1,
       "_displayName": "Set Dressing",
-      "_path": "set-dressing",
-      "_component": "SetDressing",
       "set-dressing-1": "SetDressing1"
     },
-    "art": {
+    "Art": {
+      "_order": 2,
       "_displayName": "Art",
-      "_path": "art",
-      "_component": "Art",
       "art-1": "Art1"
     }    
   },
   "locations": {
     "City": {
+      "_order": 1,
       "_displayName": "City",
       "city-1": "City1",
       "city-2": "City2"
     },
     "Temple": {
+      "_order": 2,
       "_displayName": "Temple",
       "temple-1": "Temple1",
       "temple-2": "Temple2"
     },
     "DungeonRoom": {
+      "_order": 3,
       "_displayName": "Dungeon Room",
       "dungeon-room-1": "DungeonRoom1",
       "dungeon-room-2": "DungeonRoom2"
     },
     "SmallTown": {
+      "_order": 4,
       "_displayName": "Small Town",
       "small-town-1": "SmallTown1",
       "small-town-2": "SmallTown2"
     },
     "Ship": {
+      "_order": 5,
       "_displayName": "Ship",
       "ship-1": "Ship1",
       "ship-2": "Ship2"
@@ -42,53 +45,49 @@
   },
   "magic": {
     "Spells": {
+      "_order": 1,
       "_displayName": "Spells",
       "spells-1": "Spells1"
     },
     "MagicWeapons": {
+      "_order": 2,
       "_displayName": "Magic Weapons",
       "weapons-1": "MagicWeapons1"
     }
   },
   "shops": {
-    "general": {
+    "General": {
+      "_order": 1,
       "_displayName": "General",
-      "_path": "general",
-      "_component": "General",
       "general-1": "General1"
     },
-    "blacksmith": {
+    "Blacksmith": {
+      "_order": 2,
       "_displayName": "Blacksmith",
-      "_path": "blacksmith",
-      "_component": "Blacksmith",
       "blacksmith-1": "Blacksmith1"
     }
   },
   "npcs": {
-    "noble": {
+    "Noble": {
+      "_order": 1,
       "_displayName": "Noble",
-      "_path": "noble",
-      "_component": "Noble",
       "noble-1": "Noble1"
     },
-    "wizard": {
+    "Wizard": {
+      "_order": 2,
       "_displayName": "Wizard",
-      "_path": "wizard",
-      "_component": "Wizard",
       "wizard-1": "Wizard1"
     }
   },
   "quests": {
-    "rumor": {
+    "Rumor": {
+      "_order": 1,
       "_displayName": "Rumors",
-      "_path": "rumor",
-      "_component": "Rumor",
       "rumor-1": "Rumor1"
     },
-    "wanted": {
+    "Wanted": {
+      "_order": 2,
       "_displayName": "Wanted",
-      "_path": "wanted",
-      "_component": "Wanted",
       "wanted-1": "Wanted1"
     }
   }

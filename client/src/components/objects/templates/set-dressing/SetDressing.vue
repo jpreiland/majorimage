@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import ObjectRow from "./ObjectRow.vue"
+import ObjectRow from "./object-rows/ObjectRow.vue"
 
 export default {
   name: 'Objects',

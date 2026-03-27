@@ -1,76 +1,51 @@
 <template>
   <div class="columns list left-scroll-menu">
-    <div class="column left-scroll-menu">
+    <div class="column list left-scroll-menu">
       <ul>
-        <li v-for="(objectSubpage, key, i) in data.templates.objects" :key="'objectSubpage-'+key" class="list-item" :class="{ 'selected': initialized && types[i].selected }" @click="select(objectSubpage, i)">
-          {{ objectSubpage._displayName }}
+        <li v-for="(subpage) in subpages" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.key === activeKey }" @click="activate(subpage)">
+          {{ subpage.name }}
         </li>
       </ul>
     </div>
     <div class="column right-info-card-holder">
       <div class="info-card right">
-        <component :is="computeType" v-if="initialized" />
+        <component :is="activeComponentDef" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { defineAsyncComponent } from 'vue'
+const modules = import.meta.glob('./templates/*/*.vue', { eager: true })
+import {buildSubpages} from './../../lib/page-util/page-utils.js'
 
 export default {
   name: 'Objects',
   inject: ['data', 'menuSelections'],
   data() {
     return {
-      types: [],
-      activeType: {},
-      activePath: "",
-      activeComponent: "",
-      initialized: false
+      subpages: [],
+      activeKey: null,
+      activeComponentDef: null,
     }
   },
-  computed: {
-    computeType () {
-      if (this.activePath.includes('..')) return
-      return defineAsyncComponent(() => import(`./templates/${this.activePath}/${this.activeComponent}.vue`))
+  mounted() {
+    this.subpages = buildSubpages(modules, 'objects', this.data)
+    if (this.subpages.length) {
+      const subpage = this.menuSelections.objects ? this.menuSelections.objects : this.subpages[0]
+      this.activate(subpage)
     }
-  },
-  async mounted() {
-    this.loadTypes()
-    if (!this.menuSelections.objects) {
-      this.menuSelections.objects = this.types[0].name
-    }
-    this.activeType = this.menuSelections.objects
-    this.activePath = this.data.templates.objects[this.activeType]._path
-    this.activeComponent = this.data.templates.objects[this.activeType]._component
-    this.setSelected()
-    this.initialized = true
   },
   methods: {
-    loadTypes() { 
-      for (let key of Object.keys(this.data.templates.objects)) {
-        this.types.push({name: key, selected: false})
-      }
-    },
-    setSelected() {
-      for (let type of this.types) {
-        type.selected = (type.name === this.menuSelections.objects)
-      }
-    },
-    async select(objectSubpage, listIndex) {
-      const pathParts = objectSubpage._path.split('/')
-      this.menuSelections.objects = pathParts[pathParts.length-2]
-      this.activePath = objectSubpage._path
-      this.activeComponent = objectSubpage._component
-      for (let i in this.types) {
-        this.types[i].selected = (i == listIndex)
+    activate(subpage) {
+      this.activeComponentDef = subpage.component
+      this.activeKey = subpage.key
+      this.menuSelections.objects = subpage
+
+      for (const s of this.subpages) {
+        s.selected = s === subpage
       }
     }
   }
 }
 </script>
-
-<style>
-
-</style>

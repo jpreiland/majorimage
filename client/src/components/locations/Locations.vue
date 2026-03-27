@@ -17,23 +17,7 @@
 
 <script>
 const modules = import.meta.glob('./templates/*/*.vue', { eager: true })
-
-function buildSubpages(modules, data) {
-  return Object.entries(modules).map(([path, module]) => {
-    const parts = path.split('/')
-    const file = parts.pop().replace('.vue', '')
-    const category = parts.pop()
-
-    return {
-      key: path,
-      name: data.templates.locations[file]?._displayName?
-        data.templates.locations[file]._displayName : file,
-      category,
-      component: module.default,
-      selected: false
-    }
-  })
-}
+import {buildSubpages} from './../../lib/page-util/page-utils.js'
 
 export default {
   name: 'Locations',
@@ -46,7 +30,7 @@ export default {
     }
   },
   mounted() {
-    this.subpages = buildSubpages(modules, this.data)
+    this.subpages = buildSubpages(modules, 'locations', this.data)
     if (this.subpages.length) {
       const subpage = this.menuSelections.locations ? this.menuSelections.locations : this.subpages[0]
       this.activate(subpage)
