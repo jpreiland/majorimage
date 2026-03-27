@@ -1,3 +1,5 @@
+import { markRaw } from 'vue'
+
 export function buildSubpages(modules, page, data) {
   if (!modules || typeof modules !== 'object') {
     console.warn('[buildSubpages] modules is invalid:', modules)
@@ -18,7 +20,7 @@ export function buildSubpages(modules, page, data) {
 
       const [, category, file] = match
 
-      const component = module?.default
+      const component = markRaw(module?.default)
 
       if (!component) {
         console.warn('[buildSubpages] Missing default export:', path)

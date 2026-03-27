@@ -9,13 +9,13 @@
         </p>
       </div>
       <div class="navigation">
-        <router-link to="/" class="button nav-btn red">Objects</router-link>
-        <router-link to="/locations" class="button nav-btn orange">Locations</router-link>
-        <router-link to="/magic" class="button nav-btn yellow">Magic</router-link>
-        <router-link to="/shops" class="button nav-btn green">Shops</router-link>
-        <router-link to="/npcs" class="button nav-btn blue">NPCs</router-link>
-        <router-link to="/quests" class="button nav-btn indigo">Quests</router-link>
-        <router-link to="/materials" class="button nav-btn violet">Materials</router-link>
+        <router-link to="/" class="button nav-btn red" exact-active-class="nav-selected">Objects</router-link>
+        <router-link to="/locations" class="button nav-btn orange" exact-active-class="nav-selected">Locations</router-link>
+        <router-link to="/magic" class="button nav-btn yellow" exact-active-class="nav-selected">Magic</router-link>
+        <router-link to="/shops" class="button nav-btn green" exact-active-class="nav-selected">Shops</router-link>
+        <router-link to="/npcs" class="button nav-btn blue" exact-active-class="nav-selected">NPCs</router-link>
+        <router-link to="/quests" class="button nav-btn indigo" exact-active-class="nav-selected">Quests</router-link>
+        <router-link to="/materials" class="button nav-btn violet" exact-active-class="nav-selected">Materials</router-link>
       </div>
     </div>
 
