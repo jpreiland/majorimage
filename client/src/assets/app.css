@@ -51,9 +51,10 @@
 }
 
 .page {
+  margin-top: 5rem;
   padding-left: .6rem;
   padding-right: .6rem;
-  margin-top: 5rem;
+  padding-bottom: 0.8rem;
 }
 
 .button.nav-btn {  
