@@ -32,6 +32,7 @@ export function buildSubpages(modules, page, data) {
       return {
         key: path,
         name: meta._displayName ?? file,
+        slug: file.toLowerCase(),
         category,
         component,
         selected: false,

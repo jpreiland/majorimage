@@ -2,7 +2,7 @@
   <div class="columns list left-scroll-menu">
     <div class="column list left-scroll-menu">
       <ul>
-        <li v-for="(subpage) in subpages" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.key === activeKey }" @click="activate(subpage)">
+        <li v-for="(subpage) in subpages" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.slug === activeSlug }" @click="activate(subpage)">
           {{ subpage.name }}
         </li>
       </ul>
@@ -16,35 +16,42 @@
 </template>
 
 <script>
-const modules = import.meta.glob('./templates/*/*.vue', { eager: true })
 import {buildSubpages} from './../../lib/page-util/page-utils.js'
+
+const modules = import.meta.glob('./templates/*/*.vue', { eager: true })
 
 export default {
   name: 'Npcs',
   inject: ['data', 'menuSelections'],
   data() {
     return {
-      subpages: [],
-      activeKey: null,
-      activeComponentDef: null,
+      subpages: []
+    }
+  },
+  computed: {
+    activeSlug() {
+      return this.$route.params.subpage ?? null
+    },
+    activeSubpage() {
+      return this.subpages.find(
+        s => s.slug === this.activeSlug
+      ) || this.menuSelections.npcs || this.subpages[0]
+    },
+    activeComponentDef() {
+      return this.activeSubpage?.component ?? null
     }
   },
   mounted() {
     this.subpages = buildSubpages(modules, 'npcs', this.data)
-    if (this.subpages.length) {
-      const subpage = this.menuSelections.npcs ? this.menuSelections.npcs : this.subpages[0]
-      this.activate(subpage)
+
+    if (!this.$route.params.subpage && this.subpages.length) {
+      this.$router.replace(`/npcs/${this.menuSelections.npcs?.slug ? this.menuSelections.npcs.slug : this.subpages[0].slug}`)
     }
   },
   methods: {
     activate(subpage) {
-      this.activeComponentDef = subpage.component
-      this.activeKey = subpage.key
       this.menuSelections.npcs = subpage
-
-      for (const s of this.subpages) {
-        s.selected = s === subpage
-      }
+      this.$router.replace(`/npcs/${subpage.slug}`)
     }
   }
 }

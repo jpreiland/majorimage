@@ -12,16 +12,18 @@ import Shops from '../components/shops/Shops.vue'
 import NotFound from '../components/notfound/NotFound.vue'
 
 const routes = [
-  { path: '/', component: Objects },
-  { path: '/objects', component: Objects },
-  { path: '/locations', component: Locations },
-  { path: '/magic', component: Magic },
-  { path: '/shops', component: Shops },
-  { path: '/npcs', component: Npcs },
-  { path: '/quests', component: Quests },
-  { path: '/materials', component: Materials },
-  { path: '/about', component: About },
-  { path: '/acknowledgements', component: Acknowledgements },
+  { path: '/', redirect: '/objects' },
+
+  { path: '/objects/:subpage?', name: 'objects', component: Objects, meta: { color: 'red', navDisplayName: 'Objects', topNav: true }  },
+  { path: '/locations/:subpage?', name: 'locations', component: Locations, meta: { color: 'orange', navDisplayName: 'Locations', topNav: true } },
+  { path: '/magic/:subpage?', name: 'magic', component: Magic, meta: { color: 'yellow', navDisplayName: 'Magic', topNav: true }  },
+  { path: '/shops/:subpage?', name: 'shops', component: Shops, meta: { color: 'green', navDisplayName: 'Shops', topNav: true }  },
+  { path: '/npcs/:subpage?', name: 'npcs', component: Npcs, meta: { color: 'blue', navDisplayName: 'NPCs', topNav: true }  },
+  { path: '/quests/:subpage?', name: 'quests', component: Quests, meta: { color: 'indigo', navDisplayName: 'Quests', topNav: true }  },
+  { path: '/materials', name: 'materials', component: Materials, meta: { color: 'violet', navDisplayName: 'Materials', topNav: true }  },
+
+  { path: '/about', name: 'about', component: About, meta: { navDisplayName: 'About', topNav: false } },
+  { path: '/acknowledgements', name: 'acknowledgements', component: Acknowledgements, meta: { navDisplayName: 'Acknowledgements', topNav: false } },
 
   { path: '/:pathMatch(.*)*', component: NotFound }
 ]

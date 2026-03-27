@@ -9,13 +9,13 @@
         </p>
       </div>
       <div class="navigation">
-        <router-link to="/" class="button nav-btn red" exact-active-class="nav-selected">Objects</router-link>
-        <router-link to="/locations" class="button nav-btn orange" exact-active-class="nav-selected">Locations</router-link>
-        <router-link to="/magic" class="button nav-btn yellow" exact-active-class="nav-selected">Magic</router-link>
-        <router-link to="/shops" class="button nav-btn green" exact-active-class="nav-selected">Shops</router-link>
-        <router-link to="/npcs" class="button nav-btn blue" exact-active-class="nav-selected">NPCs</router-link>
-        <router-link to="/quests" class="button nav-btn indigo" exact-active-class="nav-selected">Quests</router-link>
-        <router-link to="/materials" class="button nav-btn violet" exact-active-class="nav-selected">Materials</router-link>
+        <NavLink :page-name="'objects'" :color="'red'" :tab-display-name="'Objects'" />
+        <NavLink :page-name="'locations'" :color="'orange'" :tab-display-name="'Locations'" />
+        <NavLink :page-name="'magic'" :color="'yellow'" :tab-display-name="'Magic'" />
+        <NavLink :page-name="'shops'" :color="'green'" :tab-display-name="'Shops'" />
+        <NavLink :page-name="'npcs'" :color="'blue'" :tab-display-name="'NPCs'" />
+        <NavLink :page-name="'quests'" :color="'indigo'" :tab-display-name="'Quests'" />
+        <NavLink :page-name="'materials'" :color="'violet'" :tab-display-name="'Materials'" />
       </div>
     </div>
 
@@ -24,8 +24,18 @@
     </main>
 
     <div class="navigation">
-      <router-link to="/about" class="button nav-btn">About</router-link>
-      <router-link to="/acknowledgements" class="button nav-btn">Acknowledgements</router-link>
+      <NavLink :page-name="'about'" :tab-display-name="'About'" />
+      <NavLink :page-name="'acknowledgements'" :tab-display-name="'Acknowledgements'" />
     </div>
   </div>
 </template>
+
+<script>
+import NavLink from './components/navigation/NavLink.vue'
+
+export default {
+  components: {
+    NavLink
+  },
+}
+</script>
