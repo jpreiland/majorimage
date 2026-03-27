@@ -9,15 +9,38 @@ import StealthDescriptor from './components/descriptors/StealthDescriptor.vue'
 import './assets/app.css';
 
 async function loadData() {
-  const CACHE_KEY = 'app-data-v1'
+  const CACHE_KEY = `app-data-${__APP_VERSION__}`
+  const isDev = import.meta.env.DEV
 
-  const cached = localStorage.getItem(CACHE_KEY)
-  // comment out for convenience during development
-  if (cached) return JSON.parse(cached)
+  if (!isDev) {
+    const cached = localStorage.getItem(CACHE_KEY)
+    if (cached) {
+      fetch('/api/data')
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          if (data) {
+            localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+          }
+        })
+        .catch(() => {})
 
-  const res = await fetch('/api/data')
+      return JSON.parse(cached)
+    }
+  }
+
+  const res = await fetch('/api/data', {
+    cache: isDev ? 'no-store' : 'default'
+  })
+
+  if (!res.ok) {
+    throw new Error(`Failed to load data: ${res.status}`)
+  }
+
   const data = await res.json()
-  localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+
+  if (!isDev) {
+    localStorage.setItem(CACHE_KEY, JSON.stringify(data))
+  }
 
   return data
 }

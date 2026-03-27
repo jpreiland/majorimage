@@ -4,7 +4,7 @@
 }
 @media (max-width: 495px) {
   html {
-    font-size: .6em;
+    font-size: 0.6em;
   }
 }
 .banner {
@@ -52,8 +52,8 @@
 
 .page {
   margin-top: 5rem;
-  padding-left: .6rem;
-  padding-right: .6rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
   padding-bottom: 0.8rem;
 }
 
