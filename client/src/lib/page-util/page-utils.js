@@ -20,7 +20,7 @@ export function buildSubpages(modules, page, data) {
 
       const [, category, file] = match
 
-      const component = markRaw(module?.default)
+      const component = module?.default ? markRaw(module?.default) : null
 
       if (!component) {
         console.warn('[buildSubpages] Missing default export:', path)
