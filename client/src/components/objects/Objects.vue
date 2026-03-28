@@ -30,7 +30,7 @@ export default {
   },
   computed: {
     activeSlug() {
-      return this.$route.params.subpage ?? null
+      return this.$route.params.subpage ?? this.subpages[0]?.slug
     },
     activeSubpage() {
       return this.subpages.find(
