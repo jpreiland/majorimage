@@ -9,13 +9,7 @@
         </p>
       </div>
       <div class="navigation">
-        <NavLink :page-name="'objects'" :color="'red'" :tab-display-name="'Objects'" />
-        <NavLink :page-name="'locations'" :color="'orange'" :tab-display-name="'Locations'" />
-        <NavLink :page-name="'magic'" :color="'yellow'" :tab-display-name="'Magic'" />
-        <NavLink :page-name="'shops'" :color="'green'" :tab-display-name="'Shops'" />
-        <NavLink :page-name="'npcs'" :color="'blue'" :tab-display-name="'NPCs'" />
-        <NavLink :page-name="'quests'" :color="'indigo'" :tab-display-name="'Quests'" />
-        <NavLink :page-name="'materials'" :color="'violet'" :tab-display-name="'Materials'" />
+        <NavLink v-for="(page) in topNavPages" :page-name="page.name" :color="page.meta.color" :tab-display-name="page.meta.navDisplayName" />
       </div>
     </div>
 
@@ -24,8 +18,7 @@
     </main>
 
     <div class="navigation">
-      <NavLink :page-name="'about'" :tab-display-name="'About'" />
-      <NavLink :page-name="'acknowledgements'" :tab-display-name="'Acknowledgements'" />
+      <NavLink v-for="(page) in bottomNavPages" :page-name="page.name" :tab-display-name="page.meta.navDisplayName" />
     </div>
   </div>
 </template>
@@ -37,5 +30,13 @@ export default {
   components: {
     NavLink
   },
+  computed: {
+    topNavPages() {
+      return this.$router.getRoutes().filter(page => page.meta.topNav)
+    },
+    bottomNavPages() {
+      return this.$router.getRoutes().filter(page => page.meta.bottomNav)
+    }
+  }
 }
 </script>

@@ -14,16 +14,25 @@ import NotFound from '../components/notfound/NotFound.vue'
 const routes = [
   { path: '/', redirect: '/objects' },
 
-  { path: '/objects/:subpage?', name: 'objects', component: Objects, meta: { color: 'red', navDisplayName: 'Objects', topNav: true }  },
-  { path: '/locations/:subpage?', name: 'locations', component: Locations, meta: { color: 'orange', navDisplayName: 'Locations', topNav: true } },
-  { path: '/magic/:subpage?', name: 'magic', component: Magic, meta: { color: 'yellow', navDisplayName: 'Magic', topNav: true }  },
-  { path: '/shops/:subpage?', name: 'shops', component: Shops, meta: { color: 'green', navDisplayName: 'Shops', topNav: true }  },
-  { path: '/npcs/:subpage?', name: 'npcs', component: Npcs, meta: { color: 'blue', navDisplayName: 'NPCs', topNav: true }  },
-  { path: '/quests/:subpage?', name: 'quests', component: Quests, meta: { color: 'indigo', navDisplayName: 'Quests', topNav: true }  },
-  { path: '/materials', name: 'materials', component: Materials, meta: { color: 'violet', navDisplayName: 'Materials', topNav: true }  },
+  { path: '/objects/:subpage?', name: 'objects', component: Objects, 
+    meta: { color: 'red', navDisplayName: 'Objects', topNav: true }  },
+  { path: '/locations/:subpage?', name: 'locations', component: Locations,
+    meta: { color: 'orange', navDisplayName: 'Locations', topNav: true } },
+  { path: '/magic/:subpage?', name: 'magic', component: Magic,
+    meta: { color: 'yellow', navDisplayName: 'Magic', topNav: true }  },
+  { path: '/shops/:subpage?', name: 'shops', component: Shops,
+    meta: { color: 'green', navDisplayName: 'Shops', topNav: true }  },
+  { path: '/npcs/:subpage?', name: 'npcs', component: Npcs,
+    meta: { color: 'blue', navDisplayName: 'NPCs', topNav: true }  },
+  { path: '/quests/:subpage?', name: 'quests', component: Quests,
+    meta: { color: 'indigo', navDisplayName: 'Quests', topNav: true }  },
+  { path: '/materials', name: 'materials', component: Materials,
+    meta: { color: 'violet', navDisplayName: 'Materials', topNav: true }  },
 
-  { path: '/about', name: 'about', component: About, meta: { navDisplayName: 'About', topNav: false } },
-  { path: '/acknowledgements', name: 'acknowledgements', component: Acknowledgements, meta: { navDisplayName: 'Acknowledgements', topNav: false } },
+  { path: '/about', name: 'about', component: About,
+    meta: { navDisplayName: 'About', bottomNav: true } },
+  { path: '/acknowledgements', name: 'acknowledgements', component: Acknowledgements,
+    meta: { navDisplayName: 'Acknowledgements', bottomNav: true } },
 
   { path: '/:pathMatch(.*)*', component: NotFound }
 ]
