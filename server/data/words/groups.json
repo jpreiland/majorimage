@@ -34,6 +34,7 @@
   "qualityObject": ["adjectiveAesthetic", "adjectiveAge", "adjectiveAgeObject", "adjectiveCondition", "adjectiveCleanliness", "adjectiveQuality", "adjectiveSizeAll", "adjectiveStructural", "adjectiveWeight"],
   "roomAll": ["room", "roomBasic", "roomConnection"],
   "structure": ["building", "buildingReligious", "buildingWaterside", "tree"],
+  "tradeAll": ["tradeAdventurerAll", "tradeNPC"],
   "tradeAdventurerAll": ["tradeAdventurer", "tradeAdventurerBasic"],
   "treasure": ["art", "jewelry", "miscTreasure", "treasureBasic"],
   "treasureBasic": ["artBasic", "jewelryBasic", "miscTreasureBasic"],

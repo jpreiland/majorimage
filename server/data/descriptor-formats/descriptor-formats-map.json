@@ -1,11 +1,30 @@
 {
-  "A(n)AdjectivePersonTradeNPC": [["a(n)-adjectivePerson-tradeNPC", 1]],
-  "Bazaar": [["color-geography", 1]],
-  "Book": [["novel-tradeNPC-verbed", 1], ["novel-tradeNPCs-verbed", 1]],
-  "City": [["color-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
-  "Color": [["_color", 5], ["modifiedColor", 2]],
-  "Countryside": [["color-geography", 1]],
-  "WandOrScroll": [["scrollOf", 1], ["wandOf", 1]],
+  "A(n)AdjectivePersonTradeNPC": [
+    ["a(n)-adjectivePerson-tradeNPC", 1]
+  ],
+  "Bazaar": [
+    ["color-geography", 1]
+  ],
+  "Book": [
+    ["novel-tradeNPC-verbed", 1],
+    ["novel-tradeNPCs-verbed", 1]
+  ],
+  "City": [
+    ["color-geography", 1],
+    ["nameFirst-geography", 1],
+    ["monster-geography", 1]
+  ],
+  "Color": [
+    ["_color", 5],
+    ["modifiedColor", 2]
+  ],
+  "Countryside": [
+    ["color-geography", 1]
+  ],
+  "WandOrScroll": [
+    ["scrollOf", 1],
+    ["wandOf", 1]
+  ],
   "CustomSpell": [
     ["spellAdjectivePrefix", 16], 
     ["spellFormOfVirtue", 8], 
@@ -30,31 +49,111 @@
     ["spellCreaturesWithNounSuffix", 4], 
     ["spellPowerWordVerb", 2]
   ],
-  "CustomWeapon": [["weaponElementVerber", 3], ["weaponBodyPartVerber", 3], ["weaponAnimalVerber", 1], ["weaponMonsterVerber", 2], ["weaponVerber", 1], ["weaponWithNounSuffix", 3], ["weaponElementWeaponWithNounSuffix", 2], ["weaponMonsterWeapon", 1], ["weaponWeaponofVirtue", 2], ["weaponWeaponofVerbing", 4], ["weaponWeaponoftheMonster", 3], ["weaponWeaponoftheEpithetMonster", 2], ["weaponWeaponoftheAdventurer", 3], ["weaponWeaponoftheEpithetAdventurer", 2]],
-  "CreatureVerbingMisc(s)": [["creature-verbing-misc", 1], ["creature-verbing-miscs", 1]],
-  "DistanceLarge": [["miles2-100", 4], ["minutesTravelOptional5-60", 2], ["hoursTravelOptional2-23", 3], ["daysTravelOptional2-7", 2], ["weeksTravelOptional2-7", 1], ["_distanceRelative", 1]],
-  "DivineBeing": [["portfolio-divineBeing", 3], ["divineBeing-of-portfolio", 1]],
-  "GeographicFeature": [["color-geography", 1], ["nameFirst-geography", 1], ["monster-geography", 1]],
-  "EnhancementBonus": [["enhancementBonus", 1]],
-  "EventVerbing": [["event-verbing-creature", 1], ["event-verbing-event", 3], ["event-verbing-misc", 3]],
-
-
-  "RoomLighting": [["light-source-plural", 1],
-  ["light-source-amount-plural", 1],
-  ["light-source-singular", 1],
-  ["light-source-uncountable", 1],
-  ["_lightingQuality", 1],
-  ["_lightingQualityNone", 1]],
-
-
-  "MartialManeuver": [["maneuverMovementAnimalForm", 20], ["maneuverMovementBodyPartForm", 8], ["maneuverNumberBodyPartedForm", 2], ["maneuverNumberBodyPartedAnimalForm", 2], ["maneuverNumberBodyPartedMonsterBasicNoBeastForm", 2], ["maneuverMovementMonsterBasicNoBeastForm", 2], ["maneuverAdjectiveMonsterBasicNoBeastForm", 2], ["maneuverAdjectiveAnimalForm", 4], ["maneuverAnimalForm", 4], ["maneuverMonsterNoBeastForm", 2], ["maneuverNumberPartForm", 3], ["maneuverNumberAnimalsForm", 3], ["maneuverMammalBodyPartMammalManeuverBodyPart", 1], ["maneuverAdjectiveAnimalVerbsTheFruit", 1], ["maneuverAdjectiveAnimalVerbsTheStructure", 1]],
-  "ModifiedWeapon": [["modified-melee-weapon", 1]],
-  "Ship": [["color-geography", 1]],
-  "Small Town": [["color-geography", 1]],
-  "Temple": [["buildingReligious-adjective-tradeAdventurer(s)", 1], ["buildingReligious-divine-being", 1]],
-  "TestA(n)": [["some-animalAndMonsters", 2], ["some-accessories", 1], ["a(n)-animalAndMonster(s)", 3], ["a(n)-animalAndMonster", 3], ["a(n)-accesory(s)", 1], ["a(n)-accesory", 1]],
-  "TestNum5-17": [["numberFiveToSeventeen", 1]],
-  "TestNum0-9-no": [["numberZeroToNine(no)", 1]],
-  "TestPickMulti0-3": [["a(n)-0to3-adjectivePerson-tradeNPC", 1]],
-  "__Price": [["__price", 1]]
+  "CustomWeapon": [
+    ["weaponAnimalVerber", 1],
+    ["weaponBodyPartVerber", 3],
+    ["weaponElementVerber", 3],
+    ["weaponWithNounSuffix", 3],
+    ["weaponElementWeaponWithNounSuffix", 2],
+    ["weaponMonsterVerber", 2],
+    ["weaponMonsterWeapon", 1],
+    ["weaponNameWeapon", 3],
+    ["weaponOfNametheEpithet", 2],
+    ["weaponOfNametheTrade", 1],
+    ["weaponOfNametheTradeAdventurer", 1],
+    ["weaponWeaponofVirtue", 2],
+    ["weaponWeaponofVerbing", 4],
+    ["weaponWeaponoftheMonster", 3],
+    ["weaponWeaponoftheEpithetMonster", 2],
+    ["weaponWeaponoftheAdventurer", 3],
+    ["weaponWeaponoftheEpithetAdventurer", 2],
+    ["weaponVerber", 1]
+  ],
+  "CreatureVerbingMisc(s)": [
+    ["creature-verbing-misc", 1],
+    ["creature-verbing-miscs", 1]
+  ],
+  "DistanceLarge": [
+    ["miles2-100", 4],
+    ["minutesTravelOptional5-60", 2],
+    ["hoursTravelOptional2-23", 3],
+    ["daysTravelOptional2-7", 2],
+    ["weeksTravelOptional2-7", 1],
+    ["_distanceRelative", 1]
+  ],
+  "DivineBeing": [
+    ["portfolio-divineBeing", 3],
+    ["divineBeing-of-portfolio", 1]
+  ],
+  "GeographicFeature": [
+    ["color-geography", 1],
+    ["nameFirst-geography", 1],
+    ["monster-geography", 1]
+  ],
+  "EnhancementBonus": [
+    ["enhancementBonus", 1]
+  ],
+  "EventVerbing": [
+    ["event-verbing-creature", 1],
+    ["event-verbing-event", 3],
+    ["event-verbing-misc", 3]
+  ],
+  "RoomLighting": [
+    ["light-source-plural", 1],
+    ["light-source-amount-plural", 1],
+    ["light-source-singular", 1],
+    ["light-source-uncountable", 1],
+    ["_lightingQuality", 1],
+    ["_lightingQualityNone", 1]
+  ],
+  "MartialManeuver": [
+    ["maneuverMovementAnimalForm", 20],
+    ["maneuverMovementBodyPartForm", 8],
+    ["maneuverNumberBodyPartedForm", 2],
+    ["maneuverNumberBodyPartedAnimalForm", 2],
+    ["maneuverNumberBodyPartedMonsterBasicNoBeastForm", 2],
+    ["maneuverMovementMonsterBasicNoBeastForm", 2],
+    ["maneuverAdjectiveMonsterBasicNoBeastForm", 2],
+    ["maneuverAdjectiveAnimalForm", 4],
+    ["maneuverAnimalForm", 4],
+    ["maneuverMonsterNoBeastForm", 2],
+    ["maneuverNumberPartForm", 3],
+    ["maneuverNumberAnimalsForm", 3],
+    ["maneuverMammalBodyPartMammalManeuverBodyPart", 1],
+    ["maneuverAdjectiveAnimalVerbsTheFruit", 1],
+    ["maneuverAdjectiveAnimalVerbsTheStructure", 1]
+  ],
+  "ModifiedWeapon": [
+    ["modified-melee-weapon", 1]
+  ],
+  "Ship": [
+    ["color-geography", 1]
+  ],
+  "Small Town": [
+    ["color-geography", 1]
+  ],
+  "Temple": [
+    ["buildingReligious-adjective-tradeAdventurer(s)", 1],
+    ["buildingReligious-divine-being", 1]
+  ],
+  "TestA(n)": [
+    ["some-animalAndMonsters", 2],
+    ["some-accessories", 1],
+    ["a(n)-animalAndMonster(s)", 3],
+    ["a(n)-animalAndMonster", 3],
+    ["a(n)-accesory(s)", 1],
+    ["a(n)-accesory", 1]
+  ],
+  "TestNum5-17": [
+    ["numberFiveToSeventeen", 1]
+  ],
+  "TestNum0-9-no": [
+    ["numberZeroToNine(no)", 1]
+  ],
+  "TestPickMulti0-3": [
+    ["a(n)-0to3-adjectivePerson-tradeNPC", 1]
+  ],
+  "__Price": [
+    ["__price", 1]
+  ]
 }
