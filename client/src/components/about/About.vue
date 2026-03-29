@@ -6,10 +6,10 @@
       </div>
       <div class="no-descriptors">
         <p>
-          There are <span style="font-weight: bold;">{{ uniqueWordCount.toLocaleString() }}</span> 
-          unique words in the Major Image data set, which are randomly stitched together in a wide
-          variety of permutations to create all kinds of interesting ideas to present to your players 
-          during a ttrpg session. The goal of this site is to quickly generate descriptions so that you 
+          There are <span style="font-weight: bold;">{{ wordCount.toLocaleString() }}</span> 
+          unique words in the Major Image data set, which are randomly stitched together in a
+          variety of permutations to create ideas to kickstart your imagination or present to your players 
+          during a ttrpg session. The goal of this site is to quickly generate names and descriptions so that you 
           can keep the pace of play flowing and focus your brainpower on more important things like 
           critting the party's healer.
         </p>
@@ -36,9 +36,7 @@
         </p>
         <p>
           The word lists are typed by hand, as are the rules for randomly pulling from those lists. 
-          You've probably noticed some output that makes no sense, which is a side effect of 
-          this approach. However, since this site is meant to be a supplement rather than a replacement
-          for the imagination, the nonsensical output can still be useful. If you find yourself asking
+          Sometimes the output is silly or nonsensical, but that can still be useful. If you find yourself asking
           how a given bit of output could have its existence justified, then this tool is working!
           Embrace the emergent worldbuilding.
         </p>
@@ -70,21 +68,6 @@
 
 export default {
   name: 'About',
-  inject: ['data'],
-  data() {
-    return {
-      uniqueWordCount: 9001
-    }
-  },
-  async mounted() {
-    let uniqueWords = new Set()
-    for (let category of Object.keys(this.data.categories)) {
-      for (let word of this.data.categories[category]) {
-        uniqueWords.add(word)
-      }
-    }
-    this.uniqueWordCount = uniqueWords.size
-  },
-  methods: {}
+  inject: ['data', 'wordCount'],
 }
 </script>

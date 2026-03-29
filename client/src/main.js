@@ -64,14 +64,26 @@ async function buildAllSubpages(data) {
   }
 }
 
+async function getUniqueWordCount(data) {
+  const uniqueWords = new Set()
+    for (const category of Object.keys(data.categories)) {
+      for (const word of data.categories[category]) {
+        uniqueWords.add(word)
+      }
+    }
+  return uniqueWords.size
+}
+
 async function bootstrap() {
   const data = await loadData()
   const subpages = await buildAllSubpages(data)
+  const uniqueWordCount = await getUniqueWordCount(data)
   const app = createApp(App)
   
   app.provide('data', data)
   app.provide('menuSelections', {})
   app.provide('subpages', subpages)
+  app.provide('wordCount', uniqueWordCount)
 
   app.use(router)
 

@@ -2,7 +2,7 @@
   <div class="columns list left-scroll-menu">
     <div class="column list left-scroll-menu">
       <ul>
-        <li v-for="(subpage) in subpages.locations" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.slug === activeSlug }" @click="activate(subpage)">
+        <li v-for="(subpage) in subpages.locations" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.slug === activeSubpage.slug }" @click="activate(subpage)">
           {{ subpage.name }}
         </li>
       </ul>
