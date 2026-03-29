@@ -2,7 +2,7 @@
   <div class="columns list left-scroll-menu">
     <div class="column list left-scroll-menu">
       <ul>
-        <li v-for="(subpage) in subpages" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.slug === activeSlug }" @click="activate(subpage)">
+        <li v-for="(subpage) in subpages.locations" :key="subpage.key" class="list-item" :class="{ 'selected': subpage.slug === activeSlug }" @click="activate(subpage)">
           {{ subpage.name }}
         </li>
       </ul>
@@ -16,36 +16,25 @@
 </template>
 
 <script>
-import {buildSubpages} from './../../lib/page-util/page-utils.js'
-
-const modules = import.meta.glob('./templates/*/*.vue', { eager: true })
-
 export default {
   name: 'Locations',
-  inject: ['data', 'menuSelections'],
-  data() {
-    return {
-      subpages: []
-    }
-  },
+  inject: ['data', 'menuSelections', 'subpages'],
   computed: {
     activeSlug() {
-      return this.$route.params.subpage ?? this.subpages[0]?.slug
+      return this.$route.params.subpage ?? this.subpages.locations[0]?.slug
     },
     activeSubpage() {
-      return this.subpages.find(
+      return this.subpages.locations.find(
         s => s.slug === this.activeSlug
-      ) || this.menuSelections.locations || this.subpages[0]
+      ) || this.menuSelections.locations || this.subpages.locations[0]
     },
     activeComponentDef() {
       return this.activeSubpage?.component ?? null
     }
   },
   mounted() {
-    this.subpages = buildSubpages(modules, 'locations', this.data)
-
-    if (!this.$route.params.subpage && this.subpages.length) {
-      this.$router.replace(`/locations/${this.menuSelections.locations?.slug ? this.menuSelections.locations.slug : this.subpages[0].slug}`)
+    if (!this.$route.params.subpage && this.subpages.locations.length) {
+      this.$router.replace(`/locations/${this.menuSelections.locations?.slug ? this.menuSelections.locations.slug : this.subpages.locations[0].slug}`)
     }
   },
   methods: {

@@ -10,16 +10,14 @@ export function buildSubpages(modules, page, data) {
 
   return Object.entries(modules)
     .map(([path, module]) => {
-      // Expected: ./templates/<category>/<file>.vue
-      const match = path.match(/^\.\/templates\/([^/]+)\/([^/]+)\.vue$/)
-
+      // Expected: ./components/<page>/templates/<subpage>/<file>.vue
+      const match = path.match(/^\.\/components\/[a-z]+\/templates\/([^/]+)\/([^/]+)\.vue$/)
       if (!match) {
         console.warn('[buildSubpages] Unexpected path:', path)
         return null
       }
 
-      const [, category, file] = match
-
+      const [, subpage, file] = match
       const component = module?.default ? markRaw(module?.default) : null
 
       if (!component) {
@@ -33,7 +31,7 @@ export function buildSubpages(modules, page, data) {
         key: path,
         name: meta._displayName ?? file,
         slug: file.toLowerCase(),
-        category,
+        subpage,
         component,
         selected: false,
         order: meta._order ?? Infinity

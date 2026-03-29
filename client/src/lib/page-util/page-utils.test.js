@@ -7,8 +7,8 @@ const CompB = { name: 'CompB' }
 describe('buildSubpages', () => {
   it('builds subpages from eager glob modules', () => {
     const modules = {
-      './templates/foo/PageA.vue': { default: CompA },
-      './templates/bar/PageB.vue': { default: CompB }
+      './components/baz/templates/foo/PageA.vue': { default: CompA },
+      './components/baz/templates/bar/PageB.vue': { default: CompB }
     }
 
     const data = {
@@ -23,14 +23,14 @@ describe('buildSubpages', () => {
 
     expect(result[0]).toMatchObject({
       name: 'PageA',
-      category: 'foo',
+      subpage: 'foo',
       component: CompA
     })
   })
 
   it('uses display name from metadata', () => {
     const modules = {
-      './templates/foo/PageA.vue': { default: CompA }
+      './components/baz/templates/foo/PageA.vue': { default: CompA }
     }
 
     const data = {
@@ -48,8 +48,8 @@ describe('buildSubpages', () => {
 
   it('sorts by metadata order', () => {
     const modules = {
-      './templates/foo/PageA.vue': { default: CompA },
-      './templates/bar/PageB.vue': { default: CompB }
+      './components/baz/templates/foo/PageA.vue': { default: CompA },
+      './components/baz/templates/bar/PageB.vue': { default: CompB }
     }
 
     const data = {
@@ -68,8 +68,8 @@ describe('buildSubpages', () => {
 
   it('falls back to alphabetical when order equal', () => {
     const modules = {
-      './templates/foo/Beta.vue': { default: CompB },
-      './templates/bar/Alpha.vue': { default: CompA }
+      './components/baz/templates/foo/Beta.vue': { default: CompB },
+      './components/baz/templates/bar/Alpha.vue': { default: CompA }
     }
 
     const data = {
@@ -83,7 +83,7 @@ describe('buildSubpages', () => {
 
   it('handles missing metadata safely', () => {
     const modules = {
-      './templates/foo/PageA.vue': { default: CompA }
+      './components/baz/templates/foo/PageA.vue': { default: CompA }
     }
 
     const result = buildSubpages(modules, 'magic', undefined)
@@ -102,8 +102,8 @@ describe('buildSubpages', () => {
 
   it('ignores modules without default export', () => {
     const modules = {
-      './templates/foo/PageA.vue': {},
-      './templates/bar/PageB.vue': { default: CompB }
+      './components/baz/templates/foo/PageA.vue': {},
+      './components/baz/templates/bar/PageB.vue': { default: CompB }
     }
 
     const data = { templates: { magic: {} } }
@@ -117,7 +117,7 @@ describe('buildSubpages', () => {
   it('ignores invalid paths', () => {
     const modules = {
       './bad/path.vue': { default: CompA },
-      './templates/foo/PageB.vue': { default: CompB }
+      './components/baz/templates/foo/PageB.vue': { default: CompB }
     }
 
     const data = { templates: { magic: {} } }
