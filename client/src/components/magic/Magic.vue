@@ -15,33 +15,46 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Magic',
-  inject: ['data', 'menuSelections', 'subpages'],
-  computed: {
-    activeSlug() {
-      return this.$route.params.subpage ?? this.subpages.magic[0]?.slug
-    },
-    activeSubpage() {
-      return this.subpages.magic.find(
-        s => s.slug === this.activeSlug
-      ) || this.menuSelections.magic || this.subpages.magic[0]
-    },
-    activeComponentDef() {
-      return this.activeSubpage?.component ?? null
-    }
-  },
-  mounted() {
-    if (!this.$route.params.subpage && this.subpages.magic.length) {
-      this.$router.replace(`/magic/${this.menuSelections.magic?.slug ? this.menuSelections.magic.slug : this.subpages.magic[0].slug}`)
-    }
-  },
-  methods: {
-    activate(subpage) {
-      this.menuSelections.magic = subpage
-      this.$router.replace(`/magic/${subpage.slug}`)
-    }
-  }
+<script lang="ts" setup>
+import { computed, inject } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { subpagesKey } from '../../lib/page-util/page-utils'
+import type { Subpage } from '../../types'
+
+const subpages = inject(subpagesKey)!
+const menuSelections = inject('menuSelections') as any
+
+const route = useRoute()
+const router = useRouter()
+
+const activeSlug = computed(() => {
+  return (route.params.subpage as string | undefined)
+    ?? subpages.magic[0]?.slug
+})
+
+const activeSubpage = computed<Subpage>(() => {
+  return (
+    subpages.magic.find(s => s.slug === activeSlug.value) ||
+    menuSelections.magic ||
+    subpages.magic[0]
+  )
+})
+
+const activeComponentDef = computed(() => {
+  return activeSubpage.value?.component ?? null
+})
+
+if (!route.params.subpage && subpages.magic.length) {
+  router.replace(
+    `/magic/${
+      menuSelections.magic?.slug ??
+      subpages.magic[0].slug
+    }`
+  )
+}
+
+function activate(subpage: Subpage) {
+  menuSelections.magic = subpage
+  router.replace(`/magic/${subpage.slug}`)
 }
 </script>

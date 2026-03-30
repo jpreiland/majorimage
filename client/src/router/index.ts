@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
+import type { RouteRecordRaw } from 'vue-router'
+
 import About from '../components/about/About.vue'
 import Acknowledgements from '../components/acknowledgements/Acknowledgements.vue'
 import Locations from '../components/locations/Locations.vue'
@@ -11,7 +13,7 @@ import Quests from '../components/quests/Quests.vue'
 import Shops from '../components/shops/Shops.vue'
 import NotFound from '../components/notfound/NotFound.vue'
 
-const routes = [
+const routes: RouteRecordRaw[] = [
   { path: '/', redirect: '/objects' },
 
   { path: '/objects/:subpage?', name: 'objects', component: Objects, 
@@ -41,3 +43,14 @@ export default createRouter({
   history: createWebHashHistory(),
   routes
 })
+
+export type RouteName =
+  | 'objects'
+  | 'locations'
+  | 'magic'
+  | 'shops'
+  | 'npcs'
+  | 'quests'
+  | 'materials'
+  | 'about'
+  | 'acknowledgements'

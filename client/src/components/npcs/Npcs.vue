@@ -15,33 +15,46 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Npcs',
-  inject: ['data', 'menuSelections', 'subpages'],
-  computed: {
-    activeSlug() {
-      return this.$route.params.subpage ?? this.subpages.npcs[0]?.slug
-    },
-    activeSubpage() {
-      return this.subpages.npcs.find(
-        s => s.slug === this.activeSlug
-      ) || this.menuSelections.npcs || this.subpages.npcs[0]
-    },
-    activeComponentDef() {
-      return this.activeSubpage?.component ?? null
-    }
-  },
-  mounted() {
-    if (!this.$route.params.subpage && this.subpages.npcs.length) {
-      this.$router.replace(`/npcs/${this.menuSelections.npcs?.slug ? this.menuSelections.npcs.slug : this.subpages.npcs[0].slug}`)
-    }
-  },
-  methods: {
-    activate(subpage) {
-      this.menuSelections.npcs = subpage
-      this.$router.replace(`/npcs/${subpage.slug}`)
-    }
-  }
+<script lang="ts" setup>
+import { computed, inject } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { subpagesKey } from '../../lib/page-util/page-utils'
+import type { Subpage } from '../../types'
+
+const subpages = inject(subpagesKey)!
+const menuSelections = inject('menuSelections') as any
+
+const route = useRoute()
+const router = useRouter()
+
+const activeSlug = computed(() => {
+  return (route.params.subpage as string | undefined)
+    ?? subpages.npcs[0]?.slug
+})
+
+const activeSubpage = computed<Subpage>(() => {
+  return (
+    subpages.npcs.find(s => s.slug === activeSlug.value) ||
+    menuSelections.npcs ||
+    subpages.npcs[0]
+  )
+})
+
+const activeComponentDef = computed(() => {
+  return activeSubpage.value?.component ?? null
+})
+
+if (!route.params.subpage && subpages.npcs.length) {
+  router.replace(
+    `/npcs/${
+      menuSelections.npcs?.slug ??
+      subpages.npcs[0].slug
+    }`
+  )
+}
+
+function activate(subpage: Subpage) {
+  menuSelections.npcs = subpage
+  router.replace(`/npcs/${subpage.slug}`)
 }
 </script>

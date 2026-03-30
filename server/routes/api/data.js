@@ -20,6 +20,7 @@ router.get('/data', async (req, res) => {
     const compiledFormats = compileFormats()
     const compiledMaterials = compileMaterials()
 
+    /** @type {import('../shared/types').AppData} */
     const data = {
       version: "0.1.0",
       categories: Categories,

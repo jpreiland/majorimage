@@ -15,33 +15,46 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Objects',
-  inject: ['data', 'menuSelections', 'subpages'],
-  computed: {
-    activeSlug() {
-      return this.$route.params.subpage ?? this.subpages.objects[0]?.slug
-    },
-    activeSubpage() {
-      return this.subpages.objects.find(
-        s => s.slug === this.activeSlug
-      ) || this.menuSelections.objects || this.subpages.objects[0]
-    },
-    activeComponentDef() {
-      return this.activeSubpage?.component ?? null
-    }
-  },
-  mounted() {
-    if (!this.$route.params.subpage && this.subpages.objects.length) {
-      this.$router.replace(`/objects/${this.menuSelections.objects?.slug ? this.menuSelections.objects.slug : this.subpages.objects[0].slug}`)
-    }
-  },
-  methods: {
-    activate(subpage) {
-      this.menuSelections.objects = subpage
-      this.$router.replace(`/objects/${subpage.slug}`)
-    }
-  }
+<script lang="ts" setup>
+import { computed, inject } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { subpagesKey } from '../../lib/page-util/page-utils'
+import type { Subpage } from '../../types'
+
+const subpages = inject(subpagesKey)!
+const menuSelections = inject('menuSelections') as any
+
+const route = useRoute()
+const router = useRouter()
+
+const activeSlug = computed(() => {
+  return (route.params.subpage as string | undefined)
+    ?? subpages.objects[0]?.slug
+})
+
+const activeSubpage = computed<Subpage>(() => {
+  return (
+    subpages.objects.find(s => s.slug === activeSlug.value) ||
+    menuSelections.objects ||
+    subpages.objects[0]
+  )
+})
+
+const activeComponentDef = computed(() => {
+  return activeSubpage.value?.component ?? null
+})
+
+if (!route.params.subpage && subpages.objects.length) {
+  router.replace(
+    `/objects/${
+      menuSelections.objects?.slug ??
+      subpages.objects[0].slug
+    }`
+  )
+}
+
+function activate(subpage: Subpage) {
+  menuSelections.objects = subpage
+  router.replace(`/objects/${subpage.slug}`)
 }
 </script>

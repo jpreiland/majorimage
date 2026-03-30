@@ -1,7 +1,7 @@
 {
   "accessoryAll": ["accessory", "accessoryBasic"],
   "adjectivePerson": ["adjectivePersonality", "adjectiveEpithet"],
-  "adjectiveSizeAll": ["adjectiveSizeAndBasic", "adjectiveSizeCreatureOrObject", "adjectiveSizeLocation", "adjectiveSizeExtra"],
+  "adjectiveSizeAll": ["adjectiveSizeAndBasicLocation", "adjectiveSizeCreatureOrObject", "adjectiveSizeExtra"],
   "adjectiveSizeAndBasic": ["adjectiveSize", "adjectiveSizeBasic"], 
   "adjectiveSizeAndBasicLocation": ["adjectiveSizeAndBasic", "adjectiveSizeLocation"], 
   "amountGroupCreature": ["amount", "amountExtra", "groupCreature"],

@@ -1,22 +1,26 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router/index.js'
-import { buildSubpages } from './lib/page-util/page-utils.js'
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
+import { buildSubpages, subpagesKey } from './lib/page-util/page-utils'
 import Descriptor from './components/descriptors/Descriptor.vue'
 import FilteredDescriptor from './components/descriptors/FilteredDescriptor.vue'
 import LinkedDescriptor from './components/descriptors/LinkedDescriptor.vue'
 import SimpleDescriptor from './components/descriptors/SimpleDescriptor.vue'
 import StealthDescriptor from './components/descriptors/StealthDescriptor.vue'
+
 import './assets/app.css';
 
-const objectModules = import.meta.glob('./components/objects/templates/*/*.vue', { eager: true })
-const locationModules = import.meta.glob('./components/locations/templates/*/*.vue', { eager: true })
-const magicModules = import.meta.glob('./components/magic/templates/*/*.vue', { eager: true })
-const shopModules = import.meta.glob('./components/shops/templates/*/*.vue', { eager: true })
-const npcModules = import.meta.glob('./components/npcs/templates/*/*.vue', { eager: true })
-const questModules = import.meta.glob('./components/quests/templates/*/*.vue', { eager: true })
+import type { AppData } from '../../shared/types'
+import { VueModule } from './types'
 
-async function loadData() {
+const objectModules = import.meta.glob<VueModule>('./components/objects/templates/*/*.vue', { eager: true })
+const locationModules = import.meta.glob<VueModule>('./components/locations/templates/*/*.vue', { eager: true })
+const magicModules = import.meta.glob<VueModule>('./components/magic/templates/*/*.vue', { eager: true })
+const shopModules = import.meta.glob<VueModule>('./components/shops/templates/*/*.vue', { eager: true })
+const npcModules = import.meta.glob<VueModule>('./components/npcs/templates/*/*.vue', { eager: true })
+const questModules = import.meta.glob<VueModule>('./components/quests/templates/*/*.vue', { eager: true })
+
+async function loadData(): Promise<AppData> {
   const CACHE_KEY = `app-data-${__APP_VERSION__}`
   const isDev = import.meta.env.DEV
 
@@ -53,7 +57,7 @@ async function loadData() {
   return data
 }
 
-async function buildAllSubpages(data) {
+async function buildAllSubpages(data: AppData) {
   return {
     objects: buildSubpages(objectModules, 'objects', data),
     locations: buildSubpages(locationModules, 'locations', data),
@@ -64,7 +68,7 @@ async function buildAllSubpages(data) {
   }
 }
 
-async function getUniqueWordCount(data) {
+async function getUniqueWordCount(data: AppData) {
   const uniqueWords = new Set()
     for (const category of Object.keys(data.categories)) {
       for (const word of data.categories[category]) {
@@ -74,7 +78,7 @@ async function getUniqueWordCount(data) {
   return uniqueWords.size
 }
 
-async function bootstrap() {
+async function bootstrap(): Promise<void> {
   const data = await loadData()
   const subpages = await buildAllSubpages(data)
   const uniqueWordCount = await getUniqueWordCount(data)
@@ -82,7 +86,7 @@ async function bootstrap() {
   
   app.provide('data', data)
   app.provide('menuSelections', {})
-  app.provide('subpages', subpages)
+  app.provide(subpagesKey, subpages)
   app.provide('wordCount', uniqueWordCount)
 
   app.use(router)
