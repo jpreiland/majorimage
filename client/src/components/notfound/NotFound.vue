@@ -7,9 +7,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'NotFound',
-  inject: ['data']
-}
+<script lang="ts" setup>
+import { useAppContext } from '../../composables/useAppContext'
+const { data } = useAppContext()
 </script>

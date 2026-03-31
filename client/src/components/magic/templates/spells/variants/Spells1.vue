@@ -43,7 +43,6 @@
 <script>
 export default {
   name: 'Spells1',
-  inject: ['data'],
   data() {
     return {
       numSRDSpells: 6,

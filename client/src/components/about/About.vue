@@ -64,10 +64,7 @@
   </div>
 </template>
 
-<script>
-
-export default {
-  name: 'About',
-  inject: ['data', 'wordCount'],
-}
+<script lang="ts" setup>
+import { useAppContext } from '../../composables/useAppContext'
+const { wordCount } = useAppContext()
 </script>

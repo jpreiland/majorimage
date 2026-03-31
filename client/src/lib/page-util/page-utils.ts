@@ -1,5 +1,5 @@
 import { Component, InjectionKey, markRaw } from 'vue'
-import { ModuleMap, Subpage } from '../../types'
+import type { ModuleMap, Subpage } from '../../types/pages'
 import { AppData, TemplateMeta } from '../../../../shared/types'
 
 export function buildSubpages(modules: ModuleMap, page: string, data: AppData) {

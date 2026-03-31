@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import type { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw, RouteRecordNormalized } from 'vue-router'
 
 import About from '../components/about/About.vue'
 import Acknowledgements from '../components/acknowledgements/Acknowledgements.vue'
@@ -43,14 +43,3 @@ export default createRouter({
   history: createWebHashHistory(),
   routes
 })
-
-export type RouteName =
-  | 'objects'
-  | 'locations'
-  | 'magic'
-  | 'shops'
-  | 'npcs'
-  | 'quests'
-  | 'materials'
-  | 'about'
-  | 'acknowledgements'

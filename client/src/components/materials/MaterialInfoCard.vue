@@ -1,6 +1,6 @@
 <template>
   <div class="info-card material">
-    <div class="card-header" @click="$parent.switchUnits()">
+    <div class="card-header" @click="emit('switch-units')">
       <div class="card-header-left">
         <h2 class="card-title">
           {{ material.name }}
@@ -14,7 +14,7 @@
         <ul class="card-attributes">
           <li v-for="(val, key) in material.attributes.row2" :key="key">
             <span class="attribute key">{{ key }}:</span>
-            <span class="attribute">{{ isNaN(val.value) ? val.value : Number(val.value.toFixed(2)).toLocaleString() }}{{ val.units }}</span>
+            <span class="attribute">{{ formatValue(val.value) }}{{ val.units }}</span>
           </li>
         </ul>
       </div>
@@ -36,17 +36,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'MaterialInfoCard',
-  props: {
-    material: {
-      type: Object,
-      required: true
-    }
-  }
-}
-</script>
+<script lang="ts" setup>
+import { Material } from '../../../../shared/types';
 
-<style scoped>
-</style>
+interface Props {
+  material: Material
+}
+
+const { material } = defineProps<Props>()
+
+const emit = defineEmits<{
+  (e: 'switch-units'): void
+}>()
+
+function formatValue(val: string | number): string {
+  if (typeof val === 'number') {
+    return Number(val.toFixed(2)).toLocaleString()
+  }
+  return val
+}
+
+</script>

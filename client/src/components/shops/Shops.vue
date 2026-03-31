@@ -16,14 +16,13 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, inject } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { subpagesKey } from '../../lib/page-util/page-utils'
-import type { Subpage } from '../../types'
+import { useAppContext } from '../../composables/useAppContext';
 
-const subpages = inject(subpagesKey)!
-const menuSelections = inject('menuSelections') as any
+import type { Subpage } from '../../types/pages'
 
+const { subpages, menuSelections } = useAppContext()
 const route = useRoute()
 const router = useRouter()
 

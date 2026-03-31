@@ -1,68 +1,57 @@
 <template>
-  <span class="button descriptor name-descriptor" :style="setColor()" @click="reroll()">{{ descriptorText }}</span>
+  <span class="button descriptor name-descriptor" :style="setColor" @click="reroll()">{{ descriptorText }}</span>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { ref, onMounted, computed } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
+import { useAppContext } from '../../composables/useAppContext'
 
-export default {
-  name: 'SimpleDescriptor',
-  inject: ['data'],
-  props: {
-    type: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      default: 'black'
-    },
-    // eslint-disable-next-line vue/prop-name-casing
-    a_an: {
-      type: Boolean
-    },
-    properNoun: {
-      type: Boolean
-    },
-    pickStyle: {
-      type: String,
-      default: "pick"
-    }
-  },
-  data () {
-    return {
-      descriptorText: "Simple Descriptor",
-      pickStyles: [
-        "pick",
-        "pick-pluralize",
-        "pick-pluralize-optional",
-        "pick-pastTense",
-        "pick-verber",
-        "pick-gerund"
-      ],
-      format: []
-    }
-  },
-  async mounted() {
-    if (this.properNoun) this.format.push(["title"])
-    if (this.a_an) this.format = [["a(n)"]].concat(this.format)
-
-    if (this.pickStyles.indexOf(this.pickStyle) >= 0) {
-      this.format.push([this.pickStyle, this.type])
-    } else {
-      this.format.push(["pick", this.type])
-    }
-
-    this.reroll()
-  },
-  methods: {
-    async reroll() {
-      if (this.type) this.descriptorText = stitch(this.format, this.data, null, null)
-    },
-    setColor() {
-      return `border-bottom-color: ${this.color};`
-    }
-  }
+interface Props {
+  type: string
+  color?: string
+  a_an?: boolean
+  properNoun?: boolean
+  pickStyle?: string
 }
+
+const props = withDefaults(defineProps<Props>(), {
+  color: 'black',
+  pickStyle: 'pick'
+})
+
+const { data } = useAppContext()
+
+const descriptorText = ref('Simple Descriptor')
+let format: string[][] = []
+const pickStyles = ref([
+  "pick",
+  "pick-pluralize",
+  "pick-pluralize-optional",
+  "pick-pastTense",
+  "pick-verber",
+  "pick-gerund"
+])
+
+onMounted(() => {
+  if (props.properNoun) format.push(["title"])
+  if (props.a_an) format = [["a(n)"]].concat(format)
+
+  if (pickStyles.value.indexOf(props.pickStyle) >= 0) {
+    format.push([props.pickStyle, props.type])
+  } else {
+    format.push(["pick", props.type])
+  }
+
+  reroll()
+})
+
+function reroll() {
+  if (props.type) descriptorText.value = stitch(format, data, null, null)
+}
+
+const setColor = computed(() => {
+  return `border-bottom-color: ${props.color};`
+})
 
 </script>

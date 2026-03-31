@@ -9,7 +9,7 @@
         </p>
       </div>
       <div class="navigation">
-        <NavLink v-for="(page) in topNavPages" :page-name="page.name" :color="page.meta.color" :tab-display-name="page.meta.navDisplayName" />
+        <NavLink v-for="(page) in topNavPages" :key="page.name" :page-name="page.name" :color="page.meta.color" :tab-display-name="page.meta.navDisplayName" />
       </div>
     </div>
 
@@ -18,25 +18,24 @@
     </main>
 
     <div class="navigation">
-      <NavLink v-for="(page) in bottomNavPages" :page-name="page.name" :tab-display-name="page.meta.navDisplayName" />
+      <NavLink v-for="(page) in bottomNavPages" :key="page.name" :page-name="page.name" :tab-display-name="page.meta.navDisplayName" />
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 import NavLink from './components/navigation/NavLink.vue'
+import { isTopNavRoute, isBottomNavRoute } from './types/routes'
 
-export default {
-  components: {
-    NavLink
-  },
-  computed: {
-    topNavPages() {
-      return this.$router.getRoutes().filter(page => page.meta.topNav)
-    },
-    bottomNavPages() {
-      return this.$router.getRoutes().filter(page => page.meta.bottomNav)
-    }
-  }
-}
+const router = useRouter()
+
+const topNavPages = computed(() => {
+  return router.getRoutes().filter(isTopNavRoute)
+})
+
+const bottomNavPages = computed(() => {
+  return router.getRoutes().filter(isBottomNavRoute)
+})
 </script>

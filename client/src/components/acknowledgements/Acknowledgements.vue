@@ -13,12 +13,5 @@
   </div>
 </template>
 
-<script>
-
-export default {
-  name: 'Acknowledgements',
-  async mounted() {
-  },
-  methods: {}
-}
+<script lang="ts" setup>
 </script>

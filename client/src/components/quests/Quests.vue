@@ -15,33 +15,45 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Quests',
-  inject: ['data', 'menuSelections', 'subpages'],
-  computed: {
-    activeSlug() {
-      return this.$route.params.subpage ?? this.subpages.quests[0]?.slug
-    },
-    activeSubpage() {
-      return this.subpages.quests.find(
-        s => s.slug === this.activeSlug
-      ) || this.menuSelections.quests || this.subpages.quests[0]
-    },
-    activeComponentDef() {
-      return this.activeSubpage?.component ?? null
-    }
-  },
-  mounted() {
-    if (!this.$route.params.subpage && this.subpages.quests.length) {
-      this.$router.replace(`/quests/${this.menuSelections.quests?.slug ? this.menuSelections.quests.slug : this.subpages.quests[0].slug}`)
-    }
-  },
-  methods: {
-    activate(subpage) {
-      this.menuSelections.quests = subpage
-      this.$router.replace(`/quests/${subpage.slug}`)
-    }
-  }
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { useAppContext } from '../../composables/useAppContext';
+
+import type { Subpage } from '../../types/pages'
+
+const { subpages, menuSelections } = useAppContext()
+const route = useRoute()
+const router = useRouter()
+
+const activeSlug = computed(() => {
+  return (route.params.subpage as string | undefined)
+    ?? subpages.quests[0]?.slug
+})
+
+const activeSubpage = computed<Subpage>(() => {
+  return (
+    subpages.quests.find(s => s.slug === activeSlug.value) ||
+    menuSelections.quests ||
+    subpages.quests[0]
+  )
+})
+
+const activeComponentDef = computed(() => {
+  return activeSubpage.value?.component ?? null
+})
+
+if (!route.params.subpage && subpages.quests.length) {
+  router.replace(
+    `/quests/${
+      menuSelections.quests?.slug ??
+      subpages.quests[0].slug
+    }`
+  )
+}
+
+function activate(subpage: Subpage) {
+  menuSelections.quests = subpage
+  router.replace(`/quests/${subpage.slug}`)
 }
 </script>

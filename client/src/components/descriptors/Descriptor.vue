@@ -1,53 +1,53 @@
 <template>
-  <span class="button descriptor name-descriptor" :style="setColor()" @click="reroll()">{{ descriptorText }}</span>
+  <span class="button descriptor name-descriptor" :style="setColor" @click="reroll">
+    {{ descriptorText }}
+  </span>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { ref, onMounted, computed } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
+import { useAppContext } from '../../composables/useAppContext'
 
-export default {
-  name: 'Descriptor',
-  inject: ['data'],
-  props: {
-    type: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      default: 'black'
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    priceOverride: {
-      type: Object
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    numRangeOverride: {
-      type: Object
-    }
-  },
-  data() {
-    return {
-      descriptorText: "Descriptor",
-      formatMap: {},
-      totalWeight: 0
-    }
-  },
-  async mounted() {
-    this.formatMap = this.data.dfMap[this.type].formatMap
-    this.totalWeight = this.data.dfMap[this.type].totalWeight
-    this.reroll()
-  },
-  methods: {
-    async reroll() {
-      const format = pickFormat(this.formatMap, this.totalWeight)
-      this.descriptorText = stitch(this.data.formats[format], this.data, this.priceOverride, this.numRangeOverride)
-    },
-    setColor() {
-      return `border-bottom-color: ${this.color};`
-    }
-  }
+interface Props {
+  type: string
+  color?: string
+  priceOverride?: Record<string, unknown>
+  numRangeOverride?: Record<string, unknown>
 }
 
+const props = withDefaults(defineProps<Props>(), {
+  color: 'black'
+})
+
+const { data } = useAppContext()
+
+const descriptorText = ref('Descriptor')
+const formatMap = ref<Record<string, number>>({})
+const totalWeight = ref(0)
+
+onMounted(() => {
+  const df = data.dfMap[props.type]
+
+  formatMap.value = df.formatMap
+  totalWeight.value = df.totalWeight
+
+  reroll()
+})
+
+function reroll() {
+  const format = pickFormat(formatMap.value, totalWeight.value)
+
+  descriptorText.value = stitch(
+    data.formats[format],
+    data,
+    props.priceOverride,
+    props.numRangeOverride
+  )
+}
+
+const setColor = computed(() => {
+  return `border-bottom-color: ${props.color};`
+})
 </script>

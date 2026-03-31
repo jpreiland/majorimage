@@ -10,34 +10,27 @@
   </router-link>
 </template>
 
-<script>
-export default {
-  name: 'NavLink',
-  inject: ['menuSelections'],
-  props: {
-    pageName: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      required: false
-    },
-    tabDisplayName: {
-      type: String, 
-      required: true
-    }
-  },
-  computed: {
-    isActive() {
-      return this.$route.name === this.pageName
-    }
-  },
-  methods: {
-    handleClick(navigate) {
-      if (this.isActive) this.menuSelections[this.pageName] = ''
-      navigate()
-    }
-  }
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { NavigationFailure, useRoute } from 'vue-router'
+import { useAppContext } from '../../composables/useAppContext'
+
+interface Props {
+  pageName: string
+  color?: string
+  tabDisplayName: string
+}
+
+const { menuSelections } = useAppContext()
+const props = defineProps<Props>()
+const route = useRoute()
+
+const isActive = computed(() => {
+  return route.name === props.pageName
+})
+
+function handleClick(navigate: (e?: MouseEvent | undefined) => Promise<void | NavigationFailure>) {
+  if (isActive) menuSelections[props.pageName] = null
+  navigate()
 }
 </script>
