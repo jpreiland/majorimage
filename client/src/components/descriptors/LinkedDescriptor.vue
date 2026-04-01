@@ -1,69 +1,69 @@
 <template>
-  <span class="button descriptor name-descriptor" :style="setColor()" @click="reroll()">{{ descriptorText }}</span>
+  <span class="button descriptor name-descriptor" :style="setColor" @click="reroll">
+    {{ descriptorText }}
+  </span>
 </template>
 
-<script>
+<script setup lang="ts">
+import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
+import { useAppContext } from '../../composables/useAppContext'
 
-export default {
-  name: 'LinkedDescriptor',
-  inject: ['data'],
-  props: {
-    type: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      default: 'black'
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    priceOverride: {
-      type: Object
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    numRangeOverride: {
-      type: Object
-    },
-    link: {
-      type: String,
-      required: true
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    linkedParser: {
-      type: Function,
-    }
-  },
-  emits: ['linkUpdate'],
-  data () {
-    return {
-      descriptorText: "Linked Descriptor",
-      linkValue: 0,
-      formatMap: {},
-      totalWeight: 0
-    }
-  },
-  async mounted() {
-    this.formatMap = this.data.dfMap[this.type].formatMap
-    this.totalWeight = this.data.dfMap[this.type].totalWeight
-    this.reroll()
-  },
-  methods: {
-    async reroll() {
-      const format = pickFormat(this.formatMap, this.totalWeight)
-      this.descriptorText = stitch(this.data.formats[format], this.data, this.priceOverride, this.numRangeOverride)
+import type { NumRangeOverride, PriceOverride } from '../../../../shared/types';
 
-      const linkResponse = {
-        linkKey: this.link, 
-        linkVal: this.linkedParser ? this.linkedParser(this.descriptorText) : this.descriptorText
-      }
-      this.$emit('linkUpdate', linkResponse)
-    },
-    setColor() {
-      return `border-bottom-color: ${this.color};`
-    }
-  }
+interface Props {
+  type: string
+  color?: string
+  numRangeOverride?: NumRangeOverride
+  priceOverride?: PriceOverride
+  link: string
+  linkedParser?: (val: string) => string
 }
 
+const props = withDefaults(defineProps<Props>(), {
+  color: 'black'
+})
+
+const { data } = useAppContext()
+const descriptorText = ref('Linked Descriptor')
+const formatMap = ref<Record<string, number>>({})
+const totalWeight = ref(0)
+
+const emit = defineEmits<{
+  (e: 'linkUpdate', payload: { linkKey: string; linkVal: string }): void
+}>()
+
+onMounted(() => {
+  const df = data.dfMap[props.type]
+
+  formatMap.value = df.formatMap
+  totalWeight.value = df.totalWeight
+
+  reroll()
+})
+
+function reroll() {
+  const format = pickFormat(formatMap.value, totalWeight.value)
+
+  descriptorText.value = stitch(
+    data.formats[format],
+    data,
+    props.priceOverride,
+    props.numRangeOverride
+  )
+
+  const linkResponse = {
+    linkKey: props.link,
+    linkVal: props.linkedParser
+      ? props.linkedParser(descriptorText.value)
+      : descriptorText.value,
+  }
+
+  emit('linkUpdate', linkResponse)
+}
+
+const setColor = computed(() => {
+  return `border-bottom-color: ${props.color};`
+})
 </script>

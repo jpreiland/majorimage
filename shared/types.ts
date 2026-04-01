@@ -16,6 +16,18 @@ export interface AppData {
   version: string
 }
 
+export interface NumRangeOverride {
+  min: number
+  max: number
+  zeroString: string
+}
+
+export interface PriceOverride {
+  min: number 
+  max: number
+  denomination?: string
+}
+
 export interface MaterialsData {
   stones: Material[]
   woods: Material[]

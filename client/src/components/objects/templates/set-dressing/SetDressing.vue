@@ -13,161 +13,157 @@
         <a class="button filter" :class="{ 'is-light': !params.isWriting }" @click="toggleItemType('isWriting')">Writing</a>
       </div>
     </div>
+
     <div>
-      <template v-for="row in rows" :key="'item-'+row.id+'-'+rerollToggle">
+      <template v-for="row in rows" :key="'item-' + row.id + '-' + rerollToggle">
         <ObjectRow :item-types="itemTypes" />
       </template>
     </div>
+
     <div class="center">
-      <button class="button reroll-all" @click="rerollAll()">
+      <button class="button reroll-all" @click="rerollAll">
         Reroll All
       </button>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { reactive, ref, onMounted } from 'vue'
+import { useAppContext } from '../../../../composables/useAppContext'
+
 import ObjectRow from "./object-rows/ObjectRow.vue"
 
-export default {
-  name: 'Objects',
-  components: {
-    ObjectRow
-  },
-  inject: ['data'],
-  data() {
-    return {
-      params: {
-        isArmor: false,
-        isClothing: false,
-        isContainer: false,
-        isFurniture: false,
-        isMisc: false,
-        isTreasure: false,
-        isWeapon: false,
-        isWriting: false,
-      },
-      itemTypes: {
-        compiled: false,
-        formatPicker: [],
-        formats: {}
-      },
-      numRows: 12,
-      rows: [],
-      itemFormats: [],
-      armorFormat: ["_armorShieldUntyped", 1],
-      clothingFormat: ["_clothingHeadwear", 1],
-      containerFormat: ["_container", 1],
-      furnitureFormat: ["_furniture", 1],
-      miscFormat: ["_misc", 1],
-      treasureFormat: ["_treasure", 1],
-      weaponFormat: ["_weapon", 1],
-      writingFormat: ["_writing", 1],
-      rerollToggle: true
-    }
-  },
-  async created() {
-    this.compileItemTypes()
-    for (let i = 0; i < this.numRows; i++) {
-      this.rows.push({id: i})
-    }
-  },
-  methods: {
-    async toggleItemType(itemType) {
-      this.params[itemType] = !this.params[itemType]
-      this.compileItemTypes()
-    },
-    async compileItemTypes() {
-      this.itemTypes.compiled = false
-      this.itemFormats = []
+const { data } = useAppContext()
 
-      this.itemFormats = await this.applyItemFilters()      
-      this.itemTypes.formats = await this.compileDescriptorFormats()
-      this.itemTypes.formatPicker = await this.buildFormatPicker()
+const params = reactive({
+  isArmor: false,
+  isClothing: false,
+  isContainer: false,
+  isFurniture: false,
+  isMisc: false,
+  isTreasure: false,
+  isWeapon: false,
+  isWriting: false,
+})
 
-      this.itemTypes.compiled = true
-    },
-    async applyItemFilters() {
-      let itemFormats = []
+const itemTypes = reactive({
+  compiled: false,
+  formatPicker: [] as string[],
+  formats: {} as Record<string, any>,
+})
 
-      for (let param of Object.keys(this.params)) {
-        switch (param) {
-          case 'isArmor':
-            if (this.params[param]) itemFormats.push(this.armorFormat)
-            break;
-          
-          case 'isClothing':
-            if (this.params[param]) itemFormats.push(this.clothingFormat)
-            break;
+const numRows = 12
+const rows = ref<{ id: number }[]>([])
+const itemFormats = ref<any[]>([])
 
-          case 'isContainer':
-            if (this.params[param]) itemFormats.push(this.containerFormat)
-            break;
+const armorFormat = ["_armorShieldUntyped", 1]
+const clothingFormat = ["_clothingHeadwear", 1]
+const containerFormat = ["_container", 1]
+const furnitureFormat = ["_furniture", 1]
+const miscFormat = ["_misc", 1]
+const treasureFormat = ["_treasure", 1]
+const weaponFormat = ["_weapon", 1]
+const writingFormat = ["_writing", 1]
 
-          case 'isFurniture':
-            if (this.params[param]) itemFormats.push(this.furnitureFormat)
-            break;
-          
-          case 'isMisc':
-            if (this.params[param]) itemFormats.push(this.miscFormat)
-            break;
+const rerollToggle = ref(true)
 
-          case 'isTreasure':
-            if (this.params[param]) itemFormats.push(this.treasureFormat)
-            break;
+onMounted(() => {
+  compileItemTypes()
+  for (let i = 0; i < numRows; i++) {
+    rows.value.push({ id: i })
+  }
+})
 
-          case 'isWeapon':
-            if (this.params[param]) itemFormats.push(this.weaponFormat)
-            break;
+function toggleItemType(itemType: keyof typeof params) {
+  params[itemType] = !params[itemType]
+  compileItemTypes()
+}
 
-          case 'isWriting':
-            if (this.params[param]) itemFormats.push(this.writingFormat)
-            break;
-        
-        
-          default:
-            break;
-        }
-      }
+async function compileItemTypes() {
+  itemTypes.compiled = false
 
-      // if all filters are off, get all item types
-      if (itemFormats.length === 0) {
-        itemFormats.push(
-          this.armorFormat,
-          this.clothingFormat,
-          this.containerFormat,
-          this.furnitureFormat,
-          this.miscFormat,
-          this.treasureFormat,
-          this.weaponFormat,
-          this.writingFormat
-        )
-      }
+  itemFormats.value = await applyItemFilters()
+  itemTypes.formats = await compileDescriptorFormats()
+  itemTypes.formatPicker = await buildFormatPicker()
 
-      return itemFormats
-    },
-    async compileDescriptorFormats() {
-      let compiledDescriptorFormats = {}
+  itemTypes.compiled = true
+}
 
-      for (let nfWeightPair of this.itemFormats) {
-        compiledDescriptorFormats[nfWeightPair[0]] = {
-          weight: nfWeightPair[1],
-          format: this.data.formats[nfWeightPair[0]]
-        }
-      }
-    
-      return compiledDescriptorFormats
-    },
-    async buildFormatPicker() {
-      let formatPicker = []
-      for (let format of Object.keys(this.itemTypes.formats)) {
-        formatPicker = formatPicker.concat(Array(this.itemTypes.formats[format].weight).fill(format))
-      }
-      return formatPicker
-    },
-    async rerollAll() {
-      this.rerollToggle = !this.rerollToggle
+async function applyItemFilters() {
+  const formats: any[] = []
+
+  for (const param of Object.keys(params)) {
+    switch (param) {
+      case 'isArmor':
+        if (params[param]) formats.push(armorFormat)
+        break
+      case 'isClothing':
+        if (params[param]) formats.push(clothingFormat)
+        break
+      case 'isContainer':
+        if (params[param]) formats.push(containerFormat)
+        break
+      case 'isFurniture':
+        if (params[param]) formats.push(furnitureFormat)
+        break
+      case 'isMisc':
+        if (params[param]) formats.push(miscFormat)
+        break
+      case 'isTreasure':
+        if (params[param]) formats.push(treasureFormat)
+        break
+      case 'isWeapon':
+        if (params[param]) formats.push(weaponFormat)
+        break
+      case 'isWriting':
+        if (params[param]) formats.push(writingFormat)
+        break
     }
   }
+
+  if (formats.length === 0) {
+    formats.push(
+      armorFormat,
+      clothingFormat,
+      containerFormat,
+      furnitureFormat,
+      miscFormat,
+      treasureFormat,
+      weaponFormat,
+      writingFormat
+    )
+  }
+
+  return formats
+}
+
+async function compileDescriptorFormats() {
+  const compiled: Record<string, any> = {}
+
+  for (const [name, weight] of itemFormats.value) {
+    compiled[name] = {
+      weight,
+      format: data?.formats?.[name],
+    }
+  }
+
+  return compiled
+}
+
+async function buildFormatPicker() {
+  let picker: string[] = []
+
+  for (const format of Object.keys(itemTypes.formats)) {
+    picker = picker.concat(
+      Array(itemTypes.formats[format].weight).fill(format)
+    )
+  }
+
+  return picker
+}
+
+function rerollAll() {
+  rerollToggle.value = !rerollToggle.value
 }
 </script>

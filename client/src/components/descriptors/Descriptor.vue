@@ -5,16 +5,18 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
 import { useAppContext } from '../../composables/useAppContext'
 
+import type { NumRangeOverride, PriceOverride } from '../../../../shared/types';
+
 interface Props {
   type: string
   color?: string
-  priceOverride?: Record<string, unknown>
-  numRangeOverride?: Record<string, unknown>
+  numRangeOverride?: NumRangeOverride
+  priceOverride?: PriceOverride
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -22,7 +24,6 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { data } = useAppContext()
-
 const descriptorText = ref('Descriptor')
 const formatMap = ref<Record<string, number>>({})
 const totalWeight = ref(0)

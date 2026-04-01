@@ -2,45 +2,41 @@
   <span>{{ descriptorText }}</span>
 </template>
 
-<script>
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
+import { useAppContext } from '../../composables/useAppContext'
 
-export default {
-  name: 'StealthDescriptor',
-  inject: ['data'],
-  props: {
-    type: {
-      type: String,
-      required: true
-    },
-    color: {
-      type: String,
-      default: 'black'
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    priceOverride: {
-      type: Object
-    },
-    // eslint-disable-next-line vue/require-default-prop
-    numRangeOverride: {
-      type: Object
-    }
-  },
-  data () {
-    return {
-      descriptorText: "Stealth Descriptor",
-      formatMap: {},
-      totalWeight: 0
-    }
-  },
-  async mounted() {
-    this.formatMap = this.data.dfMap[this.type].formatMap
-    this.totalWeight = this.data.dfMap[this.type].totalWeight
+import type { NumRangeOverride, PriceOverride } from '../../../../shared/types'
 
-    const format = pickFormat(this.formatMap, this.totalWeight)
-    this.descriptorText = stitch(this.data.formats[format], this.data, this.priceOverride, this.numRangeOverride)
-  }
+interface Props {
+  type: string
+  numRangeOverride?: NumRangeOverride
+  priceOverride?: PriceOverride
 }
 
+const props = defineProps<Props>()
+
+const { data } = useAppContext()
+
+const descriptorText = ref('Descriptor')
+const formatMap = ref<Record<string, number>>({})
+const totalWeight = ref(0)
+
+onMounted(() => {
+  const df = data.dfMap[props.type]
+
+  formatMap.value = df.formatMap
+  totalWeight.value = df.totalWeight
+
+  const format = pickFormat(formatMap.value, totalWeight.value)
+
+  descriptorText.value = stitch(
+    data.formats[format],
+    data,
+    props.priceOverride,
+    props.numRangeOverride
+  )
+})
 </script>

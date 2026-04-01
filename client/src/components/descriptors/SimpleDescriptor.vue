@@ -1,9 +1,11 @@
 <template>
-  <span class="button descriptor name-descriptor" :style="setColor" @click="reroll()">{{ descriptorText }}</span>
+  <span class="button descriptor name-descriptor" :style="setColor" @click="reroll">
+    {{ descriptorText }}
+  </span>
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
 
@@ -21,26 +23,25 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const { data } = useAppContext()
-
 const descriptorText = ref('Simple Descriptor')
 let format: string[][] = []
 const pickStyles = ref([
-  "pick",
-  "pick-pluralize",
-  "pick-pluralize-optional",
-  "pick-pastTense",
-  "pick-verber",
-  "pick-gerund"
+  'pick',
+  'pick-pluralize',
+  'pick-pluralize-optional',
+  'pick-pastTense',
+  'pick-verber',
+  'pick-gerund'
 ])
 
 onMounted(() => {
-  if (props.properNoun) format.push(["title"])
-  if (props.a_an) format = [["a(n)"]].concat(format)
+  if (props.properNoun) format.push(['title'])
+  if (props.a_an) format = [['a(n)']].concat(format)
 
   if (pickStyles.value.indexOf(props.pickStyle) >= 0) {
     format.push([props.pickStyle, props.type])
   } else {
-    format.push(["pick", props.type])
+    format.push(['pick', props.type])
   }
 
   reroll()

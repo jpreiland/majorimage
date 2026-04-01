@@ -71,11 +71,11 @@ async function buildAllSubpages(data: AppData): Promise<Record<string, Subpage[]
 
 async function getUniqueWordCount(data: AppData): Promise<number> {
   const uniqueWords = new Set()
-    for (const category of Object.keys(data.categories)) {
-      for (const word of data.categories[category]) {
-        uniqueWords.add(word)
-      }
+  for (const category of Object.keys(data.categories)) {
+    for (const word of data.categories[category]) {
+      uniqueWords.add(word)
     }
+  }
   return uniqueWords.size
 }
 
