@@ -10,7 +10,6 @@ export default {
   components: {
     Noble1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

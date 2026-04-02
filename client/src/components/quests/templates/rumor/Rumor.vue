@@ -10,7 +10,6 @@ export default {
   components: {
     Rumor1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

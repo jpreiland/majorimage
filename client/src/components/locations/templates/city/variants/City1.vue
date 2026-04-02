@@ -61,7 +61,6 @@ export default {
   components: {
     CityOverview
   },
-  inject: ['data'],
   data() {
     return {
       links: {

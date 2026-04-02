@@ -11,6 +11,5 @@
 <script>
 export default {
   name: 'SmallTown1',
-  inject: ['data']
 }
 </script>

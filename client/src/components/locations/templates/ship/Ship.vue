@@ -13,7 +13,6 @@ export default {
     Ship1,
     Ship2
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

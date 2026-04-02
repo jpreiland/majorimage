@@ -13,7 +13,6 @@ export default {
     City1,
     City2
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

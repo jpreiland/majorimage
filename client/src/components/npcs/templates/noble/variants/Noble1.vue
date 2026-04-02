@@ -48,7 +48,6 @@
 <script>
 export default {
   name: 'Noble1',
-  inject: ['data'],
   data() {
     return {
       numInventory: 10,

@@ -13,7 +13,6 @@ export default {
     SmallTown1,
     SmallTown2
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

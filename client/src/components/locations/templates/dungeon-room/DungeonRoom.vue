@@ -13,7 +13,6 @@ export default {
     DungeonRoom1,
     DungeonRoom2
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

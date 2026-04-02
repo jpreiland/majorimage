@@ -10,7 +10,6 @@ export default {
   components: {
     Wanted1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

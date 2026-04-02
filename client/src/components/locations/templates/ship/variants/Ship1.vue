@@ -11,6 +11,5 @@
 <script>
 export default {
   name: 'Ship1',
-  inject: ['data']
 }
 </script>

@@ -10,7 +10,6 @@ export default {
   components: {
     MagicWeapons1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

@@ -47,7 +47,6 @@
 <script>
 export default {
   name: 'Blacksmith1',
-  inject: ['data'],
   data() {
     return {
       numInventory: 10,

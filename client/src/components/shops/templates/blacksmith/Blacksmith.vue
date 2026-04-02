@@ -10,7 +10,6 @@ export default {
   components: {
     Blacksmith1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

@@ -10,7 +10,6 @@ export default {
   components: {
     General1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

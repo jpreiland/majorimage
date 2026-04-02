@@ -10,7 +10,6 @@ export default {
   components: {
     Wizard1
   },
-  inject: ['data'],
   data() {
     return {
       variants: [

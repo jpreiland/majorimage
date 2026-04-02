@@ -52,7 +52,6 @@
 <script>
 export default {
   name: "Art1",
-  inject: ["data"],
   data() {
     return {
       numArtwork: 10,

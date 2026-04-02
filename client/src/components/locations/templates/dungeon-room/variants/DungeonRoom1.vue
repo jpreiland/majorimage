@@ -19,7 +19,6 @@
 <script>
 export default {
   name: 'DungeonRoom1',
-  inject: ['data'],
   data() {
     return {
       rerollToggle: true

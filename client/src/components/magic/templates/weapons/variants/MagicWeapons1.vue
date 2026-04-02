@@ -59,7 +59,6 @@
 <script>
 export default {
   name: 'MagicWeapons1',
-  inject: ['data'],
   data() {
     return {
       numWeapons: 10,

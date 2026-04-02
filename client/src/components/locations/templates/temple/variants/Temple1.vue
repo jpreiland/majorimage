@@ -11,6 +11,5 @@
 <script>
 export default {
   name: 'Temple1',
-  inject: ['data']
 }
 </script>

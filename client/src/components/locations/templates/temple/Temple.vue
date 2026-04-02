@@ -13,7 +13,6 @@ export default {
     Temple1,
     Temple2
   },
-  inject: ['data'],
   data() {
     return {
       variants: [
