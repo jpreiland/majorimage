@@ -1,36 +1,12 @@
 <template>
-  <Temple1 v-if="variants[0]" />
-  <Temple2 v-if="variants[1]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
-<script>
-import Temple1 from "./variants/Temple1.vue"
-import Temple2 from "./variants/Temple2.vue"
+<script lang="ts" setup>
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-export default {
-  name: 'Temple',
-  components: {
-    Temple1,
-    Temple2
-  },
-  data() {
-    return {
-      variants: [
-        true,
-        false
-      ]
-    }
-  },
-  async mounted() {
-    this.rollVariant()
-  },
-  methods: {
-    rollVariant() {
-      const variant = Math.floor(Math.random() * this.variants.length)
-      for (let i in this.variants) {
-        this.variants[i] = i == variant ? true : false
-      }
-    }
-  }
-}
+import type { VueModule } from '../../../../types/pages';
+
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>

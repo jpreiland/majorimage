@@ -1,18 +1,12 @@
 <template>
-  <Spells1 v-if="variants[0]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
 <script lang="ts" setup>
-import Spells1 from "./variants/Spells1.vue"
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-const variants = [true]
+import type { VueModule } from '../../../../types/pages';
 
-function rollVariant() {
-  const variantIndex = Math.floor(Math.random() * variants.length) as unknown as string
-  for (const i in variants) {
-    variants[i] = i == variantIndex ? true : false
-  }
-}
-
-rollVariant()
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>

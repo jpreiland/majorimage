@@ -1,36 +1,12 @@
 <template>
-  <SmallTown1 v-if="variants[0]" />
-  <SmallTown2 v-if="variants[1]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
-<script>
-import SmallTown1 from "./variants/SmallTown1.vue"
-import SmallTown2 from "./variants/SmallTown2.vue"
+<script lang="ts" setup>
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-export default {
-  name: 'SmallTown',
-  components: {
-    SmallTown1,
-    SmallTown2
-  },
-  data() {
-    return {
-      variants: [
-        true,
-        false
-      ]
-    }
-  },
-  async mounted() {
-    this.rollVariant()
-  },
-  methods: {
-    rollVariant() {
-      const variant = Math.floor(Math.random() * this.variants.length)
-      for (let i in this.variants) {
-        this.variants[i] = i == variant ? true : false
-      }
-    }
-  }
-}
+import type { VueModule } from '../../../../types/pages';
+
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>

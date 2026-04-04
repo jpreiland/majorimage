@@ -1,32 +1,12 @@
 <template>
-  <Noble1 v-if="variants[0]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
-<script>
-import Noble1 from "./variants/Noble1.vue"
+<script lang="ts" setup>
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-export default {
-  name: 'Noble',
-  components: {
-    Noble1
-  },
-  data() {
-    return {
-      variants: [
-        true
-      ]
-    }
-  },
-  async mounted() {
-    this.rollVariant()
-  },
-  methods: {
-    rollVariant() {
-      const variant = Math.floor(Math.random() * this.variants.length)
-      for (let i in this.variants) {
-        this.variants[i] = i == variant ? true : false
-      }
-    }
-  }
-}
+import type { VueModule } from '../../../../types/pages';
+
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>

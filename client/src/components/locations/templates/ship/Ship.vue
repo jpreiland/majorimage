@@ -1,36 +1,12 @@
 <template>
-  <Ship1 v-if="variants[0]" />
-  <Ship2 v-if="variants[1]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
-<script>
-import Ship1 from "./variants/Ship1.vue"
-import Ship2 from "./variants/Ship2.vue"
+<script lang="ts" setup>
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-export default {
-  name: 'Ship',
-  components: {
-    Ship1,
-    Ship2
-  },
-  data() {
-    return {
-      variants: [
-        true,
-        false
-      ]
-    }
-  },
-  async mounted() {
-    this.rollVariant()
-  },
-  methods: {
-    rollVariant() {
-      const variant = Math.floor(Math.random() * this.variants.length)
-      for (let i in this.variants) {
-        this.variants[i] = i == variant ? true : false
-      }
-    }
-  }
-}
+import type { VueModule } from '../../../../types/pages';
+
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>

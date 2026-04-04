@@ -1,32 +1,12 @@
 <template>
-  <Wanted1 v-if="variants[0]" />
+  <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
-<script>
-import Wanted1 from "./variants/Wanted1.vue"
+<script lang="ts" setup>
+import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-export default {
-  name: 'Wanted',
-  components: {
-    Wanted1
-  },
-  data() {
-    return {
-      variants: [
-        true
-      ]
-    }
-  },
-  async mounted() {
-    this.rollVariant()
-  },
-  methods: {
-    rollVariant() {
-      const variant = Math.floor(Math.random() * this.variants.length)
-      for (let i in this.variants) {
-        this.variants[i] = i == variant ? true : false
-      }
-    }
-  }
-}
+import type { VueModule } from '../../../../types/pages';
+
+const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
+const { SelectedVariant } = useRandomVariant(variants)
 </script>
