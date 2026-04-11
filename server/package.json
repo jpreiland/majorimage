@@ -16,6 +16,8 @@
     "send": "^1.2.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.14"
+    "@types/express": "^5.0.6",
+    "nodemon": "^3.1.14",
+    "typescript": "^6.0.2"
   }
 }
