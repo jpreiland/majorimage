@@ -11,7 +11,7 @@ import StealthDescriptor from './components/descriptors/StealthDescriptor.vue'
 
 import './assets/app.css';
 
-import type { AppData } from '../../shared/types'
+import type { AppData, CategoryName } from '../../shared/types'
 import type { Subpage, VueModule } from './types/pages'
 
 const objectModules = import.meta.glob<VueModule>('./components/objects/templates/*/*.vue', { eager: true })
@@ -71,7 +71,7 @@ async function buildAllSubpages(data: AppData): Promise<Record<string, Subpage[]
 
 async function getUniqueWordCount(data: AppData): Promise<number> {
   const uniqueWords = new Set()
-  for (const category of Object.keys(data.categories)) {
+  for (const category of Object.keys(data.categories) as CategoryName[]) {
     for (const word of data.categories[category]) {
       uniqueWords.add(word)
     }

@@ -7,8 +7,11 @@ import title from '../titleize/titleize'
 import verber from '../verber/verber'
 import { pickFormat } from '../descriptor-utils/formats'
 
+import type { AppData, CategoryName, DFEntry, DFMapName, Format, FormatInstruction, GroupName, NumRangeOverride, NumberFormatInstruction, NumericString, PriceFormatInstruction, PriceOverride } from '../../../../shared/types'
+import { App } from 'vue'
+
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitcher(parts, data, priceOverride, numRangeOverride) {
+function stitcher(parts: Format, data: AppData, priceOverride: PriceOverride, numRangeOverride: NumRangeOverride) {
   let name = ""
   let word
   let numWords = 0
@@ -97,7 +100,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
           numWords--
         }
 
-        if (part.length > 4 && bonusPct >= 0.01 && bonusPct <= 0.99) {
+        if (part.length > 4 && bonusPct && bonusPct >= 0.01 && bonusPct <= 0.99) {
           let rng = Math.random()
           while (rng <= bonusPct) {
             word = picker(part[1], data)
@@ -105,7 +108,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
               name += ' ' + do_a_an(word, a_an_flag)
               a_an_flag = false
             }
-            if (part.length === 6 && bonusDecay >= 0.01 && bonusDecay <= 0.99) {
+            if (part.length === 6 && bonusDecay && bonusDecay >= 0.01 && bonusDecay <= 0.99) {
               bonusPct -= bonusDecay
             }
             rng = Math.random()
@@ -132,7 +135,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
 
       case 'number': 
         if (part.length < 3) break;
-        let numParts = [...part]
+        let numParts: NumberFormatInstruction = [...part]
         if (numRangeOverride) {
           if (!isNaN(numRangeOverride.min)) numParts[1] = numRangeOverride.min
           if (!isNaN(numRangeOverride.max)) numParts[2] = numRangeOverride.max
@@ -144,7 +147,7 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
 
       case 'price':
         if (!(part.length === 3 || part.length === 4)) break;
-        let priceParts = [...part]
+        let priceParts: PriceFormatInstruction = [...part]
         if (priceOverride) {
           if (!isNaN(priceOverride.min)) priceParts[1] = priceOverride.min
           if (!isNaN(priceOverride.max)) priceParts[2] = priceOverride.max
@@ -156,11 +159,11 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
 
       case 'format':
         if (part.length !== 2) break;
-        let formatParts
+        let formatParts: Format
 
         // if descriptor type, roll for format
         if (Object.hasOwn(data.dfMap, part[1])) {
-          const res = data.dfMap[part[1]]
+          const res: DFEntry = data.dfMap[part[1] as DFMapName]
           formatParts = data.formats[pickFormat(res.formatMap, res.totalWeight)]
         } else {
           formatParts = data.formats[part[1]]
@@ -179,18 +182,18 @@ function stitcher(parts, data, priceOverride, numRangeOverride) {
   return (isTitle ? title(name.trim()) : name.trim())
 }
 
-function do_a_an(word, a_an_flag) {
+function do_a_an(word: string, a_an_flag: boolean): string {
   return a_an_flag ? (AvsAnSimple.query(word) + " " + word) : word
 }
 
-function picker(category, data) {
+function picker(category: GroupName | CategoryName, data: AppData) {
   if (Object.hasOwn(data.groups, category)) {
     category = categoryPicker(category, data)
   }
-  return wordPicker(category, data)
+  return wordPicker(category as CategoryName, data)
 }
 
-function wordPicker(category, data) {
+function wordPicker(category: CategoryName, data: AppData): string {
   if (!data.categories[category]) {
     console.log(`category ${category} does not exist`)
     return ""
@@ -198,24 +201,24 @@ function wordPicker(category, data) {
   return data.categories[category][Math.floor(Math.random() * data.categories[category].length)]
 }
 
-function categoryPicker(group, data) {
+function categoryPicker(group: GroupName | CategoryName, data: AppData): GroupName | CategoryName {
   const groupsize = data.groups[group].totalWords
   const grouproll = Math.floor(Math.random() * groupsize)
-  let categoryCandidate = ''
+  let categoryCandidate: GroupName | CategoryName = "___"
 
-  for (let categorySize of Object.keys(data.groups[group].categoryMap)) {
+  for (let categorySize of Object.keys(data.groups[group].categoryMap) as NumericString[]) {
     categoryCandidate = data.groups[group].categoryMap[categorySize]
-    if (categorySize >= grouproll) break
+    if (categorySize as number >= grouproll) break
   }
 
-  if (Object.hasOwn(data.groups, categoryCandidate)) {
+  if (categoryCandidate && Object.hasOwn(data.groups, categoryCandidate)) {
     return categoryPicker(categoryCandidate, data)
   }
 
   return categoryCandidate
 }
 
-function rollPrice(params) {
+function rollPrice(params: PriceFormatInstruction): number {
   const min = Math.ceil(Math.min(params[1], params[2]))
   const max = Math.floor(Math.max(params[1], params[2]))
   let denomination
@@ -241,7 +244,7 @@ function rollPrice(params) {
   return price
 }
 
-function formatPrice(price) {
+function formatPrice(price: number): string {
   if (isNaN(price) || price <= 0) return "free"
 
   //copper

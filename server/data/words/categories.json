@@ -279,7 +279,7 @@
   "weaponAmmo": ["crossbow bolt", "sling stone"],
   "weaponAmmoBasic": ["arrow", "bolt", "stone"],
   "weaponMelee": ["bastard sword", "battleaxe", "bill (polearm)", "brass knuckles", "cat-o'-nine tails", "dire flail", "estoc", "falchion", "greataxe", "greatclub", "greatsword", "handaxe", "heavy flail", "heavy mace", "heavy pick", "light flail", "light mace", "light pick", "longspear", "longsword", "pickaxe", "pitchfork", "punching dagger", "quarterstaff", "shortspear", "shortsword", "spiked chain", "warhammer", "wooden stake"],
-  "weaponMeleeBasic": ["axe", "bardiche", "claymore", "club", "cutlass", "dagger", "estoc", "falchion", "garrote", "gladius", "glaive", "guisarme", "halberd", "hammer", "harpoon", "knife", "lance", "machete", "morningstar", "pike", "ranseur", "rapier", "sap", "scimitar", "scizore", "sickle", "spear", "staff", "trident", "whip", "sword", "razor"],
+  "weaponMeleeBasic": ["axe", "bardiche", "claymore", "club", "crook", "cutlass", "dagger", "estoc", "falchion", "garrote", "gladius", "glaive", "guisarme", "halberd", "hammer", "harpoon", "knife", "lance", "machete", "morningstar", "pike", "ranseur", "rapier", "sap", "scimitar", "scizore", "sickle", "spear", "staff", "trident", "whip", "sword", "razor"],
   "weaponRanged": ["composite longbow", "hand crossbow", "heavy crossbow", "light crossbow", "throwing axe"],
   "weaponRangedBasic": ["dart", "crossbow", "javelin", "longbow", "net", "shortbow", "sling", "bow", "chakram"],
 
@@ -322,5 +322,7 @@
   "nameDragon": ["sithron"],
   "nameFiend": ["placeholder"],
   "nameMonster": ["placeholder"],
-  "nameWizard": ["placeholder"]
+  "nameWizard": ["placeholder"],
+
+  "___": ["ERROR"]
 }

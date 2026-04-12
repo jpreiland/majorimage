@@ -118,5 +118,7 @@
   "_treasure": [["pick", "treasure"]],
   "_weapon": [["pick", "weapon"]],
   "_writing": [["pick", "writing"]],
-  "__price": [["price", 1, 20, "copper"]]
+  "__price": [["price", 1, 20, "copper"]],
+
+  "___": [["static", "ERROR"]]
 }
