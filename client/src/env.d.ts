@@ -6,3 +6,11 @@ declare module '*.vue' {
   export default component
 }
 
+declare module 'symbols' {
+  export function is_vowel(input: string): boolean
+  export function is_consonant(input: string): boolean
+}
+
+declare module 'pluralize' {
+  export function pluralize(input: string): string
+}

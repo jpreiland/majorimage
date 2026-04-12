@@ -8,7 +8,6 @@ import verber from '../verber/verber'
 import { pickFormat } from '../descriptor-utils/formats'
 
 import type { AppData, CategoryName, DFEntry, DFMapName, Format, FormatInstruction, GroupName, NumRangeOverride, NumberFormatInstruction, NumericString, PriceFormatInstruction, PriceOverride } from '../../../../shared/types'
-import { App } from 'vue'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
 function stitcher(parts: Format, data: AppData, priceOverride: PriceOverride, numRangeOverride: NumRangeOverride) {
@@ -21,6 +20,7 @@ function stitcher(parts: Format, data: AppData, priceOverride: PriceOverride, nu
   if (parts === null || parts === undefined) return "" 
 
   for (let part of parts) {
+    // @ts-expect-error: this shouldn't ever be true but I don't want to break anything by removing this check
     if (part.length === 0) continue;
     switch (part[0]) {
       case 'pick':

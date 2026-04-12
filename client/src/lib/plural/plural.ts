@@ -1,6 +1,6 @@
 import pluralize from 'pluralize'
 
-const exceptions = {
+const exceptions: Record<string, string> = {
   "avatar of death": "avatars of death",
   "cyclops": "cyclopes",
   "fae": "fae",
@@ -17,8 +17,9 @@ const exceptions = {
   "squid": "squid"
 }
 
-function plural(word) {
+function plural(word: string): string {
   if (typeof word !== 'string') return word
+  // @ts-expect-error
   return Object.hasOwn(exceptions, word) ? exceptions[word] : pluralize(word)
 }
 

@@ -23,7 +23,7 @@ const exceptions = [
   "With"
 ]
 
-function title(string) {
+function title(string: string): string {
   if (typeof string !== 'string') return string
 
   string = string.replace(/([^\W_]+[^\s-]*) */g,
