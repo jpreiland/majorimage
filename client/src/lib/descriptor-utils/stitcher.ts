@@ -10,7 +10,7 @@ import { pickFormat } from '../descriptor-utils/formats'
 import type { AppData, CategoryName, DFEntry, DFMapName, Format, FormatInstruction, GroupName, NumRangeOverride, NumberFormatInstruction, NumericString, PriceFormatInstruction, PriceOverride } from '../../../../shared/types'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitcher(parts: Format, data: AppData, priceOverride: PriceOverride, numRangeOverride: NumRangeOverride) {
+function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, numRangeOverride?: NumRangeOverride) {
   let name = ""
   let word
   let numWords = 0

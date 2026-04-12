@@ -10,10 +10,10 @@ import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
 import { useAppContext } from '../../composables/useAppContext'
 
-import type { NumRangeOverride, PriceOverride } from '../../../../shared/types';
+import type { DFMapName, FormatName, NumRangeOverride, NumericString, PriceOverride } from '../../../../shared/types';
 
 interface Props {
-  type: string
+  type: DFMapName
   color?: string
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
@@ -25,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { data } = useAppContext()
 const descriptorText = ref('Descriptor')
-const formatMap = ref<Record<string, number>>({})
+const formatMap = ref<Record<NumericString, FormatName>>({})
 const totalWeight = ref(0)
 
 onMounted(() => {
