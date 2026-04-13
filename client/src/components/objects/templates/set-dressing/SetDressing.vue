@@ -31,8 +31,9 @@
 <script lang="ts" setup>
 import { reactive, ref, onMounted } from 'vue'
 import { useAppContext } from '../../../../composables/useAppContext'
-
 import ObjectRow from "./object-rows/ObjectRow.vue"
+
+import type { Format, FormatName } from '../../../../../../shared/types';
 
 const { data } = useAppContext()
 
@@ -49,22 +50,22 @@ const params = reactive({
 
 const itemTypes = reactive({
   compiled: false,
-  formatPicker: [] as string[],
-  formats: {} as Record<string, any>,
+  formats: {} as Record<string, {weight: number, format: Format}>,
+  formatPicker: [] as FormatName[],
 })
 
 const numRows = 12
 const rows = ref<{ id: number }[]>([])
-const itemFormats = ref<any[]>([])
+const itemFormats = ref<[FormatName, number][]>([])
 
-const armorFormat = ["_armorShieldUntyped", 1]
-const clothingFormat = ["_clothingHeadwear", 1]
-const containerFormat = ["_container", 1]
-const furnitureFormat = ["_furniture", 1]
-const miscFormat = ["_misc", 1]
-const treasureFormat = ["_treasure", 1]
-const weaponFormat = ["_weapon", 1]
-const writingFormat = ["_writing", 1]
+const armorFormat: [FormatName, number] = ["_armorShieldUntyped", 1]
+const clothingFormat: [FormatName, number] = ["_clothingHeadwear", 1]
+const containerFormat: [FormatName, number] = ["_container", 1]
+const furnitureFormat: [FormatName, number] = ["_furniture", 1]
+const miscFormat: [FormatName, number] = ["_misc", 1]
+const treasureFormat: [FormatName, number] = ["_treasure", 1]
+const weaponFormat: [FormatName, number] = ["_weapon", 1]
+const writingFormat: [FormatName, number] = ["_writing", 1]
 
 const rerollToggle = ref(true)
 
@@ -90,8 +91,8 @@ async function compileItemTypes() {
   itemTypes.compiled = true
 }
 
-async function applyItemFilters() {
-  const formats: any[] = []
+async function applyItemFilters(): Promise<[FormatName, number][]> {
+  const formats: [FormatName, number][] = []
 
   for (const param of Object.keys(params)) {
     switch (param) {
@@ -139,7 +140,7 @@ async function applyItemFilters() {
 }
 
 async function compileDescriptorFormats() {
-  const compiled: Record<string, any> = {}
+  const compiled: Record<string, {weight: number, format: Format}> = {}
 
   for (const [name, weight] of itemFormats.value) {
     compiled[name] = {
@@ -151,10 +152,10 @@ async function compileDescriptorFormats() {
   return compiled
 }
 
-async function buildFormatPicker() {
-  let picker: string[] = []
+async function buildFormatPicker(): Promise<FormatName[]> {
+  let picker: FormatName[] = []
 
-  for (const format of Object.keys(itemTypes.formats)) {
+  for (const format of Object.keys(itemTypes.formats) as FormatName[]) {
     picker = picker.concat(
       Array(itemTypes.formats[format].weight).fill(format)
     )

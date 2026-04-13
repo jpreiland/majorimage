@@ -8,11 +8,12 @@
 import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
-import type { NumRangeOverride, PriceOverride } from '../../../../shared/types'
+
+import type { Format, FormatName, NumRangeOverride, PriceOverride } from '../../../../shared/types'
 
 interface Props {
-  filteredFormats: Object
-  formatPicker: any
+  filteredFormats: Record<string, {weight: number, format: Format}>
+  formatPicker: FormatName[]
   color?: string
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
@@ -31,11 +32,12 @@ onMounted(() => {
 })
 
 function reroll() {
-  const format = props.formatPicker[Math.floor(Math.random() * props.formatPicker.length)]
+  const format: FormatName = props.formatPicker[Math.floor(Math.random() * props.formatPicker.length)]
 
   descriptorText.value = stitch(
     props.filteredFormats[format].format,
-    data, props.priceOverride,
+    data,
+    props.priceOverride,
     props.numRangeOverride
     )
 }

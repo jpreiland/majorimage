@@ -8,9 +8,10 @@
 import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
+import type { GroupName } from '../../../../shared/types';
 
 interface Props {
-  type: string
+  type: GroupName
   color?: string
   a_an?: boolean
   properNoun?: boolean
@@ -24,7 +25,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const { data } = useAppContext()
 const descriptorText = ref('Simple Descriptor')
-let format: string[][] = []
+let format: any[] = []
 const pickStyles = ref([
   'pick',
   'pick-pluralize',
@@ -48,7 +49,7 @@ onMounted(() => {
 })
 
 function reroll() {
-  if (props.type) descriptorText.value = stitch(format, data, null, null)
+  if (props.type) descriptorText.value = stitch(format, data)
 }
 
 const setColor = computed(() => {
