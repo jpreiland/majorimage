@@ -5,7 +5,7 @@
   "description": "",
   "scripts": {
     "test": "npm run test --prefix client",
-    "server": "npm run start --prefix server",
+    "server": "nodemon --watch server --exec tsx server/server.ts",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/jpreiland/majorimage#readme",
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.21.0"
   }
 }

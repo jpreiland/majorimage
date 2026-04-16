@@ -47,14 +47,12 @@ export type FormatInstruction =
 | ['a(n)']
 | ['title']
 | NumberFormatInstruction
-| FormatTypeFormatInstruction
 | PriceFormatInstruction
+| FormatTypeFormatInstruction
 
 export type NumberFormatInstruction = ['number', number, number, string?]
+export type PriceFormatInstruction = ['price', number, number, string?]
 export type FormatTypeFormatInstruction =  ['format', FormatName]
-export type PriceFormatInstruction =
-| ['price', number, number]
-| ['price', number, number, string]
 
 export type Format = readonly FormatInstruction[]
 

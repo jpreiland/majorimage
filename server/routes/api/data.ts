@@ -8,10 +8,13 @@ import Groups from '../../data/words/groups.json' with { type: "json" };
 import Templates from '../../data/templates/templates.json' with { type: "json" };
 import Formats from '../../data/descriptor-formats/formats.json' with { type: "json" };
 import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' with { type: "json" };
+import { validateAll } from '../../data/validators.js';
 
-import type { CategoryName, GroupsCompiled, GroupName, DFEntry, FormatName, NumericString, DFMapName, CompiledGroup, DFMapJsonEntry, Format } from '../../../shared/types'
+import type { CategoryName, GroupsCompiled, GroupName, DFEntry, FormatName, NumericString, DFMapName, CompiledGroup, DFMapJsonEntry, Format } from '../../../shared/types.ts'
 
 const router = express.Router()
+
+validateAll(Categories, Groups, Formats, DescriptorFormatsMap)
 
 router.get('/data', async (req, res) => {
   try {
