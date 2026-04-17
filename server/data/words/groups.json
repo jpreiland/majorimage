@@ -19,7 +19,7 @@
   "divinePortfolioSuffixes": ["divinePortfolio", "divinePortfolioSuffix"],
   "event": ["performance", "eventCelestial", "eventMisc", "eventWeather"],
   "furnitureAll": ["furniture", "furnitureBasic"],
-  "itemNonEquipment": ["miscBasic", "flower", "foodSingular", "foodPlural", "fruit", "furnitureBasic", "treasureBasic"],
+  "itemNonEquipment": ["miscBasic", "foodSingular", "foodPlural", "fruit", "furnitureBasic", "treasureBasic"],
   "jewelryAll": ["jewelry", "jewelryBasic"],
   "materialMetalStoneGem": ["materialMetal", "materialStone", "materialGemstone"],
   "materialObject": ["materialMisc", "materialMetalStoneGem", "materialTextile", "materialWood"],

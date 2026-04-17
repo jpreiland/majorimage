@@ -3,47 +3,31 @@
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
-          Magic Weapon Description
+          Word and Group/Category
         </h2>
       </div>
     </div>
     <div class="info-panel-description">
       <p>
-        Lorem ipsum <Descriptor :type="'TestNum5-17'" :color="'#00ffff'" /> 
-        dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-        <Descriptor :type="'TestNum0-9-no'" :color="'#ff00ff'" /> incididunt ut labore et dolore magna aliqua. 
-        Ut enim ad  minim veniam, quis nostrud exercitation ullamco laboris 
-        <Descriptor :type="'TestNum5-17'" :color="'#ff0000'" :num-range-override="{min: 0, max: 3, zeroString: 'nothing!'}" /> 
-        nisi ut aliquip ex ea commodo consequat. 
-        Duis <Descriptor :type="'EnhancementBonus'" :color="'#00ff00'" /> 
-        Sword aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        {{ word }}
       </p>
-    </div>
-    <div class="card-header">
-      <div class="card-header-left">
-        <h2 class="card-title">
-          Modified Weapon
-        </h2>
-      </div>
-    </div>
-    <div class="info-panel-description">
       <p>
-        <Descriptor :type="'ModifiedWeapon'" :color="'#8e1fde'" :key="rerollToggle" />
+        {{ groupOrCategory }}
       </p>
     </div>
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
-          Magic Weapon Names
+          Formats that reference [group/category name]
         </h2>
       </div>
     </div>
     <div class="info-panel-description">
       <div>
-        <template v-for="weapon in weapons" :key="'Weapon-'+weapon.id+'-'+rerollToggle">
+        <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
           <p>
-            <Descriptor :type="'CustomWeapon'" :color="'#EE3AA3'" />
+            {{ format.name }}
+            <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#3e8ed0'" />
           </p>
         </template>
       </div>
@@ -56,25 +40,98 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'WordTester1',
-  data() {
-    return {
-      numWeapons: 10,
-      weapons: [],
-      rerollToggle: true
-    }
-  },
-  mounted() {
-    for (let i = 0; i < this.numWeapons; i++) {
-      this.weapons.push({id: i})
-    }
-  },
-  methods: {
-    async rerollAll() {
-      this.rerollToggle = !this.rerollToggle
+<script lang="ts" setup>
+import { onMounted, ref } from 'vue'
+import { useAppContext } from '../../../../../composables/useAppContext'
+import { CategoryName, Format, FormatName, GroupName, NumericString } from '../../../../../../../shared/types';
+
+const { data } = useAppContext()
+
+const word = 'flamberge'
+const groupOrCategory = 'weaponMeleeBasic'
+const formats = ref(new Array())
+const rerollToggle = ref(true)
+
+onMounted(() => {
+  if (!data.categories[groupOrCategory]) {
+    console.log('category does not exist')
+  }
+
+  const reverseIndex: ReverseIndex = buildReverseIndex()
+  const foundGroups = searchGroups(groupOrCategory, reverseIndex)
+  const modifiedFormats = searchFormats(word, foundGroups)
+
+  for (const formatName of Object.keys(modifiedFormats)) {
+    const formatPicker = [formatName]
+    const filteredFormats: Record<string, {weight: number, format: Format}> = { }
+    filteredFormats[formatName] = { weight: 1, format: modifiedFormats[formatName]}
+    formats.value.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats})
+  }
+})
+
+function rerollAll() {
+  rerollToggle.value = !rerollToggle.value
+}
+
+type ReverseIndex = Map<CategoryName | GroupName, Set<GroupName>>
+
+function buildReverseIndex(): ReverseIndex {
+  const reverse: ReverseIndex = new Map()
+
+  for (const group of Object.keys(data.groups) as GroupName[]) {
+    const { categoryMap } = data.groups[group]
+
+    for (const key of Object.keys(categoryMap) as NumericString[]) {
+      const child = categoryMap[key] as CategoryName | GroupName
+
+      if (!reverse.has(child)) {
+        reverse.set(child, new Set())
+      }
+
+      reverse.get(child)!.add(group)
     }
   }
+
+  return reverse
+}
+
+function searchGroups(target: CategoryName | GroupName, reverseIndex: ReverseIndex): Set<GroupName> {
+  const result = new Set<GroupName>()
+  const queue: (CategoryName | GroupName)[] = [target]
+
+  while (queue.length > 0) {
+    const current = queue.shift()!
+
+    const parents = reverseIndex.get(current)
+    if (!parents) continue
+
+    for (const parent of parents) {
+      if (!result.has(parent)) {
+        result.add(parent)
+        queue.push(parent)
+      }
+    }
+  }
+
+  return result
+}
+
+function searchFormats(word: string, targets: Set<CategoryName | GroupName>): Record<string, Format> {
+  const formats: Record<string, Format> = {}
+
+  for (const formatName of Object.keys(data.formats) as FormatName[]) {
+    const format = structuredClone(data.formats[formatName])
+    let formatContainsTarget = false
+    for (const instruction in format) {
+      // TODO: modify word for cases pick-plural, pick-verber, etc
+      if (format[instruction][0].startsWith('pick') && targets.has(format[instruction][1] as (CategoryName | GroupName))) {
+        formatContainsTarget = true
+        format[instruction] = ['static', word]
+      }
+    }
+    if (formatContainsTarget) formats[formatName] = format
+  }
+
+  return formats
 }
 </script>

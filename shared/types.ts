@@ -34,15 +34,15 @@ export interface DFEntry {
 export type DFMap = Record<DFMapName, DFEntry>
 
 export type FormatInstruction =
-| ['pick', CategoryName]
-| ['pick-pluralize', CategoryName]
-| ['pick-pluralize-optional', CategoryName]
-| ['pick-pastTense', CategoryName]
-| ['pick-verber', CategoryName]
-| ['pick-gerund', CategoryName]
-| ['pick-multi', CategoryName, number, number]
-| ['pick-multi', CategoryName, number, number, number]
-| ['pick-multi', CategoryName, number, number, number, number]
+| ['pick', (CategoryName | GroupName)]
+| ['pick-pluralize', (CategoryName | GroupName)]
+| ['pick-pluralize-optional', (CategoryName | GroupName)]
+| ['pick-pastTense', (CategoryName | GroupName)]
+| ['pick-verber', (CategoryName | GroupName)]
+| ['pick-gerund', (CategoryName | GroupName)]
+| ['pick-multi', (CategoryName | GroupName), number, number]
+| ['pick-multi', (CategoryName | GroupName), number, number, number]
+| ['pick-multi', (CategoryName | GroupName), number, number, number, number]
 | ['static', string]
 | ['a(n)']
 | ['title']
@@ -54,7 +54,7 @@ export type NumberFormatInstruction = ['number', number, number, string?]
 export type PriceFormatInstruction = ['price', number, number, string?]
 export type FormatTypeFormatInstruction =  ['format', FormatName]
 
-export type Format = readonly FormatInstruction[]
+export type Format = FormatInstruction[]
 
 // Groups
 export type GroupName = keyof typeof GroupsJson
