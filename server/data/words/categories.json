@@ -56,7 +56,7 @@
   "buildingWaterside": ["dock", "dockyard", "dock house", "lighthouse", "pier", "port", "wharf"],
   "castlePart": ["aisle", "apse", "arcade", "arch", "arrowslit", "bailey", "barbican", "bastion", "battlement", "berm", "blockhouse", "buttery", "buttress", "column", "counterscarp", "counterscarp gallery", "cupola", "curtain wall", "dormer", "drawbridge", "dungeon", "forebuilding", "gate house", "great chamber", "great hall", "guard tower", "hall", "hallway", "inner curtain", "inner ward", "lancet window", "machicolation", "mantlet", "merlon", "moat", "motte", "murder hole", "oubliette", "outer curtain", "palisade", "parapet", "pediment", "portcullis", "postern gate", "quadrangle", "rampart", "refectory", "ringwork", "sally port", "scarp", "shaft", "shell keep", "solar", "stockade", "tower", "treasury", "turret", "vault", "wall stair", "wall walk", "yett"],
   "celestial": ["deva angel", "planetar angel", "solar angel"],
-  "celestialBasic": ["angel", "couatl", "pegasus", "unicorn"],
+  "celestialBasic": ["angel", "archon", "couatl", "pegasus", "unicorn"],
   "clothing": ["apron", "apron dress", "blouse", "boot", "chasuble", "coat", "corset", "cyclas", "dalmatic", "double-breasted coat", "doublet", "dress", "dress shirt", "duster coat", "evening gown", "fur coat", "girdle", "gown", "houppelande", "jacket", "kirtle", "leggings", "mantle", "nightgown", "overcoat", "pair of pants", "pair of shorts", "pair of slacks", "pair of trousers", "petticoat", "poncho", "robe", "sandal", "shirt", "shoe", "skirt", "slipper", "sock", "suit", "sun dress", "surcoat", "sweater", "tabard", "tailcoat", "tank top", "tunic", "undergarment", "undershirt", "vest", "vestment", "waistcoat", "wedding dress", "wizard robe"],
   "colorBasic": ["blue", "bronze", "brown", "gold", "green", "grey", "orange", "pink", "purple", "red", "silver", "tan", "teal", "violet", "yellow"],
   "colorUnmodifiable": ["black", "white"],
@@ -324,5 +324,6 @@
   "nameMonster": ["placeholder"],
   "nameWizard": ["placeholder"],
 
-  "___": ["ERROR"]
+  "___": ["ERROR"],
+  "_WORDTESTER": ["placeholder"]
 }

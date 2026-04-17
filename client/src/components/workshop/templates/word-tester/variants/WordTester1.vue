@@ -9,16 +9,18 @@
     </div>
     <div class="info-panel-description">
       <p>
-        {{ word }}
+        <input v-model="wordInput" type="text" /><button @click="updateWord(wordInput)">Test</button>
       </p>
-      <p>
-        {{ groupOrCategory }}
-      </p>
+      <select v-model="selectedGroupOrCategory" @change="updateGroupOrCategory(selectedGroupOrCategory)">
+        <option v-for="groupOrCategoryEntry in groupsAndCategories" :value="groupOrCategoryEntry">
+          {{ groupOrCategoryEntry }}
+        </option>
+      </select>
     </div>
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
-          Formats that reference [group/category name]
+          Formats that reference {{ groupOrCategory }}
         </h2>
       </div>
     </div>
@@ -26,8 +28,8 @@
       <div>
         <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
           <p>
+            <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#70c947'" />
             {{ format.name }}
-            <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#3e8ed0'" />
           </p>
         </template>
       </div>
@@ -41,33 +43,65 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from 'vue'
+import { ComputedRef, Ref, computed, ref } from 'vue'
 import { useAppContext } from '../../../../../composables/useAppContext'
 import { CategoryName, Format, FormatName, GroupName, NumericString } from '../../../../../../../shared/types';
+import { ModelRef } from 'vue';
 
 const { data } = useAppContext()
 
-const word = 'flamberge'
-const groupOrCategory = 'weaponMeleeBasic'
-const formats = ref(new Array())
+const categoriesSet = new Set(Object.keys(data.categories))
+for (const categoryName of Object.keys(data.categories)) {
+  // remove meta categories from set
+  if (categoryName.startsWith('_')) categoriesSet.delete(categoryName)
+}
+
+const groupsSet = new Set(Object.keys(data.groups))
+const groupsAndCategories = new Set([...categoriesSet, ...groupsSet])
+
+const defaultCategory = 'nameAll'
+const groupOrCategory: Ref<CategoryName | GroupName> = ref(defaultCategory)
+const selectedGroupOrCategory: ModelRef<CategoryName | GroupName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
+
+const defaultWord = 'mr. toad'
+const word = ref(defaultWord)
+const wordInput = defineModel('wordInput', { default: defaultWord })
+
 const rerollToggle = ref(true)
 
-onMounted(() => {
-  if (!data.categories[groupOrCategory]) {
-    console.log('category does not exist')
-  }
+const reverseIndex: ReverseIndex = buildReverseIndex()
 
-  const reverseIndex: ReverseIndex = buildReverseIndex()
-  const foundGroups = searchGroups(groupOrCategory, reverseIndex)
-  const modifiedFormats = searchFormats(word, foundGroups)
-
-  for (const formatName of Object.keys(modifiedFormats)) {
-    const formatPicker = [formatName]
-    const filteredFormats: Record<string, {weight: number, format: Format}> = { }
-    filteredFormats[formatName] = { weight: 1, format: modifiedFormats[formatName]}
-    formats.value.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats})
-  }
+const targetGroupsAndCategory: ComputedRef<Set<CategoryName | GroupName>> = computed(() => {
+  const foundGroups = searchGroups(groupOrCategory.value, reverseIndex)
+  return new Set([groupOrCategory.value, ...foundGroups])
 })
+
+const modifiedFormats = computed(() => {
+  return searchFormats(word.value, targetGroupsAndCategory.value)
+})
+
+const formats = computed(() => {
+  const newFormats = []
+
+  for (const formatName of Object.keys(modifiedFormats.value)) {
+    const formatPicker: FormatName[] = [formatName as FormatName]
+    const filteredFormats: Record<string, {weight: number, format: Format}> = { }
+
+    filteredFormats[formatName] = { weight: 1, format: modifiedFormats.value[formatName]}
+    newFormats.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats})
+  }
+
+  return newFormats
+})
+
+function updateWord(wordInput: string) {
+  word.value = wordInput
+  rerollAll()
+}
+
+function updateGroupOrCategory(selectedGroupOrCategory: (GroupName | CategoryName)) {
+  groupOrCategory.value = selectedGroupOrCategory
+}
 
 function rerollAll() {
   rerollToggle.value = !rerollToggle.value
@@ -116,20 +150,25 @@ function searchGroups(target: CategoryName | GroupName, reverseIndex: ReverseInd
   return result
 }
 
+// todo: account for formats that use 'format' instructions
 function searchFormats(word: string, targets: Set<CategoryName | GroupName>): Record<string, Format> {
   const formats: Record<string, Format> = {}
 
   for (const formatName of Object.keys(data.formats) as FormatName[]) {
     const format = structuredClone(data.formats[formatName])
     let formatContainsTarget = false
+
     for (const instruction in format) {
-      // TODO: modify word for cases pick-plural, pick-verber, etc
       if (format[instruction][0].startsWith('pick') && targets.has(format[instruction][1] as (CategoryName | GroupName))) {
-        formatContainsTarget = true
-        format[instruction] = ['static', word]
+        formatContainsTarget = true      
+        format[instruction][1] = '_WORDTESTER'
       }
     }
-    if (formatContainsTarget) formats[formatName] = format
+
+    if (formatContainsTarget) {
+      formats[formatName] = format
+      data.categories._WORDTESTER[0] = word
+    }
   }
 
   return formats
