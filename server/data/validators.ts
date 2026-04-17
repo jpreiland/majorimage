@@ -129,9 +129,6 @@ function validateFormatInstruction(
             typeof params[5] === 'number' &&
             params[5] >= 0.01 &&
             params[5] <= 0.99))) {
-              
-              console.log(4 in params)
-              console.log(params)
         throw new Error(`Format ${formatName} has ${instructionType} instruction with invalid params`)
       }
       break

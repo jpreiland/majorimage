@@ -11,6 +11,7 @@ import Npcs from '../components/npcs/Npcs.vue'
 import Objects from '../components/objects/Objects.vue'
 import Quests from '../components/quests/Quests.vue'
 import Shops from '../components/shops/Shops.vue'
+import Workshop from '../components/workshop/Workshop.vue'
 import NotFound from '../components/notfound/NotFound.vue'
 
 const routes: RouteRecordRaw[] = [
@@ -35,6 +36,8 @@ const routes: RouteRecordRaw[] = [
     meta: { navDisplayName: 'About', bottomNav: true } },
   { path: '/acknowledgements', name: 'acknowledgements', component: Acknowledgements,
     meta: { navDisplayName: 'Acknowledgements', bottomNav: true } },
+  { path: '/workshop/:subpage?', name: 'workshop', component: Workshop,
+    meta: { color: 'violet', navDisplayName: 'Workshop', bottomNav: true }  },
 
   { path: '/:pathMatch(.*)*', component: NotFound }
 ]

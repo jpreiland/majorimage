@@ -1,7 +1,7 @@
-import CategoriesJson from '../server/data/words/categories.json' with { type: "json" };
-import DescriptorFormatsMapJson from '../server/data/descriptor-formats/descriptor-formats-map.json' with { type: "json" };
-import GroupsJson from '../server/data/words/groups.json' with { type: "json" };
-import FormatsJson from '../server/data/descriptor-formats/formats.json' with { type: "json" };
+import CategoriesJson from '../server/data/words/categories.json'
+import DescriptorFormatsMapJson from '../server/data/descriptor-formats/descriptor-formats-map.json'
+import GroupsJson from '../server/data/words/groups.json'
+import FormatsJson from '../server/data/descriptor-formats/formats.json'
 
 export type NumericString = `${number}` | number
 

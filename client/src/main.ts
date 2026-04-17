@@ -20,6 +20,7 @@ const magicModules = import.meta.glob<VueModule>('./components/magic/templates/*
 const shopModules = import.meta.glob<VueModule>('./components/shops/templates/*/*.vue', { eager: true })
 const npcModules = import.meta.glob<VueModule>('./components/npcs/templates/*/*.vue', { eager: true })
 const questModules = import.meta.glob<VueModule>('./components/quests/templates/*/*.vue', { eager: true })
+const workshopModules = import.meta.glob<VueModule>('./components/workshop/templates/*/*.vue', { eager: true })
 
 async function loadData(): Promise<AppData> {
   const CACHE_KEY = `app-data-${__APP_VERSION__}`
@@ -65,7 +66,8 @@ async function buildAllSubpages(data: AppData): Promise<Record<string, Subpage[]
     magic: buildSubpages(magicModules, 'magic', data),
     shops: buildSubpages(shopModules, 'shops', data),
     npcs: buildSubpages(npcModules, 'npcs', data),
-    quests: buildSubpages(questModules, 'quests', data)
+    quests: buildSubpages(questModules, 'quests', data),
+    workshop: buildSubpages(workshopModules, 'workshop', data)
   }
 }
 

@@ -10,6 +10,7 @@ export type RouteName =
   | 'materials'
   | 'about'
   | 'acknowledgements'
+  | 'workshop'
 
 export type NavRoute = RouteRecordNormalized & {
   name: RouteName
