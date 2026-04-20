@@ -22,6 +22,8 @@
   "numberFiveToSeventeen": [["number", 5, 17]],
   "numberZeroToNine(no)": [["number", 0, 9, "no"]],
 
+  "spellTESTINGConjureElementObject": [["title"], ["static", "TESTING "], ["format", "spellConjureElementObject"]],
+
   "scrollOf": [["title"], ["static", "scroll of "], ["format", "CustomSpell"]],
   "wandOf": [["title"], ["static", "wand of "], ["format", "CustomSpell"]],
   "spellAdjectivePrefix": [["title"], ["pick", "magicSpellPartAdjectivePrefix"], ["static", " "], ["pick", "spellSuffixesNoGerund"]],

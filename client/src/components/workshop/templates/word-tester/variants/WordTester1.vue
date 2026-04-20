@@ -9,7 +9,8 @@
     </div>
     <div class="info-panel-description">
       <p>
-        <input v-model="wordInput" type="text" /><button @click="updateWord(wordInput)">Test</button>
+        <input v-model="wordInput" type="text" @keydown.enter="updateWord(wordInput)" />
+        <button @click="updateWord(wordInput)">Test</button>
       </p>
       <select v-model="selectedGroupOrCategory" @change="updateGroupOrCategory(selectedGroupOrCategory)">
         <option v-for="groupOrCategoryEntry in groupsAndCategories" :value="groupOrCategoryEntry">
@@ -25,14 +26,22 @@
       </div>
     </div>
     <div class="info-panel-description">
-      <div>
-        <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
-          <p>
-            <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#70c947'" />
-            {{ format.name }}
-          </p>
-        </template>
+      <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
+        <p>
+          <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#70c947'" />
+          {{ format.name }}
+        </p>
+      </template>
+    </div>    
+    <div class="card-header">
+      <div class="card-header-left">
+        <h2 class="card-title">
+          Groups that contain {{ groupOrCategory }}
+        </h2>
       </div>
+    </div>
+    <div class="info-panel-description">
+      {{ containingGroupList }}
     </div>
     <div class="center">
       <button class="button info-panel reroll-all" @click="rerollAll()">
@@ -43,12 +52,13 @@
 </template>
 
 <script lang="ts" setup>
-import { ComputedRef, Ref, computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useAppContext } from '../../../../../composables/useAppContext'
-import { CategoryName, Format, FormatName, GroupName, NumericString } from '../../../../../../../shared/types';
-import { ModelRef } from 'vue';
 
-const { data } = useAppContext()
+import type { CategoryName, DFMapName, Format, FormatName, GroupName, NumericString } from '../../../../../../../shared/types';
+import type { ComputedRef, ModelRef, Ref } from 'vue';
+
+const { data, menuSelections } = useAppContext()
 
 const categoriesSet = new Set(Object.keys(data.categories))
 for (const categoryName of Object.keys(data.categories)) {
@@ -59,32 +69,52 @@ for (const categoryName of Object.keys(data.categories)) {
 const groupsSet = new Set(Object.keys(data.groups))
 const groupsAndCategories = new Set([...categoriesSet, ...groupsSet])
 
-const defaultCategory = 'nameAll'
-const groupOrCategory: Ref<CategoryName | GroupName> = ref(defaultCategory)
-const selectedGroupOrCategory: ModelRef<CategoryName | GroupName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
-
-const defaultWord = 'mr. toad'
+const defaultWord = 'deadly'
 const word = ref(defaultWord)
 const wordInput = defineModel('wordInput', { default: defaultWord })
 
+const defaultCategory = 'magicSpellPartElementPrefix'
+const groupOrCategory: Ref<CategoryName | GroupName> = ref(defaultCategory)
+const selectedGroupOrCategory: ModelRef<CategoryName | GroupName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
+
 const rerollToggle = ref(true)
 
-const reverseIndex: ReverseIndex = buildReverseIndex()
+const groupReverseIndex: GroupReverseIndex = buildGroupReverseIndex()
+const formatReverseIndex = buildFormatReverseIndex()
 
 const targetGroupsAndCategory: ComputedRef<Set<CategoryName | GroupName>> = computed(() => {
-  const foundGroups = searchGroups(groupOrCategory.value, reverseIndex)
+  const foundGroups = searchGroups(groupOrCategory.value, groupReverseIndex)
   return new Set([groupOrCategory.value, ...foundGroups])
 })
 
+const containingGroupList: ComputedRef<string> = computed(() => {
+  let list = ''
+  for (const entry of targetGroupsAndCategory.value) {
+    if (entry !== groupOrCategory.value) list += entry + ", "
+  }
+  if (list.endsWith(", ")) list = list.substring(0, list.length-2)
+  return list.length > 0 ? list : `No groups contain ${groupOrCategory.value}`
+})
+
+const formatsAndDfMaps = computed(() => {
+  return findReferencingNodes(targetGroupsAndCategory.value, formatReverseIndex)
+})
+
+const allRelevantFormats = computed(() => {
+  const { formats, dfMaps } = formatsAndDfMaps.value
+  const dfFormats = expandDfMapsToFormats(dfMaps, formats)
+  return new Set<FormatName>([...formats, ...dfFormats])
+})
+
 const modifiedFormats = computed(() => {
-  return searchFormats(word.value, targetGroupsAndCategory.value)
+  return alterFormats(word.value, targetGroupsAndCategory.value, allRelevantFormats.value)
 })
 
 const formats = computed(() => {
   const newFormats = []
 
-  for (const formatName of Object.keys(modifiedFormats.value)) {
-    const formatPicker: FormatName[] = [formatName as FormatName]
+  for (const formatName of Object.keys(modifiedFormats.value) as FormatName[]) {
+    const formatPicker: FormatName[] = [formatName]
     const filteredFormats: Record<string, {weight: number, format: Format}> = { }
 
     filteredFormats[formatName] = { weight: 1, format: modifiedFormats.value[formatName]}
@@ -94,23 +124,41 @@ const formats = computed(() => {
   return newFormats
 })
 
+onMounted(() => {
+  if (menuSelections.wordTesterWord && typeof menuSelections.wordTesterWord === 'string') {
+    wordInput.value = menuSelections.wordTesterWord
+  }
+
+  if (menuSelections.wordTesterGroupOrCategory && 
+      typeof menuSelections.wordTesterGroupOrCategory === 'string' &&
+      groupsAndCategories.has(menuSelections.wordTesterGroupOrCategory)) {
+    selectedGroupOrCategory.value = menuSelections.wordTesterGroupOrCategory as CategoryName | GroupName
+    groupOrCategory.value = selectedGroupOrCategory.value
+  }
+
+  rerollAll()
+})
+
 function updateWord(wordInput: string) {
   word.value = wordInput
+  menuSelections.wordTesterWord = wordInput
   rerollAll()
 }
 
-function updateGroupOrCategory(selectedGroupOrCategory: (GroupName | CategoryName)) {
+function updateGroupOrCategory(selectedGroupOrCategory: GroupName | CategoryName) {
   groupOrCategory.value = selectedGroupOrCategory
+  menuSelections.wordTesterGroupOrCategory = selectedGroupOrCategory
 }
 
 function rerollAll() {
+  if (wordInput.value !== word.value) word.value = wordInput.value
   rerollToggle.value = !rerollToggle.value
 }
 
-type ReverseIndex = Map<CategoryName | GroupName, Set<GroupName>>
+type GroupReverseIndex = Map<CategoryName | GroupName, Set<GroupName>>
 
-function buildReverseIndex(): ReverseIndex {
-  const reverse: ReverseIndex = new Map()
+function buildGroupReverseIndex(): GroupReverseIndex {
+  const reverse: GroupReverseIndex = new Map()
 
   for (const group of Object.keys(data.groups) as GroupName[]) {
     const { categoryMap } = data.groups[group]
@@ -129,7 +177,7 @@ function buildReverseIndex(): ReverseIndex {
   return reverse
 }
 
-function searchGroups(target: CategoryName | GroupName, reverseIndex: ReverseIndex): Set<GroupName> {
+function searchGroups(target: CategoryName | GroupName, reverseIndex: GroupReverseIndex): Set<GroupName> {
   const result = new Set<GroupName>()
   const queue: (CategoryName | GroupName)[] = [target]
 
@@ -150,27 +198,116 @@ function searchGroups(target: CategoryName | GroupName, reverseIndex: ReverseInd
   return result
 }
 
-// todo: account for formats that use 'format' instructions
-function searchFormats(word: string, targets: Set<CategoryName | GroupName>): Record<string, Format> {
-  const formats: Record<string, Format> = {}
+type NodeName = CategoryName | GroupName | FormatName | DFMapName
+type FormatReverseIndex = Map<NodeName, Set<NodeName>>
+
+function buildFormatReverseIndex(): FormatReverseIndex {
+  const reverse: FormatReverseIndex = new Map()
+
+  function addEdge(child: NodeName, parent: NodeName) {
+    if (!reverse.has(child)) reverse.set(child, new Set())
+    reverse.get(child)!.add(parent)
+  }
 
   for (const formatName of Object.keys(data.formats) as FormatName[]) {
-    const format = structuredClone(data.formats[formatName])
-    let formatContainsTarget = false
+    const format = data.formats[formatName]
 
-    for (const instruction in format) {
-      if (format[instruction][0].startsWith('pick') && targets.has(format[instruction][1] as (CategoryName | GroupName))) {
-        formatContainsTarget = true      
-        format[instruction][1] = '_WORDTESTER'
+    for (const instruction of format) {
+      const [type, value] = instruction
+
+      if (type.startsWith('pick')) {
+        addEdge(value as CategoryName | GroupName, formatName)
       }
-    }
 
-    if (formatContainsTarget) {
-      formats[formatName] = format
-      data.categories._WORDTESTER[0] = word
+      if (type === 'format') {
+        addEdge(value as FormatName | DFMapName, formatName)
+      }
     }
   }
 
-  return formats
+  for (const dfName of Object.keys(data.dfMap) as DFMapName[]) {
+    const { formatMap } = data.dfMap[dfName]
+
+    for (const key of Object.keys(formatMap) as NumericString[]) {
+      const formatName = formatMap[key] as FormatName
+
+      addEdge(formatName, dfName)
+    }
+  }
+
+  return reverse
 }
+
+function findReferencingNodes(targets: Set<CategoryName | GroupName>, reverse: FormatReverseIndex) {
+  const resultFormats = new Set<FormatName>()
+  const resultDfMaps = new Set<DFMapName>()
+
+  const visited = new Set<NodeName>()
+  const queue: NodeName[] = [...targets]
+
+  while (queue.length > 0) {
+    const current = queue.shift()!
+
+    if (visited.has(current)) continue
+    visited.add(current)
+
+    const parents = reverse.get(current)
+    if (!parents) continue
+
+    for (const parent of parents) {
+      queue.push(parent)
+
+      if (parent in data.formats) {
+        resultFormats.add(parent as FormatName)
+      } else if (parent in data.dfMap) {
+        resultDfMaps.add(parent as DFMapName)
+      }
+    }
+  }
+
+  return { formats: resultFormats, dfMaps: resultDfMaps }
+}
+
+function expandDfMapsToFormats(dfMaps: Set<DFMapName>, reachableFormats: Set<FormatName>): Set<FormatName> {
+  const result = new Set<FormatName>()
+
+  for (const dfName of dfMaps) {
+    const { formatMap } = data.dfMap[dfName]
+
+    for (const key of Object.keys(formatMap) as NumericString[]) {
+      const formatName = formatMap[key] as FormatName
+
+      if (reachableFormats.has(formatName)) {
+        result.add(formatName)
+      }
+    }
+  }
+
+  return result
+}
+
+function alterFormats(word: string, targets: Set<CategoryName | GroupName>, formatNames: Set<FormatName>): Record<string, Format> {
+  const result: Record<string, Format> = {}
+
+  for (const formatName of formatNames) {
+    const format = structuredClone(data.formats[formatName])
+
+    for (const instruction of format) {
+      const [type, value] = instruction
+
+      if (type.startsWith('pick') && targets.has(value as any)) {
+        instruction[1] = '_WORDTESTER'
+      }
+    }
+
+    result[formatName] = format
+  }
+
+  if (result && Object.keys(result).length > 0) {
+    data.categories._WORDTESTER[0] = word
+  }
+
+  return result
+}
+
 </script>

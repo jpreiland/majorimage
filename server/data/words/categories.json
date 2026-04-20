@@ -70,12 +70,12 @@
   "distanceRelative": ["just", "slightly", "far to the", "a short ride", "a short walk", "a long ride", "a long walk", "a short ways", "a long ways", "a short distance", "a long distance"],
 
   "divinePortfolio": ["blood", "death", "air", "chaos", "charity"],
-  "divinePortfolioPrefix": ["animal", "arcane", "bestial", "celestial"],
+  "divinePortfolioPrefix": ["abyssal", "animal", "arcane", "bestial", "celestial", "infernal"],
   "divinePortfolioSuffix": ["animals", "arcana", "avarice", "balance", "change", "civilization"],
   "divineTitle": ["lord", "lady", "god", "goddess", "avatar", "harbinger", "sovereign", "deity", "spirit", "idol", "archon", "angel", "demon", "devil", "archangel", "archfiend", "archdevil", "archfey"],
   
   "dragon": ["black dragon", "blue dragon", "brass dragon", "bronze dragon", "copper dragon", "dragon", "dragon turtle", "gold dragon", "green dragon", "pseudodragon", "red dragon", "silver dragon", "white dragon"],
-  "dragonBasic": ["dragon", "wyvern"],
+  "dragonBasic": ["dragon", "drake", "wyvern"],
   "dragonAge": ["adult", "ancient", "young"],
   "dragonChromatic": ["black", "blue", "green", "red", "white"],
   "dragonMetallic": ["brass", "bronze", "copper", "gold", "silver"],
@@ -106,7 +106,7 @@
   "foodBreadType": ["brioche", "ciabatta", "cheese", "focaccia", "cinnamon", "brown", "corn", "monkey", "pita", "potato", "pretzel", "pumpernickel", "rice", "rye", "sourdough", "wheat", "whole wheat", "raisin", "banana"],
   "foodBreadForm": ["bun", "loaf", "roll", "slice", "bread"],
   "foodBreadSpecific": ["croissant", "flatbread", "naan", "tortilla", "challah", "hardtack", "pull-apart", "chapati"],
-  "foodDesert": ["pie", "cake", "muffin", "donut", "cookie", "biscuit"],
+  "foodDessert": ["pie", "cake", "muffin", "donut", "cookie", "biscuit"],
   "fruit": ["cantaloupe", "honeydew", "cranberry", "persimmon", "plantain", "star fruit", "passion fruit", "lychee", "dragonfruit", "durian"],
   "fruitBasic": ["apple", "pear", "peach", "plum", "orange", "strawberry", "cherry", "apricot", "grape", "banana", "grapefruit", "berry", "melon", "watermelon", "lime", "lemon", "tangerine", "raisin", "date", "fig", "raspberry", "blackberry", "blueberry", "coconut", "kiwi", "mango", "papaya", "pineapple", "pomegranate"],
   "fur": ["arctic fox fur", "bear fur", "ermine fur", "leopard fur", "marten fur", "mink fur", "rabbit fur", "red fox fur", "sable fur", "skunk fur", "wolf fur"],

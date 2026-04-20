@@ -5,7 +5,7 @@ import type { Subpage } from './pages'
 export interface AppContext {
   data: AppData
   subpages: Record<string, Subpage[]>
-  menuSelections: Record<string, Subpage | null>
+  menuSelections: Record<string, Subpage | string | null>
   wordCount: number
 }
 
