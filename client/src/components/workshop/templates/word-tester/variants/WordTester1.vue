@@ -28,7 +28,7 @@
     <div class="info-panel-description">
       <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
         <p>
-          <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :word-override="format.wordOverride" :color="'#70c947'" />
+          <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :word-override="wordOverride" :color="'#70c947'" />
           {{ format.name }}
         </p>
       </template>
@@ -122,7 +122,7 @@ const formats = computed(() => {
     const filteredFormats: Record<string, {weight: number, format: Format}> = { }
 
     filteredFormats[formatName] = { weight: 1, format: data.formats[formatName]}
-    newFormats.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats, wordOverride: wordOverride})
+    newFormats.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats})
   }
 
   return newFormats
