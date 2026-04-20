@@ -12,8 +12,8 @@
         <input v-model="wordInput" type="text" @keydown.enter="updateWord(wordInput)" />
         <button @click="updateWord(wordInput)">Test</button>
       </p>
-      <select v-model="selectedGroupOrCategory" @change="updateGroupOrCategory(selectedGroupOrCategory)">
-        <option v-for="groupOrCategoryEntry in groupsAndCategories" :value="groupOrCategoryEntry">
+      <select v-model="selectedCategory" @change="updateCategory(selectedCategory)">
+        <option v-for="groupOrCategoryEntry in categoriesSet" :value="groupOrCategoryEntry">
           {{ groupOrCategoryEntry }}
         </option>
       </select>
@@ -21,7 +21,7 @@
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
-          Formats that reference {{ groupOrCategory }}
+          Formats that reference {{ category }}
         </h2>
       </div>
     </div>
@@ -36,7 +36,7 @@
     <div class="card-header">
       <div class="card-header-left">
         <h2 class="card-title">
-          Groups that contain {{ groupOrCategory }}
+          Groups that contain {{ category }}
         </h2>
       </div>
     </div>
@@ -66,16 +66,13 @@ for (const categoryName of Object.keys(data.categories)) {
   if (categoryName.startsWith('_')) categoriesSet.delete(categoryName)
 }
 
-const groupsSet = new Set(Object.keys(data.groups))
-const groupsAndCategories = new Set([...categoriesSet, ...groupsSet])
-
 const defaultWord = 'deadly'
 const word = ref(defaultWord)
 const wordInput = defineModel('wordInput', { default: defaultWord })
 
 const defaultCategory = 'magicSpellPartElementPrefix'
-const groupOrCategory: Ref<CategoryName | GroupName> = ref(defaultCategory)
-const selectedGroupOrCategory: ModelRef<CategoryName | GroupName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
+const category: Ref<CategoryName> = ref(defaultCategory)
+const selectedCategory: ModelRef<CategoryName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
 
 const rerollToggle = ref(true)
 
@@ -83,17 +80,17 @@ const groupReverseIndex: GroupReverseIndex = buildGroupReverseIndex()
 const formatReverseIndex = buildFormatReverseIndex()
 
 const targetGroupsAndCategory: ComputedRef<Set<CategoryName | GroupName>> = computed(() => {
-  const foundGroups = searchGroups(groupOrCategory.value, groupReverseIndex)
-  return new Set([groupOrCategory.value, ...foundGroups])
+  const foundGroups = searchGroups(category.value, groupReverseIndex)
+  return new Set([category.value, ...foundGroups])
 })
 
 const containingGroupList: ComputedRef<string> = computed(() => {
   let list = ''
   for (const entry of targetGroupsAndCategory.value) {
-    if (entry !== groupOrCategory.value) list += entry + ", "
+    if (entry !== category.value) list += entry + ", "
   }
   if (list.endsWith(", ")) list = list.substring(0, list.length-2)
-  return list.length > 0 ? list : `No groups contain ${groupOrCategory.value}`
+  return list.length > 0 ? list : `No groups contain ${category.value}`
 })
 
 const formatsAndDfMaps = computed(() => {
@@ -129,11 +126,11 @@ onMounted(() => {
     wordInput.value = menuSelections.wordTesterWord
   }
 
-  if (menuSelections.wordTesterGroupOrCategory && 
-      typeof menuSelections.wordTesterGroupOrCategory === 'string' &&
-      groupsAndCategories.has(menuSelections.wordTesterGroupOrCategory)) {
-    selectedGroupOrCategory.value = menuSelections.wordTesterGroupOrCategory as CategoryName | GroupName
-    groupOrCategory.value = selectedGroupOrCategory.value
+  if (menuSelections.wordTesterCategory && 
+      typeof menuSelections.wordTesterCategory === 'string' &&
+      categoriesSet.has(menuSelections.wordTesterCategory)) {
+    selectedCategory.value = menuSelections.wordTesterCategory as CategoryName
+    category.value = selectedCategory.value
   }
 
   rerollAll()
@@ -145,9 +142,9 @@ function updateWord(wordInput: string) {
   rerollAll()
 }
 
-function updateGroupOrCategory(selectedGroupOrCategory: GroupName | CategoryName) {
-  groupOrCategory.value = selectedGroupOrCategory
-  menuSelections.wordTesterGroupOrCategory = selectedGroupOrCategory
+function updateCategory(selectedCategory: CategoryName) {
+  category.value = selectedCategory
+  menuSelections.wordTesterCategory = selectedCategory
 }
 
 function rerollAll() {
@@ -177,7 +174,7 @@ function buildGroupReverseIndex(): GroupReverseIndex {
   return reverse
 }
 
-function searchGroups(target: CategoryName | GroupName, reverseIndex: GroupReverseIndex): Set<GroupName> {
+function searchGroups(target: CategoryName, reverseIndex: GroupReverseIndex): Set<GroupName> {
   const result = new Set<GroupName>()
   const queue: (CategoryName | GroupName)[] = [target]
 
