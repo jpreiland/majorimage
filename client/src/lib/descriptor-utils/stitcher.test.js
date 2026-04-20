@@ -8,6 +8,8 @@ const formatTitle = [["title"], ["static", "test a string"]]
 const formatAName = [["a(n)"], ["pick", "nameAll"]]
 const formatSomeNames = [["a(n)"], ["pick-pluralize", "nameAll"]]
 const formatPick = [["pick", "nameAll"]]
+const formatPickStaticPickCategory = [["pick", "accessory"], ["static", " "], ["pick", "accessoryBasic"]]
+const formatPickStaticPickGroup = [["pick", "nameAll"], ["static", " "], ["pick", "name1a"]]
 const formatPickBadCategory = [["pick", "bad"]]
 const formatPickPlural = [["pick-pluralize", "nameAll"]]
 const formatPickPluralOptional = [["pick-pluralize-optional", "nameAll"]]
@@ -155,6 +157,16 @@ describe('#stitch', () => {
 
   it('returns an accessory prepended with "an " when using a "type" format part', () => {
     expect(stitch(formatType, data, null, null)).toMatch(/^(an acc[1-3]|a basic[1-3])$/)
+  })
+
+  it('overrides category with word if passed a wordOverride with a category entry', () => {
+    const wordOverride = { accessory: 'new accessory' }
+    expect(stitch(formatPickStaticPickCategory, data, null, null, wordOverride)).toMatch(/^new accessory basic[1-3]$/)
+  })
+
+  it('overrides category with word if passed a wordOverride with a group entry', () => {
+    const wordOverride = { nameAll: 'new name' }
+    expect(stitch(formatPickStaticPickGroup, data, null, null, wordOverride)).toMatch(/^new name 1a[1-3]$/)
   })
 
   it('skips any format part if there are an incorrect number of parameters', () => {

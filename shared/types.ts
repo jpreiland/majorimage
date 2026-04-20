@@ -122,3 +122,5 @@ export interface PriceOverride {
   max: number
   denomination?: string
 }
+
+export type WordOverride = Partial<Record<CategoryName | GroupName, string>>

@@ -28,7 +28,7 @@
     <div class="info-panel-description">
       <template v-for="format in formats" :key="'Format-'+format.name+'-'+rerollToggle">
         <p>
-          <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :color="'#70c947'" />
+          <FilteredDescriptor :filtered-formats="format.formats" :format-picker="format.formatPicker" :word-override="format.wordOverride" :color="'#70c947'" />
           {{ format.name }}
         </p>
       </template>
@@ -55,7 +55,7 @@
 import { computed, onMounted, ref } from 'vue'
 import { useAppContext } from '../../../../../composables/useAppContext'
 
-import type { CategoryName, DFMapName, Format, FormatName, GroupName, NumericString } from '../../../../../../../shared/types';
+import type { CategoryName, DFMapName, Format, FormatName, GroupName, NumericString, WordOverride } from '../../../../../../../shared/types';
 import type { ComputedRef, ModelRef, Ref } from 'vue';
 
 const { data, menuSelections } = useAppContext()
@@ -70,18 +70,29 @@ const defaultWord = 'deadly'
 const word = ref(defaultWord)
 const wordInput = defineModel('wordInput', { default: defaultWord })
 
-const defaultCategory = 'magicSpellPartElementPrefix'
+const defaultCategory: CategoryName = 'magicSpellPartElementPrefix'
 const category: Ref<CategoryName> = ref(defaultCategory)
 const selectedCategory: ModelRef<CategoryName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
 
 const rerollToggle = ref(true)
 
-const groupReverseIndex: GroupReverseIndex = buildGroupReverseIndex()
+const groupReverseIndex = buildGroupReverseIndex()
 const formatReverseIndex = buildFormatReverseIndex()
 
 const targetGroupsAndCategory: ComputedRef<Set<CategoryName | GroupName>> = computed(() => {
   const foundGroups = searchGroups(category.value, groupReverseIndex)
   return new Set([category.value, ...foundGroups])
+})
+
+const wordOverride: ComputedRef<WordOverride> = computed(() => {
+    const wordOverride: WordOverride = {}
+    wordOverride[category.value] = word.value
+
+    for (const group of [...targetGroupsAndCategory.value]) {
+      wordOverride[group] = word.value
+    }
+
+    return wordOverride
 })
 
 const containingGroupList: ComputedRef<string> = computed(() => {
@@ -103,19 +114,15 @@ const allRelevantFormats = computed(() => {
   return new Set<FormatName>([...formats, ...dfFormats])
 })
 
-const modifiedFormats = computed(() => {
-  return alterFormats(word.value, targetGroupsAndCategory.value, allRelevantFormats.value)
-})
-
 const formats = computed(() => {
   const newFormats = []
 
-  for (const formatName of Object.keys(modifiedFormats.value) as FormatName[]) {
+  for (const formatName of [...allRelevantFormats.value] as FormatName[]) {
     const formatPicker: FormatName[] = [formatName]
     const filteredFormats: Record<string, {weight: number, format: Format}> = { }
 
-    filteredFormats[formatName] = { weight: 1, format: modifiedFormats.value[formatName]}
-    newFormats.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats})
+    filteredFormats[formatName] = { weight: 1, format: data.formats[formatName]}
+    newFormats.push({name: formatName, formatPicker: formatPicker, formats: filteredFormats, wordOverride: wordOverride})
   }
 
   return newFormats
@@ -278,37 +285,6 @@ function expandDfMapsToFormats(dfMaps: Set<DFMapName>, reachableFormats: Set<For
         result.add(formatName)
       }
     }
-  }
-
-  return result
-}
-
-function alterFormats(word: string, targets: Set<CategoryName | GroupName>, formatNames: Set<FormatName>): Record<string, Format> {
-  const result: Record<string, Format> = {}
-
-  for (const formatName of formatNames) {
-    let format = structuredClone(data.formats[formatName])
-    let insPtr = 0
-
-    while (insPtr < format.length) {
-      const [type, value] = format[insPtr]
-
-      if (type === 'format' && typeof value === 'string' && !(/[A-Z]/.test(value[0]))) {
-        const expansion = structuredClone(data.formats[value])
-        format.splice(insPtr, 1, ...expansion)
-        insPtr--
-      } else if (type.startsWith('pick') && targets.has(value as any)) {
-        format[insPtr][1] = '_WORDTESTER'
-      }
-
-      insPtr++
-    }
-
-    result[formatName] = format
-  }
-
-  if (result && Object.keys(result).length > 0) {
-    data.categories._WORDTESTER[0] = word
   }
 
   return result

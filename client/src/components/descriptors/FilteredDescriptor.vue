@@ -9,7 +9,7 @@ import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
 
-import type { Format, FormatName, NumRangeOverride, PriceOverride } from '../../../../shared/types'
+import type { Format, FormatName, NumRangeOverride, PriceOverride, WordOverride } from '../../../../shared/types'
 
 interface Props {
   filteredFormats: Record<string, {weight: number, format: Format}>
@@ -17,6 +17,7 @@ interface Props {
   color?: string
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
+  wordOverride?: WordOverride
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -38,7 +39,8 @@ function reroll() {
     props.filteredFormats[format].format,
     data,
     props.priceOverride,
-    props.numRangeOverride
+    props.numRangeOverride,
+    props.wordOverride
     )
 }
 

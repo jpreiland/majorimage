@@ -18,10 +18,11 @@ import type {
   NumberFormatInstruction,
   NumericString,
   PriceFormatInstruction,
-  PriceOverride } from '../../../../shared/types'
+  PriceOverride, 
+  WordOverride } from '../../../../shared/types'
 
 /* this function is a travesty, maybe it'll get cleaned up some day */
-function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, numRangeOverride?: NumRangeOverride) {
+function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, numRangeOverride?: NumRangeOverride, wordOverride?: WordOverride) {
   let name = ""
   let word
   let numWords = 0
@@ -36,7 +37,7 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
     switch (part[0]) {
       case 'pick':
         if (part.length !== 2) break;
-        word = picker(part[1], data)
+        word = picker(part[1], data, wordOverride)
         name += do_a_an(word, a_an_flag)
         a_an_flag = false
         break;
@@ -47,12 +48,12 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
           name += "some "
           a_an_flag = false
         }
-        name += plural(picker(part[1], data))
+        name += plural(picker(part[1], data, wordOverride))
         break;
 
       case 'pick-pluralize-optional':
         if (part.length !== 2) break;
-        word = picker(part[1], data)
+        word = picker(part[1], data, wordOverride)
 
         if (Math.random() >= 0.5) {
           if (a_an_flag) {
@@ -69,17 +70,17 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
 
       case 'pick-pastTense':
         if (part.length !== 2) break;
-        name += tensify(picker(part[1], data))
+        name += tensify(picker(part[1], data, wordOverride))
         break;
 
       case 'pick-verber':
         if (part.length !== 2) break;
-        name += verber(picker(part[1], data))
+        name += verber(picker(part[1], data, wordOverride))
         break;
 
       case 'pick-gerund':
         if (part.length !== 2) break;
-        name += gerund(picker(part[1], data))
+        name += gerund(picker(part[1], data, wordOverride))
         break;
 
       case 'pick-multi':
@@ -103,7 +104,7 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
         }
 
         while (numWords > 0) {
-          word = picker(part[1], data)
+          word = picker(part[1], data, wordOverride)
           if (!name.includes(word)) {
             name += ' ' + do_a_an(word, a_an_flag)
             a_an_flag = false
@@ -114,7 +115,7 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
         if (part.length > 4 && bonusPct && bonusPct >= 0.01 && bonusPct <= 0.99) {
           let rng = Math.random()
           while (rng <= bonusPct) {
-            word = picker(part[1], data)
+            word = picker(part[1], data, wordOverride)
             if (!name.includes(word)) {
               name += ' ' + do_a_an(word, a_an_flag)
               a_an_flag = false
@@ -181,7 +182,7 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
         }
 
         if (formatParts) {
-          name += stitch(formatParts, data, priceOverride, numRangeOverride)
+          name += stitch(formatParts, data, priceOverride, numRangeOverride, wordOverride)
         }
         break;
 
@@ -197,18 +198,27 @@ function do_a_an(word: string, a_an_flag: boolean): string {
   return a_an_flag ? (AvsAnSimple.query(word) + " " + word) : word
 }
 
-function picker(category: GroupName | CategoryName, data: AppData) {
+function picker(category: GroupName | CategoryName, data: AppData, wordOverride?: WordOverride): string {
   if (Object.hasOwn(data.groups, category)) {
+    if (wordOverride && wordOverride[category]) {
+      return wordOverride[category]!
+    }
+
     category = categoryPicker(category, data)
   }
-  return wordPicker(category as CategoryName, data)
+  return wordPicker(category as CategoryName, data, wordOverride)
 }
 
-function wordPicker(category: CategoryName, data: AppData): string {
+function wordPicker(category: CategoryName, data: AppData, wordOverride?: WordOverride): string {
   if (!data.categories[category]) {
     console.log(`category ${category} does not exist`)
     return ""
   }
+
+  if (wordOverride && wordOverride[category]) {
+    return wordOverride[category]!
+  }
+
   return data.categories[category][Math.floor(Math.random() * data.categories[category].length)]
 }
 
