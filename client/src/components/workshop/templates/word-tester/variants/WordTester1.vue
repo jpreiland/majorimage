@@ -290,14 +290,21 @@ function alterFormats(word: string, targets: Set<CategoryName | GroupName>, form
   const result: Record<string, Format> = {}
 
   for (const formatName of formatNames) {
-    const format = structuredClone(data.formats[formatName])
+    let format = structuredClone(data.formats[formatName])
+    let insPtr = 0
 
-    for (const instruction of format) {
-      const [type, value] = instruction
+    while (insPtr < format.length) {
+      const [type, value] = format[insPtr]
 
-      if (type.startsWith('pick') && targets.has(value as any)) {
-        instruction[1] = '_WORDTESTER'
+      if (type === 'format' && typeof value === 'string' && !(/[A-Z]/.test(value[0]))) {
+        const expansion = structuredClone(data.formats[value])
+        format.splice(insPtr, 1, ...expansion)
+        insPtr--
+      } else if (type.startsWith('pick') && targets.has(value as any)) {
+        format[insPtr][1] = '_WORDTESTER'
       }
+
+      insPtr++
     }
 
     result[formatName] = format

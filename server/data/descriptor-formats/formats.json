@@ -23,6 +23,7 @@
   "numberZeroToNine(no)": [["number", 0, 9, "no"]],
 
   "spellTESTINGConjureElementObject": [["title"], ["static", "TESTING "], ["format", "spellConjureElementObject"]],
+  "spell2222ConjureElementObject": [["title"], ["static", "TESTING2222 "], ["pick", "magicSpellPartElementPrefix"], ["static", " "], ["format", "spellTESTINGConjureElementObject"]],
 
   "scrollOf": [["title"], ["static", "scroll of "], ["format", "CustomSpell"]],
   "wandOf": [["title"], ["static", "wand of "], ["format", "CustomSpell"]],
