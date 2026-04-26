@@ -13,8 +13,8 @@
         <button @click="updateWord(wordInput)">Test</button>
       </p>
       <select v-model="selectedCategory" @change="updateCategory(selectedCategory)">
-        <option v-for="groupOrCategoryEntry in categoriesSet" :value="groupOrCategoryEntry">
-          {{ groupOrCategoryEntry }}
+        <option v-for="categoryEntry in categoriesSet" :value="categoryEntry">
+          {{ categoryEntry }}
         </option>
       </select>
     </div>
@@ -72,7 +72,7 @@ const wordInput = defineModel('wordInput', { default: defaultWord })
 
 const defaultCategory: CategoryName = 'magicSpellPartElementPrefix'
 const category: Ref<CategoryName> = ref(defaultCategory)
-const selectedCategory: ModelRef<CategoryName> = defineModel('selectedGroupOrCategory', { default: defaultCategory })
+const selectedCategory: ModelRef<CategoryName> = defineModel('selectedCategory', { default: defaultCategory })
 
 const rerollToggle = ref(true)
 

@@ -83,9 +83,9 @@
   "elemental": ["air elemental", "azer", "dust mephit", "earth elemental", "fire elemental", "ice mephit", "invisible stalker", "magma mephit", "magmin", "salamander", "steam mephit", "water elemental", "xorn"],
   "elementalBasic": ["elemental", "djinni", "mephit", "efreeti", "gargoyle"],
 
-  "enchantment": [],
+  "_enchantment": [],
   "enchantmentPrefix": ["impervious", "glamered", "corrosive", "dispelling", "limning", "ominous", "planar", "illuminated", "dazzling", "scintillating", "prismatic", "sentient", "elemental", "spell storing", "radiant"],
-  "enchantmentSuffix": [],
+  "_enchantmentSuffix": [],
   "enchantmentPrefixArmor": ["deflecting", "immovable", "fortified", "warding", "mirrored", "slick"],
   "enchantmentSuffixArmor": ["of spell resistance", "of invulnerability", "of etherealness"],
   "enchantmentPrefixWeapon": ["defending", "flaming", "frost", "ghost touch", "heartseeking", "keen", "menacing", "merciful", "shocking", "poisonous"],

@@ -179,6 +179,12 @@ button.reroll-all {
   height: 2.5em;
 }
 
+.instruction-block {
+  border: 2px solid black;
+  width: fit-content;
+  padding: 0 0.5rem;
+}
+
 .descriptor {
   height: 2.2em;
   padding-left: 5px;

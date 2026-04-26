@@ -97,10 +97,10 @@
       "_displayName": "Word Tester",
       "word-tester-1": "WordTester1"
     },
-    "GroupTester": {
+    "FormatBuilder": {
       "_order": 2,
-      "_displayName": "Group Tester",
-      "group-tester-1": "GroupTester1"
+      "_displayName": "Format Builder",
+      "format-builder-1": "FormatBuilder1"
     }
   }
 }
