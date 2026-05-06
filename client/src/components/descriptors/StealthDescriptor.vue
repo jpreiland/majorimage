@@ -8,15 +8,19 @@ import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
 import { useAppContext } from '../../composables/useAppContext'
 
-import type { DFMapName, FormatName, NumRangeOverride, NumericString, PriceOverride } from '../../../../shared/types'
+import type { DFMapName, FormatName, NumRangeOverride, NumericString, PriceOverride, WordOverride } from '../../../../shared/types'
 
 interface Props {
   type: DFMapName
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
+  wordOverride?: WordOverride
+  sequencedPick?: boolean
 }
 
-const props = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  sequencedPick: true
+})
 
 const { data } = useAppContext()
 
@@ -36,7 +40,9 @@ onMounted(() => {
     data.formats[format],
     data,
     props.priceOverride,
-    props.numRangeOverride
+    props.numRangeOverride,
+    props.wordOverride,
+    props.sequencedPick
   )
 })
 </script>

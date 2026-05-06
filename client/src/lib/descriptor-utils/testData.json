@@ -86,6 +86,25 @@
       "5c3"
     ]
   },
+  "wordIndexMap": {
+    "accessory": 0,
+    "accessoryBasic": 0,
+    "name1a": 0,
+    "name2a": 0,
+    "name3a": 0,
+    "name4a": 0,
+    "name5+a": 0,
+    "name1b": 0,
+    "name2b": 0,
+    "name3b": 0,
+    "name4b": 0,
+    "name5+b": 0,
+    "name1c": 0,
+    "name2c": 0,
+    "name3c": 0,
+    "name4c": 0,
+    "name5+c": 0
+  },
   "dfMap": {
     "Accessory": {
       "totalWeight": 1,

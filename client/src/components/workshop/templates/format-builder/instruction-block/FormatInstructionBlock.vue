@@ -10,7 +10,6 @@
       <component :is="part" :param-number="index+1" @update-part-param="testEmit" />
     </template>
   </div>
-
 </template>
 
 <script lang="ts" setup>

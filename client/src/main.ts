@@ -2,6 +2,7 @@ import { createApp, markRaw, reactive } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { buildSubpages } from './lib/page-util/page-utils'
+import { shuffleWordsInCategory } from './lib/descriptor-utils/category-utils'
 import { AppContext, appContextKey } from './types/app-context'
 import Descriptor from './components/descriptors/Descriptor.vue'
 import FilteredDescriptor from './components/descriptors/FilteredDescriptor.vue'
@@ -81,10 +82,18 @@ async function getUniqueWordCount(data: AppData): Promise<number> {
   return uniqueWords.size
 }
 
+function shuffleAllWords(data: AppData) {
+  for (const categoryName of Object.keys(data.categories) as CategoryName[]) {
+    shuffleWordsInCategory(data, categoryName)
+  }
+}
+
 async function bootstrap(): Promise<void> {
   const data = await loadData()
   const subpages = await buildAllSubpages(data)
   const uniqueWordCount = await getUniqueWordCount(data)
+
+  shuffleAllWords(data)
 
   const app = createApp(App)
 

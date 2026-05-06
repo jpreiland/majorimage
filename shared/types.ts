@@ -7,6 +7,7 @@ export type NumericString = `${number}` | number
 
 export interface AppData {
   categories: Record<CategoryName, string[]>
+  wordIndexMap: Record<CategoryName, number>
   dfMap: DFMap
   formats: Record<FormatName, Format>
   groups: GroupsCompiled

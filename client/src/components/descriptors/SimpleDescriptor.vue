@@ -8,11 +8,15 @@
 import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
-import type { GroupName } from '../../../../shared/types';
+import type { CategoryName, GroupName, NumRangeOverride, PriceOverride, WordOverride } from '../../../../shared/types';
 
 interface Props {
-  type: GroupName
+  type: GroupName | CategoryName
   color?: string
+  numRangeOverride?: NumRangeOverride
+  priceOverride?: PriceOverride
+  wordOverride?: WordOverride
+  sequencedPick?: boolean
   a_an?: boolean
   properNoun?: boolean
   pickStyle?: string
@@ -20,7 +24,8 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   color: 'black',
-  pickStyle: 'pick'
+  pickStyle: 'pick',
+  sequencedPick: true
 })
 
 const { data } = useAppContext()
@@ -49,7 +54,14 @@ onMounted(() => {
 })
 
 function reroll() {
-  if (props.type) descriptorText.value = stitch(format, data)
+  if (props.type) descriptorText.value = stitch(
+    format,
+    data,
+    props.priceOverride,
+    props.numRangeOverride,
+    props.wordOverride,
+    props.sequencedPick
+  )
 }
 
 const setColor = computed(() => {

@@ -18,10 +18,12 @@ interface Props {
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
   wordOverride?: WordOverride
+  sequencedPick?: boolean
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  color: 'black'
+  color: 'black',
+  sequencedPick: true
 })
 
 const { data } = useAppContext()
@@ -40,7 +42,8 @@ function reroll() {
     data,
     props.priceOverride,
     props.numRangeOverride,
-    props.wordOverride
+    props.wordOverride,
+    props.sequencedPick
     )
 }
 

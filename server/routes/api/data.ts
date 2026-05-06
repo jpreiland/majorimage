@@ -24,11 +24,13 @@ router.get('/data', async (req, res) => {
     const compiledGroups = compileGroups(wordCounts)
     const compiledFormats = compileFormats()
     const compiledMaterials = compileMaterials()
+    const wordIndexMap = initializeWordIndexMap()
 
     /** @type {import('../../../shared/types').AppData} */
     const data = {
       version: "0.1.0",
       categories: Categories,
+      wordIndexMap: wordIndexMap,
       dfMap: compiledFormats,
       formats: Formats,
       groups: compiledGroups,
@@ -162,6 +164,10 @@ function compileMaterials() {
     metals: Metals.sort((a, b) => a.name.localeCompare(b.name)),
     textiles: Textiles.sort((a, b) => a.name.localeCompare(b.name))
   }
+}
+
+function initializeWordIndexMap(): Record<CategoryName, number> {
+  return Object.fromEntries(Object.keys(Categories).map(key => [key, 0])) as Record<CategoryName, number>
 }
 
 export default router
