@@ -1,8 +1,9 @@
 {
   "aberration": ["gibbering mouther", "otyugh"],
   "aberrationBasic": ["aboleth", "chuul", "cloaker"],
-  "accessory": ["ascot", "backpack", "bowtie", "briefcase", "coinpurse", "cravat", "feather boa", "fingerless glove", "hairpin", "hand fan", "hand mirror", "handkerchief", "haversack", "messenger bag", "necktie", "pocket square", "rucksack", "shoe lace", "suspender", "umbrella", "walking stick"],
-  "accessoryBasic": ["bag", "belt", "cane", "cape", "cloak", "clutch", "glove", "mitten", "parasol", "pouch", "purse", "sash", "satchel", "scarf", "umbrella"],
+  "accessory": ["hand fan", "hand mirror", "handkerchief", "pocket square", "umbrella", "walking stick"],
+  "accessoryBasic": ["bag", "cane", "parasol", "umbrella"],
+  "accessoryBag": ["backpack", "briefcase", "clutch", "coinpurse", "haversack", "messenger bag", "pouch", "purse", "rucksack", "satchel"],
   "adjective": ["big", "little", "narrow", "wide"],
   "adjectivePersonality": ["adamant", "advanced", "aggressive", "ambitious", "annoyed", "antagonistic", "apathetic", "aristocratic", "arrogant", "assertive", "audacious", "authoritative", "bad", "belligerent", "bitter", "bookish", "bored", "boring", "brainless", "brainy", "brash", "bright", "calm", "cantankerous", "caring", "charming", "cheerful", "chic", "clever", "coarse", "committed", "compassionate", "conceited", "concerned", "condescending", "confident", "considerate", "contemptuous", "controlling", "cowardly", "crabby", "cranky", "cross", "cultured", "cynical", "daft", "dandy", "decent", "dedicated", "dense", "destructive", "determined", "detracting", "difficult", "dignified", "dim", "disapproving", "disdainful", "disgusting", "disillusioned", "disorganized", "disparaging", "disrespectful", "distinguished", "distrustful", "dramatic", "driven", "droopy", "dull", "elegant", "eminent", "energetic", "enthusiatic", "epic", "experienced", "extroverted", "fair", "faithful", "false", "famed", "famous", "fanatical", "fearless", "fickle", "firm", "forceful", "forthright", "friendly", "fuming", "furious", "garrulous", "generous", "genius", "gentle", "genuine", "good", "graceful", "gracious", "greedy", "grumpy", "gullible", "happy", "headstrong", "heated", "helpful", "honest", "hopeful", "horrible", "hostile", "hyper", "illustrious", "incensed", "indifferent", "indignant", "infamous", "inflexible", "infuriated", "insistent", "intrepid", "introverted", "irate", "irritable", "keen", "kind", "known", "laid-back", "late", "lazy", "lethargic", "lighthearted", "listless", "livid", "loquacious", "loud", "lovely", "loving", "lowly", "lusty", "mad", "malicious", "mean", "melancholy", "mellow", "militant", "misleading", "motivated", "mousy", "naive", "nasty", "neat", "nervous", "notable", "notorious", "obnoxious", "obsessed", "optimistic", "organized", "ornery", "outgoing", "outraged", "peeved", "perfidious", "persistent", "pessimistic", "phony", "pigheaded", "plucky", "poised", "poisonous", "prideful", "prominent", "proven", "punctual", "pushy", "quiet", "recognized", "refined", "regal", "renowned", "reprehensible", "respectful", "responsible", "reverent", "sarcastic", "sardonic", "self-assured", "self-sacrificing", "serious", "sharp", "shy", "skeptical", "slow", "smarmy", "smart", "snobby", "sophisticated", "sporting", "stylish", "sulky", "surly", "suspicious", "talkative", "thick", "thoughtful", "tilted", "timid", "unafraid", "uncaring", "uncommitted", "uncompromising", "unconcerned", "undistinguished", "uninterested", "unmoving", "unreasonable", "unwise", "venomous", "warm", "wasteful", "watchful", "weary", "welcoming", "well-known", "witchy", "withering"],
   "adjectiveEpithet": ["bold", "strong", "swift", "wise", "fallen", "dead", "forgotten", "immortal", "indomitable", "brave", "courageous", "cruel", "devoted", "daring", "perfect", "supreme", "enraged", "evil", "righteous", "gallant", "great", "loathsome", "heroic", "legendary", "loyal", "stalwart", "vicious", "wicked", "valiant", "unknown", "proud", "obstinate", "noble", "malevolent", "merciful", "fierce", "ageless", "merciless", "fabled", "unshakeable", "eternal"],
@@ -57,7 +58,20 @@
   "castlePart": ["aisle", "apse", "arcade", "arch", "arrowslit", "bailey", "barbican", "bastion", "battlement", "berm", "blockhouse", "buttery", "buttress", "column", "counterscarp", "counterscarp gallery", "cupola", "curtain wall", "dormer", "drawbridge", "dungeon", "forebuilding", "gate house", "great chamber", "great hall", "guard tower", "hall", "hallway", "inner curtain", "inner ward", "lancet window", "machicolation", "mantlet", "merlon", "moat", "motte", "murder hole", "oubliette", "outer curtain", "palisade", "parapet", "pediment", "portcullis", "postern gate", "quadrangle", "rampart", "refectory", "ringwork", "sally port", "scarp", "shaft", "shell keep", "solar", "stockade", "tower", "treasury", "turret", "vault", "wall stair", "wall walk", "yett"],
   "celestial": ["deva angel", "planetar angel", "solar angel"],
   "celestialBasic": ["angel", "archon", "couatl", "pegasus", "unicorn"],
-  "clothing": ["apron", "apron dress", "blouse", "boot", "chasuble", "coat", "corset", "cyclas", "dalmatic", "double-breasted coat", "doublet", "dress", "dress shirt", "duster coat", "evening gown", "fur coat", "girdle", "gown", "houppelande", "jacket", "kirtle", "leggings", "mantle", "nightgown", "overcoat", "pair of pants", "pair of shorts", "pair of slacks", "pair of trousers", "petticoat", "poncho", "robe", "sandal", "shirt", "shoe", "skirt", "slipper", "sock", "suit", "sun dress", "surcoat", "sweater", "tabard", "tailcoat", "tank top", "tunic", "undergarment", "undershirt", "vest", "vestment", "waistcoat", "wedding dress", "wizard robe"],
+  
+  "clothingAccessory": ["ascot", "bowtie", "cravat", "fingerless glove", "feather boa", "hairpin", "necktie", "mitten", "scarf", "suspender"],
+  "clothingAccessoryBasic": ["belt", "cape", "cloak", "glove"],
+  "clothingAccessoryBelt": ["girdle", "sash"],
+  "clothingAccessoryCeremonial": ["cincture", "stole"],
+  "clothingArticle": ["apron", "blouse", "dress shirt", "girdle", "leggings", "pair of pants", "pair of shorts", "pair of slacks", "pair of trousers", "shirt", "skirt", "tank top", "tunic", "vest", "waistcoat"],
+  "clothingDress": ["apron dress", "cyclas", "dress", "evening gown", "gown", "kirtle", "nightgown", "sun dress", "wedding dress"],
+  "clothingOuterwear": ["coat", "double-breasted coat", "doublet", "duster coat", "frock coat", "fur coat", "houppelande", "jacket", "overcoat", "poncho", "robe", "surcoat", "sweater", "tabard", "tailcoat", "wizard robe"],
+  "clothingOuterwearCeremonial": ["chasuble", "dalmatic", "mantle"],
+  "clothingOutfit": ["costume", "finery", "raiment", "regalia", "suit", "uniform", "vestment", "vesture"],
+  "clothingPart": ["lace", "shoelace"],
+  "clothingShoe": ["boot", "sandal", "shoe", "slipper"],
+  "clothingUnderwear": ["corset", "petticoat", "sock", "undergarment", "undershirt"],
+
   "colorBasic": ["blue", "bronze", "brown", "gold", "green", "grey", "orange", "pink", "purple", "red", "silver", "tan", "teal", "violet", "yellow"],
   "colorUnmodifiable": ["black", "white"],
   "colorModifier": ["dark", "light", "pale"],
@@ -322,7 +336,7 @@
   "nameDragon": ["sithron"],
   "nameFiend": ["placeholder"],
   "nameMonster": ["placeholder"],
-  "nameWizard": ["placeholder"],
+  "nameMage": ["placeholder"],
 
   "___": ["ERROR"],
   "_WORDTESTER": ["placeholder"]

@@ -5,16 +5,23 @@ const exceptions: Record<string, string> = {
   "cyclops": "cyclopes",
   "fae": "fae",
   "fey": "fey",
+  "incubus": "incubi",
   "koi": "koi",
   "lens": "lenses",
   "man-at-arms": "men-at-arms",
   "marquis": "marquises",
   "mongoose": "mongeese",
+  "pair of pants": "pairs of pants",
+  "pair of shorts": "pairs of shorts",
+  "pair of trousers": "pairs of trousers",
   "pegasus": "pegasi",
+  "quartz": "quartz",
+  "regalia": "regalia",
   "remorhaz": "remorhazes",
   "rug of smothering": "rugs of smothering",
   "sarcophagus": "sarcophagi",
-  "squid": "squid"
+  "squid": "squid",
+  "succubus": "succubi"
 }
 
 function plural(word: string): string {

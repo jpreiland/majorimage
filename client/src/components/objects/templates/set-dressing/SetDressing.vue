@@ -59,7 +59,7 @@ const rows = ref<{ id: number }[]>([])
 const itemFormats = ref<[FormatName, number][]>([])
 
 const armorFormat: [FormatName, number] = ["_armorShieldUntyped", 1]
-const clothingFormat: [FormatName, number] = ["_clothingHeadwear", 1]
+const clothingFormat: [FormatName, number] = ["_clothingAndHeadwear", 1]
 const containerFormat: [FormatName, number] = ["_container", 1]
 const furnitureFormat: [FormatName, number] = ["_furniture", 1]
 const miscFormat: [FormatName, number] = ["_misc", 1]

@@ -113,7 +113,7 @@
   "some-accessories": [["a(n)"], ["pick-pluralize", "accessoryAll"]],
   "some-animalAndMonsters": [["a(n)"], ["pick-pluralize", "animalAndMonster"]],
   "_armorShieldUntyped": [["pick", "armorShieldUntyped"]],
-  "_clothingHeadwear": [["pick", "clothingHeadwear"]],
+  "_clothingAndHeadwear": [["pick", "clothingAndHeadwear"]],
   "_color": [["pick", "colorAll"]],
   "_container": [["pick", "container"]],
   "_furniture": [["pick", "furnitureAll"]],

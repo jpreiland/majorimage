@@ -1,5 +1,5 @@
 {
-  "accessoryAll": ["accessory", "accessoryBasic"],
+  "accessoryAll": ["accessory", "accessoryBasic", "accessoryBag", "clothingAccessories"],
   "adjectivePerson": ["adjectivePersonality", "adjectiveEpithet"],
   "adjectiveSizeAll": ["adjectiveSizeAndBasicLocation", "adjectiveSizeCreatureOrObject", "adjectiveSizeExtra"],
   "adjectiveSizeAndBasic": ["adjectiveSize", "adjectiveSizeBasic"], 
@@ -11,7 +11,9 @@
   "animalAndMonsterBasic": ["animalBasic", "monsterBasic"],
   "animalAndMonsterBasicNoBeast": ["animalBasic", "monsterBasicNoBeast"],
   "animalNonMarine": ["amphibian", "amphibianBasic", "bird", "birdBasic", "mammal", "mammalBasic", "reptile", "reptileBasic"],
-  "clothingHeadwear": ["clothing", "headwear"],
+  "clothing": ["clothingAccessories", "clothingArticle", "clothingDress", "clothingOuterwear", "clothingOuterwearCeremonial", "clothingOutfit", "clothingShoe", "clothingUnderwear"],
+  "clothingAccessories": ["clothingAccessory", "clothingAccessoryBasic", "clothingAccessoryBelt", "clothingAccessoryCeremonial"],
+  "clothingAndHeadwear": ["clothing", "headwear"],
   "color": ["colorBasic", "colorUnmodifiable"],
   "colorAll": ["color", "colorSpecific", "colorSpecial"],
   "creature": ["humanoidCommon","tradeAdventurerAll", "tradeNPC", "monster", "animal"],
