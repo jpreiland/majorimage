@@ -5,9 +5,10 @@
   "description": "",
   "scripts": {
     "test": "npm run test --prefix client",
+    "build": "npm run build-data --prefix server",
     "server": "nodemon --watch server --exec tsx server/server.ts",
     "client": "npm run dev --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "npm run build && concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",

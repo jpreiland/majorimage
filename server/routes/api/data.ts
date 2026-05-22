@@ -3,11 +3,12 @@ import Stones from '../../data/materials/stones.json' with { type: "json" };
 import Woods from '../../data/materials/woods.json' with { type: "json" };
 import Metals from '../../data/materials/metals.json' with { type: "json" };
 import Textiles from '../../data/materials/textiles.json' with { type: "json" };
-import Categories from '../../data/words/categories.json' with { type: "json" };
+import Categories from '../../data/generated/categories.generated.json'
 import Groups from '../../data/words/groups.json' with { type: "json" };
-import Templates from '../../data/templates/templates.json' with { type: "json" };
 import Formats from '../../data/descriptor-formats/formats.json' with { type: "json" };
 import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' with { type: "json" };
+import Templates from '../../data/templates/templates.json' with { type: "json" };
+
 import { validateAll } from '../../data/validators.js';
 
 import type { CategoryName, GroupsCompiled, GroupName, DFEntry, FormatName, NumericString, DFMapName, CompiledGroup, DFMapJsonEntry, Format } from '../../../shared/types.ts'

@@ -1,6 +1,6 @@
 export function validateAll(
-  categories: Record<string, unknown>,
-  groups: Record<string, unknown>,
+  categories: Record<string, string[]>,
+  groups: Record<string, string[]>,
   formats: Record<string, unknown>,
   descriptorFormatsMap: Record<string, unknown>
 ) {
@@ -10,7 +10,7 @@ export function validateAll(
   validateDescriptorFormatsMap(formats, descriptorFormatsMap)
 }
 
-function validateCategories(categories: Record<string, unknown>) {
+function validateCategories(categories: Record<string, string[]>) {
   for (const [category, wordList] of Object.entries(categories)) {
     if (!Array.isArray(wordList)) {
       throw new Error(`Category ${category} must be an array`)
@@ -55,8 +55,8 @@ function validateGroups(
 }
 
 function validateFormats(
-  categories: Record<string, unknown>,
-  groups: Record<string, unknown>,
+  categories: Record<string, string[]>,
+  groups: Record<string, string[]>,
   formats: Record<string, unknown>,
   dfMap: Record<string, unknown>
 ) {

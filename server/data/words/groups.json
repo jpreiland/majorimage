@@ -57,7 +57,7 @@
 
   "enchantmentPrefixesWeapon": ["enchantmentPrefix", "enchantmentPrefixWeapon"],
   
-  "spellElementSuffixes": ["magicSpellPartElement", "magicSpellPartElementSuffix"],
+  "spellModifiers": ["magicSpellPartModifier", "magicSpellModifier"],
   "spellPrefixesEntity": ["magicSpellPartPrefix", "magicSpellPartInanimatePrefix"],
   "spellPrefixesItem": ["spellPrefixesEntity", "magicSpellPartAdjectivePrefix", "magicSpellPartElementPrefix"],
   "spellPrefixesItemSingular": ["spellPrefixesItem", "magicSpellPartInanimatePrefixSingular"],
@@ -66,12 +66,12 @@
   "spellFormPrefixesCreature": ["spellPrefixesEntity", "magicSpellPartCreaturePrefix", "magicSpellPartAdjectivePrefix"],
   "spellFormPrefixesCreaturePlural": ["spellFormPrefixesCreature", "magicSpellPartInanimatePrefixPlural", "magicSpellPartPrefixPlural"],
   "spellElementPrefixes": ["magicSpellPartElement", "magicSpellPartElementPrefix"],
-  "spellFormSuffixesElement": ["magicSpellPartFormSuffix", "magicSpellPartFormSuffixElement", "magicSpellPartInanimateSuffix", "magicSpellPartSuffixSingular"],
-  "spellFormSuffixesCreatureSingular": ["magicSpellPartFormSuffix", "magicSpellPartCreatureSuffixSingular", "magicSpellPartSuffixSingular"],
-  "spellModifiers": ["magicSpellPartModifier", "magicSpellModifier"],
+  "spellElementSuffixes": ["magicSpellPartElement", "magicSpellPartElementSuffix"],
   "spellNounSuffixes": ["magicSpellPartNounSuffix", "magicSpellPartNounSuffixNegative", "magicSpellPartNounSuffixPositive"],
   "spellNounSuffixesAll": ["spellNounSuffixes", "magicSpellPartGerundSuffixNegative", "magicSpellPartGerundSuffixPositive"],
   "spellSuffixesNoGerund": ["spellFormSuffixesCreatureSingular", "spellElementSuffixes", "spellNounSuffixes", "magicSpellPartInanimateSuffix", "magicSpellPartFormSuffixElement"],
+  "spellFormSuffixesCreatureSingular": ["magicSpellPartFormSuffix", "magicSpellPartCreatureSuffixSingular", "magicSpellPartSuffixSingular"],
+  "spellFormSuffixesElement": ["magicSpellPartFormSuffix", "magicSpellPartFormSuffixElement", "magicSpellPartInanimateSuffix", "magicSpellPartSuffixSingular"],
 
   "maneuverForm": ["maneuverFormNoWeapon", "maneuverPartWeaponStrike"],
   "maneuverFormNoWeapon": ["maneuverPartUnarmedStrike", "maneuverPartType", "maneuverPartDefense"],
