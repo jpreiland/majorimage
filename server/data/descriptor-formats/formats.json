@@ -60,7 +60,7 @@
   "weaponNameWeapon": [["title"], ["pick", "nameAll"], ["static", "'s "], ["pick", "weaponBasic"]],
   "weaponOfNametheEpithet": [["title"], ["pick", "weaponBasic"],  ["static", " of "], ["pick", "nameAll"], ["static", " the "], ["pick", "adjectivePerson"]],
   "weaponOfNametheTradeAll": [["title"], ["pick", "weaponBasic"],  ["static", " of "], ["pick", "nameAll"], ["static", " the "], ["pick", "tradeAll"]],
-  "weaponOfNametheTradeAdventurer": [["title"], ["pick", "weaponBasic"],  ["static", " of "], ["pick", "nameAll"], ["static", " the "], ["pick", "tradeAdventurerBasic"]],
+  "weaponOfNametheTradeAdventurer": [["title"], ["pick", "weaponBasic"],  ["static", " of "], ["pick", "nameSingle"], ["static", " the "], ["pick", "tradeAdventurerBasic"]],
   "weaponWeaponofVirtue": [["title"], ["pick", "weaponBasic"], ["static", " of "], ["pick", "virtue"]],
   "weaponWeaponofVerbing": [["title"], ["pick", "weaponBasic"], ["static", " of "], ["pick-gerund", "verbViolent"]],
   "weaponWeaponoftheMonster": [["title"], ["pick", "weaponBasic"], ["static", " of the "], ["pick", "monsterBasicNoBeast"]],
@@ -99,7 +99,7 @@
 
   "color-geography": [["title"], ["pick", "color"], ["static", " "], ["pick", "geographySuffix"]],
   "monster-geography": [["title"], ["pick", "monster"], ["static", " "], ["pick", "geographySuffix"]],
-  "nameFirst-geography": [["title"], ["pick", "nameAll"], ["static", "'s "], ["pick", "geographySuffix"]],
+  "nameFirst-geography": [["title"], ["pick", "nameSingle"], ["static", "'s "], ["pick", "geographySuffix"]],
 
   "miles2-100": [["number", 2, 100], ["static", " miles"]],
   "minutesTravelOptional5-60": [["number", 5, 60], ["static", " minutes "], ["pick-multi", "modeOfTravel", 0, 1]],

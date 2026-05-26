@@ -3,6 +3,7 @@
     <div class="columns materials">
       <div v-for="matType in materialOrder" :key="matType + '-header'" class="column materials head">
         <ul>
+          <button @click="cycleCategory(matType)"> {{ materials[matType].categories[materials[matType].category][0] }}</button>
           <li class="list-header">
             {{ matType.charAt(0).toUpperCase() + matType.slice(1) }}
           </li>
@@ -111,7 +112,7 @@ onMounted(() => {
   getMaterials()
 
   if (!menuSelections.materials) {
-    const first = materials.stone.items[0]
+    const first = materials.stone.items[defaultSelectionIndex()]
 
     menuSelections.materials = {
       type: 'stone',
@@ -124,13 +125,25 @@ onMounted(() => {
 
     const list = materials[type].items
 
-    const found = list.find(m => m.name === name)
+    const found = list.find((m: { name: any }) => m.name === name)
     if (found) select(found, type)
   }
 
   switchUnits()
   initialized.value = true
 })
+
+// TODO: refactor when common toggle is reimplemented
+function defaultSelectionIndex(): number {
+  for (let i = 0; i <  materials.stone.items.length; i++) {
+    if (materials.stone.items[i].isCommon) return i
+  }
+  return 0
+}
+
+function cycleCategory(materialType: MaterialType) {
+  materials[materialType].category = (materials[materialType].category + 1) % materials[materialType].categories.length
+}
 
 function getMaterials() {
   materials.stone.items = data.materials.stones

@@ -1,0 +1,427 @@
+[
+  {
+    "name": "Basalt",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.10877927,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 6
+        },
+        "Relative Value": {
+          "value": "Low?"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 1.2525,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.13624603,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Basalt is a dark, often grey or brown colored, volcanic rock. It is hard and can be porous.",
+    "occurrence": "Found commonly across the world, especially on the floor of the ocean and volcanic islands. It can occur in a variety of formations from pillowy cooled lava flows to neatly structured hexagonal columns.",
+    "uses": "Architecture, art",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Diamond",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.126445522,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 10
+        },
+        "Relative Value": {
+          "value": "High"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 453592.37,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 57354.724,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 1000,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "A structurally perfect diamond is transparent with no hue, but diamonds can vary widely in color. In order of increasing rarity, diamond hues can be yellow, brown, colorless, blue, green, black, pink, orange, purple, and red. While they are chiefly sought after for use in jewelry due to their appearance, diamonds and diamond dust are also used as spell components.",
+    "occurrence": "Diamonds move to the surface via igneous host rocks. They can be found by themselves deposited in sand and sediment near bodies of water that transported them, or embedded in volcanic rock.",
+    "uses": "Engraving, jewelry, spell components",
+    "component": "Clone, Gate, Glyph of Warding, Greater Restoration, Nondetection, Raise Dead, Resurrection, Revivify, Sequester, Stoneskin, Symbol, True Resurrection",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Emerald",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.099350053,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 7.5
+        },
+        "Relative Value": {
+          "value": "High"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 90718.474,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 9012.885,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 200,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Emerald is a green precious gemstone. Since emeralds commonly have cloudy inclusions, clear specimens are rare and valuable.",
+    "occurrence": "Found in black shale beds or where shale and limestone are layered, as well as in granite deposits.",
+    "uses": "Jewelry, spell components",
+    "component": "Sequester",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Granite",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.09844687,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 5
+        },
+        "Relative Value": {
+          "value": "Low?"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 1.67,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.1644062,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Granite is a speckled rock that typically contains grey, white, and sometimes slight reddish hues. It is formed from an array of crystals, primarily quartz and feldspar.",
+    "occurrence": "Commonly found in huge deposits in mountains.",
+    "uses": "Architecture, art, spell components",
+    "component": "Wall of Stone",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Limestone",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.097904961,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 3.5
+        },
+        "Relative Value": {
+          "value": "Low-Mod?"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 0.5,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.04895248,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Limestone is a somewhat soft rock that ranges in color from light grey to white.",
+    "occurrence": "Found in large amounts in bodies of water and caves.",
+    "uses": "Architecture, agriculture (soil additive), art",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Marble",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.097543688,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 3
+        },
+        "Relative Value": {
+          "value": "Low-Mod?"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 3,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.292631064,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Marble commonly occurs as a white rock with plenty of impurities that give it a \"marbled\" appearance. It is soft, polishes well, and can have a glitzy appearance with a slight amount of translucence.",
+    "occurrence": "Occurs commonly in old layers of the planet's crust, where tectonic plates converge and fold under high heat and pressure.",
+    "uses": "Architecture, art",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Ruby",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.144870441,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 9
+        },
+        "Relative Value": {
+          "value": "High"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 453592.37,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 65712.126,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 1000,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "A red or pink precious gemstone that can range from being transparent with a glassy luster to being very opaque and dull.",
+    "occurrence": "Rubies can be found in marble and basalt.",
+    "uses": "Jewelry, spell components",
+    "component": "Continual Flame, Forbiddance, Forcecage, Sequester, Simulacrum",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Sandstone",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.08309277,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 6
+        },
+        "Relative Value": {
+          "value": "Low?"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 1,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.08309277,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Sandstone is a sedimentary rock that forms from heavily compacted and cemented sand. It is often tan or yellowish in color, but can also be found in grey, white, and black.",
+    "occurrence": "Forms in areas that sand is deposited and buried, such as deserts and near bodies of water.",
+    "uses": "Architecture, art",
+    "isCommon": true,
+    "isPrecious": false,
+    "isMagical": false
+  },
+  {
+    "name": "Sapphire",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.144147895,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 9
+        },
+        "Relative Value": {
+          "value": "High"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 90718.474,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 13076.877,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 200,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Sapphire is a precious gemstone typically blue in color, though they can occur in just about any other hue. The pink to reddish-pink range of hues that sapphires can have at times make some specimens difficult to distinguish from rubies, which can also lean towards a pinkish-red hue, but sapphires are never fully red in the way that many rubies are.",
+    "occurrence": "Found in granite, gneiss, schist, and various other igneous and metamorphic rocks, as well as in alluvial deposits.",
+    "uses": "Jewelry, spell components",
+    "component": "Instant Summons, Sequester",
+    "isCommon": true,
+    "isPrecious": true,
+    "isMagical": false
+  },
+  {
+    "name": "Arborite",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.099350053,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 9.5
+        },
+        "Relative Value": {
+          "value": "Extreme"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 453592.37,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 57354.724,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 1000,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Arborite is a green precious gemstone that carries innate magical properties. Under moonlight, dancing gold and white lights can be seen slowly moving inside an arborite gem. Carrying an arborite gem allows one to move swiftly and quietly through forested areas, as well as have improved vision at night. Owing to their rarity and unique provenance, arborite gems are prized among forest-dwelling elven cultures. In exceedingly rare cases, foreigners are gifted arborite to signify a deep bond, gratitude, or alliance.",
+    "occurrence": "Arborite slowly emerges from trunks of trees that are imbued with elven magic. Such a tree may only produce a few stones a year. Pulling an arborite gem out of a trunk before it naturally falls out causes the stone to lose its magical properties.",
+    "uses": "Jewelry, enchantments",
+    "isCommon": false,
+    "isPrecious": true,
+    "isMagical": true
+  },
+  {
+    "name": "Paladite",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.126445522,
+          "units": "lb"
+        }
+      },
+      "row2": {
+        "Hardness": {
+          "value": 11
+        },
+        "Relative Value": {
+          "value": "Extreme"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 90718.474,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 9012.885,
+          "units": "g"
+        },
+        "Cost/carat": {
+          "value": 200,
+          "units": "g"
+        }
+      },
+      "units": "in³"
+    },
+    "description": "Paladite is a white, iridescent precious gemstone resembling opal or moonstone. It gives off a subtle glow and is one of the few known substances that souls cannot pass through. Paladite is supernaturally tough, being impossible to cut or damage through mundane means. Each stone has a unique word or sound, much like a true name, that will cause it to go out of phase until uttered again. Paladite that is out of phase appears blurry and doubled, and in this state souls can pass through it. This property makes paladite highly coveted by demons and devils, as it can be used like a lockbox for souls.",
+    "occurrence": "Paladite occurs naturally on the celestial plane. Not much is known about the specifics of its occurrence, and most records of the extraplanar mineral are through encounters with fiends of the lower planes. Unlike most precious stones, paladite can occur in very large sizes, sometimes measuring several feet in any given dimension.",
+    "uses": "Soul storage, jewelry, weapons, armor, enchantments",
+    "isCommon": false,
+    "isPrecious": true,
+    "isMagical": true
+  }
+]

@@ -1,13 +1,23 @@
 import fs from 'node:fs'
 import Categories from '../data/words/categories.json'
+import Groups from '../data/words/groups.json'
+import Metals from '../data/materials/metals.json'
+import Stones from '../data/materials/stones.json'
+import Textiles from '../data/materials/textiles.json'
+import Woods from '../data/materials/woods.json'
 
-import { CategoryName } from '../../shared/types.ts'
+import type { CategoryName, GroupName } from '../../shared/types.ts'
 
 const DATA_BASE_PATH = 'data'
 const MODULES_BASE_PATH = DATA_BASE_PATH + '/modules'
 const GENERATED_BASE_PATH = DATA_BASE_PATH + '/generated'
 
 const GENERATED_CATEGORIES_PATH = GENERATED_BASE_PATH + '/categories.generated.json'
+const GENERATED_GROUPS_PATH = GENERATED_BASE_PATH + '/groups.generated.json'
+const GENERATED_STONES_PATH = GENERATED_BASE_PATH + '/stones.generated.json'
+const GENERATED_METALS_PATH = GENERATED_BASE_PATH + '/metals.generated.json'
+const GENERATED_TEXTILES_PATH = GENERATED_BASE_PATH + '/textiles.generated.json'
+const GENERATED_WOODS_PATH = GENERATED_BASE_PATH + '/woods.generated.json'
 
 function buildData() {
   try {
@@ -30,9 +40,38 @@ function loadModule(moduleName: string) {
 
   if (files.includes('categories.json')) {
     loadModuleCategories(`${modulePath}/categories.json`)
-    // alphabetize
-    const categoriesString = stringifyCategories(Categories)
+    const categoriesString = stringifyData(Categories)
     fs.writeFileSync(GENERATED_CATEGORIES_PATH, categoriesString)
+  }
+
+  if (files.includes('groups.json')) {
+    loadModuleGroups(`${modulePath}/groups.json`)
+    const groupsString = stringifyData(Groups)
+    fs.writeFileSync(GENERATED_GROUPS_PATH, groupsString)
+  }
+
+  if (files.includes('metals.json')) {
+    loadModuleMaterials(`${modulePath}/metals.json`, Metals)
+    const metalsString = JSON.stringify(Metals, null, 2)
+    fs.writeFileSync(GENERATED_METALS_PATH, metalsString)
+  }
+
+  if (files.includes('stones.json')) {
+    loadModuleMaterials(`${modulePath}/stones.json`, Stones)
+    const stonesString = JSON.stringify(Stones, null, 2)
+    fs.writeFileSync(GENERATED_STONES_PATH, stonesString)
+  }
+
+  if (files.includes('textiles.json')) {
+    loadModuleMaterials(`${modulePath}/textiles.json`, Textiles)
+    const textilesString = JSON.stringify(Textiles, null, 2)
+    fs.writeFileSync(GENERATED_TEXTILES_PATH, textilesString)
+  }
+
+  if (files.includes('woods.json')) {
+    loadModuleMaterials(`${modulePath}/woods.json`, Woods)
+    const woodsString = JSON.stringify(Woods, null, 2)
+    fs.writeFileSync(GENERATED_WOODS_PATH, woodsString)
   }
 }
 
@@ -41,11 +80,11 @@ function loadModuleCategories(path: string) {
     const rawData = fs.readFileSync(path, 'utf8')
     const moduleCategories = JSON.parse(rawData)
 
-    for (const categoryName of Object.keys(moduleCategories)) {
+    for (const categoryName of Object.keys(moduleCategories) as CategoryName[]) {
       if (!Object.keys(Categories).includes(categoryName)) {
         Categories[categoryName] = moduleCategories[categoryName]
       } else {
-        augmentCategory(categoryName as CategoryName, moduleCategories[categoryName])
+        augmentCategory(categoryName, moduleCategories[categoryName])
       }
     }
   }
@@ -53,11 +92,45 @@ function loadModuleCategories(path: string) {
 
 function augmentCategory(categoryName: CategoryName, words: string[]) {
   for (const word of words) {
+    // @ts-expect-error
     if (!Categories[categoryName].includes(word)) Categories[categoryName].push(word)
   }
 }
 
-function stringifyCategories(data: Record<string, string[]>) {
+function loadModuleGroups(path: string) {
+  if (fs.statSync(path).isFile()) {
+    const rawData = fs.readFileSync(path, 'utf8')
+    const moduleGroups = JSON.parse(rawData)
+
+    for (const groupName of Object.keys(moduleGroups) as GroupName[]) {
+      if (!Object.keys(Groups).includes(groupName)) {
+        Groups[groupName] = moduleGroups[groupName]
+      } else {
+        augmentGroup(groupName, moduleGroups[groupName])
+      }
+    }
+  }
+}
+
+function augmentGroup(groupName: GroupName, groupMembers: string[]) {
+  for (const groupMember of groupMembers) {
+    if (!Groups[groupName].includes(groupMember)) Groups[groupName].push(groupMember)
+  }
+}
+
+function loadModuleMaterials(path: string, baseMaterials: object) {
+  if (fs.statSync(path).isFile()) {
+    const rawData = fs.readFileSync(path, 'utf8')
+    const moduleMaterials = JSON.parse(rawData)
+
+    if (Array.isArray(moduleMaterials) && Array.isArray(baseMaterials)) {
+      console.log('augmenting materials for ' + path)
+      baseMaterials.push(...moduleMaterials)
+    }
+  }
+}
+
+function stringifyData(data: Record<string, string[]>) {
   const lines = ['{']
 
   const entries = Object.entries(data).sort(([a], [b]) =>  a.localeCompare(b))

@@ -89,7 +89,10 @@
 
   "geographySuffix": ["geographyBasic", "geographyWaterBasic", "geographyBiomeBasic"],
 
-  "nameAll": ["name1Syllable", "name2Syllable", "name3Syllable", "name4Syllable", "name5+Syllable"],
+  "nameAll": ["nameSingle"],
+  "nameSingle": ["nameReal", "nameFantasy"],
+  "nameFantasy": ["nameCelestial", "nameDragon", "nameFiend", "nameMage", "nameMonster", "nameWarrior"],
+  "nameReal": ["name1Syllable", "name2Syllable", "name3Syllable", "name4Syllable", "name5+Syllable"],
   "name1Syllable": ["name1a", "name1b", "name1c", "name1d", "name1e"],
   "name2Syllable": ["name2a", "name2b", "name2c", "name2d", "name2e"],
   "name3Syllable": ["name3a", "name3b", "name3c", "name3d", "name3e"],

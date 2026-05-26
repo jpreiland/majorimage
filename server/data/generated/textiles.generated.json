@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Linen",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.003858,
+          "units": "oz"
+        }
+      },
+      "row2": {
+        "Texture": {
+          "value": "Medium"
+        },
+        "Relative Value": {
+          "value": "Low"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 0.1,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.0038580246,
+          "units": "g"
+        }
+      },
+      "units": "in²"
+    },
+    "description": "linen to do",
+    "uses": "linen to do",
+    "isCommon": true,
+    "isFabric": true,
+    "isFur": false
+  },
+  {
+    "name": "Wool",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.00925925925,
+          "units": "oz"
+        }
+      },
+      "row2": {
+        "Texture": {
+          "value": "Rough"
+        },
+        "Relative Value": {
+          "value": "Low"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 0.1,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.12,
+          "units": "g"
+        }
+      },
+      "units": "in²"
+    },
+    "description": "wool to do",
+    "uses": "wool to do",
+    "isCommon": true,
+    "isFabric": true,
+    "isFur": false
+  },
+  {
+    "name": "Silk",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.0015432,
+          "units": "oz"
+        }
+      },
+      "row2": {
+        "Texture": {
+          "value": "Fine"
+        },
+        "Relative Value": {
+          "value": "High"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 0.1,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.007716049,
+          "units": "g"
+        }
+      },
+      "units": "in²"
+    },
+    "description": "silk to do",
+    "uses": "silk to do",
+    "isCommon": true,
+    "isFabric": true,
+    "isFur": false
+  },
+  {
+    "name": "Cashmere",
+    "attributes": {
+      "row1": {
+        "Weight": {
+          "value": 0.00978566,
+          "units": "oz"
+        }
+      },
+      "row2": {
+        "Texture": {
+          "value": "Soft"
+        },
+        "Relative Value": {
+          "value": "Moderate"
+        }
+      },
+      "unused": {
+        "Cost/lb": {
+          "value": 0.1,
+          "units": "g"
+        },
+        "Cost": {
+          "value": 0.2,
+          "units": "g"
+        }
+      },
+      "units": "in²"
+    },
+    "description": "cashmere to do",
+    "uses": "cashmere to do",
+    "isCommon": true,
+    "isFabric": true,
+    "isFur": false
+  }
+]

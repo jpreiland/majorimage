@@ -1,10 +1,10 @@
 import express from 'express'
-import Stones from '../../data/materials/stones.json' with { type: "json" };
-import Woods from '../../data/materials/woods.json' with { type: "json" };
-import Metals from '../../data/materials/metals.json' with { type: "json" };
-import Textiles from '../../data/materials/textiles.json' with { type: "json" };
+import Stones from '../../data/generated/stones.generated.json'
+import Woods from '../../data/generated/woods.generated.json'
+import Metals from '../../data/generated/metals.generated.json'
+import Textiles from '../../data/generated/textiles.generated.json'
 import Categories from '../../data/generated/categories.generated.json'
-import Groups from '../../data/words/groups.json' with { type: "json" };
+import Groups from '../../data/generated/groups.generated.json'
 import Formats from '../../data/descriptor-formats/formats.json' with { type: "json" };
 import DescriptorFormatsMap from '../../data/descriptor-formats/descriptor-formats-map.json' with { type: "json" };
 import Templates from '../../data/templates/templates.json' with { type: "json" };

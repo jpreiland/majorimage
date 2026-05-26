@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Arborite",
+    "attributes": {
+      "row1": {
+        "Weight": {"value": 0.099350053, "units": "lb"}
+      },
+      "row2": {
+        "Hardness": {"value": 9.5},
+        "Relative Value": {"value": "Extreme"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 453592.37, "units": "g"},
+        "Cost": {"value": 57354.724, "units": "g"},
+        "Cost/carat": {"value": 1000, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Arborite is a green precious gemstone that carries innate magical properties. Under moonlight, dancing gold and white lights can be seen slowly moving inside an arborite gem. Carrying an arborite gem allows one to move swiftly and quietly through forested areas, as well as have improved vision at night. Owing to their rarity and unique provenance, arborite gems are prized among forest-dwelling elven cultures. In exceedingly rare cases, foreigners are gifted arborite to signify a deep bond, gratitude, or alliance.",
+    "occurrence": "Arborite slowly emerges from trunks of trees that are imbued with elven magic. Such a tree may only produce a few stones a year. Pulling an arborite gem out of a trunk before it naturally falls out causes the stone to lose its magical properties.",
+    "uses": "Jewelry, enchantments",
+    "isCommon": false,
+    "isPrecious": true,
+    "isMagical": true
+  },
+  {
+    "name": "Paladite",
+    "attributes": {
+      "row1": {
+        "Weight": {"value": 0.126445522, "units": "lb"}
+      },
+      "row2": {
+        "Hardness": {"value": 11},
+        "Relative Value": {"value": "Extreme"}
+      },
+      "unused": {
+        "Cost/lb": {"value": 90718.474, "units": "g"},
+        "Cost": {"value": 9012.885, "units": "g"},
+        "Cost/carat": {"value": 200, "units": "g"}
+      },
+      "units": "in³"
+    },
+    "description": "Paladite is a white, iridescent precious gemstone resembling opal or moonstone. It gives off a subtle glow and is one of the few known substances that souls cannot pass through. Paladite is supernaturally tough, being impossible to cut or damage through mundane means. Each stone has a unique word or sound, much like a true name, that will cause it to go out of phase until uttered again. Paladite that is out of phase appears blurry and doubled, and in this state souls can pass through it. This property makes paladite highly coveted by demons and devils, as it can be used like a lockbox for souls.",
+    "occurrence": "Paladite occurs naturally on the celestial plane. Not much is known about the specifics of its occurrence, and most records of the extraplanar mineral are through encounters with fiends of the lower planes. Unlike most precious stones, paladite can occur in very large sizes, sometimes measuring several feet in any given dimension.",
+    "uses": "Soul storage, jewelry, weapons, armor, enchantments",
+    "isCommon": false,
+    "isPrecious": true,
+    "isMagical": true
+  }
+]
