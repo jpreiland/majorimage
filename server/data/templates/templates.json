@@ -102,5 +102,17 @@
       "_displayName": "Format Builder",
       "format-builder-1": "FormatBuilder1"
     }
+  },
+  "wordclouds": {
+    "NPCCloud": {
+      "_order": 1,
+      "_displayName": "NPC",
+      "npc-cloud-1": "NPCCloud1"
+    },
+    "TempleCloud": {
+      "_order": 2,
+      "_displayName": "Temple",
+      "temple-cloud-1": "TempleCloud1"
+    }
   }
 }

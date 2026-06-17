@@ -21,6 +21,7 @@ const magicModules = import.meta.glob<VueModule>('./components/magic/templates/*
 const shopModules = import.meta.glob<VueModule>('./components/shops/templates/*/*.vue', { eager: true })
 const npcModules = import.meta.glob<VueModule>('./components/npcs/templates/*/*.vue', { eager: true })
 const questModules = import.meta.glob<VueModule>('./components/quests/templates/*/*.vue', { eager: true })
+const wordCloudModules = import.meta.glob<VueModule>('./components/wordclouds/templates/*/*.vue', { eager: true })
 const workshopModules = import.meta.glob<VueModule>('./components/workshop/templates/*/*.vue', { eager: true })
 
 async function loadData(): Promise<AppData> {
@@ -68,6 +69,7 @@ async function buildAllSubpages(data: AppData): Promise<Record<string, Subpage[]
     shops: buildSubpages(shopModules, 'shops', data),
     npcs: buildSubpages(npcModules, 'npcs', data),
     quests: buildSubpages(questModules, 'quests', data),
+    wordclouds: buildSubpages(wordCloudModules, 'wordclouds', data),
     workshop: buildSubpages(workshopModules, 'workshop', data)
   }
 }

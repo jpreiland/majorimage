@@ -9,12 +9,13 @@ import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
 import { useAppContext } from '../../composables/useAppContext'
+import { getCssGradient } from '../../lib/descriptor-utils/descriptor-display-utils'
 
-import type { DFMapName, FormatName, NumRangeOverride, NumericString, PriceOverride, WordOverride } from '../../../../shared/types';
+import type { DFMapName, FormatName, NumRangeOverride, NumericString, PriceOverride, WordOverride } from '../../../../shared/types'
 
 interface Props {
   type: DFMapName
-  color?: string
+  color?: string | string[]
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
   wordOverride?: WordOverride
@@ -54,6 +55,15 @@ function reroll() {
 }
 
 const setColor = computed(() => {
-  return `border-bottom-color: ${props.color};`
+  if (Array.isArray(props.color)) {
+    return {
+      '--descriptor-gradient': getCssGradient(props.color, 90)
+    }
+  } else {
+    return {
+      '--descriptor-gradient': props.color
+    }
+  }
 })
+
 </script>

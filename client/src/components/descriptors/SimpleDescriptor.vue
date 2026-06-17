@@ -8,11 +8,13 @@
 import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { useAppContext } from '../../composables/useAppContext'
-import type { CategoryName, GroupName, NumRangeOverride, PriceOverride, WordOverride } from '../../../../shared/types';
+import { getCssGradient } from '../../lib/descriptor-utils/descriptor-display-utils'
+
+import type { CategoryName, GroupName, NumRangeOverride, PriceOverride, WordOverride } from '../../../../shared/types'
 
 interface Props {
   type: GroupName | CategoryName
-  color?: string
+  color?: string | string[]
   numRangeOverride?: NumRangeOverride
   priceOverride?: PriceOverride
   wordOverride?: WordOverride
@@ -65,7 +67,15 @@ function reroll() {
 }
 
 const setColor = computed(() => {
-  return `border-bottom-color: ${props.color};`
+  if (Array.isArray(props.color)) {
+    return {
+      '--descriptor-gradient': getCssGradient(props.color, 90)
+    }
+  } else {
+    return {
+      '--descriptor-gradient': props.color
+    }
+  }
 })
 
 </script>
