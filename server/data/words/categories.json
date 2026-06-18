@@ -340,5 +340,6 @@
   "nameWarrior": ["brodovan"],
 
   "___": ["ERROR"],
-  "_WORDTESTER": ["placeholder"]
+  "_WORDTESTER": ["placeholder"],
+  "_TEST_REPLACE": ["lorem", "ipsum", "dolor", "sit", "amet"]
 }

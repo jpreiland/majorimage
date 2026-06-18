@@ -2,6 +2,7 @@
   "___": ["ERROR"],
   "_enchantment": [],
   "_enchantmentSuffix": [],
+  "_TEST_REPLACE": ["adipiscing", "consectetur", "elit"],
   "_WORDTESTER": ["placeholder"],
   "aberration": ["gibbering mouther", "otyugh"],
   "aberrationBasic": ["aboleth", "chuul", "cloaker"],

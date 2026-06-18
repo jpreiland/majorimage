@@ -50,6 +50,12 @@ function loadModule(moduleName: string) {
     fs.writeFileSync(GENERATED_CATEGORIES_PATH, categoriesString)
   }
 
+  if (files.includes('categories-replace.json')) {
+    loadModuleReplacementCategories(`${modulePath}/categories-replace.json`)
+    const categoriesString = stringifyData(Categories)
+    fs.writeFileSync(GENERATED_CATEGORIES_PATH, categoriesString)
+  }
+
   if (files.includes('groups.json')) {
     loadModuleGroups(`${modulePath}/groups.json`)
     const groupsString = stringifyData(Groups)
@@ -121,6 +127,19 @@ function removeWordsFromCategory(categoryName: CategoryName, words: string[]) {
 
   for (let i = Categories[categoryName].length - 1; i >= 0; i--) {
     if (removeWordsSet.has(Categories[categoryName][i])) Categories[categoryName].splice(i, 1)
+  }
+}
+
+function loadModuleReplacementCategories(path: string) {
+  if (fs.statSync(path).isFile()) {
+    const rawData = fs.readFileSync(path, 'utf8')
+    const moduleCategories = JSON.parse(rawData)
+
+    for (const categoryName of Object.keys(moduleCategories) as CategoryName[]) {
+      if (Object.keys(Categories).includes(categoryName)) {
+        Categories[categoryName] = moduleCategories[categoryName]
+      }
+    }
   }
 }
 
