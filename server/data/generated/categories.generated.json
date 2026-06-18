@@ -116,7 +116,7 @@
   "foodDessert": ["biscuit", "cake", "cookie", "donut", "muffin", "pie"],
   "foodPlural": ["beans", "rice"],
   "foodSingular": ["pie", "salad", "sandwich", "soup", "stew"],
-  "fruit": ["cantaloupe", "cranberry", "dragonfruit", "durian", "honeydew", "lychee", "passion fruit", "persimmon", "plantain", "star fruit"],
+  "fruit": ["cantaloupe", "cranberry", "dragonfruit", "durian", "honeydew", "lychee", "passion fruit", "persimmon", "plantain"],
   "fruitBasic": ["apple", "apricot", "banana", "berry", "blackberry", "blueberry", "cherry", "coconut", "date", "fig", "grape", "grapefruit", "kiwi", "lemon", "lime", "mango", "melon", "orange", "papaya", "peach", "pear", "pineapple", "plum", "pomegranate", "raisin", "raspberry", "strawberry", "tangerine", "watermelon"],
   "fur": ["arctic fox fur", "bear fur", "ermine fur", "leopard fur", "marten fur", "mink fur", "rabbit fur", "red fox fur", "sable fur", "skunk fur", "wolf fur"],
   "furniture": ["bookcase", "coat rack", "coffee table", "dining table", "drawing board", "end table", "footstool", "love seat", "rocking chair", "room divider", "sliding wall", "wall basin", "wardrobe", "weapon rack", "wine table", "workbench"],
