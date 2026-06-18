@@ -347,6 +347,22 @@ button.reroll-all {
   line-height: 1.3em;
 }
 
+.word-cloud {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+.descriptor-wrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition:
+    left 0.5s ease,
+    top 0.5s ease;
+  white-space: nowrap;  
+}
+
 /* Width and height of the scrollbar */
 ::-webkit-scrollbar {
   width: 5px;

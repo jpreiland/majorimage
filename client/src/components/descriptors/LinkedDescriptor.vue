@@ -69,6 +69,10 @@ function reroll() {
   emit('linkUpdate', linkResponse)
 }
 
+defineExpose({
+  reroll
+})
+
 const setColor = computed(() => {
   if (Array.isArray(props.color)) {
     return {

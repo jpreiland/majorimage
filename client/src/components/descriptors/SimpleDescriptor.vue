@@ -66,6 +66,10 @@ function reroll() {
   )
 }
 
+defineExpose({
+  reroll
+})
+
 const setColor = computed(() => {
   if (Array.isArray(props.color)) {
     return {
