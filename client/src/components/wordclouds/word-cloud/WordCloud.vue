@@ -1,8 +1,19 @@
 <template>
   <div class="world-cloud-container">
     <div ref="cloud" class="word-cloud">
-      <div v-for="(item, index) in props.items" :key="index" class="descriptor-wrapper" :style="getPositionCss(index)">
-        <SimpleDescriptor ref="descriptorRefs" :type="item.type" :proper-noun="true" :color="item.color" @click="checkCollisionsOnReroll" />
+      <div
+        v-for="(item, index) in props.items"
+        :key="item.id"
+        :ref="el => descriptorWrappers[index] = el as HTMLElement"
+        class="descriptor-wrapper"
+        :style="getPositionCss(index)"
+      >
+        <component
+          :is="getComponent(item)"
+          :ref="el => descriptorRefs[index] = el"
+          v-bind="getProps(item)"
+          @click="checkCollisionsOnReroll"
+        />
       </div>
     </div>
 
@@ -14,6 +25,8 @@
 
 <script lang="ts" setup>
 import { nextTick, onMounted, ref } from 'vue'
+import Descriptor from '../../descriptors/Descriptor.vue'
+import SimpleDescriptor from '../../descriptors/SimpleDescriptor.vue'
 
 import type { WordCloudItem } from './word-cloud.ts'
 
@@ -29,6 +42,7 @@ interface Position {
 const props = defineProps<Props>()
 
 const descriptorRefs = ref<any[]>([])
+const descriptorWrappers = ref<HTMLElement[]>([])
 const cloud = ref<HTMLElement>()
 const animating = ref(false)
 
@@ -39,6 +53,15 @@ const positions = ref<Position[]>(
   }))
 )
 
+function getComponent(item: WordCloudItem) {
+  return item.component === "simple" ? SimpleDescriptor : Descriptor
+}
+
+function getProps(item: WordCloudItem) {
+  const { id, component, ...props } = item
+  return props
+}
+
 function getPositionCss(index: number) {
   return {
     left: `${positions.value[index].x}px`,
@@ -47,9 +70,7 @@ function getPositionCss(index: number) {
 }
 
 function getBoxes() {
-  const elements = Array.from(cloud.value!.children) as HTMLElement[]
-
-  return elements.map((el, index) => {
+  return descriptorWrappers.value.map((el, index) => {
     const rect = el.getBoundingClientRect()
 
     return {
@@ -58,8 +79,8 @@ function getBoxes() {
       y: positions.value[index].y,
       width: rect.width,
       height: rect.height
-    };
-  });
+    }
+  })
 }
 
 function overlaps(a: any, b: any) {
@@ -89,8 +110,8 @@ function resolveCollisions() {
 
   let moved = false
 
-  for (let i = 1; i < boxes.length; i++) {
-    for (let j = 0; j < i; j++) {
+  for (let i = 0; i < boxes.length; i++) {
+    for (let j = i + 1; j < boxes.length; j++) {
       const a = boxes[i]
       const b = boxes[j]
 
@@ -121,6 +142,9 @@ function resolveCollisions() {
       positions.value[j].x -= moveX
       positions.value[j].y -= moveY
 
+      clampPosition(a.index, a.width, a.height)
+      clampPosition(b.index, b.width, b.height)
+
       moved = true
     }
   }
@@ -128,9 +152,77 @@ function resolveCollisions() {
   return moved
 }
 
+function clampPosition(index: number, width: number, height: number) {
+  const cloudRect = cloud.value!.getBoundingClientRect()
+
+  const padding = 10
+
+  const minX = width / 2 + padding
+  const maxX = cloudRect.width - width / 2 - padding
+
+  const minY = height / 2 + padding
+  const maxY = cloudRect.height - height / 2 - padding
+
+  positions.value[index].x =
+    Math.max(minX, Math.min(maxX, positions.value[index].x))
+
+  positions.value[index].y =
+    Math.max(minY, Math.min(maxY, positions.value[index].y))
+}
+
+function keepInBounds(box: any) {
+  const cloudRect = cloud.value!.getBoundingClientRect()
+
+  const padding = 10
+
+  let moved = false
+
+  const minX = box.width / 2 + padding
+  const maxX = cloudRect.width - box.width / 2 - padding
+
+  const minY = box.height / 2 + padding
+  const maxY = cloudRect.height - box.height / 2 - padding
+
+  if (box.x < minX) {
+    positions.value[box.index].x += minX - box.x
+    moved = true
+  }
+
+  if (box.x > maxX) {
+    positions.value[box.index].x -= box.x - maxX
+    moved = true
+  }
+
+  if (box.y < minY) {
+    positions.value[box.index].y += minY - box.y
+    moved = true
+  }
+
+  if (box.y > maxY) {
+    positions.value[box.index].y -= box.y - maxY
+    moved = true
+  }
+
+  return moved
+}
+
 function handleCollisions() {
-  for (let pass = 0; pass < 30; pass++) {
-    if (!resolveCollisions()) break
+  for (let pass = 0; pass < 100; pass++) {
+    let moved = false
+
+    if (resolveCollisions()) {
+      moved = true
+    }
+
+    const boxes = getBoxes()
+
+    for (const box of boxes) {
+      if (keepInBounds(box)) {
+        moved = true
+      }
+    }
+
+    if (!moved) break
   }
 }
 
@@ -167,22 +259,26 @@ function wait(ms: number) {
 
 function rerollDescriptors() {
   descriptorRefs.value.forEach(descriptor => {
-    descriptor.reroll()
-  });
+    descriptor?.reroll()
+  })
 }
 
 function generateInitialPositions() {
   const rect = cloud.value!.getBoundingClientRect()
+  const boxes = getBoxes().sort((a, b) => b.width - a.width)
+  const newPositions = [...positions.value]
 
-  positions.value = props.items.map(() => {
+  for (const box of boxes) {
     const angle = Math.random() * Math.PI * 2
-    const radius = Math.random() * 120
-    
-    return {
+    const radius =  Math.random() * Math.min(rect.width, rect.height) / 4
+
+    newPositions[box.index] = {
       x: (rect.width / 2) + (Math.cos(angle) * radius),
       y: (rect.height / 2) + (Math.sin(angle) * radius)
     }
-  })
+  }
+
+  positions.value = newPositions
 }
 
 async function checkCollisionsOnReroll() {

@@ -1,7 +1,26 @@
-import { CategoryName, GroupName } from '../../../../../shared/types'
+import { CategoryName, DFMapName, GroupName, NumRangeOverride, PriceOverride, WordOverride } from '../../../../../shared/types'
 
-export interface WordCloudItem {
+interface BaseDescriptorItem {
   id: string | number
-  type: GroupName | CategoryName
-  color: string | string[]
+  component: 'simple' | 'descriptor'
+  color?: string | string[]
+  numRangeOverride?: NumRangeOverride
+  priceOverride?: PriceOverride
+  wordOverride?: WordOverride
+  sequencedPick?: boolean
 }
+
+interface SimpleDescriptorItem extends BaseDescriptorItem {
+  component: 'simple'
+  type: GroupName | CategoryName
+  a_an?: boolean
+  properNoun?: boolean
+  pickStyle?: string
+}
+
+interface DescriptorItem extends BaseDescriptorItem {
+  component: 'descriptor'
+  type: DFMapName
+}
+
+export type WordCloudItem = SimpleDescriptorItem  | DescriptorItem

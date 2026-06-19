@@ -9,13 +9,13 @@ import WordCloud from '../../../word-cloud/WordCloud.vue'
 import type { WordCloudItem } from '../../../word-cloud/word-cloud'
 
 const descriptorConfigs = ref<WordCloudItem[]>([
-  { id: "name", type: 'nameAll', color: 'pink' },
-  { id: "color", type: 'colorAll', color: ['red', 'orange', 'yellow', 'green', 'blue', 'violet'] },
-  { id: "adjective", type: 'adjectivePerson', color: 'green' },
-  { id: "trade", type: 'tradeAll', color: 'blue' },
-  { id: "animal", type: 'animal', color: 'orange' },
-  { id: "structure", type: 'structure', color: 'red' },
-  { id: "item", type: 'itemAll', color: 'purple' }
+  { id: "name", component: 'simple', type: 'nameAll', color: 'pink' },
+  { id: "color", component: 'simple', type: 'colorAll', color: ['red', 'orange', 'yellow', 'green', 'blue', 'violet'] },
+  { id: "adjective", component: 'simple', type: 'adjectivePerson', color: 'green' },
+  { id: "trade", component: 'simple', type: 'tradeAll', color: 'blue' },
+  { id: "animal", component: 'simple', type: 'animal', color: 'orange' },
+  { id: "structure", component: 'simple', type: 'structure', color: 'red' },
+  { id: "item", component: 'simple', type: 'itemAll', color: 'purple' }
 ])
 
 </script>
