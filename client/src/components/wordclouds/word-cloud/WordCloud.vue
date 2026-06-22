@@ -53,6 +53,14 @@ const positions = ref<Position[]>(
   }))
 )
 
+onMounted(() => {
+  generateInitialPositions()
+
+  setTimeout(() => {
+    handleCollisions()
+  }, 50)
+})
+
 function getComponent(item: WordCloudItem) {
   return item.component === "simple" ? SimpleDescriptor : Descriptor
 }
@@ -263,6 +271,11 @@ function rerollDescriptors() {
   })
 }
 
+async function checkCollisionsOnReroll() {
+  await nextTick()
+  handleCollisions()
+}
+
 function generateInitialPositions() {
   const rect = cloud.value!.getBoundingClientRect()
   const boxes = getBoxes().sort((a, b) => b.width - a.width)
@@ -280,28 +293,5 @@ function generateInitialPositions() {
 
   positions.value = newPositions
 }
-
-async function checkCollisionsOnReroll() {
-  await nextTick()
-  handleCollisions()
-}
-
-onMounted(() => {
-  const rect = cloud.value!.getBoundingClientRect()
-
-  positions.value = props.items.map(() => {
-    const angle = Math.random() * Math.PI * 2
-    const radius = Math.random() * 80
-
-    return {
-      x: (rect.width / 2) + (Math.cos(angle) * radius),
-      y: (rect.height / 2) + (Math.sin(angle) * radius)
-    }
-  })
-
-  setTimeout(() => {
-    handleCollisions()
-  }, 50)
-})
 
 </script>
