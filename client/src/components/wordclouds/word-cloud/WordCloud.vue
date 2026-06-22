@@ -161,15 +161,15 @@ function resolveCollisions() {
 }
 
 function clampPosition(index: number, width: number, height: number) {
-  const cloudRect = cloud.value!.getBoundingClientRect()
+  const rect = cloud.value!.getBoundingClientRect()
 
   const padding = 10
 
   const minX = width / 2 + padding
-  const maxX = cloudRect.width - width / 2 - padding
+  const maxX = rect.width - width / 2 - padding
 
   const minY = height / 2 + padding
-  const maxY = cloudRect.height - height / 2 - padding
+  const maxY = rect.height - height / 2 - padding
 
   positions.value[index].x =
     Math.max(minX, Math.min(maxX, positions.value[index].x))
@@ -179,17 +179,17 @@ function clampPosition(index: number, width: number, height: number) {
 }
 
 function keepInBounds(box: any) {
-  const cloudRect = cloud.value!.getBoundingClientRect()
+  const rect = cloud.value!.getBoundingClientRect()
 
   const padding = 10
 
   let moved = false
 
   const minX = box.width / 2 + padding
-  const maxX = cloudRect.width - box.width / 2 - padding
+  const maxX = rect.width - box.width / 2 - padding
 
   const minY = box.height / 2 + padding
-  const maxY = cloudRect.height - box.height / 2 - padding
+  const maxY = rect.height - box.height / 2 - padding
 
   if (box.x < minX) {
     positions.value[box.index].x += minX - box.x
