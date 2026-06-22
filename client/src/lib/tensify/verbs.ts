@@ -1,5 +1,6 @@
 // created by Egor Gumenyuk (boo1ean)
-// modified by Kujiy & JP Reiland
+// modified by Kujiy
+// modified by JP Reiland
 
 // Last element - past participle
 // Last - 1 element - past simple

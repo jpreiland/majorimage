@@ -1,5 +1,6 @@
 // created by Egor Gumenyuk (boo1ean)
-// modified by Kujiy & JP Reiland
+// modified by Kujiy
+// modified by JP Reiland
 import find_irregular_verb from './verbs'
 import { is_consonant, is_vowel } from 'symbols'
 

@@ -11,6 +11,8 @@
     "test": "vitest --coverage",
     "type-check": "vue-tsc --noEmit"
   },
+  "author": "JP Reiland",
+  "license": "MIT License",
   "dependencies": {
     "pluralize": "^8.0.0",
     "symbols": "^0.0.6",

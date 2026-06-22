@@ -8,6 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-data": "tsx scripts/build-data.ts"
   },
+  "author": "JP Reiland",
+  "license": "MIT License",
   "dependencies": {
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",

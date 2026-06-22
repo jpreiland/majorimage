@@ -1,6 +1,6 @@
 MIT License 
 
-Copyright (c) 2022 JP Reiland
+Copyright (c) 2022-2026 JP Reiland
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,12 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+-----------------------------------------------------------------
+
+Other dependencies and licenses:
+
+1. a-vs-an by Eamon Nerbonne is licensed under the Apache License 2.0.
+2. tensify by Egor Gumenyuk (boo1ean) is licensed under the MIT License.
+
+See the LICENSE files collocated with these dependencies in their respective directories for full license text and copyright notices.

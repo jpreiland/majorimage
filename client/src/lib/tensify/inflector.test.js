@@ -1,3 +1,4 @@
+// by JP Reiland, MIT License
 import tensify from './inflector'
 import { describe, expect, it } from 'vitest'
 

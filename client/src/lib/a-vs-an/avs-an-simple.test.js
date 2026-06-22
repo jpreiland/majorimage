@@ -1,3 +1,4 @@
+// by JP Reiland, MIT License
 import AvsAnSimple from './avs-an-simple'
 import { describe, expect, it } from 'vitest'
 
