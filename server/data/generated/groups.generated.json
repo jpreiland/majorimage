@@ -100,5 +100,17 @@
   "weaponMeleeAll": ["weaponMelee", "weaponMeleeBasic"],
   "wearable": ["armorAll", "wearableNonArmor"],
   "wearableNonArmor": ["accessoryAll", "clothing", "headwear", "jewelryAll"],
-  "writing": ["book", "writing"]
+  "writingsAcademic": ["writingAcademic", "writingAcademicMagic"],
+  "writingsAll": ["writingsCountable", "writingsFreeUncountable"],
+  "writingsBound": ["writingBasic", "writingRecord", "writingsAcademic", "writingsSpecific"],
+  "writingsCountable": ["writingFreeVisualSingularTextPlural", "writingsFreeCountable", "writingsNonFree"],
+  "writingsFree": ["writingsFreeCountable", "writingsFreeUncountable"],
+  "writingsFreeAll": ["writingFreeVisualSingularTextPlural", "writingsFree"],
+  "writingsFreeCountable": ["writingFree", "writingFreeText", "writingFreeVisual"],
+  "writingsFreeUncountable": ["writingFreeTextUncountable", "writingFreeUncountable", "writingFreeVisualUncountable"],
+  "writingsLoose": ["writingLooseRigid", "writingsLooseNonRigid"],
+  "writingsLooseNonRigid": ["writingLoose", "writingLooseSpecific"],
+  "writingsNonFree": ["writingLooseRigid", "writingsNonRigid"],
+  "writingsNonRigid": ["writingLoose", "writingsBound"],
+  "writingsSpecific": ["writingLooseSpecific", "writingSpecific", "writingSpecificMagic"]
 }
