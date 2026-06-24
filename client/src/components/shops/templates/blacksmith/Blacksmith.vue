@@ -3,10 +3,13 @@
 </template>
 
 <script lang="ts" setup>
+import Blacksmith1 from './variants/Blacksmith1.vue'
+
 import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-import type { VueModule } from '../../../../types/pages';
+const variants = [
+  Blacksmith1
+]
 
-const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
 const { SelectedVariant } = useRandomVariant(variants)
 </script>

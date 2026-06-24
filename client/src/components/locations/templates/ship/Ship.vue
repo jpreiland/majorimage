@@ -3,10 +3,15 @@
 </template>
 
 <script lang="ts" setup>
+import Ship1 from './variants/Ship1.vue'
+import Ship2 from './variants/Ship2.vue'
+
 import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-import type { VueModule } from '../../../../types/pages';
+const variants = [
+  Ship1,
+  Ship2
+]
 
-const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
 const { SelectedVariant } = useRandomVariant(variants)
 </script>

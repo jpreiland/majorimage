@@ -1,46 +1,30 @@
-import { markRaw } from 'vue'
-import { onMounted, ref } from 'vue'
+import { markRaw, onMounted, ref } from 'vue'
+import type { Component } from 'vue'
 
-type VariantModule = {
-  default: any
-}
+export function useRandomVariant(variants: Component[], seed?: number) {
+  const SelectedVariant = ref<Component | null>(null)
 
-export function useRandomVariant(globImport: Record<string, any>, seed?: number) {
-  const SelectedVariant = ref<any>(null)
-  const variantKeys = ref<string[]>([])
-
-   function initKeys() {
-    let keys = Object.keys(globImport)
-
-    variantKeys.value = keys
-  }
+  rollVariant()
 
   function getRandomIndex(length: number) {
     if (seed !== undefined) {
       return seed % length
     }
+
     return Math.floor(Math.random() * length)
   }
 
-  function roll() {
-    if (variantKeys.value.length === 0) {
+  function rollVariant() {
+    if (!variants.length) {
       console.warn('No variants available')
       return
     }
 
-    const index = getRandomIndex(variantKeys.value.length)
-    const key = variantKeys.value[index]
-
-    const mod = globImport[key] as VariantModule
-    SelectedVariant.value = markRaw(mod.default)
+    SelectedVariant.value = markRaw(variants[getRandomIndex(variants.length)])
   }
-
-  initKeys()
-
-  onMounted(roll)
 
   return {
     SelectedVariant,
-    variantKeys
+    reroll: rollVariant
   }
 }

@@ -3,10 +3,13 @@
 </template>
 
 <script lang="ts" setup>
+import NPCCloud1 from './variants/NPCCloud1.vue'
+
 import { useRandomVariant } from '../../../../composables/useRandomVariant'
 
-import type { VueModule } from '../../../../types/pages';
+const variants = [
+  NPCCloud1
+]
 
-const variants = import.meta.glob<VueModule>('./variants/*.vue', { eager: true })
 const { SelectedVariant } = useRandomVariant(variants)
 </script>

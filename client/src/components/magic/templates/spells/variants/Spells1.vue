@@ -1,69 +1,58 @@
 <template>
   <div>
-    <div class="card-header">
-      <div class="card-header-left">
-        <h2 class="card-title">
-          SRD Spells
-        </h2>
-      </div>
-    </div>
-    <div class="info-panel-description">
+    <CollapsibleSection title="SRD Spells" :initially-open="true">
       <div>
-        <template v-for="spell in srdSpells" :key="'SRDspell-'+spell.id+'-'+rerollToggle">
+        <template v-for="spell in srdSpells" :key="'SRDspell-' + spell.id + '-' + rerollToggle">
           <p>
-            <SimpleDescriptor :type="'spellSRD'" :proper-noun="true" :color="'#FF8C58'" />
+            <SimpleDescriptor type="spellSRD" :proper-noun="true" color="#FF8C58" />
           </p>
         </template>
       </div>
-    </div>
-    <div class="card-header" style="margin-top:2.5rem">
-      <div class="card-header-left">
-        <h2 class="card-title">
-          Custom Spells
-        </h2>
-      </div>
-    </div>
-    <div class="info-panel-description">
+    </CollapsibleSection>
+
+    <CollapsibleSection title="Custom Spells" :initially-open="true" style="margin-top:2.5rem">
       <div>
-        <template v-for="spell in customSpells" :key="'CustomSpell-'+spell.id+'-'+rerollToggle">
+        <template v-for="spell in customSpells" :key="'CustomSpell-' + spell.id + '-' + rerollToggle">
           <p>
-            <Descriptor :type="'CustomSpell'" :color="'#58CBFF'" />
+            <Descriptor type="CustomSpell" color="#58CBFF" />
           </p>
         </template>
       </div>
-    </div>
+    </CollapsibleSection>
+
     <div class="center">
-      <button class="button info-panel reroll-all" @click="rerollAll()">
+      <button class="button info-panel reroll-all" @click="rerollAll">
         Reroll All
       </button>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Spells1',
-  data() {
-    return {
-      numSRDSpells: 6,
-      srdSpells: [],
-      numCustomSpells: 10,
-      customSpells: [],
-      rerollToggle: true
-    }
-  },
-  mounted() {
-    for (let i = 0; i < this.numSRDSpells; i++) {
-      this.srdSpells.push({id: i})
-    }
-    for (let i = 0; i < this.numCustomSpells; i++) {
-      this.customSpells.push({id: i})
-    }
-  },
-  methods: {
-    async rerollAll() {
-      this.rerollToggle = !this.rerollToggle
-    }
-  }
+<script setup lang="ts">
+import { ref, onMounted } from 'vue'
+import CollapsibleSection from '../../../../layout/CollapsibleSection.vue'
+
+const numSRDSpells = 6
+const numCustomSpells = 10
+
+const srdSpells = ref<{ id: number }[]>([])
+const customSpells = ref<{ id: number }[]>([])
+const rerollToggle = ref(true)
+
+onMounted(() => {
+  srdSpells.value = Array.from(
+    { length: numSRDSpells },
+    (_, id) => ({ id })
+  )
+
+  customSpells.value = Array.from(
+    { length: numCustomSpells },
+    (_, id) => ({ id })
+  )
+})
+
+function rerollAll() {
+  rerollToggle.value = !rerollToggle.value
 }
+
 </script>

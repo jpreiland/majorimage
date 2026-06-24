@@ -2,117 +2,93 @@
   "objects": {
     "SetDressing": {
       "_order": 1,
-      "_displayName": "Set Dressing",
-      "set-dressing-1": "SetDressing1"
+      "_displayName": "Set Dressing"
     },
     "Art": {
       "_order": 2,
-      "_displayName": "Art",
-      "art-1": "Art1"
+      "_displayName": "Art"
     }    
   },
   "locations": {
     "City": {
       "_order": 1,
-      "_displayName": "City",
-      "city-1": "City1",
-      "city-2": "City2"
+      "_displayName": "City"
     },
     "Temple": {
       "_order": 2,
-      "_displayName": "Temple",
-      "temple-1": "Temple1",
-      "temple-2": "Temple2"
+      "_displayName": "Temple"
     },
     "DungeonRoom": {
       "_order": 3,
-      "_displayName": "Dungeon Room",
-      "dungeon-room-1": "DungeonRoom1",
-      "dungeon-room-2": "DungeonRoom2"
+      "_displayName": "Dungeon Room"
     },
     "SmallTown": {
       "_order": 4,
-      "_displayName": "Small Town",
-      "small-town-1": "SmallTown1",
-      "small-town-2": "SmallTown2"
+      "_displayName": "Small Town"
     },
     "Ship": {
       "_order": 5,
-      "_displayName": "Ship",
-      "ship-1": "Ship1",
-      "ship-2": "Ship2"
+      "_displayName": "Ship"
     }
   },
   "magic": {
     "Spells": {
       "_order": 1,
-      "_displayName": "Spells",
-      "spells-1": "Spells1"
+      "_displayName": "Spells"
     },
     "MagicWeapons": {
       "_order": 2,
-      "_displayName": "Magic Weapons",
-      "weapons-1": "MagicWeapons1"
+      "_displayName": "Magic Weapons"
     }
   },
   "shops": {
     "General": {
       "_order": 1,
-      "_displayName": "General",
-      "general-1": "General1"
+      "_displayName": "General"
     },
     "Blacksmith": {
       "_order": 2,
-      "_displayName": "Blacksmith",
-      "blacksmith-1": "Blacksmith1"
+      "_displayName": "Blacksmith"
     }
   },
   "npcs": {
     "Noble": {
       "_order": 1,
-      "_displayName": "Noble",
-      "noble-1": "Noble1"
+      "_displayName": "Noble"
     },
     "Wizard": {
       "_order": 2,
-      "_displayName": "Wizard",
-      "wizard-1": "Wizard1"
+      "_displayName": "Wizard"
     }
   },
   "quests": {
     "Rumor": {
       "_order": 1,
-      "_displayName": "Rumors",
-      "rumor-1": "Rumor1"
+      "_displayName": "Rumors"
     },
     "Wanted": {
       "_order": 2,
-      "_displayName": "Wanted",
-      "wanted-1": "Wanted1"
+      "_displayName": "Wanted"
     }
   },
   "workshop": {
     "WordTester": {
       "_order": 1,
-      "_displayName": "Word Tester",
-      "word-tester-1": "WordTester1"
+      "_displayName": "Word Tester"
     },
     "FormatBuilder": {
       "_order": 2,
-      "_displayName": "Format Builder",
-      "format-builder-1": "FormatBuilder1"
+      "_displayName": "Format Builder"
     }
   },
   "wordclouds": {
     "NPCCloud": {
       "_order": 1,
-      "_displayName": "NPC",
-      "npc-cloud-1": "NPCCloud1"
+      "_displayName": "NPC"
     },
     "TempleCloud": {
       "_order": 2,
-      "_displayName": "Temple",
-      "temple-cloud-1": "TempleCloud1"
+      "_displayName": "Temple"
     }
   }
 }

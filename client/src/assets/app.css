@@ -293,6 +293,7 @@ button.reroll-all {
 }
 
 .card-header {
+  cursor: pointer;
   -webkit-user-select: none; /* Safari */        
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -340,6 +341,13 @@ button.reroll-all {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   line-height: 2.5em;
+}
+
+.collapse-icon {
+  margin-right: 0.75rem;
+  margin-left: auto;
+  align-self: center;
+  color: black;
 }
 
 .no-descriptors {
