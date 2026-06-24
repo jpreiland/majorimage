@@ -43,6 +43,7 @@ export type FormatInstruction =
 | ['pick-gerund', (CategoryName | GroupName)]
 | ['pick-multi', (CategoryName | GroupName), number, number, number?, number?]
 | ['static', string]
+| ['static-optional', string, number?]
 | ['a(n)']
 | ['title']
 | NumberFormatInstruction

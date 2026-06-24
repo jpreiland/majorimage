@@ -4,6 +4,8 @@ import { describe, expect, it } from 'vitest'
 
 const formatBadPart = [["bad"]]
 const formatStatic = [["static", "test"]]
+const formatStaticOptional = [["static", "always-text"], ["static-optional", " maybe-text"]]
+const formatStaticOptionalWithPercent = [["static", "always-text"], ["static-optional", " maybe-text", 0.6]]
 const formatTitle = [["title"], ["static", "test a string"]]
 const formatAName = [["a(n)"], ["pick", "nameAll"]]
 const formatSomeNames = [["a(n)"], ["pick-pluralize", "nameAll"]]
@@ -32,6 +34,9 @@ const formatType = [["format", "Accessory"]]
 const formatInvalidLength = [[]]
 const formatAInvalidLength = [["a(n)", 1]]
 const formatStaticInvalidLength = [["static"]]
+const formatStaticOptionalInvalidLength = [["static-optional"]]
+const formatStaticOptionalInvalidLength2 = [["static-optional", "text", 0.2, 0.2]]
+const formatStaticOptionalInvalidPctChance = [["static-optional", "text", 999]]
 const formatTitleInvalidLength = [["title", 1]]
 const formatPickInvalidLength = [["pick", "nameAll", 1]]
 const formatPickPluralInvalidLength = [["pick-pluralize", "nameAll", 1]]
@@ -69,6 +74,20 @@ describe('#stitch', () => {
 
   it('returns a static string of text with "a " prepended', () => {
     expect(stitch(formatSomeNames, data, null, null)).toMatch(/^some [1-5][a-c][1-3]s$/)
+  })
+
+  it('optionally returns a static string of text', () => {
+    // ensure high chance of line coverage since there's a branch with random (50%) chance of execution
+    for (let i = 0; i < 10; i++) {
+      expect(stitch(formatStaticOptional, data, null, null)).toMatch(/^always-text( maybe-text)?$/)
+    }
+  })
+
+  it('optionally returns a static string of text when given optional percent', () => {
+    // ensure high chance of line coverage since there's a branch with random (50%) chance of execution
+    for (let i = 0; i < 10; i++) {
+      expect(stitch(formatStaticOptionalWithPercent, data, null, null)).toMatch(/^always-text( maybe-text)?$/)
+    }
   })
 
   it('returns a name from one of the 15 subcategories nested in the nameAll group', () => {
@@ -173,6 +192,9 @@ describe('#stitch', () => {
     expect(stitch(formatInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatAInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatStaticInvalidLength, data, null, null)).toBe("")
+    expect(stitch(formatStaticOptionalInvalidLength, data, null, null)).toBe("")
+    expect(stitch(formatStaticOptionalInvalidLength2, data, null, null)).toBe("")
+    expect(stitch(formatStaticOptionalInvalidPctChance, data, null, null)).toBe("")
     expect(stitch(formatTitleInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatPickInvalidLength, data, null, null)).toBe("")
     expect(stitch(formatPickPluralInvalidLength, data, null, null)).toBe("")

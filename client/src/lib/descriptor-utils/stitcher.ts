@@ -135,6 +135,14 @@ function stitcher(parts: Format, data: AppData, priceOverride?: PriceOverride, n
         name += part[1]
         break;
 
+      case 'static-optional':
+        if (!(part.length === 2 || (part.length === 3 && part[2] && part[2] >=0.01 && part[2] <= 0.99))) break;
+        const pctChance = part[2] ? part[2] : 0.5
+        if (Math.random() < pctChance) {
+          name += part[1]        
+        }
+        break;  
+
       case 'a(n)':
         if (part.length !== 1) break;
         name += " "

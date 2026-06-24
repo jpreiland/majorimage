@@ -335,20 +335,21 @@
   "writingLooseSpecificUncountable": ["sheet music"],
   "writingLooseRigid": ["placard", "tablet"],
 
-  "writingFree": ["carving", "engraving", "etching", "tag"],
+  "writingFree": ["carving", "engraving", "etching"],
   "writingFreeUncountable": ["graffiti"],
-  "writingFreeText": ["epitaph", "inscription", "plaque", "scrawling"],
-  "writingFreeTextUncountable": ["epigraphy"],
+  "writingFreeText": ["epitaph", "inscription", "plaque", "scrawling", "tag"],
+  "writingFreeTextUncountable": ["epigraphy", "lettering"],
   "writingFreeVisual": ["crest", "glyph", "magic circle", "pictograph", "sigil", "symbol", "ward"],
   "writingFreeVisualUncountable": ["heraldry", "iconography"],
   "writingFreeVisualSingularTextPlural": ["hieroglyph", "rune"],
 
+  "writingContainer": ["scroll case", "tube", "pouch", "wax seal"],
   "writingBinding": ["calfskin", "leather", "metal", "metal plate", "pigskin", "silk", "treasure", "velvet", "wood", "wooden board"],
   "writingBindingFurniture": ["ribbon", "strap", "ties"],
   "writingBindingFurnitureRigid": ["boss", "buckle", "chain", "clasp", "lock"],
   "writingSurface": ["paper", "papyrus", "parchment", "rag paper", "vellum"],
   "writingSurfaceRigid": ["bark", "bone", "copper plate", "ivory", "slate", "stone", "wax tablet"],
-  "writingContainer": ["scroll case", "tube", "pouch", "wax seal"],
+  "writingMedium": ["blood", "charcoal", "chalk", "glowing essence", "gold leaf", "ink", "paint", "soot", "tar"],
 
   "writingTitlePartStory": ["chronicle", "legend", "romance", "tradgedy", "epic", "saga", "story", "tale", "testament"],
 
