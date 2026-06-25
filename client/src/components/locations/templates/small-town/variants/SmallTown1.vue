@@ -1,15 +1,13 @@
 <template>
-  <div class="info-panel-description">
+  <CollapsibleSection title="Small Town">
     <p>
       smalltown variant 1
       <Descriptor :type="'City'" />
       Lorem ipsum
     </p>
-  </div>
+  </CollapsibleSection>
 </template>
 
-<script>
-export default {
-  name: 'SmallTown1',
-}
+<script lang="ts" setup>
+import CollapsibleSection from '../../../../layout/CollapsibleSection.vue'
 </script>

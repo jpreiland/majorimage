@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useAppContext } from '../../composables/useAppContext';
+import { useAppContext } from '../../composables/useAppContext'
 
 import type { Subpage } from '../../types/pages'
 

@@ -1,22 +1,18 @@
 <template>
   <CollapsibleSection title="SRD Spells">
-    <div>
-      <template v-for="spell in srdSpells" :key="'SRDspell-' + spell.id + '-' + rerollToggle">
-        <p>
-          <SimpleDescriptor type="spellSRD" :proper-noun="true" color="#FF8C58" />
-        </p>
-      </template>
-    </div>
+    <template v-for="spell in srdSpells" :key="'SRDspell-' + spell.id + '-' + rerollToggle">
+      <p>
+        <SimpleDescriptor type="spellSRD" :proper-noun="true" color="#FF8C58" />
+      </p>
+    </template>
   </CollapsibleSection>
 
   <CollapsibleSection title="Custom Spells" style="margin-top:2.5rem">
-    <div>
-      <template v-for="spell in customSpells" :key="'CustomSpell-' + spell.id + '-' + rerollToggle">
-        <p>
-          <Descriptor type="CustomSpell" color="#58CBFF" />
-        </p>
-      </template>
-    </div>
+    <template v-for="spell in customSpells" :key="'CustomSpell-' + spell.id + '-' + rerollToggle">
+      <p>
+        <Descriptor type="CustomSpell" color="#58CBFF" />
+      </p>
+    </template>
   </CollapsibleSection>
 
   <div class="center">
