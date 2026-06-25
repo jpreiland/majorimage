@@ -1,42 +1,39 @@
 <template>
   <div>
-    <div class="card-header">
-      <div class="card-header-left">
-        <Descriptor :type="'City'" />
-      </div>
-    </div>
-    <CityOverview />
-    <div class="info-panel-description">
+    <CollapsibleSection title="City">
+      <CityOverview />
       <p>
         variant 1
-        <Descriptor :type="'City'" />
+        <Descriptor type="City" />
         Lorem ipsum 
-        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linked-parser="tlkParser" @link-update="linkUpdate" /> {{ links.tlk }} 
+        <LinkedDescriptor type="City" :color="'pink'" link="tlk" :linked-parser="tlkParser" @link-update="linkUpdate" />
+        {{ linkedDescriptorTexts.tlk }} 
         dolor sit amet, consectetur adipiscing elit. 
-        <Descriptor :type="'Book'" :color="'red'" />
+        <Descriptor type="Book" color="red" />
         hendrerit, ligula vitae feugiat ullamcorper, velit 
-        <Descriptor :type="'EventVerbing'" :color="'gold'" /> placerat nisi, sit 
-        <Descriptor :type="'Temple'" :color="'green'" /> vestibulum 
-        <Descriptor :type="'TestA(n)'" :color="'orange'" /> enim et magna.Lorem 
-        <Descriptor :type="'City'" /> 
+        <Descriptor type="EventVerbing" color="gold" /> placerat nisi, sit 
+        <Descriptor type="Temple" color="green" /> vestibulum 
+        <Descriptor type="TestA(n)" color="orange" /> enim et magna.Lorem 
+        <Descriptor type="City" /> 
         dolor sit amet, consectetur adipiscing elit. Integer 
-        <Descriptor :type="'City'" />, ligula vitae feugiat ullamcorper, 
+        <Descriptor type="City" />, ligula vitae feugiat ullamcorper, 
         velit nulla placerat nisi, sit amet vestibulum sapien 
-        <Descriptor :type="'CreatureVerbingMisc(s)'" :color="'blue'" /> et magna.
-        <Descriptor :type="'City'" /> 
-        ipsum dolor sit <Descriptor :type="'City'" />, consectetur adipiscing elit. 
-        <Descriptor :type="'City'" /> hendrerit, 
+        <Descriptor type="CreatureVerbingMisc(s)" color="blue" /> et magna.
+        <Descriptor type="City" /> 
+        ipsum dolor sit <Descriptor type="City" />, consectetur adipiscing elit. 
+        <Descriptor type="City" /> hendrerit, 
         ligula vitae feugiat ullamcorper.
         Lorem ipsum dolor sit amet, consectetur adipiscing 
-        <Descriptor :type="'A(n)AdjectivePersonTradeNPC'" :color="'silver'" />. 
+        <Descriptor type="A(n)AdjectivePersonTradeNPC" color="silver" />. 
         Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet 
-        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk2'" @link-update="linkUpdate" /> {{ links.tlk2 }} 
+        <LinkedDescriptor type="City" color="pink" link="tlk2" @link-update="linkUpdate" />
+        {{ linkedDescriptorTexts.tlk2 }} 
         vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
         ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.
       </p>
       <p>
-        <StealthDescriptor :type="'Book'" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
+        <StealthDescriptor type="Book" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
         ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum 
         dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat 
         nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
@@ -45,38 +42,33 @@
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper, velit 
         nulla placerat nisi, sit amet vestibulum sapien enim et magna. Lorem 
-        <Descriptor :type="'City'" /> ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae 
+        <Descriptor type="City" /> ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae 
         feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.
       </p>
-    </div>
+    </CollapsibleSection>
   </div>
 </template>
 
-<script>
-import CityOverview from "./../overview/CityOverview.vue"
+<script lang="ts" setup>
+import { ref } from 'vue'
+import CityOverview from './../overview/CityOverview.vue'
+import CollapsibleSection from '../../../../layout/CollapsibleSection.vue';
 
-export default {
-  name: 'City1',
-  components: {
-    CityOverview
-  },
-  data() {
-    return {
-      links: {
-        tlk: 'the thing',
-        tlk2: 'the other thing'
-      }
-    }
-  },
-  methods: {
-    async linkUpdate(linkResponse) {
-      this.links[linkResponse.linkKey] = linkResponse.linkVal
-    },
-    tlkParser(descriptorText) {
-      let parts = descriptorText.split(' ')
-      return parts[parts.length-1]
-    }
-  }
+import type { LinkResponse } from '../../../../descriptors/LinkedDescriptor.vue';
+
+const linkedDescriptorTexts = ref<Record<string, string>>({
+  tlk: 'default tlk',
+  tlk2: 'default tlk2'
+})
+
+function linkUpdate(linkResponse: LinkResponse) {
+  linkedDescriptorTexts.value[linkResponse.linkKey] = linkResponse.linkVal
 }
+
+function tlkParser(descriptorText: string) {
+  let parts = descriptorText.split(' ')
+  return parts[parts.length-1]
+}
+
 </script>

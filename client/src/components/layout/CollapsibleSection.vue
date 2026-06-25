@@ -1,6 +1,6 @@
 <template>
   <div class="collapsible-section">
-    <div class="card-header" :class="{ collapsed: !open }" @click="open = !open">
+    <div class="card-header" :class="{ collapsed: closed }" @click="closed = !closed">
       <div class="card-header-left">
         <h2 class="card-title">
           {{ title }}
@@ -8,24 +8,24 @@
       </div>
 
       <div class="collapse-icon">
-        {{ open ? '▲' : '▼' }}
+        {{ !closed ? '▲' : '▼' }}
       </div>
     </div>
 
-    <div v-if="open" class="info-panel-description">
+    <div v-if="!closed" class="info-panel-description">
       <slot></slot>
     </div>
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref } from 'vue'
 
 const props = defineProps<{
   title: string
-  initiallyOpen?: boolean
+  initiallyClosed?: boolean
 }>()
 
-const open = ref(props.initiallyOpen ?? true)
+const closed = ref(props.initiallyClosed ?? true)
 
 </script>

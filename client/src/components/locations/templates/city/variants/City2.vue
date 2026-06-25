@@ -1,14 +1,9 @@
 <template>
   <div>
-    <div class="card-header">
-      <div class="card-header-left">
-        <LinkedDescriptor :type="'City'" :link="'cityName'" :color="'purple'" @link-update="linkUpdate" />
-      </div>
-    </div>
-    <CityOverview />
-    <div class="info-panel-description">
+    <CollapsibleSection title="City">
+      <CityOverview />
       <p>
-        {{ links.cityName }} is
+        {{ linkedDescriptorTexts.tlk2 }} is
         <SimpleDescriptor :type="'adjectiveSizeBasic'" :a_an="true" :color="'#c42b68'" /> city located 
         <Descriptor :type="'DistanceLarge'" :color="'#61d0ff'" /> <SimpleDescriptor :type="'direction'" :color="'#2b7fc4'" /> 
         of <Descriptor :type="'GeographicFeature'" :color="'brown'" />. 
@@ -17,7 +12,8 @@
         variant 2
         <Descriptor :type="'City'" />
         Lorem ipsum 
-        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linked-parser="cityNameParser" @link-update="linkUpdate" /> {{ links.tlk }} 
+        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk'" :linked-parser="cityNameParser" @link-update="linkUpdate" />
+        {{ linkedDescriptorTexts.tlk }} 
         dolor sit amet, consectetur adipiscing elit. 
         <Descriptor :type="'Book'" :color="'red'" />
         hendrerit, ligula vitae feugiat ullamcorper, velit 
@@ -36,38 +32,34 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing 
         <Descriptor :type="'A(n)AdjectivePersonTradeNPC'" :color="'silver'" />. 
         Integer hendrerit, ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet 
-        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk2'" @link-update="linkUpdate" /> {{ links.tlk2 }} 
+        <LinkedDescriptor :type="'City'" :color="'pink'" :link="'tlk2'" @link-update="linkUpdate" />
+        {{ linkedDescriptorTexts.tlk2 }} 
         vestibulum sapien enim et magna.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, 
         ligula vitae feugiat ullamcorper, velit nulla placerat nisi, sit amet vestibulum sapien enim et magna. 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer hendrerit, ligula vitae feugiat ullamcorper.
       </p>
-    </div>
+    </CollapsibleSection>
   </div>
 </template>
 
-<script>
-import CityOverview from "./../overview/CityOverview.vue"
+<script lang="ts" setup>
+import { ref } from 'vue'
+import CityOverview from './../overview/CityOverview.vue'
+import CollapsibleSection from '../../../../layout/CollapsibleSection.vue';
 
-export default {
-  name: 'City2',
-  components: {
-    CityOverview
-  },
-  data() {
-    return {
-      links: {
-        cityName: 'the city',
-        tlk2: 'the other thing'
-      }
-    }
-  },
-  methods: {
-    async linkUpdate(linkResponse) {
-      this.links[linkResponse.linkKey] = linkResponse.linkVal
-    },
-    cityNameParser(descriptorText) {
-      return descriptorText
-    }
-  }
+import type { LinkResponse } from '../../../../descriptors/LinkedDescriptor.vue';
+
+const linkedDescriptorTexts = ref<Record<string, string>>({
+  tlk: 'default tlk',
+  tlk2: 'default tlk2'
+})
+
+function linkUpdate(linkResponse: LinkResponse) {
+  linkedDescriptorTexts.value[linkResponse.linkKey] = linkResponse.linkVal
+}
+
+function cityNameParser(descriptorText: string) {
+  let parts = descriptorText.split(' ')
+  return parts[parts.length-1]
 }
 </script>

@@ -4,7 +4,7 @@
   </span>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, onMounted, ref } from 'vue'
 import { stitch } from '../../lib/descriptor-utils/stitcher'
 import { pickFormat } from '../../lib/descriptor-utils/formats'
@@ -22,6 +22,11 @@ interface Props {
   sequencedPick?: boolean
   link: string
   linkedParser?: (val: string) => string
+}
+
+export type LinkResponse = {
+  linkKey: string
+  linkVal: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -59,7 +64,7 @@ function reroll() {
     props.sequencedPick
   )
 
-  const linkResponse = {
+  const linkResponse: LinkResponse = {
     linkKey: props.link,
     linkVal: props.linkedParser
       ? props.linkedParser(descriptorText.value)
