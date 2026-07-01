@@ -350,6 +350,16 @@ button.reroll-all {
   color: black;
 }
 
+.overview {
+  background: var(--overview-gradient);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.overview-title {
+  font-weight: 700;
+}
+
 .no-descriptors {
   margin: 0;
   line-height: 1.3em;

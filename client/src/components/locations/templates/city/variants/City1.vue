@@ -1,6 +1,8 @@
 <template>
   <CollapsibleSection title="City">
-    <CityOverview />
+    <CollapsibleOverview title="Overview">
+      Population: 20
+    </CollapsibleOverview>
     <p>
       variant 1
       <Descriptor type="City" />
@@ -50,7 +52,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import CityOverview from './../overview/CityOverview.vue'
+import CollapsibleOverview from '../../../../layout/CollapsibleOverview.vue';
 import CollapsibleSection from '../../../../layout/CollapsibleSection.vue'
 
 import type { LinkResponse } from '../../../../descriptors/LinkedDescriptor.vue'
