@@ -48,6 +48,12 @@ const params = reactive({
   isWriting: false,
 })
 
+export type ItemTypes = {
+  compiled: boolean
+  formats: Record<string, {weight: number, format: Format}>
+  formatPicker: FormatName[]
+}
+
 const itemTypes = reactive({
   compiled: false,
   formats: {} as Record<string, {weight: number, format: Format}>,
