@@ -1,8 +1,9 @@
-import { markRaw, onMounted, ref } from 'vue'
+import { markRaw, ref } from 'vue'
 import type { Component } from 'vue'
 
 export function useRandomVariant(variants: Component[], seed?: number) {
   const SelectedVariant = ref<Component | null>(null)
+  let currentIndex = 0
 
   rollVariant()
 
@@ -23,8 +24,17 @@ export function useRandomVariant(variants: Component[], seed?: number) {
     SelectedVariant.value = markRaw(variants[getRandomIndex(variants.length)])
   }
 
+  function cycleVariant() {
+    currentIndex = (currentIndex + 1) % variants.length
+
+    SelectedVariant.value = markRaw(
+      variants[currentIndex]
+    )
+  }
+
   return {
     SelectedVariant,
-    reroll: rollVariant
+    rollVariant,
+    cycleVariant
   }
 }

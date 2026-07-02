@@ -1,4 +1,5 @@
 <template>
+  <button v-if="variants.length > 1" @click="cycleVariant">new city</button>
   <component v-if="SelectedVariant" :is="SelectedVariant" />
 </template>
 
@@ -13,5 +14,6 @@ const variants = [
   City2
 ]
 
-const { SelectedVariant } = useRandomVariant(variants)
+const { SelectedVariant, cycleVariant } = useRandomVariant(variants)
+
 </script>
